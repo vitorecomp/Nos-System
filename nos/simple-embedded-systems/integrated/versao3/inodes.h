@@ -1,7 +1,7 @@
 #ifndef INODES_H
 #define INODES_H
 
-#include "nodes.h"
+#include "node.h"
 
 class MotorNode : Node{
 private:

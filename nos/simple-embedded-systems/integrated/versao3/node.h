@@ -1,7 +1,7 @@
 #ifndef NOS_H
 #define NOS_H
 
-#include <string.h>
+#include <string>
 
 using namespace std;
 
@@ -9,7 +9,7 @@ using namespace std;
 class Node
 {
 private:
-	string name;
+	char[] name;
 	StringLists services;
 	StringLists interruptions;
 

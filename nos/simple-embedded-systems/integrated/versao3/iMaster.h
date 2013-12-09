@@ -3,7 +3,7 @@
 
 #include "master.h"
 #include "inodes.h"
-#include "iconnections.h"
+#include "iconnection.h"
 
 class IMaster : public Master
 {
