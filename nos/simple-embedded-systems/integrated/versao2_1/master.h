@@ -5,8 +5,8 @@
 #include "connection.h"
 #include "superNodes.h"
 
-#include <list>
 #include <string.h>
+#include <list>
 
 using namespace std;
 

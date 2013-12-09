@@ -2,6 +2,8 @@
 #define MASTER_H
 
 #include "master.h"
+#include "inodes.h"
+#include "iconnections.h"
 
 class IMaster : public Master
 {
