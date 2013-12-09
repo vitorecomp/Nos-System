@@ -9,11 +9,11 @@
 
 class Master
 {
-private:
+protected:
 	//list of nodes
 	Node *nodes[100];
 	//list of supernodes
-	SuperNodes *sNodes[100];
+	SuperNode *sNodes[100];
 	//list of connection
 	Connection *connections[100];
 	//list of nodes names

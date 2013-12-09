@@ -5,14 +5,14 @@
 #include <string.h>
 
 
-class SuperNodes
+class SuperNode
 {
 private:
 	Node *nodes[100];
 	StringList* dependenceNodes;
 	StringList* myServices;
 	StringList* interruptions;
-	char* myName;
+	char* name;
 
 	virtual void setName() = 0;
 	virtual void setNodeDependencesName() = 0;

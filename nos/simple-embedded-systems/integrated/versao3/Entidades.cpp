@@ -24,17 +24,17 @@ void StringList::push(char *)
 void StringList::list_push_back(StringList *aList)
 {
 	if(list == NULL){
-		list = char *List;
+		list = aList->list;
 	}else{
 		LStrings *termo;
-		for(*termo = list; termo->next != NULL; termo = termo->next);
-		termo->next = char *List->list;
+		for(termo = list; termo->next != NULL; termo = termo->next);
+		termo->next =aList->list;
 	}
 }
 
 
 
-char* StringList::pop();
+char* StringList::pop()
 {
 	char *termo = NULL;
 	if(list == NULL)
@@ -47,15 +47,16 @@ char* StringList::pop();
 	return termo;
 }
 
-char* StringList::getFirst();
+char* StringList::getFirst()
 {
 	return getN(0);
 }
 
-char* StringList::getN(int ni);
+char* StringList::getN(int ni)
 {
 	char *termo = NULL;
-	for(lStrings *iList = list, int i = 0; iList != NULL; iList = iList->next, i++)
+	int i = 0;
+	for(lStrings *iList = list; iList != NULL; iList = iList->next, i++)
 		if(i == ni)
 		{
 			termo = iList->Valor;

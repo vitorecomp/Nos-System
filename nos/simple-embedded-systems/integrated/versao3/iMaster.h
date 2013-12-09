@@ -5,7 +5,7 @@
 #include "inodes.h"
 #include "iconnection.h"
 
-class IMaster : public Master{
+class IMaster : protected Master{
 private:
 	void createNosList();
 	void createConnectionList();
