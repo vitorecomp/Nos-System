@@ -8,8 +8,8 @@ private:
 	void setName();
 	void setServiceList();
 public:
-	int run();
-	int runService(string);
+	void run();
+	void runService(char*);
 };
 
 class DirectionNode : Node
@@ -18,18 +18,18 @@ private:
 	void setName();
 	void setServiceList();
 public:
-	int run();
-	int runService(string);
+	void run();
+	void runService(char*);
 };
 
-class DirectionNode : Node
+class TemperatureNode : Node
 {
 private:
 	void setName();
 	void setServiceList();
 public:
-	int run();
-	int runService(string);
+	void run();
+	void runService(char*);
 };
 
 #endif

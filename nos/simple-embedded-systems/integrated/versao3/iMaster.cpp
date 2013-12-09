@@ -2,14 +2,14 @@
 
 void IMaster::createNosList()
 {
-	nodes.push((Node*) new MotorNode());
-	nodes.push((Node*) new DirectionNode());
-	nodes.push((Node*) new TemperatureNode());
+	nodes[0] = new MotorNode();
+	nodes[1] = new DirectionNode();
+	nodes[2] = new TemperatureNode();
 }
 
 void IMaster::createConnectionList()
 {
-	connections.push((Connection*)new BlueToothConnection());
+	connections[0] = new BlueToothConnection()	;
 }
 
 void IMaster::createSuperNosList()

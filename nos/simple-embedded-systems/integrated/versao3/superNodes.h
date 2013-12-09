@@ -4,16 +4,15 @@
 #include "node.h"
 #include <string.h>
 
-using namespace std;
 
 class SuperNodes
 {
 private:
 	Node *nodes[100];
-	StringLists dependenceNodes;
-	StringLists myServices;
-	StringLists interruptions;
-	string myName;
+	StringList* dependenceNodes;
+	StringList* myServices;
+	StringList* interruptions;
+	char* myName;
 
 	virtual void setName() = 0;
 	virtual void setNodeDependencesName() = 0;
@@ -22,16 +21,16 @@ private:
 
 
 public:
-	StringLists getDependecesNames();
-	void setNodeDependences(list<*Node>);
+	StringList getDependecesNames();
+	void setNodeDependences(Node**);
 
 	void initialize();
-	string getName();
-	StringLists getServices();
-	StringLists getInterrupts();
+	char* getName();
+	StringList* getServices();
+	StringList* getInterrupts();
 
 	virtual int run() = 0;
-	virtual int runService(string) = 0;
+	virtual int runService(char*) = 0;
 };
 
 #endif

@@ -1,30 +1,30 @@
 #ifndef NOS_H
 #define NOS_H
 
-#include <string>
-
+#include <string.h>
+#include "Entidades.h"
 using namespace std;
 
 
 class Node
 {
 private:
-	char[] name;
-	StringLists services;
-	StringLists interruptions;
+	char *name;
+	StringList* services;
+	StringList* interruptions;
 
 	virtual void setName() = 0;
 	virtual void setServiceList() = 0;
 
 public:
 	void initialize();
-	string getName();
-	StringLists getServices();
-	StringLists getInterrupts();
+	char* getName();
+	StringList* getServices();
+	StringList* getInterrupts();
 
 
-	virtual int run() = 0;
-	virtual int runService(string) = 0;
+	virtual void run() = 0;
+	virtual void runService(char*) = 0;
 };
 
 

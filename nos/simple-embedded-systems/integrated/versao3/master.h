@@ -7,8 +7,6 @@
 
 #include <string.h>
 
-using namespace std;
-
 class Master
 {
 private:
@@ -19,15 +17,15 @@ private:
 	//list of connection
 	Connection *connections[100];
 	//list of nodes names
-	string nodesNames[100];	
-	string sNodesNames[100];	
+	char *nodesNames[100];	
+	char *sNodesNames[100];	
 	//list of interruptions
-	StringLists *interrupts;
+	StringList *interrupts;
 	
 
-	bool inNodeList();
-	bool inSuperNodeList();
-	int inConnectionList();
+	int inNodeList(char *);
+	int inSuperNodeList(char *);
+	int inConnectionList(char *);
 
 
 	//functions
@@ -36,9 +34,9 @@ private:
 	void executeConections();
 	void passSpys();
 	void executeInterruptionList();
-	virtual void createNosList();
-	virtual void createSuperNosList();
-	virtual void createConnectionList();
+	virtual void createNosList() = 0;
+	virtual void createSuperNosList() = 0;
+	virtual void createConnectionList() = 0;
 public:
 	void initialize();
 	void run();

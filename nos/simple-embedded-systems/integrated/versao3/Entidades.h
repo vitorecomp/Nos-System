@@ -1,11 +1,13 @@
 #ifndef ENTIDADES_H
 #define ENTIDADES_H
 
-struct lStrings
+#include <stdlib.h>
+
+typedef struct lStrings
 {
-	string Valor;
-	LStrings *next;
-} typedef LStrings;
+	char *Valor;
+	struct lStrings *next;
+}LStrings;
 
 class StringList
 {
@@ -14,11 +16,11 @@ private:
 public:
 	StringList();
 	void list_push_back(StringList*);
-	string pop();
-	string getFirst();
-	void push(string);
+	char* pop();
+	char* getFirst();
+	void push(char*);
 	bool empty();
-	string getN(int);
+	char* getN(int);
 };
 
 #endif

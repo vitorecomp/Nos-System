@@ -1,16 +1,16 @@
 #include "master.h"
 
-void initialize()
+void Master::initialize()
 {
-	interruptions = new StringList();
+	interrupts = new StringList();
 	for(int i = 0; i < 100; i ++)
 	{
 		nodes[i] = NULL;
 		sNodes[i] = NULL;
 		connections[i] = NULL;
 
-		nodesNames[i].clear();
-		sNodesNames[i].clear();
+		nodesNames[i]  = NULL;
+		sNodesNames[i] = NULL;
 	}
 
 	createNosList();
@@ -19,18 +19,18 @@ void initialize()
 	
 	for(int i = 0; nodes[i] != NULL; i++)
 	{
-		nodesNames[i] = nodes[i].getName();
+		nodesNames[i] = nodes[i]->getName();
 	}
 	for(int i = 0; i < 100; i++)
 	{
-		sNodesNames[i] = sNodes[i].getName();
+		sNodesNames[i] = sNodes[i]->getName();
 	}
 }
 
 
 void Master::run()
 {
-	if(!interruptions->empty())
+	if(!interrupts->empty())
 		executeInterruptionList();
 
 	executeNos();
@@ -41,22 +41,21 @@ void Master::run()
 void Master::executeInterruptionList()
 {
 	int nService = -1;
-	StringLists *nAtenInterrupts = new StringList();
-	while(!interruptions->empty())
+	StringList *nAtenInterrupts = new StringList();
+	while(!interrupts->empty())
 	{
 		//pegando o nome do servico
-		string serviceTemp = interruptions.pop();
-		char *service = new char [serviceTemp.length()+1];
-  		strcpy (service, serviceTemp.c_str());
-		char *name = strtok(service, "/");
-		string serviceName(name, strlen(name)+1);
+		char service[100];		
+		char *serviceTemp = interrupts->pop();
+		strcpy(service, serviceTemp);
+		char *serviceName = strtok(service, "/");
 
 		//decobrindo onde sera executado
 		int nService = inNodeList(serviceName);
 		if(nService >= 0)
 		{
 			//executando servico
-			nodes[nService]->run(serviceTemp);
+			nodes[nService]->runService(serviceTemp);
 			continue;
 		}
 		nService = inSuperNodeList(serviceName);
@@ -76,8 +75,8 @@ void Master::executeInterruptionList()
 		}
 		nAtenInterrupts->push(serviceTemp);
 	}
-	delete(interruptions);
-	interruptions = nAtenInterrupts;
+	delete(interrupts);
+	interrupts = nAtenInterrupts;
 }
 
 void Master::executeNos()
@@ -85,17 +84,17 @@ void Master::executeNos()
 	for(int i = 0; nodes[i] != NULL; i++)
 	{
 		nodes[i]->run();
-		interruptions.list_push_back(node[i]->getInterrupts());
+		interrupts->list_push_back(nodes[i]->getInterrupts());
 		
 	}
 }
 
-void Mater::executeSuperNos();
+void Master::executeSuperNos()
 {
 	for(int i = 0; sNodes[i] != NULL; i++)
 	{
 		sNodes[i]->run();
-		interruptions.list_push_back(sNode[i]->getInterrupts());	
+		interrupts->list_push_back(sNodes[i]->getInterrupts());	
 	}
 }
 
@@ -103,37 +102,37 @@ void Master::executeConections()
 {
 	for(int i = 0; connections[i] != NULL; i++)
 	{
-		interruptions.list_push_back(connections[i]->reciveMessages());	
+		interrupts->list_push_back(connections[i]->reciveMessages());	
 	}
 }
 
-bool Master::inNodeList(string name)
+int Master::inNodeList(char *name)
 {
-	for(int i = 0; !nodesNames[i].empty() && i < 100; i++)
+	for(int i = 0; nodesNames[i] != NULL && i < 100; i++)
 	{
-		if(nodesNames[i].compare(name))
+		if(!strcmp(nodesNames[i], name))
 			return i;
 	}
 	return -1;
 }
 
-bool Master::inSuperNodeList(string name)
+int Master::inSuperNodeList(char *name)
 {
-for(int i = 0; !NodesNames[i].empty() && i < 100; i++)
+for(int i = 0; nodesNames[i] !=NULL && i < 100; i++)
 	{
-		if(sNodesNames[i].compare(name))
+		if(strcmp(sNodesNames[i],name))
 			return i;
 	}
-	return -1;	
+	return -1;
+}
 
-int Master::inConnectionList(string name)
-{
+int Master::inConnectionList(char *name){
 	int i = 0;
 	for(int i = 0; connections[i] != NULL; i++)
 	{
 		StringList *list = connections[i]->getConnectionList();
-		for(int i = 0; !list->getN(i).empty(); i++)
-			if(list->getN(i).compare(name))
+		for(int i = 0; !list->getN(i) == NULL; i++)
+			if(strcmp(list->getN(i), name))
 				return i;
 	}
 	return -1;

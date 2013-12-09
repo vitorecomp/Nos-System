@@ -14,28 +14,29 @@ bool StringList::empty()
 		return false;
 }
 
-void StringList::push(string)
+void StringList::push(char *)
 {
-	LStrings *termo= new lStrings;
+	LStrings *termo = new lStrings;
 	termo->next = list;
 	list = termo;
 }
 
-void StringList::list_push_back(stringList)
+void StringList::list_push_back(StringList *aList)
 {
-	if(termo == NULL){
-		list = stringList;
+	if(list == NULL){
+		list = char *List;
 	}else{
-		for(LStrings *termo = list; termo->next != NULL; termo = termo->next);
-		termo->next = stringList->list;
+		LStrings *termo;
+		for(*termo = list; termo->next != NULL; termo = termo->next);
+		termo->next = char *List->list;
 	}
 }
 
 
 
-string StringList::pop();
+char* StringList::pop();
 {
-	string termo = new string();
+	char *termo = NULL;
 	if(list == NULL)
 		return termo;
 
@@ -46,14 +47,14 @@ string StringList::pop();
 	return termo;
 }
 
-string StringList::getFirst();
+char* StringList::getFirst();
 {
 	return getN(0);
 }
 
-string StringList::getN(int ni);
+char* StringList::getN(int ni);
 {
-	string termo = new string();
+	char *termo = NULL;
 	for(lStrings *iList = list, int i = 0; iList != NULL; iList = iList->next, i++)
 		if(i == ni)
 		{

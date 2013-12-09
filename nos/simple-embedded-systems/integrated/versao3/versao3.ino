@@ -1,12 +1,12 @@
 #include "iMaster.h"
 
-IMaster *imaster;
+Master *imaster;
 void setup()
 {
-  imaster = new IMaster();
-}
+  imaster =(Master*) new IMaster();
+};
 
 void loop()
 {
-  IMaster->run();
-}
+  imaster->run();
+};
