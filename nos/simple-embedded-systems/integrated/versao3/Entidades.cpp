@@ -14,9 +14,10 @@ bool StringList::empty()
 		return false;
 }
 
-void StringList::push(char *)
+void StringList::push(char * valor)
 {
-	LStrings *termo = new lStrings;
+	LStrings *termo =(lStrings*)malloc(sizeof(lStrings));
+	termo->Valor = valor;
 	termo->next = list;
 	list = termo;
 }
@@ -30,6 +31,7 @@ void StringList::list_push_back(StringList *aList)
 		for(termo = list; termo->next != NULL; termo = termo->next);
 		termo->next =aList->list;
 	}
+	delete(aList);
 }
 
 
@@ -43,7 +45,7 @@ char* StringList::pop()
 	termo = list->Valor;
 	lStrings *inter = list;
 	list= list->next;
-	delete(list);
+	free(list);
 	return termo;
 }
 
@@ -56,12 +58,13 @@ char* StringList::getN(int ni)
 {
 	char *termo = NULL;
 	int i = 0;
-	for(lStrings *iList = list; iList != NULL; iList = iList->next, i++)
+	for(lStrings *iList = list; iList != NULL; iList = iList->next, i++){
 		if(i == ni)
 		{
 			termo = iList->Valor;
 			return termo;
 		}
+	}
 	return termo;
 }
 

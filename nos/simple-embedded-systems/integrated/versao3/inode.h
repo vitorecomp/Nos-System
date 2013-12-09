@@ -29,22 +29,30 @@ public:
 class DirectionNode : Node
 {
 private:
+	Servo *myservo;
+	int a_PIN;
 
 	void setName();
 	void setServiceList();
+
+	void direita(int);
+	void esquerda(int);
+	void centro();
 public:
-	void run(){}
-	void runService(char*){}
+	DirectionNode(int);
+	void run();
+	void runService(char*);
 };
 
 
 class TemperatureNode : Node
 {
-private:
+private:	
 	void setName();
 	void setServiceList();
 public:
-	void run(){}
+	TemperatureNode();
+	void run();
 	void runService(char*){}
 };
 

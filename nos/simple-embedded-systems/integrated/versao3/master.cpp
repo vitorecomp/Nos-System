@@ -25,14 +25,17 @@ void Master::initialize()
 	{
 		sNodesNames[i] = sNodes[i]->getName();
 	}
+	Serial.println("/////loop");
 }
 
 
 void Master::run()
 {
+
+	Serial.println("loop");
 	if(!interrupts->empty())
 		executeInterruptionList();
-
+	
 	executeNos();
 	executeConections();
 	executeSuperNos();
@@ -40,13 +43,21 @@ void Master::run()
 
 void Master::executeInterruptionList()
 {
+	Serial.println("connection");
+	if(!interrupts->empty()){
+		Serial.println(interrupts->getFirst());
+		while(1);
+	}
 	int nService = -1;
 	StringList *nAtenInterrupts = new StringList();
 	while(!interrupts->empty())
 	{
 		//pegando o nome do servico
-		char service[100];		
-		char *serviceTemp = interrupts->pop();
+		char service[100];
+		char serviceTemp[100];
+		char *serviceTemp2 = interrupts->pop();
+		strcpy(serviceTemp, serviceTemp2);
+		free(serviceTemp);
 		strcpy(service, serviceTemp);
 		char *serviceName = strtok(service, "/");
 
@@ -84,8 +95,8 @@ void Master::executeNos()
 	for(int i = 0; nodes[i] != NULL; i++)
 	{
 		nodes[i]->run();
+		Serial.println(nodes[i]->getName());
 		interrupts->list_push_back(nodes[i]->getInterrupts());
-		
 	}
 }
 
@@ -100,6 +111,7 @@ void Master::executeSuperNos()
 
 void Master::executeConections()
 {
+	Serial.println("chegou aqui");
 	for(int i = 0; connections[i] != NULL; i++)
 	{
 		interrupts->list_push_back(connections[i]->reciveMessages());	

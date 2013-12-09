@@ -2,6 +2,7 @@
 #define ENTIDADES_H
 
 #include <stdlib.h>
+#include <Arduino.h>
 
 typedef struct lStrings
 {

@@ -2,6 +2,7 @@
 
 void Node::initialize()
 {
+	interruptions = new StringList();
 	setName();
 	setServiceList();
 }

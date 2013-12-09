@@ -5,6 +5,7 @@
 #include "connection.h"
 #include "superNodes.h"
 
+#include <Arduino.h>
 #include <string.h>
 
 class Master
