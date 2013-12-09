@@ -117,11 +117,13 @@ void DirectionNode::run(){
 
 void DirectionNode::runService(char *service)
 {
+	Serial.println(service);
 	char *msgInr, *msg2;
     msgInr = strtok(service, "/;");
     msg2 = strtok(NULL, "/;");
 	msgInr = strtok(NULL, "/;");
 	int i = atoi(msgInr);
+
 	if(!strcmp(msg2, "center"))
 		centro();
 
