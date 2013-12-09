@@ -7,9 +7,9 @@ class Connection
 public:
 	virtual void initialize();
 	virtual int connect();
-	virtual int sendMessage();
-	virtual list<string> reciveMessages();
-	virtual int verifyConnection();
+	virtual int sendMessage(string);
+	virtual list<Interrupts> reciveMessages();
+	virtual bool verifyConnection();
 };
 
 #endif
