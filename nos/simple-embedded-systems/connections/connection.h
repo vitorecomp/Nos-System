@@ -3,6 +3,7 @@
 
 class Connection
 {
+	list<string> services;
 public:
 	virtual void initialize();
 	virtual int connect();
