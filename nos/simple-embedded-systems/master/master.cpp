@@ -1,5 +1,22 @@
 #include "master.h"
 
+void initialize()
+{
+	createNosList();
+	createSuperNosList();
+	createConnectionList();
+	
+	for(Lnode::interator n = nodes.begin(); n != nodes.end(); ++n)
+	{
+		nodesNames.push_back(n.getName());
+	}
+	for(Lsnode::interator n = sNodes.begin(); n != sNodes.end(); ++n)
+	{
+		sNodesNames.push_back(n.getName());
+	}
+}
+
+
 void Master::run()
 {
 	while(1)
@@ -23,8 +40,9 @@ void Master::executeInterruptionList()
 		string serviceTemp = n.getService();
 		char *service = new char [serviceTemp.length()+1];
   		strcpy (service, serviceTemp.c_str());
-		strtok(service, "/");
-		if(inNodeList())
+		char *name = strtok(service, "/");
+		string serviceName(name, strlen(name)+1);
+		if(inNodeList(serviceName))
 		{
 			for(Lnode::interator n = nodes.begin(); n != nodes.end(); ++n)
 			{
@@ -36,7 +54,7 @@ void Master::executeInterruptionList()
 			interruptions.remove(n);
 			continue;
 		}
-		if(inSuperNodeList())
+		if(inSuperNodeList(serviceName))
 		{
 			for(Lsnode::interator n = sNodes.begin(); n != sNodes.end(); ++n)
 			{
@@ -47,10 +65,10 @@ void Master::executeInterruptionList()
 			continue;
 		}
 
-		int temp = inConnectionList();
+		int temp = inConnectionList(serviceName);
 		if(temp >= 0)
 		{
-			for(Lconection::interator n = connections.begin(); n != connections.end(); ++n, i)
+			for(Lconection::interator n = connections.begin(); n != connections.end(); ++n)
 			{	
 				if(temp == i)
 					n.sendMessage(serviceTemp);
@@ -93,3 +111,32 @@ void Master::executeConections()
 	}
 }
 
+bool Master::inNodeList(string name)
+{
+	for(Lstring::interator n = nodesNames.begin(); n != nodesNames.end(); ++n)
+		if(n.getName.compare(name))
+			return true;
+	return false;
+}
+
+bool Master::inSuperNodeList(string name)
+{
+	for(Lstring::interator n = sNodesNames.begin(); n != sNodesNames.end(); ++n)
+		if(n.getName.compare(name))
+			return true;
+	return false;
+}	
+
+int Master::inConnectionList(string name)
+{
+	int i = 0;
+	for(Lstring::interator n = sNodesNames.begin(); n != sNodesNames.end(); ++n)
+	{
+		list<string> list = n.getConnectionList();
+		for(Lstring::interator n2 = sNodesNames.begin(); n2 != sNodesNames.end(); ++n2)
+			if(n2.getName.compare(name))
+				return i;
+		i++;
+	}
+	return -1;
+}

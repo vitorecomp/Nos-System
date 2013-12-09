@@ -46,7 +46,7 @@ private:
 	virtual void createSuperNosList();
 	virtual void createConnectionList();
 public:
-	Master();
+	void initialize();
 	void run();
 };
 #endif

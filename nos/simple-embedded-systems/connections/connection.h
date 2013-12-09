@@ -10,6 +10,7 @@ public:
 	virtual int sendMessage(string);
 	virtual list<Interrupts> reciveMessages();
 	virtual bool verifyConnection();
+	virtual list<string> getConnectionList();
 };
 
 #endif
