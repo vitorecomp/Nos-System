@@ -2,6 +2,7 @@
 
 void initialize()
 {
+	interruptions = new StringList();
 	for(int i = 0; i < 100; i ++)
 	{
 		nodes[i] = NULL;
@@ -10,7 +11,6 @@ void initialize()
 
 		nodesNames[i].clear();
 		sNodesNames[i].clear();
-		interrupts[i].clear();
 	}
 
 	createNosList();
@@ -30,28 +30,22 @@ void initialize()
 
 void Master::run()
 {
-	while(1)
-	{
-		if(nInterruptions > 0)
-			executeInterruptionList();
+	if(!interruptions->empty())
+		executeInterruptionList();
 
-		executeNos();
-		executeConections();
-		executeSuperNos();
-	}
-
+	executeNos();
+	executeConections();
+	executeSuperNos();
 }
 
 void Master::executeInterruptionList()
 {
 	int nService = -1;
-	for(int i = 0; nInterruptions > 0 || i < 100 ; i++)
+	StringLists *nAtenInterrupts = new StringList();
+	while(!interruptions->empty())
 	{
-		if(interruptions[i].empty())
-			continue;
-
 		//pegando o nome do servico
-		string serviceTemp = interruptions[i];
+		string serviceTemp = interruptions.pop();
 		char *service = new char [serviceTemp.length()+1];
   		strcpy (service, serviceTemp.c_str());
 		char *name = strtok(service, "/");
@@ -63,9 +57,6 @@ void Master::executeInterruptionList()
 		{
 			//executando servico
 			nodes[nService]->run(serviceTemp);
-			//dizendo que o servico ja foi executado
-			nInterruptions--;
-			interruptions[i].clear();
 			continue;
 		}
 		nService = inSuperNodeList(serviceName);
@@ -73,22 +64,20 @@ void Master::executeInterruptionList()
 		{
 			//executando o servico
 			sNodes[nService]->runService(serviceTemp);
-
-			//dizendo que o servico ja foi executado
-			nInterruptions--;
-			interruptions[i].clear();
 			continue;
 		}
 
 		nService = inConnectionList(serviceName);
 		if(nService >= 0)
 		{
+			//executando o servico
 			connections[nService]->sendMessage(serviceTemp);
-				
-			nInterruptions--;
-			interruptions[i].clear();
+			continue;
 		}
+		nAtenInterrupts->push(serviceTemp);
 	}
+	delete(interruptions);
+	interruptions = nAtenInterrupts;
 }
 
 void Master::executeNos()
@@ -103,51 +92,49 @@ void Master::executeNos()
 
 void Mater::executeSuperNos();
 {
-	for(Lsnode::interator n = sNodes.begin(); n != sNodes.end(); ++n)
+	for(int i = 0; sNodes[i] != NULL; i++)
 	{
-		n->run();
-		Linterrupt temp = n->getInterrupts();
-		for(Linterrupt::interator n = temp.begin(); n != temp.end(); ++n)
-			interruptions.push_back(n);	
+		sNodes[i]->run();
+		interruptions.list_push_back(sNode[i]->getInterrupts());	
 	}
 }
 
 void Master::executeConections()
 {
-	for(Lconection::interator n = connections.begin(); n != connections.end(); ++n)
+	for(int i = 0; connections[i] != NULL; i++)
 	{
-		Linterrupt temp = n->reciveMessages();
-		for(Linterrupt::interator n = temp.begin(); n != temp.end(); ++n)
-			interruptions.push_back(n);
+		interruptions.list_push_back(connections[i]->reciveMessages());	
 	}
 }
 
 bool Master::inNodeList(string name)
 {
-	for(Lstring::interator n = nodesNames.begin(); n != nodesNames.end(); ++n)
-		if(n->getName.compare(name))
-			return true;
-	return false;
+	for(int i = 0; !nodesNames[i].empty() && i < 100; i++)
+	{
+		if(nodesNames[i].compare(name))
+			return i;
+	}
+	return -1;
 }
 
 bool Master::inSuperNodeList(string name)
 {
-	for(Lstring::interator n = sNodesNames.begin(); n != sNodesNames.end(); ++n)
-		if(n->getName.compare(name))
-			return true;
-	return false;
-}	
+for(int i = 0; !NodesNames[i].empty() && i < 100; i++)
+	{
+		if(sNodesNames[i].compare(name))
+			return i;
+	}
+	return -1;	
 
 int Master::inConnectionList(string name)
 {
 	int i = 0;
-	for(Lstring::interator n = sNodesNames.begin(); n != sNodesNames.end(); ++n)
+	for(int i = 0; connections[i] != NULL; i++)
 	{
-		list<string> list = n->getConnectionList();
-		for(Lstring::interator n2 = sNodesNames.begin(); n2 != sNodesNames.end(); ++n2)
-			if(n2->getName.compare(name))
+		StringList *list = connections[i]->getConnectionList();
+		for(int i = 0; !list->getN(i).empty(); i++)
+			if(list->getN(i).compare(name))
 				return i;
-		i++;
 	}
 	return -1;
 }

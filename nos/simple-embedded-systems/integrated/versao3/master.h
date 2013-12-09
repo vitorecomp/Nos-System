@@ -22,13 +22,12 @@ private:
 	string nodesNames[100];	
 	string sNodesNames[100];	
 	//list of interruptions
-	StringLists interrupts;
+	StringLists *interrupts;
 	
 
 	bool inNodeList();
 	bool inSuperNodeList();
 	int inConnectionList();
-	void addOnInterruptionsList(string interruptions);
 
 
 	//functions

@@ -23,8 +23,12 @@ void StringList::push(string)
 
 void StringList::list_push_back(stringList)
 {
-	for(LStrings *termo = list; termo->next != NULL; termo = termo->next);
-	termo->next = stringList->list;
+	if(termo == NULL){
+		list = stringList;
+	}else{
+		for(LStrings *termo = list; termo->next != NULL; termo = termo->next);
+		termo->next = stringList->list;
+	}
 }
 
 
@@ -38,17 +42,24 @@ string StringList::pop();
 	termo = list->Valor;
 	lStrings *inter = list;
 	list= list->next;
-	destroy(list);
+	delete(list);
 	return termo;
 }
 
 string StringList::getFirst();
 {
-	string termo = new string();
-	if(list == NULL)
-		return termo;
+	return getN(0);
+}
 
-	termo = list->Valor;
+string StringList::getN(int ni);
+{
+	string termo = new string();
+	for(lStrings *iList = list, int i = 0; iList != NULL; iList = iList->next, i++)
+		if(i == ni)
+		{
+			termo = iList->Valor;
+			return termo;
+		}
 	return termo;
 }
 
