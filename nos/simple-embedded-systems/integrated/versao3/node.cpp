@@ -11,7 +11,7 @@ char* Node::getName()
 	return name;
 }
 
-StringList* Node::getServices()
+char** Node::getServices()
 {
 	return services;
 }

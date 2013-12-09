@@ -7,12 +7,12 @@
 class BlueToothConnection : Connection
 {
 public:
-	void initialize();
-	int connect();
-	int sendMessage(char *);
-	StringList* reciveMessages();
-	bool verifyConnection();
-	StringList* getConnectionList();
+	void initialize(){}
+	int connect(){}
+	int sendMessage(char *){}
+	StringList* reciveMessages(){}
+	bool verifyConnection(){}
+	StringList* getConnectionList(){}
 };
 
 #endif

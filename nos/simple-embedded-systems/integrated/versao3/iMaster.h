@@ -2,8 +2,9 @@
 #define IMASTER_H
 
 #include "master.h"
-#include "inodes.h"
+#include "inode.h"
 #include "iconnection.h"
+#include "Defines.h"
 
 class IMaster : protected Master{
 private:

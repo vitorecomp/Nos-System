@@ -8,9 +8,9 @@ using namespace std;
 
 class Node
 {
-private:
+protected:
 	char *name;
-	StringList* services;
+	char ** services;
 	StringList* interruptions;
 
 	virtual void setName() = 0;
@@ -19,7 +19,7 @@ private:
 public:
 	void initialize();
 	char* getName();
-	StringList* getServices();
+	char** getServices();
 	StringList* getInterrupts();
 
 
