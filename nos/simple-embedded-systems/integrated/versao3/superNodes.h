@@ -9,10 +9,10 @@ using namespace std;
 class SuperNodes
 {
 private:
-	list<*Node> nodes;
-	list<sting> dependenceNodes;
-	list<string> myServices;
-	list<Interrupts> interruptions;
+	Node *nodes[100];
+	StringLists dependenceNodes;
+	StringLists myServices;
+	StringLists interruptions;
 	string myName;
 
 	virtual void setName() = 0;
@@ -22,15 +22,13 @@ private:
 
 
 public:
-	list<string> getDependecesNames();
+	StringLists getDependecesNames();
 	void setNodeDependences(list<*Node>);
 
 	void initialize();
 	string getName();
-	list<string> getServices();
-	list<Interrupts> getInterrupts();
-	void returnInterruts(list<Interrupts>);
-
+	StringLists getServices();
+	StringLists getInterrupts();
 
 	virtual int run() = 0;
 	virtual int runService(string) = 0;

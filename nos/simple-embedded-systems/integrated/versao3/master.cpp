@@ -2,17 +2,28 @@
 
 void initialize()
 {
+	for(int i = 0; i < 100; i ++)
+	{
+		nodes[i] = NULL;
+		sNodes[i] = NULL;
+		connections[i] = NULL;
+
+		nodesNames[i].clear();
+		sNodesNames[i].clear();
+		interrupts[i].clear();
+	}
+
 	createNosList();
 	createSuperNosList();
 	createConnectionList();
 	
-	for(Lnode::interator n = nodes.begin(); n != nodes.end(); ++n)
+	for(int i = 0; nodes[i] != NULL; i++)
 	{
-		nodesNames.push_back(n->getName());
+		nodesNames[i] = nodes[i].getName();
 	}
-	for(Lsnode::interator n = sNodes.begin(); n != sNodes.end(); ++n)
+	for(int i = 0; i < 100; i++)
 	{
-		sNodesNames.push_back(n->getName());
+		sNodesNames[i] = sNodes[i].getName();
 	}
 }
 
@@ -21,7 +32,7 @@ void Master::run()
 {
 	while(1)
 	{
-		if(!interruptions.empty())
+		if(nInterruptions > 0)
 			executeInterruptionList();
 
 		executeNos();
@@ -33,66 +44,60 @@ void Master::run()
 
 void Master::executeInterruptionList()
 {
-	int i = 0;
-	for(Linterrupt::interator n = interruptions.begin(); n != interruptions.end(); ++n)
+	int nService = -1;
+	for(int i = 0; nInterruptions > 0 || i < 100 ; i++)
 	{
+		if(interruptions[i].empty())
+			continue;
+
 		//pegando o nome do servico
-		string serviceTemp = n->getService();
+		string serviceTemp = interruptions[i];
 		char *service = new char [serviceTemp.length()+1];
   		strcpy (service, serviceTemp.c_str());
 		char *name = strtok(service, "/");
 		string serviceName(name, strlen(name)+1);
-		if(inNodeList(serviceName))
+
+		//decobrindo onde sera executado
+		int nService = inNodeList(serviceName);
+		if(nService >= 0)
 		{
-			for(Lnode::interator n = nodes.begin(); n != nodes.end(); ++n)
-			{
-				if(n->getName().compare(serviceTemp))
-				{
-					n->runService(serviceTemp);
-				}
-			}
-			Node *temp = n;
-			interruptions.remove(n);
-			detroy(temp);
+			//executando servico
+			nodes[nService]->run(serviceTemp);
+			//dizendo que o servico ja foi executado
+			nInterruptions--;
+			interruptions[i].clear();
 			continue;
 		}
-		if(inSuperNodeList(serviceName))
+		nService = inSuperNodeList(serviceName);
+		if(nService >= 0)
 		{
-			for(Lsnode::interator n = sNodes.begin(); n != sNodes.end(); ++n)
-			{
-				if(n->getName().compare(serviceTemp))
-					n->runService(serviceTemp);
-			}
-			Node *temp = n;
-			interruptions.remove(n);
-			detroy(temp);
+			//executando o servico
+			sNodes[nService]->runService(serviceTemp);
+
+			//dizendo que o servico ja foi executado
+			nInterruptions--;
+			interruptions[i].clear();
 			continue;
 		}
 
-		int temp = inConnectionList(serviceName);
-		if(temp >= 0)
+		nService = inConnectionList(serviceName);
+		if(nService >= 0)
 		{
-			for(Lconection::interator n = connections.begin(); n != connections.end(); ++n)
-			{	
-				if(temp == i)
-					n->sendMessage(serviceTemp);
-				i++;
-			}
-			Node *temp = n;
-			interruptions.remove(n);
-			detroy(temp);
+			connections[nService]->sendMessage(serviceTemp);
+				
+			nInterruptions--;
+			interruptions[i].clear();
 		}
 	}
 }
 
 void Master::executeNos()
 {
-	for(Lnode::interator n = nodes.begin(); n != nodes.end(); ++n)
+	for(int i = 0; nodes[i] != NULL; i++)
 	{
-		n->run();
-		Linterrupt temp = n->getInterrupts();
-		for(Linterrupt::interator n = temp.begin(); n != temp.end(); ++n)
-			interruptions.push_back(n);
+		nodes[i]->run();
+		interruptions.list_push_back(node[i]->getInterrupts());
+		
 	}
 }
 

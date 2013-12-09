@@ -6,34 +6,31 @@
 #include "superNodes.h"
 
 #include <string.h>
-#include <list>
 
 using namespace std;
-
-#define list<Node*> Lnode;
-#define list<SuperNode*> Lsnode;
-#define list<Connection*> connections;
-#define list<string> Lstring;
-#define list<Interrupt*> Linterrupt;
 
 class Master
 {
 private:
 	//list of nodes
-	Lnode nodes;
+	Node *nodes[100];
 	//list of supernodes
-	Lsnode sNodes;
+	SuperNodes *sNodes[100];
+	//list of connection
+	Connection *connections[100];
 	//list of nodes names
-	Lstring nodesNames;	
-	Lstring sNodesNames;	
+	string nodesNames[100];	
+	string sNodesNames[100];	
 	//list of interruptions
-	Linterrupt interrupts;
+	StringLists interrupts;
 	
 
 	bool inNodeList();
 	bool inSuperNodeList();
 	int inConnectionList();
-	
+	void addOnInterruptionsList(string interruptions);
+
+
 	//functions
 	void executeNos();
 	void executeSuperNos();

@@ -10,8 +10,8 @@ class Node
 {
 private:
 	string name;
-	list<string> services;
-	list<Interrupts> interruptions;
+	StringLists services;
+	StringLists interruptions;
 
 	virtual void setName() = 0;
 	virtual void setServiceList() = 0;
@@ -19,8 +19,8 @@ private:
 public:
 	void initialize();
 	string getName();
-	list<string> getServices();
-	list<Interrupts> getInterrupts();
+	StringLists getServices();
+	StringLists getInterrupts();
 
 
 	virtual int run() = 0;

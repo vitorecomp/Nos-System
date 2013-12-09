@@ -7,9 +7,9 @@ public:
 	void initialize();
 	int connect();
 	int sendMessage(string);
-	list<Interrupts> reciveMessages();
+	StringLists reciveMessages();
 	bool verifyConnection();
-	list<string> getConnectionList();
+	StringLists getConnectionList();
 };
 
 #endif
