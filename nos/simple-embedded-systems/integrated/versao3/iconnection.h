@@ -9,12 +9,53 @@
 class BlueToothConnection : Connection
 {
 public:
+	/** \fn virtual void validate(const string& value) throw (invalid_argument) = 0
+     *  \brief Validar os argumentos antes que estes sejam setados nas classes.
+     *  \param value : e o valor a ser validado
+     *  \exception std::invalid_argument o argumeto e invalido
+     */
 	BlueToothConnection();
+
+	/** \fn virtual void validate(const string& value) throw (invalid_argument) = 0
+     *  \brief Validar os argumentos antes que estes sejam setados nas classes.
+     *  \param value : e o valor a ser validado
+     *  \exception std::invalid_argument o argumeto e invalido
+     */
 	void initialize(){}
+
+	/** \fn virtual void validate(const string& value) throw (invalid_argument) = 0
+     *  \brief Validar os argumentos antes que estes sejam setados nas classes.
+     *  \param value : e o valor a ser validado
+     *  \exception std::invalid_argument o argumeto e invalido
+     */
 	int connect(){}
+
+	/** \fn virtual void validate(const string& value) throw (invalid_argument) = 0
+     *  \brief Validar os argumentos antes que estes sejam setados nas classes.
+     *  \param value : e o valor a ser validado
+     *  \exception std::invalid_argument o argumeto e invalido
+     */
 	int sendMessage(char *){}
+
+	/** \fn virtual void validate(const string& value) throw (invalid_argument) = 0
+     *  \brief Validar os argumentos antes que estes sejam setados nas classes.
+     *  \param value : e o valor a ser validado
+     *  \exception std::invalid_argument o argumeto e invalido
+     */
 	StringList* reciveMessages();
+
+	/** \fn virtual void validate(const string& value) throw (invalid_argument) = 0
+     *  \brief Validar os argumentos antes que estes sejam setados nas classes.
+     *  \param value : e o valor a ser validado
+     *  \exception std::invalid_argument o argumeto e invalido
+     */
 	bool verifyConnection(){}
+
+	/** \fn virtual void validate(const string& value) throw (invalid_argument) = 0
+     *  \brief Validar os argumentos antes que estes sejam setados nas classes.
+     *  \param value : e o valor a ser validado
+     *  \exception std::invalid_argument o argumeto e invalido
+     */
 	StringList* getConnectionList(){}
 };
 

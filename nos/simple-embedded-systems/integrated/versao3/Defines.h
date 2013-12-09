@@ -1,3 +1,10 @@
+/* 
+ * File:   Defines.h
+ * Author: Vitor
+ *
+ * Created on 3 de Octuber de 2013, 16:32
+ */
+
 #ifndef DEFINES_H
 #define DEFINES_H
 
