@@ -15,18 +15,17 @@ private:
 
 	virtual void setName() = 0;
 	virtual void setServiceList() = 0;
-	void cleanInterrupts();
 
 public:
 	void initialize();
 	string getName();
 	list<string> getServices();
 	list<Interrupts> getInterrupts();
-	void returnInterruts(list<Interrupts>);
 
 
 	virtual int run() = 0;
 	virtual int runService(string) = 0;
 };
+
 
 #endif

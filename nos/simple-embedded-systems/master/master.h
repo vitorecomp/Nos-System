@@ -34,8 +34,6 @@ private:
 	bool inSuperNodeList();
 	int inConnectionList();
 	
-
-
 	//functions
 	void executeNos();
 	void executeSuperNos();

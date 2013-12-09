@@ -22,11 +22,5 @@ string Interrupt::getService()
 	return this->service;
 }
 
-class Service
-{
-private:
-	string service;
-
-};
 
 #endif
