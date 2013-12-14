@@ -1,3 +1,8 @@
+/**  \file   superNodes.h
+     \brief  Cabecalho das classes que prove o serviço de super no. Nesse esta contido todo o codigo necessario
+     para se ter um conito de super no implementado fora apenas o serviços implementados por estes
+*/
+
 #ifndef NOS_H
 #define NOS_H
 
@@ -6,17 +11,16 @@
 using namespace std;
 
 
-/** \class BasicType
- *  \brief Essa e a classe responsavel por ser um padrao de classe para clases tipos basicos       \n
- *      tendo os metodos obrigratorios para todas essas e os mentodos mais gerais ja implemtados\n
- *      inline garantindo uma economia de memoria.
- */
+/** \class Node
+     \brief Classe que reprensenta os nos essa define a estrutura basica de um no, essa tras
+     a implentaçõa basico de um No, com as fiuncianlidades basicas ja implentadas levando apenas
+     a implentaçao do No apenas a preocupaçao com detalhes dos serviços providos por esse*/
 class Node
 {
 protected:
-	char *name;					/**< Esta string e usada para armazenar as informaçoes repassadas de cada classe apos a validaçao destas*/
-	char ** services;			/**< Esta string e usada para armazenar as informaçoes repassadas de cada classe apos a validaçao destas*/
-	StringList* interruptions;	/**< Esta string e usada para armazenar as informaçoes repassadas de cada classe apos a validaçao destas*/
+	char *name;				/**< Nome do no*/
+	char ** services;			/**< Lista de serviços providos pelo no*/
+	StringList* interruptions;	/**< Lista de interrupçoes gerados pelo no apos uma interaço ou uma chamada de serviço.*/
 
 	/** \fn virtual void validate(const string& value) throw (invalid_argument) = 0
      *  \brief Validar os argumentos antes que estes sejam setados nas classes.

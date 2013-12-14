@@ -10,7 +10,7 @@
 #include <string.h>
 
 /**  \class SuperNode
-     \brief Essa classe representa um superNo que implementa serviçosq que dependem de mais de um no, 
+     \brief Essa classe representa um superNo que implementa serviços que dependem de mais de um no, 
      esse coiceito permite que a comicaçao quase direta entre esse nos e tambem diminui varios problemas
      desse tipo de serviço pois agora ele so podera ser feito se os dois nos existirem. Evitando assim com
      que o serviço seja disponibilizado mesmo com uma de sua dependencias off.*/
