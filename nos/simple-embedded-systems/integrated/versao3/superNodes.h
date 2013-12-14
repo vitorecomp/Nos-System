@@ -4,35 +4,37 @@
 #include "node.h"
 #include <string.h>
 
-/** \class BasicType
- *  \brief Essa e a classe responsavel por ser um padrao de classe para clases tipos basicos       \n
- *      tendo os metodos obrigratorios para todas essas e os mentodos mais gerais ja implemtados\n
- *      inline garantindo uma economia de memoria.
+/** \class SuperNode
+ *  \brief Essa classe representa um superNo que implementa serviçosq que dependem de mais de um no, 
+ *  esse coiceito permite que a comicaçao quase direta entre esse nos e tambem diminui varios problemas
+ *  desse tipo de serviço pois agora ele so podera ser feito se os dois nos existirem. Evitando assim com
+ *  que o serviço seja disponibilizado mesmo com uma de sua dependencias off.
  */
 class SuperNode
 {
 private:
-	Node *nodes[100];				/**< Esta string e usada para armazenar as informaçoes repassadas de cada classe apos a validaçao destas*/
-	StringList* dependenceNodes;	/**< Esta string e usada para armazenar as informaçoes repassadas de cada classe apos a validaçao destas*/
-	StringList* myServices;			/**< Esta string e usada para armazenar as informaçoes repassadas de cada classe apos a validaçao destas*/
-	StringList* interruptions;		/**< Esta string e usada para armazenar as informaçoes repassadas de cada classe apos a validaçao destas*/
-	char* name;						/**< Esta string e usada para armazenar as informaçoes repassadas de cada classe apos a validaçao destas*/
+	Node *nodes[100];			/**< Nos que esse master controla.*/
+	StringList* dependenceNodes;	/**< Nomes dos nos necessarios para instaciação do master.*/
+	StringList* myServices;		/**< Lista de serviços que esse disponibilizada pelo superNo.*/
+	StringList* interruptions;	/**< Lista de interrupçoes geradas pelo super no apos uma execução.*/
+	char* name;				/**< Nome do superNo.*/
 
-	/** \fn virtual void validate(const string& value) throw (invalid_argument) = 0
-     *  \brief Validar os argumentos antes que estes sejam setados nas classes.
-     *  \param value : e o valor a ser validado
-     *  \exception std::invalid_argument o argumeto e invalido
+	/** \fn virtual void setName() = 0
+     *  \brief Essa atruibui valor a variavel name, o seu respectivo valor. E uma função garante
+     *  para na implementaçao dessa classe o programado set um nome para o super no garantindo
+     *  assim o funcionamento cosiso do sistema. 
      */
 	virtual void setName() = 0;
 
-	/** \fn virtual void validate(const string& value) throw (invalid_argument) = 0
-     *  \brief Validar os argumentos antes que estes sejam setados nas classes.
-     *  \param value : e o valor a ser validado
-     *  \exception std::invalid_argument o argumeto e invalido
+	/** \fn virtual void setNodeDependencesName()
+     *  \brief Essa atribui a valor a lista que guarda o nome dos nos necessarios 
+     *  para a instaciação dessa classe.E uma função garante que durante a
+     *  implementaçao dessa classe o programado set essa lista para o superNo garantindo
+     *  assim o funcionamento cosiso do sistema. 
      */
 	virtual void setNodeDependencesName() = 0;
 
-	/** \fn virtual void validate(const string& value) throw (invalid_argument) = 0
+	/** \fn virtual void setServiceList() = 0
      *  \brief Validar os argumentos antes que estes sejam setados nas classes.
      *  \param value : e o valor a ser validado
      *  \exception std::invalid_argument o argumeto e invalido
