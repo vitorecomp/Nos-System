@@ -85,6 +85,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow3" class="tabs2">
     <ul class="tablist">
       <li><a href="functions.html"><span>All</span></a></li>
+      <li><a href="functions_func.html"><span>Functions</span></a></li>
       <li class="current"><a href="functions_vars.html"><span>Variables</span></a></li>
     </ul>
   </div>
@@ -104,32 +105,85 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div id="doc-content">
 <div class="contents">
 &#160;<ul>
+<li>a_PIN
+: <a class="el" href="class_motor_node.html#aa0056bc3a0d01daac73e10afa98fb38a">MotorNode</a>
+, <a class="el" href="class_direction_node.html#ae5a68ce3183d9f5ab17786385e753127">DirectionNode</a>
+</li>
 <li>connections
 : <a class="el" href="class_master.html#a8bc8a77b8885a2059876fec3e8148655">Master</a>
 </li>
+<li>d1_PIN
+: <a class="el" href="class_motor_node.html#a83bbfecdc4f5ce895b60790905de61ad">MotorNode</a>
+</li>
+<li>d2_PIN
+: <a class="el" href="class_motor_node.html#a898ee928705b6746296517bde5f9aaf2">MotorNode</a>
+</li>
+<li>dependenceNodes
+: <a class="el" href="class_super_node.html#ad3fb4890573b94871776dd6712fb7191">SuperNode</a>
+</li>
 <li>interruptions
 : <a class="el" href="class_node.html#a835e1b08cf223b7d424286d9831e6e1b">Node</a>
+, <a class="el" href="class_super_node.html#aa4e681aede949122507446824cef9fe6">SuperNode</a>
 </li>
 <li>interrupts
 : <a class="el" href="class_master.html#a63c0b80c268641b773de9dcd5e11b7c3">Master</a>
 </li>
+<li>isActive
+: <a class="el" href="struct_servo_pin__t.html#aaf3c1889bb99bc6f936a3cfb6eba532a">ServoPin_t</a>
+</li>
+<li>list
+: <a class="el" href="class_string_list.html#a759079f877566a0f5b53ba943a21ed6a">StringList</a>
+</li>
+<li>max
+: <a class="el" href="class_servo.html#a71f71fd80677c88515444c3b88b51a21">Servo</a>
+</li>
+<li>min
+: <a class="el" href="class_servo.html#a11ac140aa7696dc424526f4f4562853d">Servo</a>
+</li>
+<li>myServices
+: <a class="el" href="class_super_node.html#a3a077dbaf88a5bd47a432f862e0c5fbf">SuperNode</a>
+</li>
+<li>myservo
+: <a class="el" href="class_direction_node.html#a1dd61938506f08758b12abd352b0da7f">DirectionNode</a>
+</li>
 <li>name
 : <a class="el" href="class_node.html#a059a0ea6f86dce9fd919c08a707b360b">Node</a>
+, <a class="el" href="class_super_node.html#a9ca87678abdbec40f370e17b56006eb8">SuperNode</a>
+</li>
+<li>nbr
+: <a class="el" href="struct_servo_pin__t.html#ad2ff0e34820e04a276e38d359021b03c">ServoPin_t</a>
+</li>
+<li>next
+: <a class="el" href="structl_strings.html#ac85f27c4135282e360ee3f50dbdddcde">lStrings</a>
 </li>
 <li>nodes
 : <a class="el" href="class_master.html#ad72e615042ba6d7dce6eb740d566d656">Master</a>
+, <a class="el" href="class_super_node.html#ac0fc7ee976ec99824410cbc64693dff2">SuperNode</a>
 </li>
 <li>nodesNames
 : <a class="el" href="class_master.html#a7e1f5d1be566ea94123c986af9acf869">Master</a>
 </li>
+<li>Pin
+: <a class="el" href="structservo__t.html#a04bcc6cf13ea5cd2c4dabdc977e054cb">servo_t</a>
+</li>
 <li>services
-: <a class="el" href="class_node.html#a4b21b5cd6dda987633ec2d42be41a844">Node</a>
+: <a class="el" href="class_connection.html#a815d06b275bbd9688b539b53f0af22d2">Connection</a>
+, <a class="el" href="class_node.html#a4b21b5cd6dda987633ec2d42be41a844">Node</a>
+</li>
+<li>servoIndex
+: <a class="el" href="class_servo.html#a01fa8c02563163757164771304f9ab3a">Servo</a>
 </li>
 <li>sNodes
 : <a class="el" href="class_master.html#aee685e5b58f7bd2c34e69118f360a95e">Master</a>
 </li>
 <li>sNodesNames
 : <a class="el" href="class_master.html#aff269d443848d41f5a5a1d641b1eacb7">Master</a>
+</li>
+<li>ticks
+: <a class="el" href="structservo__t.html#ad1d758a6f4b18bf2eee4d48d1bf9fad6">servo_t</a>
+</li>
+<li>Valor
+: <a class="el" href="structl_strings.html#a1e1e6e9e264c2b017dd8e4b255166f7b">lStrings</a>
 </li>
 </ul>
 </div><!-- contents -->
@@ -138,7 +192,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -151,7 +205,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="nav-path" class="navpath">
     <ul>
 
-    <li class="footer">Generated on Sat Dec 14 2013 14:47:23 for Nos - System by
+    <li class="footer">Generated on Sat Dec 14 2013 15:36:10 for Nos - System by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

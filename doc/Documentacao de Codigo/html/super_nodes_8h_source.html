@@ -77,6 +77,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 </div>
@@ -98,50 +99,51 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">/home/vitor/workspace/Nos-System/nos/simple-embedded-systems/integrated/versao3/superNodes.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef SUPERNODES_H</span>
-<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define SUPERNODES_H</span>
-<a name="l00003"></a>00003 <span class="preprocessor"></span>
-<a name="l00004"></a>00004 <span class="preprocessor">#include &quot;node.h&quot;</span>
-<a name="l00005"></a>00005 <span class="preprocessor">#include &lt;string.h&gt;</span>
-<a name="l00006"></a>00006 
-<a name="l00013"></a><a class="code" href="class_super_node.html">00013</a> <span class="keyword">class </span><a class="code" href="class_super_node.html" title="Essa classe representa um superNo que implementa serviçosq que dependem de mais de um no...">SuperNode</a>
-<a name="l00014"></a>00014 {
-<a name="l00015"></a>00015 <span class="keyword">private</span>:
-<a name="l00016"></a>00016         <a class="code" href="class_node.html">Node</a> *nodes[100];                       
-<a name="l00017"></a>00017         <a class="code" href="class_string_list.html">StringList</a>* dependenceNodes;    
-<a name="l00018"></a>00018         <a class="code" href="class_string_list.html">StringList</a>* myServices;         
-<a name="l00019"></a>00019         <a class="code" href="class_string_list.html">StringList</a>* interruptions;      
-<a name="l00020"></a>00020         <span class="keywordtype">char</span>* name;                             
-<a name="l00027"></a>00027         <span class="keyword">virtual</span> <span class="keywordtype">void</span> setName() = 0;
-<a name="l00028"></a>00028 
-<a name="l00035"></a>00035         <span class="keyword">virtual</span> <span class="keywordtype">void</span> setNodeDependencesName() = 0;
-<a name="l00036"></a>00036 
-<a name="l00042"></a>00042         <span class="keyword">virtual</span> <span class="keywordtype">void</span> setServiceList() = 0;
-<a name="l00043"></a>00043 
-<a name="l00049"></a>00049         <span class="keywordtype">void</span> cleanInterrupts();
+<a href="super_nodes_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00006"></a>00006 <span class="preprocessor">#ifndef SUPERNODES_H</span>
+<a name="l00007"></a>00007 <span class="preprocessor"></span><span class="preprocessor">#define SUPERNODES_H</span>
+<a name="l00008"></a>00008 <span class="preprocessor"></span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="code" href="node_8h.html">node.h</a>&quot;</span>
+<a name="l00010"></a>00010 <span class="preprocessor">#include &lt;string.h&gt;</span>
+<a name="l00011"></a>00011 
+<a name="l00017"></a><a class="code" href="class_super_node.html">00017</a> <span class="keyword">class </span><a class="code" href="class_super_node.html" title="Essa classe representa um superNo que implementa serviçosq que dependem de mais de um no...">SuperNode</a>
+<a name="l00018"></a>00018 {
+<a name="l00019"></a>00019 <span class="keyword">protected</span>:
+<a name="l00020"></a><a class="code" href="class_super_node.html#ac0fc7ee976ec99824410cbc64693dff2">00020</a>         <a class="code" href="class_node.html">Node</a> *<a class="code" href="class_super_node.html#ac0fc7ee976ec99824410cbc64693dff2">nodes</a>[100];                       
+<a name="l00021"></a><a class="code" href="class_super_node.html#ad3fb4890573b94871776dd6712fb7191">00021</a>         <a class="code" href="class_string_list.html">StringList</a>* <a class="code" href="class_super_node.html#ad3fb4890573b94871776dd6712fb7191">dependenceNodes</a>;    
+<a name="l00022"></a><a class="code" href="class_super_node.html#a3a077dbaf88a5bd47a432f862e0c5fbf">00022</a>         <a class="code" href="class_string_list.html">StringList</a>* <a class="code" href="class_super_node.html#a3a077dbaf88a5bd47a432f862e0c5fbf">myServices</a>;         
+<a name="l00023"></a><a class="code" href="class_super_node.html#aa4e681aede949122507446824cef9fe6">00023</a>         <a class="code" href="class_string_list.html">StringList</a>* <a class="code" href="class_super_node.html#aa4e681aede949122507446824cef9fe6">interruptions</a>;      
+<a name="l00024"></a><a class="code" href="class_super_node.html#a9ca87678abdbec40f370e17b56006eb8">00024</a>         <span class="keywordtype">char</span>* <a class="code" href="class_super_node.html#a9ca87678abdbec40f370e17b56006eb8">name</a>;                             
+<a name="l00030"></a>00030         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_super_node.html#a629fa000c6e75a4e84b2be5a21fd0815" title="Essa atruibui valor a variavel name, o seu respectivo valor. E uma função garante para na implementaç...">setName</a>();
+<a name="l00031"></a>00031 
+<a name="l00037"></a>00037         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_super_node.html#a987bb16826f7a2f03b1eb830020cf370" title="Essa atribui a valor a lista que guarda o nome dos nos necessarios para a instaciação dessa classe...">setNodeDependencesName</a>();
+<a name="l00038"></a>00038 
+<a name="l00043"></a>00043         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_super_node.html#adf5796c32740df5134b5cd2eb11b42dc" title="Esse atribui valor lista de serviços que sao disponibilizados pelo super no. E uma função garante que...">setServiceList</a>();
+<a name="l00044"></a>00044 
+<a name="l00048"></a>00048         <span class="keywordtype">void</span> <a class="code" href="class_super_node.html#a2a6440835cd1b7289b6021fd0281ea16" title="Responsavel por limpar as interrupçoes apos esse serem requisitadas pelos master, garantindo assim qu...">cleanInterrupts</a>();
+<a name="l00049"></a>00049 
 <a name="l00050"></a>00050 
-<a name="l00051"></a>00051 
-<a name="l00052"></a>00052 <span class="keyword">public</span>:
-<a name="l00053"></a>00053 
-<a name="l00059"></a>00059         <a class="code" href="class_string_list.html">StringList</a> getDependecesNames();
-<a name="l00060"></a>00060 
-<a name="l00066"></a>00066         <span class="keywordtype">void</span> setNodeDependences(<a class="code" href="class_node.html">Node</a>**);
-<a name="l00067"></a>00067 
-<a name="l00073"></a>00073         <span class="keywordtype">void</span> initialize();
-<a name="l00074"></a>00074 
-<a name="l00080"></a>00080         <span class="keywordtype">char</span>* getName();
-<a name="l00081"></a>00081 
-<a name="l00087"></a>00087         <a class="code" href="class_string_list.html">StringList</a>* getServices();
-<a name="l00088"></a>00088 
-<a name="l00094"></a>00094         <a class="code" href="class_string_list.html">StringList</a>* getInterrupts();
-<a name="l00095"></a>00095 
-<a name="l00096"></a>00096 
-<a name="l00102"></a>00102         <span class="keyword">virtual</span> <span class="keywordtype">int</span> run() = 0;
-<a name="l00103"></a>00103 
-<a name="l00109"></a>00109         <span class="keyword">virtual</span> <span class="keywordtype">int</span> runService(<span class="keywordtype">char</span>*) = 0;
-<a name="l00110"></a>00110 };
-<a name="l00111"></a>00111 
-<a name="l00112"></a>00112 <span class="preprocessor">#endif</span>
+<a name="l00051"></a>00051 <span class="keyword">public</span>:
+<a name="l00052"></a>00052 
+<a name="l00058"></a>00058         <a class="code" href="class_string_list.html">StringList</a> <a class="code" href="class_super_node.html#a3171db92d10ec5d38950b55e4af27188" title="Essa retorna a lista e com os nomes dos nos nos necessarios para poder executar um servico immplentad...">getDependecesNames</a>();
+<a name="l00059"></a>00059 
+<a name="l00064"></a>00064         <span class="keywordtype">void</span> <a class="code" href="class_super_node.html#a17f4dc1eb55152558b56f24bfad2f693" title="Responsavel por dar um ser nos que seram usados durante a execuçao dos serviços e validar se todos os...">setNodeDependences</a>(<a class="code" href="class_node.html">Node</a>**);
+<a name="l00065"></a>00065 
+<a name="l00069"></a>00069         <span class="keywordtype">void</span> <a class="code" href="class_super_node.html#acd0db29a8b8cc240a0f8c7c5c387f271" title="responsavel por inicializar o super no, garantindo que tudo esteja ok antes da execucao dos serviços ...">initialize</a>();
+<a name="l00070"></a>00070 
+<a name="l00075"></a>00075         <span class="keywordtype">char</span>* <a class="code" href="class_super_node.html#a739c73e1eda5cc23dd32d39ccd8d83ca" title="reporna o nome do superNo, podendo assim direcionar os serviços detinados a ele de forma correta...">getName</a>();
+<a name="l00076"></a>00076 
+<a name="l00082"></a>00082         <a class="code" href="class_string_list.html">StringList</a>* <a class="code" href="class_super_node.html#a4112876ace824e4bb6107444547627fb" title="Retorna a lista de serviços disponibilizados pelo super No a partir do momento que todos os nos dos q...">getServices</a>();
+<a name="l00083"></a>00083 
+<a name="l00089"></a>00089         <a class="code" href="class_string_list.html">StringList</a>* <a class="code" href="class_super_node.html#ae26f1c3a0dfee60095dd0edb3a80e0c2" title="Retorna a lista de interrupçoes gerando pelo super no apos a execução de um serviço ou de um interaçã...">getInterrupts</a>();
+<a name="l00090"></a>00090 
+<a name="l00091"></a>00091 
+<a name="l00097"></a>00097         <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="class_super_node.html#a1d9839cfe5b7618697f9a9cf21614459">run</a>();
+<a name="l00098"></a>00098 
+<a name="l00104"></a>00104         <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="class_super_node.html#a200a0c6d3a2705aec6be89264eb3c97a">runService</a>(<span class="keywordtype">char</span>*);
+<a name="l00105"></a>00105 };
+<a name="l00106"></a>00106 
+<a name="l00107"></a>00107 <span class="preprocessor">#endif</span>
 </pre></div></div><!-- contents -->
 </div>
 <!-- window showing the filter options -->
@@ -149,7 +151,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -160,9 +162,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><b>superNodes.h</b>      </li>
+      <li class="navelem"><a class="el" href="super_nodes_8h.html">superNodes.h</a>      </li>
 
-    <li class="footer">Generated on Sat Dec 14 2013 14:47:22 for Nos - System by
+    <li class="footer">Generated on Sat Dec 14 2013 15:36:09 for Nos - System by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

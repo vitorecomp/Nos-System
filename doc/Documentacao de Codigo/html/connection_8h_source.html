@@ -77,6 +77,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 </div>
@@ -98,26 +99,26 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">/home/vitor/workspace/Nos-System/nos/simple-embedded-systems/integrated/versao3/connection.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef CONNECTIONS_H</span>
+<a href="connection_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef CONNECTIONS_H</span>
 <a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define CONNECTIONS_H</span>
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
-<a name="l00004"></a>00004 <span class="preprocessor">#include &quot;Entidades.h&quot;</span>
+<a name="l00004"></a>00004 <span class="preprocessor">#include &quot;<a class="code" href="_entidades_8h.html">Entidades.h</a>&quot;</span>
 <a name="l00005"></a>00005 
 <a name="l00006"></a><a class="code" href="class_connection.html">00006</a> <span class="keyword">class </span><a class="code" href="class_connection.html">Connection</a>
 <a name="l00007"></a>00007 {
-<a name="l00008"></a>00008         <a class="code" href="class_string_list.html">StringList</a> services; 
+<a name="l00008"></a><a class="code" href="class_connection.html#a815d06b275bbd9688b539b53f0af22d2">00008</a>         <a class="code" href="class_string_list.html">StringList</a> <a class="code" href="class_connection.html#a815d06b275bbd9688b539b53f0af22d2">services</a>; 
 <a name="l00010"></a>00010 <span class="keyword">public</span>:
-<a name="l00016"></a>00016         <span class="keyword">virtual</span> <span class="keywordtype">void</span> initialize() = 0;
+<a name="l00016"></a>00016         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_connection.html#a28243250ce4a8afcc2c3c28cb215cda6">initialize</a>() = 0;
 <a name="l00017"></a>00017 
-<a name="l00023"></a>00023         <span class="keyword">virtual</span> <span class="keywordtype">int</span> connect() = 0;
+<a name="l00023"></a>00023         <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="class_connection.html#ae97c710db785d4387e73def6cc2e10d0">connect</a>() = 0;
 <a name="l00024"></a>00024 
-<a name="l00030"></a>00030         <span class="keyword">virtual</span> <span class="keywordtype">int</span> sendMessage(<span class="keywordtype">char</span> *) = 0;
+<a name="l00030"></a>00030         <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="class_connection.html#a3643ee96c249ac48f1bf4eba34111bdf">sendMessage</a>(<span class="keywordtype">char</span> *) = 0;
 <a name="l00031"></a>00031 
-<a name="l00037"></a>00037         <span class="keyword">virtual</span> <a class="code" href="class_string_list.html">StringList</a>* reciveMessages() = 0;
+<a name="l00037"></a>00037         <span class="keyword">virtual</span> <a class="code" href="class_string_list.html">StringList</a>* <a class="code" href="class_connection.html#ab2b0280016e8516f3114b7db2c901b68">reciveMessages</a>() = 0;
 <a name="l00038"></a>00038 
-<a name="l00044"></a>00044         <span class="keyword">virtual</span> <span class="keywordtype">bool</span> verifyConnection() = 0;
+<a name="l00044"></a>00044         <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_connection.html#a6aacb9e31524db4aea66618b869cb510">verifyConnection</a>() = 0;
 <a name="l00045"></a>00045 
-<a name="l00051"></a>00051         <span class="keyword">virtual</span> <a class="code" href="class_string_list.html">StringList</a>* getConnectionList() = 0;
+<a name="l00051"></a>00051         <span class="keyword">virtual</span> <a class="code" href="class_string_list.html">StringList</a>* <a class="code" href="class_connection.html#a50d0eb1a568b899bfaba95ebb1e1ee92">getConnectionList</a>() = 0;
 <a name="l00052"></a>00052 };
 <a name="l00053"></a>00053 
 <a name="l00054"></a>00054 <span class="preprocessor">#endif</span>
@@ -128,7 +129,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -139,9 +140,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><b>connection.h</b>      </li>
+      <li class="navelem"><a class="el" href="connection_8h.html">connection.h</a>      </li>
 
-    <li class="footer">Generated on Sat Dec 14 2013 14:47:22 for Nos - System by
+    <li class="footer">Generated on Sat Dec 14 2013 15:36:09 for Nos - System by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

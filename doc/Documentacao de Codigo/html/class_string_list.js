@@ -6,5 +6,6 @@ var class_string_list =
     [ "getN", "class_string_list.html#a3dc0d9070806f60c1fce9211a1013c8e", null ],
     [ "list_push_back", "class_string_list.html#ad5cafd0f3f93cb721c07a57badb297d8", null ],
     [ "pop", "class_string_list.html#aaba9dc874a2e06aef3ab046ab6a373e0", null ],
-    [ "push", "class_string_list.html#a887dd6d29b120cac80b3dbdc6d639b6d", null ]
+    [ "push", "class_string_list.html#a887dd6d29b120cac80b3dbdc6d639b6d", null ],
+    [ "list", "class_string_list.html#a759079f877566a0f5b53ba943a21ed6a", null ]
 ];

@@ -98,37 +98,340 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div id="doc-content">
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a>  </div>
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">Servo Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <!-- doxytag: class="Servo" -->
+<p><code>#include &lt;<a class="el" href="_servo_8h_source.html">Servo.h</a>&gt;</code></p>
+
 <p><a href="class_servo-members.html">List of all members.</a></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeccd2077f07ebc45250da14e72a0c461"></a><!-- doxytag: member="Servo::attach" ref="aeccd2077f07ebc45250da14e72a0c461" args="(int pin)" -->
-uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>attach</b> (int pin)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a70076d9a77de97241badd1f377817219"></a><!-- doxytag: member="Servo::attach" ref="a70076d9a77de97241badd1f377817219" args="(int pin, int min, int max)" -->
-uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>attach</b> (int pin, int min, int max)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0b69ccc5c8b348ebaa84be91d973a362"></a><!-- doxytag: member="Servo::detach" ref="a0b69ccc5c8b348ebaa84be91d973a362" args="()" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>detach</b> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a72b4b546912eada96a6ef705168ceb8a"></a><!-- doxytag: member="Servo::write" ref="a72b4b546912eada96a6ef705168ceb8a" args="(int value)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (int value)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac7fe3d6d2ea285ead98814bcfc417029"></a><!-- doxytag: member="Servo::writeMicroseconds" ref="ac7fe3d6d2ea285ead98814bcfc417029" args="(int value)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>writeMicroseconds</b> (int value)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaca0af33ba7d7c87c8a785b8eabf95a7"></a><!-- doxytag: member="Servo::read" ref="aaca0af33ba7d7c87c8a785b8eabf95a7" args="()" -->
-int&#160;</td><td class="memItemRight" valign="bottom"><b>read</b> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a43950424d146c1414460066483d9561b"></a><!-- doxytag: member="Servo::readMicroseconds" ref="a43950424d146c1414460066483d9561b" args="()" -->
-int&#160;</td><td class="memItemRight" valign="bottom"><b>readMicroseconds</b> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a48607d47aa5678780b1b927102bd3b1b"></a><!-- doxytag: member="Servo::attached" ref="a48607d47aa5678780b1b927102bd3b1b" args="()" -->
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>attached</b> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_servo.html#a70b2b17657cf258cdcb57503bcf62cd2">Servo</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_servo.html#aeccd2077f07ebc45250da14e72a0c461">attach</a> (int pin)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_servo.html#a70076d9a77de97241badd1f377817219">attach</a> (int pin, int <a class="el" href="class_servo.html#a11ac140aa7696dc424526f4f4562853d">min</a>, int <a class="el" href="class_servo.html#a71f71fd80677c88515444c3b88b51a21">max</a>)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_servo.html#a0b69ccc5c8b348ebaa84be91d973a362">detach</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_servo.html#a72b4b546912eada96a6ef705168ceb8a">write</a> (int value)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_servo.html#ac7fe3d6d2ea285ead98814bcfc417029">writeMicroseconds</a> (int value)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_servo.html#aaca0af33ba7d7c87c8a785b8eabf95a7">read</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_servo.html#a43950424d146c1414460066483d9561b">readMicroseconds</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_servo.html#a48607d47aa5678780b1b927102bd3b1b">attached</a> ()</td></tr>
+<tr><td colspan="2"><h2><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_servo.html#a01fa8c02563163757164771304f9ab3a">servoIndex</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_servo.html#a11ac140aa7696dc424526f4f4562853d">min</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_servo.html#a71f71fd80677c88515444c3b88b51a21">max</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock">
 <p>Definition at line <a class="el" href="_servo_8h_source.html#l00109">109</a> of file <a class="el" href="_servo_8h_source.html">Servo.h</a>.</p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+</div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a70b2b17657cf258cdcb57503bcf62cd2"></a><!-- doxytag: member="Servo::Servo" ref="a70b2b17657cf258cdcb57503bcf62cd2" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_servo.html#a70b2b17657cf258cdcb57503bcf62cd2">Servo::Servo</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_servo_8cpp_source.html#l00245">245</a> of file <a class="el" href="_servo_8cpp_source.html">Servo.cpp</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="aeccd2077f07ebc45250da14e72a0c461"></a><!-- doxytag: member="Servo::attach" ref="aeccd2077f07ebc45250da14e72a0c461" args="(int pin)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t <a class="el" href="class_servo.html#aeccd2077f07ebc45250da14e72a0c461">Servo::attach</a> </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>pin</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_servo_8cpp_source.html#l00255">255</a> of file <a class="el" href="_servo_8cpp_source.html">Servo.cpp</a>.</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_servo_aeccd2077f07ebc45250da14e72a0c461_icgraph.png" border="0" usemap="#class_servo_aeccd2077f07ebc45250da14e72a0c461_icgraph" alt=""/></div>
+<map name="class_servo_aeccd2077f07ebc45250da14e72a0c461_icgraph" id="class_servo_aeccd2077f07ebc45250da14e72a0c461_icgraph">
+<area shape="rect" id="node3" href="class_direction_node.html#a53a8403551cf42e8aa0c7bbe07ad2995" title="DirectionNode::DirectionNode" alt="" coords="156,5,351,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a70076d9a77de97241badd1f377817219"></a><!-- doxytag: member="Servo::attach" ref="a70076d9a77de97241badd1f377817219" args="(int pin, int min, int max)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t <a class="el" href="class_servo.html#aeccd2077f07ebc45250da14e72a0c461">Servo::attach</a> </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>pin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>min</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>max</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_servo_8cpp_source.html#l00260">260</a> of file <a class="el" href="_servo_8cpp_source.html">Servo.cpp</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_servo_a70076d9a77de97241badd1f377817219_cgraph.png" border="0" usemap="#class_servo_a70076d9a77de97241badd1f377817219_cgraph" alt=""/></div>
+<map name="class_servo_a70076d9a77de97241badd1f377817219_cgraph" id="class_servo_a70076d9a77de97241badd1f377817219_cgraph">
+<area shape="rect" id="node3" href="_servo_8cpp.html#a9f4c515f70ed80cf205584acdd289535" title="isTimerActive" alt="" coords="156,5,257,35"/><area shape="rect" id="node5" href="_servo_8cpp.html#ac602938217371d7fc43bbdd89482c716" title="initISR" alt="" coords="176,59,237,88"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a48607d47aa5678780b1b927102bd3b1b"></a><!-- doxytag: member="Servo::attached" ref="a48607d47aa5678780b1b927102bd3b1b" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="class_servo.html#a48607d47aa5678780b1b927102bd3b1b">Servo::attached</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_servo_8cpp_source.html#l00334">334</a> of file <a class="el" href="_servo_8cpp_source.html">Servo.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0b69ccc5c8b348ebaa84be91d973a362"></a><!-- doxytag: member="Servo::detach" ref="a0b69ccc5c8b348ebaa84be91d973a362" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_servo.html#a0b69ccc5c8b348ebaa84be91d973a362">Servo::detach</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_servo_8cpp_source.html#l00277">277</a> of file <a class="el" href="_servo_8cpp_source.html">Servo.cpp</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_servo_a0b69ccc5c8b348ebaa84be91d973a362_cgraph.png" border="0" usemap="#class_servo_a0b69ccc5c8b348ebaa84be91d973a362_cgraph" alt=""/></div>
+<map name="class_servo_a0b69ccc5c8b348ebaa84be91d973a362_cgraph" id="class_servo_a0b69ccc5c8b348ebaa84be91d973a362_cgraph">
+<area shape="rect" id="node3" href="_servo_8cpp.html#a9f4c515f70ed80cf205584acdd289535" title="isTimerActive" alt="" coords="159,5,260,35"/><area shape="rect" id="node5" href="_servo_8cpp.html#a8330e55eb97587e73745b6c31e6ab792" title="finISR" alt="" coords="180,59,239,88"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aaca0af33ba7d7c87c8a785b8eabf95a7"></a><!-- doxytag: member="Servo::read" ref="aaca0af33ba7d7c87c8a785b8eabf95a7" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="class_servo.html#aaca0af33ba7d7c87c8a785b8eabf95a7">Servo::read</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_servo_8cpp_source.html#l00318">318</a> of file <a class="el" href="_servo_8cpp_source.html">Servo.cpp</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_servo_aaca0af33ba7d7c87c8a785b8eabf95a7_cgraph.png" border="0" usemap="#class_servo_aaca0af33ba7d7c87c8a785b8eabf95a7_cgraph" alt=""/></div>
+<map name="class_servo_aaca0af33ba7d7c87c8a785b8eabf95a7_cgraph" id="class_servo_aaca0af33ba7d7c87c8a785b8eabf95a7_cgraph">
+<area shape="rect" id="node3" href="class_servo.html#a43950424d146c1414460066483d9561b" title="Servo::readMicroseconds" alt="" coords="144,5,315,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a43950424d146c1414460066483d9561b"></a><!-- doxytag: member="Servo::readMicroseconds" ref="a43950424d146c1414460066483d9561b" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="class_servo.html#a43950424d146c1414460066483d9561b">Servo::readMicroseconds</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_servo_8cpp_source.html#l00323">323</a> of file <a class="el" href="_servo_8cpp_source.html">Servo.cpp</a>.</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_servo_a43950424d146c1414460066483d9561b_icgraph.png" border="0" usemap="#class_servo_a43950424d146c1414460066483d9561b_icgraph" alt=""/></div>
+<map name="class_servo_a43950424d146c1414460066483d9561b_icgraph" id="class_servo_a43950424d146c1414460066483d9561b_icgraph">
+<area shape="rect" id="node3" href="class_servo.html#aaca0af33ba7d7c87c8a785b8eabf95a7" title="Servo::read" alt="" coords="225,5,313,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a72b4b546912eada96a6ef705168ceb8a"></a><!-- doxytag: member="Servo::write" ref="a72b4b546912eada96a6ef705168ceb8a" args="(int value)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_servo.html#a72b4b546912eada96a6ef705168ceb8a">Servo::write</a> </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_servo_8cpp_source.html#l00286">286</a> of file <a class="el" href="_servo_8cpp_source.html">Servo.cpp</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_servo_a72b4b546912eada96a6ef705168ceb8a_cgraph.png" border="0" usemap="#class_servo_a72b4b546912eada96a6ef705168ceb8a_cgraph" alt=""/></div>
+<map name="class_servo_a72b4b546912eada96a6ef705168ceb8a_cgraph" id="class_servo_a72b4b546912eada96a6ef705168ceb8a_cgraph">
+<area shape="rect" id="node3" href="class_servo.html#ac7fe3d6d2ea285ead98814bcfc417029" title="Servo::writeMicroseconds" alt="" coords="147,5,320,35"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_servo_a72b4b546912eada96a6ef705168ceb8a_icgraph.png" border="0" usemap="#class_servo_a72b4b546912eada96a6ef705168ceb8a_icgraph" alt=""/></div>
+<map name="class_servo_a72b4b546912eada96a6ef705168ceb8a_icgraph" id="class_servo_a72b4b546912eada96a6ef705168ceb8a_icgraph">
+<area shape="rect" id="node3" href="class_direction_node.html#a53a8403551cf42e8aa0c7bbe07ad2995" title="DirectionNode::DirectionNode" alt="" coords="148,5,343,35"/><area shape="rect" id="node5" href="class_direction_node.html#a90091aad98a6ec4892d1cd0ae6675fad" title="DirectionNode::esquerda" alt="" coords="163,59,328,88"/><area shape="rect" id="node9" href="class_direction_node.html#ad88a9f87817099bde959a2592412046c" title="DirectionNode::centro" alt="" coords="171,112,320,141"/><area shape="rect" id="node12" href="class_direction_node.html#ab2040369d101d5964b2d76b06814d7eb" title="DirectionNode::direita" alt="" coords="172,165,319,195"/><area shape="rect" id="node7" href="class_direction_node.html#ab38b8d7381f174b9deadb1f6dbd71e31" title="DirectionNode::runService" alt="" coords="393,112,567,141"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ac7fe3d6d2ea285ead98814bcfc417029"></a><!-- doxytag: member="Servo::writeMicroseconds" ref="ac7fe3d6d2ea285ead98814bcfc417029" args="(int value)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_servo.html#ac7fe3d6d2ea285ead98814bcfc417029">Servo::writeMicroseconds</a> </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_servo_8cpp_source.html#l00297">297</a> of file <a class="el" href="_servo_8cpp_source.html">Servo.cpp</a>.</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_servo_ac7fe3d6d2ea285ead98814bcfc417029_icgraph.png" border="0" usemap="#class_servo_ac7fe3d6d2ea285ead98814bcfc417029_icgraph" alt=""/></div>
+<map name="class_servo_ac7fe3d6d2ea285ead98814bcfc417029_icgraph" id="class_servo_ac7fe3d6d2ea285ead98814bcfc417029_icgraph">
+<area shape="rect" id="node3" href="class_servo.html#a72b4b546912eada96a6ef705168ceb8a" title="Servo::write" alt="" coords="228,85,319,115"/><area shape="rect" id="node5" href="class_direction_node.html#a53a8403551cf42e8aa0c7bbe07ad2995" title="DirectionNode::DirectionNode" alt="" coords="369,5,564,35"/><area shape="rect" id="node7" href="class_direction_node.html#a90091aad98a6ec4892d1cd0ae6675fad" title="DirectionNode::esquerda" alt="" coords="384,59,549,88"/><area shape="rect" id="node11" href="class_direction_node.html#ad88a9f87817099bde959a2592412046c" title="DirectionNode::centro" alt="" coords="392,112,541,141"/><area shape="rect" id="node14" href="class_direction_node.html#ab2040369d101d5964b2d76b06814d7eb" title="DirectionNode::direita" alt="" coords="393,165,540,195"/><area shape="rect" id="node9" href="class_direction_node.html#ab38b8d7381f174b9deadb1f6dbd71e31" title="DirectionNode::runService" alt="" coords="615,112,788,141"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<hr/><h2>Member Data Documentation</h2>
+<a class="anchor" id="a71f71fd80677c88515444c3b88b51a21"></a><!-- doxytag: member="Servo::max" ref="a71f71fd80677c88515444c3b88b51a21" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int8_t <a class="el" href="class_servo.html#a71f71fd80677c88515444c3b88b51a21">Servo::max</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_servo_8h_source.html#l00124">124</a> of file <a class="el" href="_servo_8h_source.html">Servo.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a11ac140aa7696dc424526f4f4562853d"></a><!-- doxytag: member="Servo::min" ref="a11ac140aa7696dc424526f4f4562853d" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int8_t <a class="el" href="class_servo.html#a11ac140aa7696dc424526f4f4562853d">Servo::min</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_servo_8h_source.html#l00123">123</a> of file <a class="el" href="_servo_8h_source.html">Servo.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a01fa8c02563163757164771304f9ab3a"></a><!-- doxytag: member="Servo::servoIndex" ref="a01fa8c02563163757164771304f9ab3a" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t <a class="el" href="class_servo.html#a01fa8c02563163757164771304f9ab3a">Servo::servoIndex</a><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Definition at line <a class="el" href="_servo_8h_source.html#l00122">122</a> of file <a class="el" href="_servo_8h_source.html">Servo.h</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>/home/vitor/workspace/Nos-System/nos/simple-embedded-systems/integrated/versao3/<a class="el" href="_servo_8h_source.html">Servo.h</a></li>
 <li>/home/vitor/workspace/Nos-System/nos/simple-embedded-systems/integrated/versao3/<a class="el" href="_servo_8cpp_source.html">Servo.cpp</a></li>
 </ul>
@@ -139,7 +442,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>attached</b> ()</td><
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -152,7 +455,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>attached</b> ()</td><
     <ul>
       <li class="navelem"><a class="el" href="class_servo.html">Servo</a>      </li>
 
-    <li class="footer">Generated on Sat Dec 14 2013 14:47:22 for Nos - System by
+    <li class="footer">Generated on Sat Dec 14 2013 15:36:10 for Nos - System by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

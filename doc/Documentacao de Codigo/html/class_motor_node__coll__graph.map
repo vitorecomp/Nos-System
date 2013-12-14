@@ -1,4 +1,5 @@
 <map id="G" name="G">
-<area shape="rect" id="node2" href="$class_node.html" title="Node" alt="" coords="21,101,75,131"/>
-<area shape="rect" id="node4" href="$class_string_list.html" title="StringList" alt="" coords="9,5,87,35"/>
+<area shape="rect" id="node2" href="$class_node.html" title="Node" alt="" coords="21,197,75,227"/>
+<area shape="rect" id="node4" href="$class_string_list.html" title="StringList" alt="" coords="9,101,87,131"/>
+<area shape="rect" id="node6" href="$structl_strings.html" title="lStrings" alt="" coords="15,5,81,35"/>
 </map>

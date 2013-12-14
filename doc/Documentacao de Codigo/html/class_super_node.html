@@ -98,7 +98,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div id="doc-content">
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a>  </div>
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">SuperNode Class Reference</div>  </div>
 </div><!--header-->
@@ -108,33 +110,421 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
  <a href="class_super_node.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="super_nodes_8h_source.html">superNodes.h</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for SuperNode:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_super_node__coll__graph.png" border="0" usemap="#_super_node_coll__map" alt="Collaboration graph"/></div>
+<map name="_super_node_coll__map" id="_super_node_coll__map">
+<area shape="rect" id="node2" href="class_node.html" title="Node" alt="" coords="156,209,209,239"/><area shape="rect" id="node4" href="class_string_list.html" title="StringList" alt="" coords="5,101,83,131"/><area shape="rect" id="node6" href="structl_strings.html" title="lStrings" alt="" coords="11,5,77,35"/></map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 
 <p><a href="class_super_node-members.html">List of all members.</a></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a78875204c940ba42581612ced66e0574"></a><!-- doxytag: member="SuperNode::getDependecesNames" ref="a78875204c940ba42581612ced66e0574" args="()" -->
-<a class="el" href="class_string_list.html">StringList</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getDependecesNames</b> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a17f4dc1eb55152558b56f24bfad2f693"></a><!-- doxytag: member="SuperNode::setNodeDependences" ref="a17f4dc1eb55152558b56f24bfad2f693" args="(Node **)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setNodeDependences</b> (<a class="el" href="class_node.html">Node</a> **)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acd0db29a8b8cc240a0f8c7c5c387f271"></a><!-- doxytag: member="SuperNode::initialize" ref="acd0db29a8b8cc240a0f8c7c5c387f271" args="()" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>initialize</b> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a739c73e1eda5cc23dd32d39ccd8d83ca"></a><!-- doxytag: member="SuperNode::getName" ref="a739c73e1eda5cc23dd32d39ccd8d83ca" args="()" -->
-char *&#160;</td><td class="memItemRight" valign="bottom"><b>getName</b> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4112876ace824e4bb6107444547627fb"></a><!-- doxytag: member="SuperNode::getServices" ref="a4112876ace824e4bb6107444547627fb" args="()" -->
-<a class="el" href="class_string_list.html">StringList</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getServices</b> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae26f1c3a0dfee60095dd0edb3a80e0c2"></a><!-- doxytag: member="SuperNode::getInterrupts" ref="ae26f1c3a0dfee60095dd0edb3a80e0c2" args="()" -->
-<a class="el" href="class_string_list.html">StringList</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getInterrupts</b> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a122a9af923bd710574c1567b1b4e943c"></a><!-- doxytag: member="SuperNode::run" ref="a122a9af923bd710574c1567b1b4e943c" args="()=0" -->
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>run</b> ()=0</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae58d38fd7acb667aa4dc9828e3ba0ba8"></a><!-- doxytag: member="SuperNode::runService" ref="ae58d38fd7acb667aa4dc9828e3ba0ba8" args="(char *)=0" -->
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>runService</b> (char *)=0</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_string_list.html">StringList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_super_node.html#a3171db92d10ec5d38950b55e4af27188">getDependecesNames</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Essa retorna a lista e com os nomes dos nos nos necessarios para poder executar um servico immplentado, com essa se garante que o <a class="el" href="class_master.html">Master</a> ao instaciar o super no ele passe os argumentos.  <a href="#a3171db92d10ec5d38950b55e4af27188"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_super_node.html#a17f4dc1eb55152558b56f24bfad2f693">setNodeDependences</a> (<a class="el" href="class_node.html">Node</a> **)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Responsavel por dar um ser nos que seram usados durante a execuçao dos serviços e validar se todos os nos necessarios estao incluso no argumento passado a ela.  <a href="#a17f4dc1eb55152558b56f24bfad2f693"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_super_node.html#acd0db29a8b8cc240a0f8c7c5c387f271">initialize</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">responsavel por inicializar o super no, garantindo que tudo esteja ok antes da execucao dos serviços pelo super no.  <a href="#acd0db29a8b8cc240a0f8c7c5c387f271"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_super_node.html#a739c73e1eda5cc23dd32d39ccd8d83ca">getName</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">reporna o nome do superNo, podendo assim direcionar os serviços detinados a ele de forma correta.  <a href="#a739c73e1eda5cc23dd32d39ccd8d83ca"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_string_list.html">StringList</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_super_node.html#a4112876ace824e4bb6107444547627fb">getServices</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna a lista de serviços disponibilizados pelo super No a partir do momento que todos os nos dos quais ele depende foram instacializado e devidamente setados. garantindo que o master nao chame sevicos nao implementados por esse super no.  Lista de serviços implementados por esse super no.  <a href="#a4112876ace824e4bb6107444547627fb"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_string_list.html">StringList</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_super_node.html#ae26f1c3a0dfee60095dd0edb3a80e0c2">getInterrupts</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna a lista de interrupçoes gerando pelo super no apos a execução de um serviço ou de um interação. /retorn A lista de interrupções geradas pelo super no.  <a href="#ae26f1c3a0dfee60095dd0edb3a80e0c2"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_super_node.html#a1d9839cfe5b7618697f9a9cf21614459">run</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_super_node.html#a200a0c6d3a2705aec6be89264eb3c97a">runService</a> (char *)</td></tr>
+<tr><td colspan="2"><h2><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_super_node.html#a629fa000c6e75a4e84b2be5a21fd0815">setName</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Essa atruibui valor a variavel name, o seu respectivo valor. E uma função garante para na implementaçao dessa classe o programado set um nome para o super no garantindo assim o funcionamento cosiso do sistema.  <a href="#a629fa000c6e75a4e84b2be5a21fd0815"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_super_node.html#a987bb16826f7a2f03b1eb830020cf370">setNodeDependencesName</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Essa atribui a valor a lista que guarda o nome dos nos necessarios para a instaciação dessa classe.E uma função garante que durante a implementaçao dessa classe o programado set essa lista para o superNo garantindo assim o funcionamento cosiso do sistema.  <a href="#a987bb16826f7a2f03b1eb830020cf370"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_super_node.html#adf5796c32740df5134b5cd2eb11b42dc">setServiceList</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Esse atribui valor lista de serviços que sao disponibilizados pelo super no. E uma função garante que durante a implementaçao dessa classe o programdor set essa lista para o superNo garantindo assim o funcionamento cosiso do sistema.  <a href="#adf5796c32740df5134b5cd2eb11b42dc"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_super_node.html#a2a6440835cd1b7289b6021fd0281ea16">cleanInterrupts</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Responsavel por limpar as interrupçoes apos esse serem requisitadas pelos master, garantindo assim que essa nao sejas executadas novamente.  <a href="#a2a6440835cd1b7289b6021fd0281ea16"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_node.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_super_node.html#ac0fc7ee976ec99824410cbc64693dff2">nodes</a> [100]</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_string_list.html">StringList</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_super_node.html#ad3fb4890573b94871776dd6712fb7191">dependenceNodes</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_string_list.html">StringList</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_super_node.html#a3a077dbaf88a5bd47a432f862e0c5fbf">myServices</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_string_list.html">StringList</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_super_node.html#aa4e681aede949122507446824cef9fe6">interruptions</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_super_node.html#a9ca87678abdbec40f370e17b56006eb8">name</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Essa classe representa um superNo que implementa serviçosq que dependem de mais de um no, esse coiceito permite que a comicaçao quase direta entre esse nos e tambem diminui varios problemas desse tipo de serviço pois agora ele so podera ser feito se os dois nos existirem. Evitando assim com que o serviço seja disponibilizado mesmo com uma de sua dependencias off. </p>
 
-<p>Definition at line <a class="el" href="super_nodes_8h_source.html#l00013">13</a> of file <a class="el" href="super_nodes_8h_source.html">superNodes.h</a>.</p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+<p>Definition at line <a class="el" href="super_nodes_8h_source.html#l00017">17</a> of file <a class="el" href="super_nodes_8h_source.html">superNodes.h</a>.</p>
+</div><hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="a2a6440835cd1b7289b6021fd0281ea16"></a><!-- doxytag: member="SuperNode::cleanInterrupts" ref="a2a6440835cd1b7289b6021fd0281ea16" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_super_node.html#a2a6440835cd1b7289b6021fd0281ea16">SuperNode::cleanInterrupts</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Responsavel por limpar as interrupçoes apos esse serem requisitadas pelos master, garantindo assim que essa nao sejas executadas novamente. </p>
+
+</div>
+</div>
+<a class="anchor" id="a3171db92d10ec5d38950b55e4af27188"></a><!-- doxytag: member="SuperNode::getDependecesNames" ref="a3171db92d10ec5d38950b55e4af27188" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string <a class="el" href="class_super_node.html#a3171db92d10ec5d38950b55e4af27188">SuperNode::getDependecesNames</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Essa retorna a lista e com os nomes dos nos nos necessarios para poder executar um servico immplentado, com essa se garante que o <a class="el" href="class_master.html">Master</a> ao instaciar o super no ele passe os argumentos. </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>Lista com os nomes dos nos depencias. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ae26f1c3a0dfee60095dd0edb3a80e0c2"></a><!-- doxytag: member="SuperNode::getInterrupts" ref="ae26f1c3a0dfee60095dd0edb3a80e0c2" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_string_list.html">StringList</a> * <a class="el" href="class_super_node.html#ae26f1c3a0dfee60095dd0edb3a80e0c2">SuperNode::getInterrupts</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Retorna a lista de interrupçoes gerando pelo super no apos a execução de um serviço ou de um interação. /retorn A lista de interrupções geradas pelo super no. </p>
+
+<p>Definition at line <a class="el" href="super_nodes_8cpp_source.html#l00019">19</a> of file <a class="el" href="super_nodes_8cpp_source.html">superNodes.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a739c73e1eda5cc23dd32d39ccd8d83ca"></a><!-- doxytag: member="SuperNode::getName" ref="a739c73e1eda5cc23dd32d39ccd8d83ca" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * <a class="el" href="class_super_node.html#a739c73e1eda5cc23dd32d39ccd8d83ca">SuperNode::getName</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>reporna o nome do superNo, podendo assim direcionar os serviços detinados a ele de forma correta. </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>retorna o nome do superNo. </dd></dl>
+
+<p>Definition at line <a class="el" href="super_nodes_8cpp_source.html#l00009">9</a> of file <a class="el" href="super_nodes_8cpp_source.html">superNodes.cpp</a>.</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_super_node_a739c73e1eda5cc23dd32d39ccd8d83ca_icgraph.png" border="0" usemap="#class_super_node_a739c73e1eda5cc23dd32d39ccd8d83ca_icgraph" alt=""/></div>
+<map name="class_super_node_a739c73e1eda5cc23dd32d39ccd8d83ca_icgraph" id="class_super_node_a739c73e1eda5cc23dd32d39ccd8d83ca_icgraph">
+<area shape="rect" id="node3" href="class_master.html#ae7d5d18c793e0e32e5c53c69ecdb96a1" title="Master::initialize" alt="" coords="203,5,320,35"/><area shape="rect" id="node5" href="class_i_master.html#a81a79f55860e3d21f7c3929afe571f92" title="IMaster::IMaster" alt="" coords="369,5,487,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a4112876ace824e4bb6107444547627fb"></a><!-- doxytag: member="SuperNode::getServices" ref="a4112876ace824e4bb6107444547627fb" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_string_list.html">StringList</a> * <a class="el" href="class_super_node.html#a4112876ace824e4bb6107444547627fb">SuperNode::getServices</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Retorna a lista de serviços disponibilizados pelo super No a partir do momento que todos os nos dos quais ele depende foram instacializado e devidamente setados. garantindo que o master nao chame sevicos nao implementados por esse super no.  Lista de serviços implementados por esse super no. </p>
+
+<p>Definition at line <a class="el" href="super_nodes_8cpp_source.html#l00014">14</a> of file <a class="el" href="super_nodes_8cpp_source.html">superNodes.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="acd0db29a8b8cc240a0f8c7c5c387f271"></a><!-- doxytag: member="SuperNode::initialize" ref="acd0db29a8b8cc240a0f8c7c5c387f271" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_super_node.html#acd0db29a8b8cc240a0f8c7c5c387f271">SuperNode::initialize</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>responsavel por inicializar o super no, garantindo que tudo esteja ok antes da execucao dos serviços pelo super no. </p>
+
+<p>Definition at line <a class="el" href="super_nodes_8cpp_source.html#l00003">3</a> of file <a class="el" href="super_nodes_8cpp_source.html">superNodes.cpp</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_super_node_acd0db29a8b8cc240a0f8c7c5c387f271_cgraph.png" border="0" usemap="#class_super_node_acd0db29a8b8cc240a0f8c7c5c387f271_cgraph" alt=""/></div>
+<map name="class_super_node_acd0db29a8b8cc240a0f8c7c5c387f271_cgraph" id="class_super_node_acd0db29a8b8cc240a0f8c7c5c387f271_cgraph">
+<area shape="rect" id="node3" href="class_super_node.html#a629fa000c6e75a4e84b2be5a21fd0815" title="Essa atruibui valor a variavel name, o seu respectivo valor. E uma função garante para na implementaç..." alt="" coords="213,5,360,35"/><area shape="rect" id="node5" href="class_super_node.html#adf5796c32740df5134b5cd2eb11b42dc" title="Esse atribui valor lista de serviços que sao disponibilizados pelo super no. E uma função garante que..." alt="" coords="197,59,376,88"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a1d9839cfe5b7618697f9a9cf21614459"></a><!-- doxytag: member="SuperNode::run" ref="a1d9839cfe5b7618697f9a9cf21614459" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int <a class="el" href="class_super_node.html#a1d9839cfe5b7618697f9a9cf21614459">SuperNode::run</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_super_node_a1d9839cfe5b7618697f9a9cf21614459_icgraph.png" border="0" usemap="#class_super_node_a1d9839cfe5b7618697f9a9cf21614459_icgraph" alt=""/></div>
+<map name="class_super_node_a1d9839cfe5b7618697f9a9cf21614459_icgraph" id="class_super_node_a1d9839cfe5b7618697f9a9cf21614459_icgraph">
+<area shape="rect" id="node3" href="class_master.html#add8981ccc8f6ada51f55bbc5cfaa5e06" title="Master::executeSuperNos" alt="" coords="169,5,343,35"/><area shape="rect" id="node5" href="class_master.html#a008baa6bf85857581cdd5702e0cfc0d2" title="Master::run" alt="" coords="392,5,480,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a200a0c6d3a2705aec6be89264eb3c97a"></a><!-- doxytag: member="SuperNode::runService" ref="a200a0c6d3a2705aec6be89264eb3c97a" args="(char *)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int <a class="el" href="class_super_node.html#a200a0c6d3a2705aec6be89264eb3c97a">SuperNode::runService</a> </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_super_node_a200a0c6d3a2705aec6be89264eb3c97a_icgraph.png" border="0" usemap="#class_super_node_a200a0c6d3a2705aec6be89264eb3c97a_icgraph" alt=""/></div>
+<map name="class_super_node_a200a0c6d3a2705aec6be89264eb3c97a_icgraph" id="class_super_node_a200a0c6d3a2705aec6be89264eb3c97a_icgraph">
+<area shape="rect" id="node3" href="class_master.html#a41bd85473687e1691d62bb9db328baf2" title="Master::executeInterruptionList" alt="" coords="211,5,413,35"/><area shape="rect" id="node5" href="class_master.html#a008baa6bf85857581cdd5702e0cfc0d2" title="Master::run" alt="" coords="461,5,549,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a629fa000c6e75a4e84b2be5a21fd0815"></a><!-- doxytag: member="SuperNode::setName" ref="a629fa000c6e75a4e84b2be5a21fd0815" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_super_node.html#a629fa000c6e75a4e84b2be5a21fd0815">SuperNode::setName</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Essa atruibui valor a variavel name, o seu respectivo valor. E uma função garante para na implementaçao dessa classe o programado set um nome para o super no garantindo assim o funcionamento cosiso do sistema. </p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_super_node_a629fa000c6e75a4e84b2be5a21fd0815_icgraph.png" border="0" usemap="#class_super_node_a629fa000c6e75a4e84b2be5a21fd0815_icgraph" alt=""/></div>
+<map name="class_super_node_a629fa000c6e75a4e84b2be5a21fd0815_icgraph" id="class_super_node_a629fa000c6e75a4e84b2be5a21fd0815_icgraph">
+<area shape="rect" id="node3" href="class_super_node.html#acd0db29a8b8cc240a0f8c7c5c387f271" title="responsavel por inicializar o super no, garantindo que tudo esteja ok antes da execucao dos serviços ..." alt="" coords="204,5,345,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a17f4dc1eb55152558b56f24bfad2f693"></a><!-- doxytag: member="SuperNode::setNodeDependences" ref="a17f4dc1eb55152558b56f24bfad2f693" args="(Node **)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_super_node.html#a17f4dc1eb55152558b56f24bfad2f693">SuperNode::setNodeDependences</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_node.html">Node</a> **&#160;</td>
+          <td class="paramname"><em>nodeList</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Responsavel por dar um ser nos que seram usados durante a execuçao dos serviços e validar se todos os nos necessarios estao incluso no argumento passado a ela. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nodeList,:</td><td>a lista com os nodes que o super no depende para executar um serviço. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a987bb16826f7a2f03b1eb830020cf370"></a><!-- doxytag: member="SuperNode::setNodeDependencesName" ref="a987bb16826f7a2f03b1eb830020cf370" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_super_node.html#a987bb16826f7a2f03b1eb830020cf370">SuperNode::setNodeDependencesName</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Essa atribui a valor a lista que guarda o nome dos nos necessarios para a instaciação dessa classe.E uma função garante que durante a implementaçao dessa classe o programado set essa lista para o superNo garantindo assim o funcionamento cosiso do sistema. </p>
+
+</div>
+</div>
+<a class="anchor" id="adf5796c32740df5134b5cd2eb11b42dc"></a><!-- doxytag: member="SuperNode::setServiceList" ref="adf5796c32740df5134b5cd2eb11b42dc" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_super_node.html#adf5796c32740df5134b5cd2eb11b42dc">SuperNode::setServiceList</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Esse atribui valor lista de serviços que sao disponibilizados pelo super no. E uma função garante que durante a implementaçao dessa classe o programdor set essa lista para o superNo garantindo assim o funcionamento cosiso do sistema. </p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_super_node_adf5796c32740df5134b5cd2eb11b42dc_icgraph.png" border="0" usemap="#class_super_node_adf5796c32740df5134b5cd2eb11b42dc_icgraph" alt=""/></div>
+<map name="class_super_node_adf5796c32740df5134b5cd2eb11b42dc_icgraph" id="class_super_node_adf5796c32740df5134b5cd2eb11b42dc_icgraph">
+<area shape="rect" id="node3" href="class_super_node.html#acd0db29a8b8cc240a0f8c7c5c387f271" title="responsavel por inicializar o super no, garantindo que tudo esteja ok antes da execucao dos serviços ..." alt="" coords="233,5,375,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<hr/><h2>Member Data Documentation</h2>
+<a class="anchor" id="ad3fb4890573b94871776dd6712fb7191"></a><!-- doxytag: member="SuperNode::dependenceNodes" ref="ad3fb4890573b94871776dd6712fb7191" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_string_list.html">StringList</a>* <a class="el" href="class_super_node.html#ad3fb4890573b94871776dd6712fb7191">SuperNode::dependenceNodes</a><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Nomes dos nos necessarios para instaciação do master. </p>
+
+<p>Definition at line <a class="el" href="super_nodes_8h_source.html#l00021">21</a> of file <a class="el" href="super_nodes_8h_source.html">superNodes.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa4e681aede949122507446824cef9fe6"></a><!-- doxytag: member="SuperNode::interruptions" ref="aa4e681aede949122507446824cef9fe6" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_string_list.html">StringList</a>* <a class="el" href="class_super_node.html#aa4e681aede949122507446824cef9fe6">SuperNode::interruptions</a><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Lista de interrupçoes geradas pelo super no apos uma execução. </p>
+
+<p>Definition at line <a class="el" href="super_nodes_8h_source.html#l00023">23</a> of file <a class="el" href="super_nodes_8h_source.html">superNodes.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3a077dbaf88a5bd47a432f862e0c5fbf"></a><!-- doxytag: member="SuperNode::myServices" ref="a3a077dbaf88a5bd47a432f862e0c5fbf" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_string_list.html">StringList</a>* <a class="el" href="class_super_node.html#a3a077dbaf88a5bd47a432f862e0c5fbf">SuperNode::myServices</a><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Lista de serviços que esse disponibilizada pelo superNo. </p>
+
+<p>Definition at line <a class="el" href="super_nodes_8h_source.html#l00022">22</a> of file <a class="el" href="super_nodes_8h_source.html">superNodes.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9ca87678abdbec40f370e17b56006eb8"></a><!-- doxytag: member="SuperNode::name" ref="a9ca87678abdbec40f370e17b56006eb8" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* <a class="el" href="class_super_node.html#a9ca87678abdbec40f370e17b56006eb8">SuperNode::name</a><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Nome do superNo. </p>
+
+<p>Definition at line <a class="el" href="super_nodes_8h_source.html#l00024">24</a> of file <a class="el" href="super_nodes_8h_source.html">superNodes.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac0fc7ee976ec99824410cbc64693dff2"></a><!-- doxytag: member="SuperNode::nodes" ref="ac0fc7ee976ec99824410cbc64693dff2" args="[100]" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_node.html">Node</a>* <a class="el" href="class_super_node.html#ac0fc7ee976ec99824410cbc64693dff2">SuperNode::nodes</a>[100]<code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Nos que esse master controla. </p>
+
+<p>Definition at line <a class="el" href="super_nodes_8h_source.html#l00020">20</a> of file <a class="el" href="super_nodes_8h_source.html">superNodes.h</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>/home/vitor/workspace/Nos-System/nos/simple-embedded-systems/integrated/versao3/<a class="el" href="super_nodes_8h_source.html">superNodes.h</a></li>
 <li>/home/vitor/workspace/Nos-System/nos/simple-embedded-systems/integrated/versao3/<a class="el" href="super_nodes_8cpp_source.html">superNodes.cpp</a></li>
 </ul>
@@ -145,7 +535,7 @@ virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>runService</b>
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -158,7 +548,7 @@ virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>runService</b>
     <ul>
       <li class="navelem"><a class="el" href="class_super_node.html">SuperNode</a>      </li>
 
-    <li class="footer">Generated on Sat Dec 14 2013 14:47:23 for Nos - System by
+    <li class="footer">Generated on Sat Dec 14 2013 15:36:10 for Nos - System by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

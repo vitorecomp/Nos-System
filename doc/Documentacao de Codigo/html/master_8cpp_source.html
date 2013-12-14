@@ -77,6 +77,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 </div>
@@ -98,9 +99,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">/home/vitor/workspace/Nos-System/nos/simple-embedded-systems/integrated/versao3/master.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#include &quot;master.h&quot;</span>
+<a href="master_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#include &quot;<a class="code" href="master_8h.html">master.h</a>&quot;</span>
 <a name="l00002"></a>00002 
-<a name="l00003"></a>00003 <span class="keywordtype">void</span> Master::initialize()
+<a name="l00003"></a><a class="code" href="class_master.html#ae7d5d18c793e0e32e5c53c69ecdb96a1">00003</a> <span class="keywordtype">void</span> <a class="code" href="class_master.html#ae7d5d18c793e0e32e5c53c69ecdb96a1">Master::initialize</a>()
 <a name="l00004"></a>00004 {
 <a name="l00005"></a>00005         <a class="code" href="class_master.html#a63c0b80c268641b773de9dcd5e11b7c3">interrupts</a> = <span class="keyword">new</span> <a class="code" href="class_string_list.html">StringList</a>();
 <a name="l00006"></a>00006         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 100; i ++)
@@ -113,105 +114,105 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00013"></a>00013                 <a class="code" href="class_master.html#aff269d443848d41f5a5a1d641b1eacb7">sNodesNames</a>[i] = NULL;
 <a name="l00014"></a>00014         }
 <a name="l00015"></a>00015 
-<a name="l00016"></a>00016         createNosList();
-<a name="l00017"></a>00017         createSuperNosList();
-<a name="l00018"></a>00018         createConnectionList();
+<a name="l00016"></a>00016         <a class="code" href="class_master.html#ae2567a9398b944281617213bdae04def">createNosList</a>();
+<a name="l00017"></a>00017         <a class="code" href="class_master.html#aeaf593702786432b496149c015dcebb4">createSuperNosList</a>();
+<a name="l00018"></a>00018         <a class="code" href="class_master.html#a3368406242e0b8f0f63dd622694888e4">createConnectionList</a>();
 <a name="l00019"></a>00019         
 <a name="l00020"></a>00020         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; <a class="code" href="class_master.html#ad72e615042ba6d7dce6eb740d566d656">nodes</a>[i] != NULL; i++)
 <a name="l00021"></a>00021         {
-<a name="l00022"></a>00022                 <a class="code" href="class_master.html#a7e1f5d1be566ea94123c986af9acf869">nodesNames</a>[i] = <a class="code" href="class_master.html#ad72e615042ba6d7dce6eb740d566d656">nodes</a>[i]-&gt;getName();
+<a name="l00022"></a>00022                 <a class="code" href="class_master.html#a7e1f5d1be566ea94123c986af9acf869">nodesNames</a>[i] = <a class="code" href="class_master.html#ad72e615042ba6d7dce6eb740d566d656">nodes</a>[i]-&gt;<a class="code" href="class_node.html#a018baf1e8b80f389aadf6153d2305491">getName</a>();
 <a name="l00023"></a>00023         }
 <a name="l00024"></a>00024         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 100; i++)
 <a name="l00025"></a>00025         {
-<a name="l00026"></a>00026                 <a class="code" href="class_master.html#aff269d443848d41f5a5a1d641b1eacb7">sNodesNames</a>[i] = <a class="code" href="class_master.html#aee685e5b58f7bd2c34e69118f360a95e">sNodes</a>[i]-&gt;getName();
+<a name="l00026"></a>00026                 <a class="code" href="class_master.html#aff269d443848d41f5a5a1d641b1eacb7">sNodesNames</a>[i] = <a class="code" href="class_master.html#aee685e5b58f7bd2c34e69118f360a95e">sNodes</a>[i]-&gt;<a class="code" href="class_super_node.html#a739c73e1eda5cc23dd32d39ccd8d83ca" title="reporna o nome do superNo, podendo assim direcionar os serviços detinados a ele de forma correta...">getName</a>();
 <a name="l00027"></a>00027         }
 <a name="l00028"></a>00028         Serial.println(<span class="stringliteral">&quot;/////loop&quot;</span>);
 <a name="l00029"></a>00029 }
 <a name="l00030"></a>00030 
 <a name="l00031"></a>00031 
-<a name="l00032"></a>00032 <span class="keywordtype">void</span> Master::run()
+<a name="l00032"></a><a class="code" href="class_master.html#a008baa6bf85857581cdd5702e0cfc0d2">00032</a> <span class="keywordtype">void</span> <a class="code" href="class_master.html#a008baa6bf85857581cdd5702e0cfc0d2">Master::run</a>()
 <a name="l00033"></a>00033 {
 <a name="l00034"></a>00034 
 <a name="l00035"></a>00035         Serial.println(<span class="stringliteral">&quot;loop&quot;</span>);
-<a name="l00036"></a>00036         <span class="keywordflow">if</span>(!<a class="code" href="class_master.html#a63c0b80c268641b773de9dcd5e11b7c3">interrupts</a>-&gt;empty())
-<a name="l00037"></a>00037                 executeInterruptionList();
-<a name="l00038"></a>00038         executeNos();
-<a name="l00039"></a>00039         executeConections();
-<a name="l00040"></a>00040         executeSuperNos();
+<a name="l00036"></a>00036         <span class="keywordflow">if</span>(!<a class="code" href="class_master.html#a63c0b80c268641b773de9dcd5e11b7c3">interrupts</a>-&gt;<a class="code" href="class_string_list.html#a5f940fa69e60a1ee3273ea2cf3dafa33">empty</a>())
+<a name="l00037"></a>00037                 <a class="code" href="class_master.html#a41bd85473687e1691d62bb9db328baf2">executeInterruptionList</a>();
+<a name="l00038"></a>00038         <a class="code" href="class_master.html#a756ac6b740f56b6769755ed6670d3378">executeNos</a>();
+<a name="l00039"></a>00039         <a class="code" href="class_master.html#a629f3d092d47c94471c1feb4b59b66e2">executeConections</a>();
+<a name="l00040"></a>00040         <a class="code" href="class_master.html#add8981ccc8f6ada51f55bbc5cfaa5e06">executeSuperNos</a>();
 <a name="l00041"></a>00041 }
 <a name="l00042"></a>00042 
-<a name="l00043"></a>00043 <span class="keywordtype">void</span> Master::executeInterruptionList()
+<a name="l00043"></a><a class="code" href="class_master.html#a41bd85473687e1691d62bb9db328baf2">00043</a> <span class="keywordtype">void</span> <a class="code" href="class_master.html#a41bd85473687e1691d62bb9db328baf2">Master::executeInterruptionList</a>()
 <a name="l00044"></a>00044 {
 <a name="l00045"></a>00045         <span class="keywordtype">int</span> nService = -1;
 <a name="l00046"></a>00046         <a class="code" href="class_string_list.html">StringList</a> *nAtenInterrupts = <span class="keyword">new</span> <a class="code" href="class_string_list.html">StringList</a>();
-<a name="l00047"></a>00047         <span class="keywordflow">while</span>(!<a class="code" href="class_master.html#a63c0b80c268641b773de9dcd5e11b7c3">interrupts</a>-&gt;empty())
+<a name="l00047"></a>00047         <span class="keywordflow">while</span>(!<a class="code" href="class_master.html#a63c0b80c268641b773de9dcd5e11b7c3">interrupts</a>-&gt;<a class="code" href="class_string_list.html#a5f940fa69e60a1ee3273ea2cf3dafa33">empty</a>())
 <a name="l00048"></a>00048         {
 <a name="l00049"></a>00049                 <span class="comment">//pegando o nome do servico</span>
 <a name="l00050"></a>00050                 <span class="keywordtype">char</span> service[100];
 <a name="l00051"></a>00051                 <span class="keywordtype">char</span> serviceTemp[100];
-<a name="l00052"></a>00052                 <span class="keywordtype">char</span> *serviceTemp2 = <a class="code" href="class_master.html#a63c0b80c268641b773de9dcd5e11b7c3">interrupts</a>-&gt;pop();
+<a name="l00052"></a>00052                 <span class="keywordtype">char</span> *serviceTemp2 = <a class="code" href="class_master.html#a63c0b80c268641b773de9dcd5e11b7c3">interrupts</a>-&gt;<a class="code" href="class_string_list.html#aaba9dc874a2e06aef3ab046ab6a373e0">pop</a>();
 <a name="l00053"></a>00053                 strcpy(serviceTemp, serviceTemp2);
 <a name="l00054"></a>00054                 strcpy(service, serviceTemp);
 <a name="l00055"></a>00055                 <span class="keywordtype">char</span> *serviceName = strtok(service, <span class="stringliteral">&quot;/&quot;</span>);
 <a name="l00056"></a>00056 
 <a name="l00057"></a>00057                 <span class="comment">//decobrindo onde sera executado</span>
-<a name="l00058"></a>00058                 <span class="keywordtype">int</span> nService = inNodeList(serviceName);
+<a name="l00058"></a>00058                 <span class="keywordtype">int</span> nService = <a class="code" href="class_master.html#a48a96c20f84f6caf1d30dd8ba5baacd6">inNodeList</a>(serviceName);
 <a name="l00059"></a>00059                 <span class="keywordflow">if</span>(nService &gt;= 0)
 <a name="l00060"></a>00060                 {
-<a name="l00061"></a>00061                         <a class="code" href="class_master.html#ad72e615042ba6d7dce6eb740d566d656">nodes</a>[nService]-&gt;runService(serviceTemp);
+<a name="l00061"></a>00061                         <a class="code" href="class_master.html#ad72e615042ba6d7dce6eb740d566d656">nodes</a>[nService]-&gt;<a class="code" href="class_node.html#aa1eaf5072c5d4dffaadbbdd83067318f">runService</a>(serviceTemp);
 <a name="l00062"></a>00062                         free(serviceTemp2);
 <a name="l00063"></a>00063                         <span class="keywordflow">continue</span>;
 <a name="l00064"></a>00064                 }
-<a name="l00065"></a>00065                 nService = inSuperNodeList(serviceName);
+<a name="l00065"></a>00065                 nService = <a class="code" href="class_master.html#ac5e687b80f27ffaa3774c1838240c58a">inSuperNodeList</a>(serviceName);
 <a name="l00066"></a>00066                 <span class="keywordflow">if</span>(nService &gt;= 0)
 <a name="l00067"></a>00067                 {
 <a name="l00068"></a>00068                         <span class="comment">//executando o servico</span>
-<a name="l00069"></a>00069                         <a class="code" href="class_master.html#aee685e5b58f7bd2c34e69118f360a95e">sNodes</a>[nService]-&gt;runService(serviceTemp);
+<a name="l00069"></a>00069                         <a class="code" href="class_master.html#aee685e5b58f7bd2c34e69118f360a95e">sNodes</a>[nService]-&gt;<a class="code" href="class_super_node.html#a200a0c6d3a2705aec6be89264eb3c97a">runService</a>(serviceTemp);
 <a name="l00070"></a>00070                         <span class="keywordflow">continue</span>;
 <a name="l00071"></a>00071                 }
 <a name="l00072"></a>00072 
-<a name="l00073"></a>00073                 nService = inConnectionList(serviceName);
+<a name="l00073"></a>00073                 nService = <a class="code" href="class_master.html#a00b7f77b44dacd05e0623c96307a3bc4">inConnectionList</a>(serviceName);
 <a name="l00074"></a>00074                 Serial.println(nService);
 <a name="l00075"></a>00075                 <span class="keywordflow">if</span>(nService &gt;= 0)
 <a name="l00076"></a>00076                 {
 <a name="l00077"></a>00077                         <span class="comment">//executando o servico</span>
-<a name="l00078"></a>00078                         <a class="code" href="class_master.html#a8bc8a77b8885a2059876fec3e8148655">connections</a>[nService]-&gt;sendMessage(serviceTemp);
+<a name="l00078"></a>00078                         <a class="code" href="class_master.html#a8bc8a77b8885a2059876fec3e8148655">connections</a>[nService]-&gt;<a class="code" href="class_connection.html#a3643ee96c249ac48f1bf4eba34111bdf">sendMessage</a>(serviceTemp);
 <a name="l00079"></a>00079                         free(serviceTemp2);
 <a name="l00080"></a>00080                         <span class="keywordflow">continue</span>;
 <a name="l00081"></a>00081                 }
-<a name="l00082"></a>00082                 nAtenInterrupts-&gt;push(serviceTemp);
+<a name="l00082"></a>00082                 nAtenInterrupts-&gt;<a class="code" href="class_string_list.html#a887dd6d29b120cac80b3dbdc6d639b6d">push</a>(serviceTemp);
 <a name="l00083"></a>00083         }
 <a name="l00084"></a>00084         <span class="keyword">delete</span>(<a class="code" href="class_master.html#a63c0b80c268641b773de9dcd5e11b7c3">interrupts</a>);
 <a name="l00085"></a>00085         <a class="code" href="class_master.html#a63c0b80c268641b773de9dcd5e11b7c3">interrupts</a> = nAtenInterrupts;
 <a name="l00086"></a>00086 }
 <a name="l00087"></a>00087 
-<a name="l00088"></a>00088 <span class="keywordtype">void</span> Master::executeNos()
+<a name="l00088"></a><a class="code" href="class_master.html#a756ac6b740f56b6769755ed6670d3378">00088</a> <span class="keywordtype">void</span> <a class="code" href="class_master.html#a756ac6b740f56b6769755ed6670d3378">Master::executeNos</a>()
 <a name="l00089"></a>00089 {
 <a name="l00090"></a>00090         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; <a class="code" href="class_master.html#ad72e615042ba6d7dce6eb740d566d656">nodes</a>[i] != NULL; i++)
 <a name="l00091"></a>00091         {
-<a name="l00092"></a>00092                 <a class="code" href="class_master.html#ad72e615042ba6d7dce6eb740d566d656">nodes</a>[i]-&gt;run();
-<a name="l00093"></a>00093                 <a class="code" href="class_master.html#a63c0b80c268641b773de9dcd5e11b7c3">interrupts</a>-&gt;list_push_back(<a class="code" href="class_master.html#ad72e615042ba6d7dce6eb740d566d656">nodes</a>[i]-&gt;getInterrupts());
+<a name="l00092"></a>00092                 <a class="code" href="class_master.html#ad72e615042ba6d7dce6eb740d566d656">nodes</a>[i]-&gt;<a class="code" href="class_node.html#a262b9594b45604c69d12263853768533">run</a>();
+<a name="l00093"></a>00093                 <a class="code" href="class_master.html#a63c0b80c268641b773de9dcd5e11b7c3">interrupts</a>-&gt;<a class="code" href="class_string_list.html#ad5cafd0f3f93cb721c07a57badb297d8">list_push_back</a>(<a class="code" href="class_master.html#ad72e615042ba6d7dce6eb740d566d656">nodes</a>[i]-&gt;getInterrupts());
 <a name="l00094"></a>00094         }
 <a name="l00095"></a>00095 }
 <a name="l00096"></a>00096 
-<a name="l00097"></a>00097 <span class="keywordtype">void</span> Master::executeSuperNos()
+<a name="l00097"></a><a class="code" href="class_master.html#add8981ccc8f6ada51f55bbc5cfaa5e06">00097</a> <span class="keywordtype">void</span> <a class="code" href="class_master.html#add8981ccc8f6ada51f55bbc5cfaa5e06">Master::executeSuperNos</a>()
 <a name="l00098"></a>00098 {
 <a name="l00099"></a>00099         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; <a class="code" href="class_master.html#aee685e5b58f7bd2c34e69118f360a95e">sNodes</a>[i] != NULL; i++)
 <a name="l00100"></a>00100         {
-<a name="l00101"></a>00101                 <a class="code" href="class_master.html#aee685e5b58f7bd2c34e69118f360a95e">sNodes</a>[i]-&gt;run();
-<a name="l00102"></a>00102                 <a class="code" href="class_master.html#a63c0b80c268641b773de9dcd5e11b7c3">interrupts</a>-&gt;list_push_back(<a class="code" href="class_master.html#aee685e5b58f7bd2c34e69118f360a95e">sNodes</a>[i]-&gt;getInterrupts()); 
+<a name="l00101"></a>00101                 <a class="code" href="class_master.html#aee685e5b58f7bd2c34e69118f360a95e">sNodes</a>[i]-&gt;<a class="code" href="class_super_node.html#a1d9839cfe5b7618697f9a9cf21614459">run</a>();
+<a name="l00102"></a>00102                 <a class="code" href="class_master.html#a63c0b80c268641b773de9dcd5e11b7c3">interrupts</a>-&gt;<a class="code" href="class_string_list.html#ad5cafd0f3f93cb721c07a57badb297d8">list_push_back</a>(<a class="code" href="class_master.html#aee685e5b58f7bd2c34e69118f360a95e">sNodes</a>[i]-&gt;getInterrupts()); 
 <a name="l00103"></a>00103         }
 <a name="l00104"></a>00104 }
 <a name="l00105"></a>00105 
-<a name="l00106"></a>00106 <span class="keywordtype">void</span> Master::executeConections()
+<a name="l00106"></a><a class="code" href="class_master.html#a629f3d092d47c94471c1feb4b59b66e2">00106</a> <span class="keywordtype">void</span> <a class="code" href="class_master.html#a629f3d092d47c94471c1feb4b59b66e2">Master::executeConections</a>()
 <a name="l00107"></a>00107 {
 <a name="l00108"></a>00108         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; <a class="code" href="class_master.html#a8bc8a77b8885a2059876fec3e8148655">connections</a>[i] != NULL; i++)
 <a name="l00109"></a>00109         {
-<a name="l00110"></a>00110                 <a class="code" href="class_master.html#a63c0b80c268641b773de9dcd5e11b7c3">interrupts</a>-&gt;list_push_back(<a class="code" href="class_master.html#a8bc8a77b8885a2059876fec3e8148655">connections</a>[i]-&gt;reciveMessages());   
+<a name="l00110"></a>00110                 <a class="code" href="class_master.html#a63c0b80c268641b773de9dcd5e11b7c3">interrupts</a>-&gt;<a class="code" href="class_string_list.html#ad5cafd0f3f93cb721c07a57badb297d8">list_push_back</a>(<a class="code" href="class_master.html#a8bc8a77b8885a2059876fec3e8148655">connections</a>[i]-&gt;reciveMessages());   
 <a name="l00111"></a>00111         }
 <a name="l00112"></a>00112 }
 <a name="l00113"></a>00113 
-<a name="l00114"></a>00114 <span class="keywordtype">int</span> Master::inNodeList(<span class="keywordtype">char</span> *name)
+<a name="l00114"></a><a class="code" href="class_master.html#a48a96c20f84f6caf1d30dd8ba5baacd6">00114</a> <span class="keywordtype">int</span> <a class="code" href="class_master.html#a48a96c20f84f6caf1d30dd8ba5baacd6">Master::inNodeList</a>(<span class="keywordtype">char</span> *name)
 <a name="l00115"></a>00115 {
 <a name="l00116"></a>00116         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; <a class="code" href="class_master.html#a7e1f5d1be566ea94123c986af9acf869">nodesNames</a>[i] != NULL &amp;&amp; i &lt; 100; i++)
 <a name="l00117"></a>00117         {
@@ -221,7 +222,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00121"></a>00121         <span class="keywordflow">return</span> -1;
 <a name="l00122"></a>00122 }
 <a name="l00123"></a>00123 
-<a name="l00124"></a>00124 <span class="keywordtype">int</span> Master::inSuperNodeList(<span class="keywordtype">char</span> *name)
+<a name="l00124"></a><a class="code" href="class_master.html#ac5e687b80f27ffaa3774c1838240c58a">00124</a> <span class="keywordtype">int</span> <a class="code" href="class_master.html#ac5e687b80f27ffaa3774c1838240c58a">Master::inSuperNodeList</a>(<span class="keywordtype">char</span> *name)
 <a name="l00125"></a>00125 {
 <a name="l00126"></a>00126 <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; <a class="code" href="class_master.html#a7e1f5d1be566ea94123c986af9acf869">nodesNames</a>[i] !=NULL &amp;&amp; i &lt; 100; i++)
 <a name="l00127"></a>00127         {
@@ -231,13 +232,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00131"></a>00131         <span class="keywordflow">return</span> -1;
 <a name="l00132"></a>00132 }
 <a name="l00133"></a>00133 
-<a name="l00134"></a>00134 <span class="keywordtype">int</span> Master::inConnectionList(<span class="keywordtype">char</span> *name){
+<a name="l00134"></a><a class="code" href="class_master.html#a00b7f77b44dacd05e0623c96307a3bc4">00134</a> <span class="keywordtype">int</span> <a class="code" href="class_master.html#a00b7f77b44dacd05e0623c96307a3bc4">Master::inConnectionList</a>(<span class="keywordtype">char</span> *name){
 <a name="l00135"></a>00135         <span class="keywordtype">int</span> i = 0;
 <a name="l00136"></a>00136         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; <a class="code" href="class_master.html#a8bc8a77b8885a2059876fec3e8148655">connections</a>[i] != NULL; i++)
 <a name="l00137"></a>00137         {
-<a name="l00138"></a>00138                 <a class="code" href="class_string_list.html">StringList</a> *list = <a class="code" href="class_master.html#a8bc8a77b8885a2059876fec3e8148655">connections</a>[i]-&gt;getConnectionList();
-<a name="l00139"></a>00139                 <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; !list-&gt;getN(i) == NULL; i++)
-<a name="l00140"></a>00140                         <span class="keywordflow">if</span>(strcmp(list-&gt;getN(i), name))
+<a name="l00138"></a>00138                 <a class="code" href="class_string_list.html">StringList</a> *list = <a class="code" href="class_master.html#a8bc8a77b8885a2059876fec3e8148655">connections</a>[i]-&gt;<a class="code" href="class_connection.html#a50d0eb1a568b899bfaba95ebb1e1ee92">getConnectionList</a>();
+<a name="l00139"></a>00139                 <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; !list-&gt;<a class="code" href="class_string_list.html#a3dc0d9070806f60c1fce9211a1013c8e">getN</a>(i) == NULL; i++)
+<a name="l00140"></a>00140                         <span class="keywordflow">if</span>(strcmp(list-&gt;<a class="code" href="class_string_list.html#a3dc0d9070806f60c1fce9211a1013c8e">getN</a>(i), name))
 <a name="l00141"></a>00141                                 <span class="keywordflow">return</span> i;
 <a name="l00142"></a>00142         }
 <a name="l00143"></a>00143         <span class="keywordflow">return</span> -1;
@@ -249,7 +250,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -260,9 +261,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><b>master.cpp</b>      </li>
+      <li class="navelem"><a class="el" href="master_8cpp.html">master.cpp</a>      </li>
 
-    <li class="footer">Generated on Sat Dec 14 2013 14:47:22 for Nos - System by
+    <li class="footer">Generated on Sat Dec 14 2013 15:36:09 for Nos - System by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

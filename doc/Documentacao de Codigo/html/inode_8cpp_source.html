@@ -77,6 +77,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 </div>
@@ -98,15 +99,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">/home/vitor/workspace/Nos-System/nos/simple-embedded-systems/integrated/versao3/inode.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#include &quot;inode.h&quot;</span>
+<a href="inode_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#include &quot;<a class="code" href="inode_8h.html">inode.h</a>&quot;</span>
 <a name="l00002"></a>00002 
-<a name="l00003"></a>00003 <span class="keywordtype">void</span> MotorNode::setName()
+<a name="l00003"></a><a class="code" href="class_motor_node.html#a67b51d8c7984e654738b514e390671dc">00003</a> <span class="keywordtype">void</span> <a class="code" href="class_motor_node.html#a67b51d8c7984e654738b514e390671dc">MotorNode::setName</a>()
 <a name="l00004"></a>00004 {
 <a name="l00005"></a>00005         <a class="code" href="class_node.html#a059a0ea6f86dce9fd919c08a707b360b">name</a> = (<span class="keywordtype">char</span>*)calloc(20, <span class="keyword">sizeof</span>(<span class="keywordtype">char</span>));
 <a name="l00006"></a>00006         strcpy(<a class="code" href="class_node.html#a059a0ea6f86dce9fd919c08a707b360b">name</a>, <span class="stringliteral">&quot;motor&quot;</span>);
 <a name="l00007"></a>00007 }
 <a name="l00008"></a>00008 
-<a name="l00009"></a>00009 <span class="keywordtype">void</span> MotorNode::setServiceList()
+<a name="l00009"></a><a class="code" href="class_motor_node.html#a562a90c1718556a3f6a25373687128b4">00009</a> <span class="keywordtype">void</span> <a class="code" href="class_motor_node.html#a562a90c1718556a3f6a25373687128b4">MotorNode::setServiceList</a>()
 <a name="l00010"></a>00010 {
 <a name="l00011"></a>00011         
 <a name="l00012"></a>00012         <a class="code" href="class_node.html#a4b21b5cd6dda987633ec2d42be41a844">services</a> = (<span class="keywordtype">char</span>**)malloc(<span class="keyword">sizeof</span>(<span class="keywordtype">char</span>*)*3);
@@ -118,13 +119,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00018"></a>00018         
 <a name="l00019"></a>00019 }
 <a name="l00020"></a>00020 
-<a name="l00021"></a>00021 MotorNode::MotorNode(<span class="keywordtype">int</span> d1_PIN, <span class="keywordtype">int</span> d2_PIN, <span class="keywordtype">int</span> a_PIN)
+<a name="l00021"></a><a class="code" href="class_motor_node.html#a0e8566ad6e799416807a5ace3bae7960">00021</a> <a class="code" href="class_motor_node.html#a0e8566ad6e799416807a5ace3bae7960">MotorNode::MotorNode</a>(<span class="keywordtype">int</span> d1_PIN, <span class="keywordtype">int</span> d2_PIN, <span class="keywordtype">int</span> a_PIN)
 <a name="l00022"></a>00022 {
-<a name="l00023"></a>00023         initialize();
+<a name="l00023"></a>00023         <a class="code" href="class_node.html#aae071b74f8ad790ba8304f6e9c9258e1">initialize</a>();
 <a name="l00024"></a>00024         <span class="comment">//Para a classe</span>
-<a name="l00025"></a>00025         this-&gt;d1_PIN = d1_PIN;
-<a name="l00026"></a>00026         this-&gt;d2_PIN = d2_PIN;
-<a name="l00027"></a>00027         this-&gt;a_PIN = a_PIN;
+<a name="l00025"></a>00025         this-&gt;d1_PIN = <a class="code" href="class_motor_node.html#a83bbfecdc4f5ce895b60790905de61ad">d1_PIN</a>;
+<a name="l00026"></a>00026         this-&gt;d2_PIN = <a class="code" href="class_motor_node.html#a898ee928705b6746296517bde5f9aaf2">d2_PIN</a>;
+<a name="l00027"></a>00027         this-&gt;a_PIN = <a class="code" href="class_motor_node.html#aa0056bc3a0d01daac73e10afa98fb38a">a_PIN</a>;
 <a name="l00028"></a>00028 
 <a name="l00029"></a>00029         <span class="comment">//inicializando os pinos</span>
 <a name="l00030"></a>00030         pinMode(d1_PIN, OUTPUT);
@@ -140,33 +141,33 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00040"></a>00040         digitalWrite(d2_PIN, LOW);
 <a name="l00041"></a>00041 }
 <a name="l00042"></a>00042 
-<a name="l00043"></a>00043 <span class="keywordtype">void</span> MotorNode::frente(<span class="keywordtype">int</span> forca)
+<a name="l00043"></a><a class="code" href="class_motor_node.html#a27ea018840ace0eebbfaa2cb664de2f9">00043</a> <span class="keywordtype">void</span> <a class="code" href="class_motor_node.html#a27ea018840ace0eebbfaa2cb664de2f9">MotorNode::frente</a>(<span class="keywordtype">int</span> forca)
 <a name="l00044"></a>00044 {
-<a name="l00045"></a>00045         analogWrite(a_PIN, forca); <span class="comment">// this is the analog speed value for the arduino (0-255)</span>
-<a name="l00046"></a>00046         digitalWrite(d1_PIN, HIGH);
-<a name="l00047"></a>00047         digitalWrite(d2_PIN, LOW); <span class="comment">//turns the motors on - forwards</span>
+<a name="l00045"></a>00045         analogWrite(<a class="code" href="class_motor_node.html#aa0056bc3a0d01daac73e10afa98fb38a">a_PIN</a>, forca); <span class="comment">// this is the analog speed value for the arduino (0-255)</span>
+<a name="l00046"></a>00046         digitalWrite(<a class="code" href="class_motor_node.html#a83bbfecdc4f5ce895b60790905de61ad">d1_PIN</a>, HIGH);
+<a name="l00047"></a>00047         digitalWrite(<a class="code" href="class_motor_node.html#a898ee928705b6746296517bde5f9aaf2">d2_PIN</a>, LOW); <span class="comment">//turns the motors on - forwards</span>
 <a name="l00048"></a>00048 }
 <a name="l00049"></a>00049 
-<a name="l00050"></a>00050 <span class="keywordtype">void</span> MotorNode::tras(<span class="keywordtype">int</span> forca)
+<a name="l00050"></a><a class="code" href="class_motor_node.html#a8fee12729e92e1aba2b5f7cf4bffb764">00050</a> <span class="keywordtype">void</span> <a class="code" href="class_motor_node.html#a8fee12729e92e1aba2b5f7cf4bffb764">MotorNode::tras</a>(<span class="keywordtype">int</span> forca)
 <a name="l00051"></a>00051 {
-<a name="l00052"></a>00052         analogWrite(a_PIN, forca); <span class="comment">// this is the analog speed value for the arduino (0-255)</span>
-<a name="l00053"></a>00053         digitalWrite(d1_PIN, LOW);
-<a name="l00054"></a>00054         digitalWrite(d2_PIN, HIGH); <span class="comment">//turns the motors on - forwards</span>
+<a name="l00052"></a>00052         analogWrite(<a class="code" href="class_motor_node.html#aa0056bc3a0d01daac73e10afa98fb38a">a_PIN</a>, forca); <span class="comment">// this is the analog speed value for the arduino (0-255)</span>
+<a name="l00053"></a>00053         digitalWrite(<a class="code" href="class_motor_node.html#a83bbfecdc4f5ce895b60790905de61ad">d1_PIN</a>, LOW);
+<a name="l00054"></a>00054         digitalWrite(<a class="code" href="class_motor_node.html#a898ee928705b6746296517bde5f9aaf2">d2_PIN</a>, HIGH); <span class="comment">//turns the motors on - forwards</span>
 <a name="l00055"></a>00055 }
 <a name="l00056"></a>00056 
-<a name="l00057"></a>00057 <span class="keywordtype">void</span> MotorNode::pare()
+<a name="l00057"></a><a class="code" href="class_motor_node.html#a4cc66cb486f64b72daec6b4147d2b708">00057</a> <span class="keywordtype">void</span> <a class="code" href="class_motor_node.html#a4cc66cb486f64b72daec6b4147d2b708">MotorNode::pare</a>()
 <a name="l00058"></a>00058 {
-<a name="l00059"></a>00059         analogWrite(a_PIN, 255); <span class="comment">// this is the analog speed value for the arduino (0-255)</span>
-<a name="l00060"></a>00060         digitalWrite(d1_PIN, LOW);
-<a name="l00061"></a>00061         digitalWrite(d2_PIN, LOW); <span class="comment">//turns the motors on - forwards</span>
+<a name="l00059"></a>00059         analogWrite(<a class="code" href="class_motor_node.html#aa0056bc3a0d01daac73e10afa98fb38a">a_PIN</a>, 255); <span class="comment">// this is the analog speed value for the arduino (0-255)</span>
+<a name="l00060"></a>00060         digitalWrite(<a class="code" href="class_motor_node.html#a83bbfecdc4f5ce895b60790905de61ad">d1_PIN</a>, LOW);
+<a name="l00061"></a>00061         digitalWrite(<a class="code" href="class_motor_node.html#a898ee928705b6746296517bde5f9aaf2">d2_PIN</a>, LOW); <span class="comment">//turns the motors on - forwards</span>
 <a name="l00062"></a>00062 }
 <a name="l00063"></a>00063 
-<a name="l00064"></a>00064 <span class="keywordtype">void</span> MotorNode::run()
+<a name="l00064"></a><a class="code" href="class_motor_node.html#a56837f03bfa2f976de5510a948e4ec9f">00064</a> <span class="keywordtype">void</span> <a class="code" href="class_motor_node.html#a56837f03bfa2f976de5510a948e4ec9f">MotorNode::run</a>()
 <a name="l00065"></a>00065 {
 <a name="l00066"></a>00066         <a class="code" href="class_node.html#a835e1b08cf223b7d424286d9831e6e1b">interruptions</a> = <span class="keyword">new</span> <a class="code" href="class_string_list.html">StringList</a>();
 <a name="l00067"></a>00067 }
 <a name="l00068"></a>00068 
-<a name="l00069"></a>00069 <span class="keywordtype">void</span> MotorNode::runService(<span class="keywordtype">char</span> *service)
+<a name="l00069"></a><a class="code" href="class_motor_node.html#ad95eb7e85b274172c6bef6f685cf256d">00069</a> <span class="keywordtype">void</span> <a class="code" href="class_motor_node.html#ad95eb7e85b274172c6bef6f685cf256d">MotorNode::runService</a>(<span class="keywordtype">char</span> *service)
 <a name="l00070"></a>00070 {
 <a name="l00071"></a>00071         <span class="keywordtype">char</span> *msgInr, *msg2;
 <a name="l00072"></a>00072     msgInr = strtok(service, <span class="stringliteral">&quot;/;&quot;</span>);
@@ -174,32 +175,32 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00074"></a>00074         msgInr = strtok(NULL, <span class="stringliteral">&quot;/;&quot;</span>);
 <a name="l00075"></a>00075         <span class="keywordtype">int</span> i = atoi(msgInr);
 <a name="l00076"></a>00076         <span class="keywordflow">if</span>(!strcmp(msg2, <span class="stringliteral">&quot;stop&quot;</span>))
-<a name="l00077"></a>00077                 pare();
+<a name="l00077"></a>00077                 <a class="code" href="class_motor_node.html#a4cc66cb486f64b72daec6b4147d2b708">pare</a>();
 <a name="l00078"></a>00078 
 <a name="l00079"></a>00079         <span class="keywordflow">if</span>(!strcmp(msg2, <span class="stringliteral">&quot;frente&quot;</span>))
-<a name="l00080"></a>00080                 frente(i);
+<a name="l00080"></a>00080                 <a class="code" href="class_motor_node.html#a27ea018840ace0eebbfaa2cb664de2f9">frente</a>(i);
 <a name="l00081"></a>00081 
 <a name="l00082"></a>00082         <span class="keywordflow">if</span>(!strcmp(msg2, <span class="stringliteral">&quot;tras&quot;</span>))
-<a name="l00083"></a>00083                 tras(i);
+<a name="l00083"></a>00083                 <a class="code" href="class_motor_node.html#a8fee12729e92e1aba2b5f7cf4bffb764">tras</a>(i);
 <a name="l00084"></a>00084 }
 <a name="l00085"></a>00085 
-<a name="l00086"></a>00086 DirectionNode::DirectionNode(<span class="keywordtype">int</span> a_PIN)
+<a name="l00086"></a><a class="code" href="class_direction_node.html#a53a8403551cf42e8aa0c7bbe07ad2995">00086</a> <a class="code" href="class_direction_node.html#a53a8403551cf42e8aa0c7bbe07ad2995">DirectionNode::DirectionNode</a>(<span class="keywordtype">int</span> a_PIN)
 <a name="l00087"></a>00087 {
-<a name="l00088"></a>00088         initialize();
-<a name="l00089"></a>00089     myservo = <span class="keyword">new</span> <a class="code" href="class_servo.html">Servo</a>();
-<a name="l00090"></a>00090         this-&gt;a_PIN = a_PIN;
-<a name="l00091"></a>00091     myservo-&gt;attach(a_PIN);
+<a name="l00088"></a>00088         <a class="code" href="class_node.html#aae071b74f8ad790ba8304f6e9c9258e1">initialize</a>();
+<a name="l00089"></a>00089     <a class="code" href="class_direction_node.html#a1dd61938506f08758b12abd352b0da7f">myservo</a> = <span class="keyword">new</span> <a class="code" href="class_servo.html">Servo</a>();
+<a name="l00090"></a>00090         this-&gt;a_PIN = <a class="code" href="class_direction_node.html#ae5a68ce3183d9f5ab17786385e753127">a_PIN</a>;
+<a name="l00091"></a>00091     <a class="code" href="class_direction_node.html#a1dd61938506f08758b12abd352b0da7f">myservo</a>-&gt;<a class="code" href="class_servo.html#aeccd2077f07ebc45250da14e72a0c461">attach</a>(a_PIN);
 <a name="l00092"></a>00092         <span class="keywordtype">int</span> outputValue = map(0, SHRT_MIN, SHRT_MAX, 0, 180);  
-<a name="l00093"></a>00093     myservo-&gt;write(outputValue);
+<a name="l00093"></a>00093     <a class="code" href="class_direction_node.html#a1dd61938506f08758b12abd352b0da7f">myservo</a>-&gt;<a class="code" href="class_servo.html#a72b4b546912eada96a6ef705168ceb8a">write</a>(outputValue);
 <a name="l00094"></a>00094 }
 <a name="l00095"></a>00095 
-<a name="l00096"></a>00096 <span class="keywordtype">void</span> DirectionNode::setName()
+<a name="l00096"></a><a class="code" href="class_direction_node.html#a61228494bbd8936697ca68d41edd79dd">00096</a> <span class="keywordtype">void</span> <a class="code" href="class_direction_node.html#a61228494bbd8936697ca68d41edd79dd">DirectionNode::setName</a>()
 <a name="l00097"></a>00097 {
 <a name="l00098"></a>00098         <a class="code" href="class_node.html#a059a0ea6f86dce9fd919c08a707b360b">name</a> = (<span class="keywordtype">char</span>*)calloc(20, <span class="keyword">sizeof</span>(<span class="keywordtype">char</span>));
 <a name="l00099"></a>00099         strcpy(<a class="code" href="class_node.html#a059a0ea6f86dce9fd919c08a707b360b">name</a>, <span class="stringliteral">&quot;direction&quot;</span>);
 <a name="l00100"></a>00100 }
 <a name="l00101"></a>00101 
-<a name="l00102"></a>00102 <span class="keywordtype">void</span> DirectionNode::setServiceList()
+<a name="l00102"></a><a class="code" href="class_direction_node.html#a2bf00da20c98befe761481c9eb4405ae">00102</a> <span class="keywordtype">void</span> <a class="code" href="class_direction_node.html#a2bf00da20c98befe761481c9eb4405ae">DirectionNode::setServiceList</a>()
 <a name="l00103"></a>00103 {
 <a name="l00104"></a>00104         
 <a name="l00105"></a>00105         <a class="code" href="class_node.html#a4b21b5cd6dda987633ec2d42be41a844">services</a> = (<span class="keywordtype">char</span>**)malloc(<span class="keyword">sizeof</span>(<span class="keywordtype">char</span>*)*3);
@@ -211,11 +212,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00111"></a>00111         
 <a name="l00112"></a>00112 }
 <a name="l00113"></a>00113 
-<a name="l00114"></a>00114 <span class="keywordtype">void</span> DirectionNode::run(){
+<a name="l00114"></a><a class="code" href="class_direction_node.html#aa7fde93e8ef5887e9793c4bd75279c47">00114</a> <span class="keywordtype">void</span> <a class="code" href="class_direction_node.html#aa7fde93e8ef5887e9793c4bd75279c47">DirectionNode::run</a>(){
 <a name="l00115"></a>00115         <a class="code" href="class_node.html#a835e1b08cf223b7d424286d9831e6e1b">interruptions</a> = <span class="keyword">new</span> <a class="code" href="class_string_list.html">StringList</a>();
 <a name="l00116"></a>00116 }
 <a name="l00117"></a>00117 
-<a name="l00118"></a>00118 <span class="keywordtype">void</span> DirectionNode::runService(<span class="keywordtype">char</span> *service)
+<a name="l00118"></a><a class="code" href="class_direction_node.html#ab38b8d7381f174b9deadb1f6dbd71e31">00118</a> <span class="keywordtype">void</span> <a class="code" href="class_direction_node.html#ab38b8d7381f174b9deadb1f6dbd71e31">DirectionNode::runService</a>(<span class="keywordtype">char</span> *service)
 <a name="l00119"></a>00119 {
 <a name="l00120"></a>00120         Serial.println(service);
 <a name="l00121"></a>00121         <span class="keywordtype">char</span> *msgInr, *msg2;
@@ -225,43 +226,43 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00125"></a>00125         <span class="keywordtype">int</span> i = atoi(msgInr);
 <a name="l00126"></a>00126 
 <a name="l00127"></a>00127         <span class="keywordflow">if</span>(!strcmp(msg2, <span class="stringliteral">&quot;center&quot;</span>))
-<a name="l00128"></a>00128                 centro();
+<a name="l00128"></a>00128                 <a class="code" href="class_direction_node.html#ad88a9f87817099bde959a2592412046c">centro</a>();
 <a name="l00129"></a>00129 
 <a name="l00130"></a>00130         <span class="keywordflow">if</span>(!strcmp(msg2, <span class="stringliteral">&quot;rigth&quot;</span>))
-<a name="l00131"></a>00131                 direita(i + 70) ;
+<a name="l00131"></a>00131                 <a class="code" href="class_direction_node.html#ab2040369d101d5964b2d76b06814d7eb">direita</a>(i + 70) ;
 <a name="l00132"></a>00132 
 <a name="l00133"></a>00133         <span class="keywordflow">if</span>(!strcmp(msg2, <span class="stringliteral">&quot;left&quot;</span>))
-<a name="l00134"></a>00134                 esquerda(90 - i + 20);
+<a name="l00134"></a>00134                 <a class="code" href="class_direction_node.html#a90091aad98a6ec4892d1cd0ae6675fad">esquerda</a>(90 - i + 20);
 <a name="l00135"></a>00135 }
 <a name="l00136"></a>00136 
-<a name="l00137"></a>00137 <span class="keywordtype">void</span> DirectionNode::esquerda(<span class="keywordtype">int</span> forca)
+<a name="l00137"></a><a class="code" href="class_direction_node.html#a90091aad98a6ec4892d1cd0ae6675fad">00137</a> <span class="keywordtype">void</span> <a class="code" href="class_direction_node.html#a90091aad98a6ec4892d1cd0ae6675fad">DirectionNode::esquerda</a>(<span class="keywordtype">int</span> forca)
 <a name="l00138"></a>00138 {
-<a name="l00139"></a>00139     myservo-&gt;write(forca);
+<a name="l00139"></a>00139     <a class="code" href="class_direction_node.html#a1dd61938506f08758b12abd352b0da7f">myservo</a>-&gt;<a class="code" href="class_servo.html#a72b4b546912eada96a6ef705168ceb8a">write</a>(forca);
 <a name="l00140"></a>00140 }
 <a name="l00141"></a>00141 
-<a name="l00142"></a>00142 <span class="keywordtype">void</span> DirectionNode::centro()
+<a name="l00142"></a><a class="code" href="class_direction_node.html#ad88a9f87817099bde959a2592412046c">00142</a> <span class="keywordtype">void</span> <a class="code" href="class_direction_node.html#ad88a9f87817099bde959a2592412046c">DirectionNode::centro</a>()
 <a name="l00143"></a>00143 {
-<a name="l00144"></a>00144     myservo-&gt;write(90);
+<a name="l00144"></a>00144     <a class="code" href="class_direction_node.html#a1dd61938506f08758b12abd352b0da7f">myservo</a>-&gt;<a class="code" href="class_servo.html#a72b4b546912eada96a6ef705168ceb8a">write</a>(90);
 <a name="l00145"></a>00145 }
 <a name="l00146"></a>00146 
-<a name="l00147"></a>00147 <span class="keywordtype">void</span> DirectionNode::direita(<span class="keywordtype">int</span> forca)
+<a name="l00147"></a><a class="code" href="class_direction_node.html#ab2040369d101d5964b2d76b06814d7eb">00147</a> <span class="keywordtype">void</span> <a class="code" href="class_direction_node.html#ab2040369d101d5964b2d76b06814d7eb">DirectionNode::direita</a>(<span class="keywordtype">int</span> forca)
 <a name="l00148"></a>00148 {
-<a name="l00149"></a>00149     myservo-&gt;write(forca);
+<a name="l00149"></a>00149     <a class="code" href="class_direction_node.html#a1dd61938506f08758b12abd352b0da7f">myservo</a>-&gt;<a class="code" href="class_servo.html#a72b4b546912eada96a6ef705168ceb8a">write</a>(forca);
 <a name="l00150"></a>00150 }
 <a name="l00151"></a>00151 
-<a name="l00152"></a>00152 TemperatureNode::TemperatureNode()
+<a name="l00152"></a><a class="code" href="class_temperature_node.html#a2ea691ecdbdf934d88d8200961661a66">00152</a> <a class="code" href="class_temperature_node.html#a2ea691ecdbdf934d88d8200961661a66">TemperatureNode::TemperatureNode</a>()
 <a name="l00153"></a>00153 {
-<a name="l00154"></a>00154         initialize();
+<a name="l00154"></a>00154         <a class="code" href="class_node.html#aae071b74f8ad790ba8304f6e9c9258e1">initialize</a>();
 <a name="l00155"></a>00155 }
 <a name="l00156"></a>00156 
 <a name="l00157"></a>00157 
-<a name="l00158"></a>00158 <span class="keywordtype">void</span> TemperatureNode::setName()
+<a name="l00158"></a><a class="code" href="class_temperature_node.html#a8889cdfc6f7f6697c8954883c30bca3d">00158</a> <span class="keywordtype">void</span> <a class="code" href="class_temperature_node.html#a8889cdfc6f7f6697c8954883c30bca3d">TemperatureNode::setName</a>()
 <a name="l00159"></a>00159 {
 <a name="l00160"></a>00160         <a class="code" href="class_node.html#a059a0ea6f86dce9fd919c08a707b360b">name</a> = (<span class="keywordtype">char</span>*)calloc(20, <span class="keyword">sizeof</span>(<span class="keywordtype">char</span>));
 <a name="l00161"></a>00161         strcpy(<a class="code" href="class_node.html#a059a0ea6f86dce9fd919c08a707b360b">name</a>, <span class="stringliteral">&quot;temperature&quot;</span>);
 <a name="l00162"></a>00162 }
 <a name="l00163"></a>00163 
-<a name="l00164"></a>00164 <span class="keywordtype">void</span> TemperatureNode::setServiceList()
+<a name="l00164"></a><a class="code" href="class_temperature_node.html#a04e950b56532c79d4b566284c204f707">00164</a> <span class="keywordtype">void</span> <a class="code" href="class_temperature_node.html#a04e950b56532c79d4b566284c204f707">TemperatureNode::setServiceList</a>()
 <a name="l00165"></a>00165 {
 <a name="l00166"></a>00166         <a class="code" href="class_node.html#a4b21b5cd6dda987633ec2d42be41a844">services</a> = (<span class="keywordtype">char</span>**)malloc(<span class="keyword">sizeof</span>(<span class="keywordtype">char</span>*)*1);
 <a name="l00167"></a>00167         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 1; i++)
@@ -269,7 +270,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00169"></a>00169         strcpy(<a class="code" href="class_node.html#a4b21b5cd6dda987633ec2d42be41a844">services</a>[0], <span class="stringliteral">&quot;ambiente/X&quot;</span>);
 <a name="l00170"></a>00170 }
 <a name="l00171"></a>00171 
-<a name="l00172"></a>00172 <span class="keywordtype">void</span> TemperatureNode::run()
+<a name="l00172"></a><a class="code" href="class_temperature_node.html#a19e447adb2fd0aa2bf7f9eb0bd301016">00172</a> <span class="keywordtype">void</span> <a class="code" href="class_temperature_node.html#a19e447adb2fd0aa2bf7f9eb0bd301016">TemperatureNode::run</a>()
 <a name="l00173"></a>00173 {
 <a name="l00174"></a>00174         <a class="code" href="class_node.html#a835e1b08cf223b7d424286d9831e6e1b">interruptions</a> = <span class="keyword">new</span> <a class="code" href="class_string_list.html">StringList</a>();       
 <a name="l00175"></a>00175 }
@@ -280,7 +281,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -291,9 +292,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><b>inode.cpp</b>      </li>
+      <li class="navelem"><a class="el" href="inode_8cpp.html">inode.cpp</a>      </li>
 
-    <li class="footer">Generated on Sat Dec 14 2013 14:47:22 for Nos - System by
+    <li class="footer">Generated on Sat Dec 14 2013 15:36:09 for Nos - System by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

@@ -77,6 +77,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 </div>
@@ -98,7 +99,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">/home/vitor/workspace/Nos-System/nos/simple-embedded-systems/integrated/versao3/Servo.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">/*</span>
+<a href="_servo_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">/*</span>
 <a name="l00002"></a>00002 <span class="comment">  Servo.h - Interrupt driven Servo library for Arduino using 16 bit timers- Version 2</span>
 <a name="l00003"></a>00003 <span class="comment">  Copyright (c) 2009 Michael Margolis.  All right reserved.</span>
 <a name="l00004"></a>00004 <span class="comment"></span>
@@ -162,66 +163,66 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00062"></a>00062 <span class="preprocessor"></span><span class="preprocessor">#define _useTimer1 </span>
 <a name="l00063"></a>00063 <span class="preprocessor"></span><span class="preprocessor">#define _useTimer3</span>
 <a name="l00064"></a>00064 <span class="preprocessor"></span><span class="preprocessor">#define _useTimer4 </span>
-<a name="l00065"></a>00065 <span class="preprocessor"></span><span class="keyword">typedef</span> <span class="keyword">enum</span> { _timer5, _timer1, _timer3, _timer4, _Nbr_16timers } timer16_Sequence_t ;
+<a name="l00065"></a>00065 <span class="preprocessor"></span><span class="keyword">typedef</span> <span class="keyword">enum</span> { _timer5, <a class="code" href="_servo_8h.html#aa57046a4eafc371d1ae9a7f82f666887a79ea1c528ccb762bc8533c2b5849026d">_timer1</a>, _timer3, _timer4, <a class="code" href="_servo_8h.html#aa57046a4eafc371d1ae9a7f82f666887a53f530c6e8ca85b1b3fbd5b21ef207a4">_Nbr_16timers</a> } <a class="code" href="_servo_8h.html#aa57046a4eafc371d1ae9a7f82f666887">timer16_Sequence_t</a> ;
 <a name="l00066"></a>00066 
 <a name="l00067"></a>00067 <span class="preprocessor">#elif defined(__AVR_ATmega32U4__)  </span>
 <a name="l00068"></a>00068 <span class="preprocessor"></span><span class="preprocessor">#define _useTimer3</span>
 <a name="l00069"></a>00069 <span class="preprocessor"></span><span class="preprocessor">#define _useTimer1 </span>
-<a name="l00070"></a>00070 <span class="preprocessor"></span><span class="keyword">typedef</span> <span class="keyword">enum</span> { _timer3, _timer1, _Nbr_16timers } timer16_Sequence_t ;
+<a name="l00070"></a>00070 <span class="preprocessor"></span><span class="keyword">typedef</span> <span class="keyword">enum</span> { _timer3, <a class="code" href="_servo_8h.html#aa57046a4eafc371d1ae9a7f82f666887a79ea1c528ccb762bc8533c2b5849026d">_timer1</a>, <a class="code" href="_servo_8h.html#aa57046a4eafc371d1ae9a7f82f666887a53f530c6e8ca85b1b3fbd5b21ef207a4">_Nbr_16timers</a> } <a class="code" href="_servo_8h.html#aa57046a4eafc371d1ae9a7f82f666887">timer16_Sequence_t</a> ;
 <a name="l00071"></a>00071 
 <a name="l00072"></a>00072 <span class="preprocessor">#elif defined(__AVR_AT90USB646__) || defined(__AVR_AT90USB1286__)</span>
 <a name="l00073"></a>00073 <span class="preprocessor"></span><span class="preprocessor">#define _useTimer3</span>
 <a name="l00074"></a>00074 <span class="preprocessor"></span><span class="preprocessor">#define _useTimer1</span>
-<a name="l00075"></a>00075 <span class="preprocessor"></span><span class="keyword">typedef</span> <span class="keyword">enum</span> { _timer3, _timer1, _Nbr_16timers } timer16_Sequence_t ;
+<a name="l00075"></a>00075 <span class="preprocessor"></span><span class="keyword">typedef</span> <span class="keyword">enum</span> { _timer3, <a class="code" href="_servo_8h.html#aa57046a4eafc371d1ae9a7f82f666887a79ea1c528ccb762bc8533c2b5849026d">_timer1</a>, <a class="code" href="_servo_8h.html#aa57046a4eafc371d1ae9a7f82f666887a53f530c6e8ca85b1b3fbd5b21ef207a4">_Nbr_16timers</a> } <a class="code" href="_servo_8h.html#aa57046a4eafc371d1ae9a7f82f666887">timer16_Sequence_t</a> ;
 <a name="l00076"></a>00076 
 <a name="l00077"></a>00077 <span class="preprocessor">#elif defined(__AVR_ATmega128__) ||defined(__AVR_ATmega1281__)||defined(__AVR_ATmega2561__)</span>
 <a name="l00078"></a>00078 <span class="preprocessor"></span><span class="preprocessor">#define _useTimer3</span>
 <a name="l00079"></a>00079 <span class="preprocessor"></span><span class="preprocessor">#define _useTimer1</span>
-<a name="l00080"></a>00080 <span class="preprocessor"></span><span class="keyword">typedef</span> <span class="keyword">enum</span> { _timer3, _timer1, _Nbr_16timers } timer16_Sequence_t ;
+<a name="l00080"></a>00080 <span class="preprocessor"></span><span class="keyword">typedef</span> <span class="keyword">enum</span> { _timer3, <a class="code" href="_servo_8h.html#aa57046a4eafc371d1ae9a7f82f666887a79ea1c528ccb762bc8533c2b5849026d">_timer1</a>, <a class="code" href="_servo_8h.html#aa57046a4eafc371d1ae9a7f82f666887a53f530c6e8ca85b1b3fbd5b21ef207a4">_Nbr_16timers</a> } <a class="code" href="_servo_8h.html#aa57046a4eafc371d1ae9a7f82f666887">timer16_Sequence_t</a> ;
 <a name="l00081"></a>00081 
 <a name="l00082"></a>00082 <span class="preprocessor">#else  // everything else</span>
-<a name="l00083"></a>00083 <span class="preprocessor"></span><span class="preprocessor">#define _useTimer1</span>
-<a name="l00084"></a>00084 <span class="preprocessor"></span><span class="keyword">typedef</span> <span class="keyword">enum</span> { _timer1, _Nbr_16timers } timer16_Sequence_t ;                  
+<a name="l00083"></a><a class="code" href="_servo_8h.html#ab187febb2d332254f49068c80dbb22d7">00083</a> <span class="preprocessor"></span><span class="preprocessor">#define _useTimer1</span>
+<a name="l00084"></a><a class="code" href="_servo_8h.html#aa57046a4eafc371d1ae9a7f82f666887">00084</a> <span class="preprocessor"></span><span class="keyword">typedef</span> <span class="keyword">enum</span> { <a class="code" href="_servo_8h.html#aa57046a4eafc371d1ae9a7f82f666887a79ea1c528ccb762bc8533c2b5849026d">_timer1</a>, <a class="code" href="_servo_8h.html#aa57046a4eafc371d1ae9a7f82f666887a53f530c6e8ca85b1b3fbd5b21ef207a4">_Nbr_16timers</a> } <a class="code" href="_servo_8h.html#aa57046a4eafc371d1ae9a7f82f666887">timer16_Sequence_t</a> ;                  
 <a name="l00085"></a>00085 <span class="preprocessor">#endif</span>
 <a name="l00086"></a>00086 <span class="preprocessor"></span>
-<a name="l00087"></a>00087 <span class="preprocessor">#define Servo_VERSION           2      // software version of this library</span>
+<a name="l00087"></a><a class="code" href="_servo_8h.html#af6fdee462ecaf434690dad810328b0dd">00087</a> <span class="preprocessor">#define Servo_VERSION           2      // software version of this library</span>
 <a name="l00088"></a>00088 <span class="preprocessor"></span>
-<a name="l00089"></a>00089 <span class="preprocessor">#define MIN_PULSE_WIDTH       544     // the shortest pulse sent to a servo  </span>
-<a name="l00090"></a>00090 <span class="preprocessor"></span><span class="preprocessor">#define MAX_PULSE_WIDTH      2400     // the longest pulse sent to a servo </span>
-<a name="l00091"></a>00091 <span class="preprocessor"></span><span class="preprocessor">#define DEFAULT_PULSE_WIDTH  1500     // default pulse width when servo is attached</span>
-<a name="l00092"></a>00092 <span class="preprocessor"></span><span class="preprocessor">#define REFRESH_INTERVAL    20000     // minumim time to refresh servos in microseconds </span>
+<a name="l00089"></a><a class="code" href="_servo_8h.html#ad95c8286fc30ece77d632ad00a94d80e">00089</a> <span class="preprocessor">#define MIN_PULSE_WIDTH       544     // the shortest pulse sent to a servo  </span>
+<a name="l00090"></a><a class="code" href="_servo_8h.html#a57a10261e6511f97317cee9076692315">00090</a> <span class="preprocessor"></span><span class="preprocessor">#define MAX_PULSE_WIDTH      2400     // the longest pulse sent to a servo </span>
+<a name="l00091"></a><a class="code" href="_servo_8h.html#a7eada57cb49e7b1766a813e4635d79bd">00091</a> <span class="preprocessor"></span><span class="preprocessor">#define DEFAULT_PULSE_WIDTH  1500     // default pulse width when servo is attached</span>
+<a name="l00092"></a><a class="code" href="_servo_8h.html#adfe85923c58edb0cfa15a0d026d7ee74">00092</a> <span class="preprocessor"></span><span class="preprocessor">#define REFRESH_INTERVAL    20000     // minumim time to refresh servos in microseconds </span>
 <a name="l00093"></a>00093 <span class="preprocessor"></span>
-<a name="l00094"></a>00094 <span class="preprocessor">#define SERVOS_PER_TIMER       12     // the maximum number of servos controlled by one timer </span>
-<a name="l00095"></a>00095 <span class="preprocessor"></span><span class="preprocessor">#define MAX_SERVOS   (_Nbr_16timers  * SERVOS_PER_TIMER)</span>
+<a name="l00094"></a><a class="code" href="_servo_8h.html#af16be8a4945638887eae35a30aa702c0">00094</a> <span class="preprocessor">#define SERVOS_PER_TIMER       12     // the maximum number of servos controlled by one timer </span>
+<a name="l00095"></a><a class="code" href="_servo_8h.html#a4259c40a55e489ed25c9f3cbb3be05ab">00095</a> <span class="preprocessor"></span><span class="preprocessor">#define MAX_SERVOS   (_Nbr_16timers  * SERVOS_PER_TIMER)</span>
 <a name="l00096"></a>00096 <span class="preprocessor"></span>
-<a name="l00097"></a>00097 <span class="preprocessor">#define INVALID_SERVO         255     // flag indicating an invalid servo index</span>
+<a name="l00097"></a><a class="code" href="_servo_8h.html#ac4ebf3d89da7ee64b1f4726099b6d6ec">00097</a> <span class="preprocessor">#define INVALID_SERVO         255     // flag indicating an invalid servo index</span>
 <a name="l00098"></a>00098 <span class="preprocessor"></span>
 <a name="l00099"></a><a class="code" href="struct_servo_pin__t.html">00099</a> <span class="keyword">typedef</span> <span class="keyword">struct  </span>{
-<a name="l00100"></a>00100   uint8_t nbr        :6 ;             <span class="comment">// a pin number from 0 to 63</span>
-<a name="l00101"></a>00101   uint8_t isActive   :1 ;             <span class="comment">// true if this channel is enabled, pin not pulsed if false </span>
+<a name="l00100"></a><a class="code" href="struct_servo_pin__t.html#ad2ff0e34820e04a276e38d359021b03c">00100</a>   uint8_t nbr        :6 ;             <span class="comment">// a pin number from 0 to 63</span>
+<a name="l00101"></a><a class="code" href="struct_servo_pin__t.html#aaf3c1889bb99bc6f936a3cfb6eba532a">00101</a>   uint8_t isActive   :1 ;             <span class="comment">// true if this channel is enabled, pin not pulsed if false </span>
 <a name="l00102"></a>00102 } <a class="code" href="struct_servo_pin__t.html">ServoPin_t</a>   ;  
 <a name="l00103"></a>00103 
 <a name="l00104"></a><a class="code" href="structservo__t.html">00104</a> <span class="keyword">typedef</span> <span class="keyword">struct </span>{
-<a name="l00105"></a>00105   <a class="code" href="struct_servo_pin__t.html">ServoPin_t</a> Pin;
-<a name="l00106"></a>00106   <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> ticks;
+<a name="l00105"></a><a class="code" href="structservo__t.html#a04bcc6cf13ea5cd2c4dabdc977e054cb">00105</a>   <a class="code" href="struct_servo_pin__t.html">ServoPin_t</a> <a class="code" href="structservo__t.html#a04bcc6cf13ea5cd2c4dabdc977e054cb">Pin</a>;
+<a name="l00106"></a><a class="code" href="structservo__t.html#ad1d758a6f4b18bf2eee4d48d1bf9fad6">00106</a>   <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="structservo__t.html#ad1d758a6f4b18bf2eee4d48d1bf9fad6">ticks</a>;
 <a name="l00107"></a>00107 } <a class="code" href="structservo__t.html">servo_t</a>;
 <a name="l00108"></a>00108 
 <a name="l00109"></a><a class="code" href="class_servo.html">00109</a> <span class="keyword">class </span><a class="code" href="class_servo.html">Servo</a>
 <a name="l00110"></a>00110 {
 <a name="l00111"></a>00111 <span class="keyword">public</span>:
-<a name="l00112"></a>00112   <a class="code" href="class_servo.html">Servo</a>();
-<a name="l00113"></a>00113   uint8_t attach(<span class="keywordtype">int</span> pin);           <span class="comment">// attach the given pin to the next free channel, sets pinMode, returns channel number or 0 if failure</span>
-<a name="l00114"></a>00114   uint8_t attach(<span class="keywordtype">int</span> pin, <span class="keywordtype">int</span> min, <span class="keywordtype">int</span> max); <span class="comment">// as above but also sets min and max values for writes. </span>
-<a name="l00115"></a>00115   <span class="keywordtype">void</span> detach();
-<a name="l00116"></a>00116   <span class="keywordtype">void</span> write(<span class="keywordtype">int</span> value);             <span class="comment">// if value is &lt; 200 its treated as an angle, otherwise as pulse width in microseconds </span>
-<a name="l00117"></a>00117   <span class="keywordtype">void</span> writeMicroseconds(<span class="keywordtype">int</span> value); <span class="comment">// Write pulse width in microseconds </span>
-<a name="l00118"></a>00118   <span class="keywordtype">int</span> read();                        <span class="comment">// returns current pulse width as an angle between 0 and 180 degrees</span>
-<a name="l00119"></a>00119   <span class="keywordtype">int</span> readMicroseconds();            <span class="comment">// returns current pulse width in microseconds for this servo (was read_us() in first release)</span>
-<a name="l00120"></a>00120   <span class="keywordtype">bool</span> attached();                   <span class="comment">// return true if this servo is attached, otherwise false </span>
+<a name="l00112"></a>00112   <a class="code" href="class_servo.html#a70b2b17657cf258cdcb57503bcf62cd2">Servo</a>();
+<a name="l00113"></a>00113   uint8_t <a class="code" href="class_servo.html#aeccd2077f07ebc45250da14e72a0c461">attach</a>(<span class="keywordtype">int</span> pin);           <span class="comment">// attach the given pin to the next free channel, sets pinMode, returns channel number or 0 if failure</span>
+<a name="l00114"></a>00114   uint8_t <a class="code" href="class_servo.html#aeccd2077f07ebc45250da14e72a0c461">attach</a>(<span class="keywordtype">int</span> pin, <span class="keywordtype">int</span> <a class="code" href="class_servo.html#a11ac140aa7696dc424526f4f4562853d">min</a>, <span class="keywordtype">int</span> <a class="code" href="class_servo.html#a71f71fd80677c88515444c3b88b51a21">max</a>); <span class="comment">// as above but also sets min and max values for writes. </span>
+<a name="l00115"></a>00115   <span class="keywordtype">void</span> <a class="code" href="class_servo.html#a0b69ccc5c8b348ebaa84be91d973a362">detach</a>();
+<a name="l00116"></a>00116   <span class="keywordtype">void</span> <a class="code" href="class_servo.html#a72b4b546912eada96a6ef705168ceb8a">write</a>(<span class="keywordtype">int</span> value);             <span class="comment">// if value is &lt; 200 its treated as an angle, otherwise as pulse width in microseconds </span>
+<a name="l00117"></a>00117   <span class="keywordtype">void</span> <a class="code" href="class_servo.html#ac7fe3d6d2ea285ead98814bcfc417029">writeMicroseconds</a>(<span class="keywordtype">int</span> value); <span class="comment">// Write pulse width in microseconds </span>
+<a name="l00118"></a>00118   <span class="keywordtype">int</span> <a class="code" href="class_servo.html#aaca0af33ba7d7c87c8a785b8eabf95a7">read</a>();                        <span class="comment">// returns current pulse width as an angle between 0 and 180 degrees</span>
+<a name="l00119"></a>00119   <span class="keywordtype">int</span> <a class="code" href="class_servo.html#a43950424d146c1414460066483d9561b">readMicroseconds</a>();            <span class="comment">// returns current pulse width in microseconds for this servo (was read_us() in first release)</span>
+<a name="l00120"></a>00120   <span class="keywordtype">bool</span> <a class="code" href="class_servo.html#a48607d47aa5678780b1b927102bd3b1b">attached</a>();                   <span class="comment">// return true if this servo is attached, otherwise false </span>
 <a name="l00121"></a>00121 <span class="keyword">private</span>:
-<a name="l00122"></a>00122    uint8_t servoIndex;               <span class="comment">// index into the channel data for this servo</span>
-<a name="l00123"></a>00123    int8_t min;                       <span class="comment">// minimum is this value times 4 added to MIN_PULSE_WIDTH    </span>
-<a name="l00124"></a>00124    int8_t max;                       <span class="comment">// maximum is this value times 4 added to MAX_PULSE_WIDTH   </span>
+<a name="l00122"></a><a class="code" href="class_servo.html#a01fa8c02563163757164771304f9ab3a">00122</a>    uint8_t <a class="code" href="class_servo.html#a01fa8c02563163757164771304f9ab3a">servoIndex</a>;               <span class="comment">// index into the channel data for this servo</span>
+<a name="l00123"></a><a class="code" href="class_servo.html#a11ac140aa7696dc424526f4f4562853d">00123</a>    int8_t <a class="code" href="class_servo.html#a11ac140aa7696dc424526f4f4562853d">min</a>;                       <span class="comment">// minimum is this value times 4 added to MIN_PULSE_WIDTH    </span>
+<a name="l00124"></a><a class="code" href="class_servo.html#a71f71fd80677c88515444c3b88b51a21">00124</a>    int8_t <a class="code" href="class_servo.html#a71f71fd80677c88515444c3b88b51a21">max</a>;                       <span class="comment">// maximum is this value times 4 added to MAX_PULSE_WIDTH   </span>
 <a name="l00125"></a>00125 };
 <a name="l00126"></a>00126 
 <a name="l00127"></a>00127 <span class="preprocessor">#endif</span>
@@ -232,7 +233,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Defines</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -243,9 +244,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><b>Servo.h</b>      </li>
+      <li class="navelem"><a class="el" href="_servo_8h.html">Servo.h</a>      </li>
 
-    <li class="footer">Generated on Sat Dec 14 2013 14:47:22 for Nos - System by
+    <li class="footer">Generated on Sat Dec 14 2013 15:36:09 for Nos - System by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>
