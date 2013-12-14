@@ -1,0 +1,5 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$class_direction_node.html" title="DirectionNode" alt="" coords="5,83,109,112"/>
+<area shape="rect" id="node5" href="$class_motor_node.html" title="MotorNode" alt="" coords="133,83,219,112"/>
+<area shape="rect" id="node7" href="$class_temperature_node.html" title="TemperatureNode" alt="" coords="243,83,368,112"/>
+</map>
