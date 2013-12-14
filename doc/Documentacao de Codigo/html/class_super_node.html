@@ -134,8 +134,10 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna a lista de serviços disponibilizados pelo super No a partir do momento que todos os nos dos quais ele depende foram instacializado e devidamente setados. garantindo que o master nao chame sevicos nao implementados por esse super no.  Lista de serviços implementados por esse super no.  <a href="#a4112876ace824e4bb6107444547627fb"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_string_list.html">StringList</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_super_node.html#ae26f1c3a0dfee60095dd0edb3a80e0c2">getInterrupts</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna a lista de interrupçoes gerando pelo super no apos a execução de um serviço ou de um interação. /retorn A lista de interrupções geradas pelo super no.  <a href="#ae26f1c3a0dfee60095dd0edb3a80e0c2"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_super_node.html#a1d9839cfe5b7618697f9a9cf21614459">run</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_super_node.html#a200a0c6d3a2705aec6be89264eb3c97a">runService</a> (char *)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_super_node.html#acdee9ffa2d02a55a86fe9944353b15a7">run</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">realiza as interraçoes basicas do super no para cada interçao do master. Aqui se exetuda de forma continua. neste se gera a lista de interrupçoes se necessario, e se faz um processamento nao blocante.  <a href="#acdee9ffa2d02a55a86fe9944353b15a7"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_super_node.html#a21f3bac0b293c8b4fc6427d39a0527f4">runService</a> (char *)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">relazida a interaçao basica apos a chamada de um serviço, executando o basico e preparando para que nas interraçoes <a class="el" href="class_super_node.html#acdee9ffa2d02a55a86fe9944353b15a7" title="realiza as interraçoes basicas do super no para cada interçao do master. Aqui se exetuda de forma con...">run()</a> o super no se comporte de maneira correta. aqui tambem podem ser geradas interrupçoes que devem ser add a lista de interrupçoes.  <a href="#a21f3bac0b293c8b4fc6427d39a0527f4"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_super_node.html#a629fa000c6e75a4e84b2be5a21fd0815">setName</a> ()</td></tr>
@@ -295,12 +297,12 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a class="anchor" id="a1d9839cfe5b7618697f9a9cf21614459"></a><!-- doxytag: member="SuperNode::run" ref="a1d9839cfe5b7618697f9a9cf21614459" args="()" -->
+<a class="anchor" id="acdee9ffa2d02a55a86fe9944353b15a7"></a><!-- doxytag: member="SuperNode::run" ref="acdee9ffa2d02a55a86fe9944353b15a7" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual int <a class="el" href="class_super_node.html#a1d9839cfe5b7618697f9a9cf21614459">SuperNode::run</a> </td>
+          <td class="memname">void <a class="el" href="class_super_node.html#acdee9ffa2d02a55a86fe9944353b15a7">SuperNode::run</a> </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td><code> [virtual]</code></td>
@@ -309,23 +311,25 @@ Here is the call graph for this function:</div>
 </div>
 <div class="memdoc">
 
+<p>realiza as interraçoes basicas do super no para cada interçao do master. Aqui se exetuda de forma continua. neste se gera a lista de interrupçoes se necessario, e se faz um processamento nao blocante. </p>
+
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_super_node_a1d9839cfe5b7618697f9a9cf21614459_icgraph.png" border="0" usemap="#class_super_node_a1d9839cfe5b7618697f9a9cf21614459_icgraph" alt=""/></div>
-<map name="class_super_node_a1d9839cfe5b7618697f9a9cf21614459_icgraph" id="class_super_node_a1d9839cfe5b7618697f9a9cf21614459_icgraph">
+<div class="center"><img src="class_super_node_acdee9ffa2d02a55a86fe9944353b15a7_icgraph.png" border="0" usemap="#class_super_node_acdee9ffa2d02a55a86fe9944353b15a7_icgraph" alt=""/></div>
+<map name="class_super_node_acdee9ffa2d02a55a86fe9944353b15a7_icgraph" id="class_super_node_acdee9ffa2d02a55a86fe9944353b15a7_icgraph">
 <area shape="rect" id="node3" href="class_master.html#add8981ccc8f6ada51f55bbc5cfaa5e06" title="Master::executeSuperNos" alt="" coords="169,5,343,35"/><area shape="rect" id="node5" href="class_master.html#a008baa6bf85857581cdd5702e0cfc0d2" title="Master::run" alt="" coords="392,5,480,35"/></map>
 </div>
 </p>
 
 </div>
 </div>
-<a class="anchor" id="a200a0c6d3a2705aec6be89264eb3c97a"></a><!-- doxytag: member="SuperNode::runService" ref="a200a0c6d3a2705aec6be89264eb3c97a" args="(char *)" -->
+<a class="anchor" id="a21f3bac0b293c8b4fc6427d39a0527f4"></a><!-- doxytag: member="SuperNode::runService" ref="a21f3bac0b293c8b4fc6427d39a0527f4" args="(char *)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual int <a class="el" href="class_super_node.html#a200a0c6d3a2705aec6be89264eb3c97a">SuperNode::runService</a> </td>
+          <td class="memname">void <a class="el" href="class_super_node.html#a21f3bac0b293c8b4fc6427d39a0527f4">SuperNode::runService</a> </td>
           <td>(</td>
           <td class="paramtype">char *&#160;</td>
           <td class="paramname"></td><td>)</td>
@@ -335,11 +339,13 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
+<p>relazida a interaçao basica apos a chamada de um serviço, executando o basico e preparando para que nas interraçoes <a class="el" href="class_super_node.html#acdee9ffa2d02a55a86fe9944353b15a7" title="realiza as interraçoes basicas do super no para cada interçao do master. Aqui se exetuda de forma con...">run()</a> o super no se comporte de maneira correta. aqui tambem podem ser geradas interrupçoes que devem ser add a lista de interrupçoes. </p>
+
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_super_node_a200a0c6d3a2705aec6be89264eb3c97a_icgraph.png" border="0" usemap="#class_super_node_a200a0c6d3a2705aec6be89264eb3c97a_icgraph" alt=""/></div>
-<map name="class_super_node_a200a0c6d3a2705aec6be89264eb3c97a_icgraph" id="class_super_node_a200a0c6d3a2705aec6be89264eb3c97a_icgraph">
+<div class="center"><img src="class_super_node_a21f3bac0b293c8b4fc6427d39a0527f4_icgraph.png" border="0" usemap="#class_super_node_a21f3bac0b293c8b4fc6427d39a0527f4_icgraph" alt=""/></div>
+<map name="class_super_node_a21f3bac0b293c8b4fc6427d39a0527f4_icgraph" id="class_super_node_a21f3bac0b293c8b4fc6427d39a0527f4_icgraph">
 <area shape="rect" id="node3" href="class_master.html#a41bd85473687e1691d62bb9db328baf2" title="Master::executeInterruptionList" alt="" coords="211,5,413,35"/><area shape="rect" id="node5" href="class_master.html#a008baa6bf85857581cdd5702e0cfc0d2" title="Master::run" alt="" coords="461,5,549,35"/></map>
 </div>
 </p>
@@ -548,7 +554,7 @@ Here is the caller graph for this function:</div>
     <ul>
       <li class="navelem"><a class="el" href="class_super_node.html">SuperNode</a>      </li>
 
-    <li class="footer">Generated on Sat Dec 14 2013 15:36:10 for Nos - System by
+    <li class="footer">Generated on Sat Dec 14 2013 15:46:51 for Nos - System by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

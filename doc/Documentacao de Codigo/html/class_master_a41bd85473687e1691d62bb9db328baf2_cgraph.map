@@ -1,0 +1,13 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$class_string_list.html#a5f940fa69e60a1ee3273ea2cf3dafa33" title="StringList::empty" alt="" coords="285,5,405,35"/>
+<area shape="rect" id="node5" href="$class_string_list.html#aaba9dc874a2e06aef3ab046ab6a373e0" title="StringList::pop" alt="" coords="292,59,399,88"/>
+<area shape="rect" id="node7" href="$class_master.html#a48a96c20f84f6caf1d30dd8ba5baacd6" title="Master::inNodeList" alt="" coords="280,112,411,141"/>
+<area shape="rect" id="node9" href="$class_node.html#aa1eaf5072c5d4dffaadbbdd83067318f" title="Node::runService" alt="" coords="284,165,407,195"/>
+<area shape="rect" id="node11" href="$class_master.html#ac5e687b80f27ffaa3774c1838240c58a" title="Master::inSuperNodeList" alt="" coords="263,219,428,248"/>
+<area shape="rect" id="node13" href="$class_super_node.html#a21f3bac0b293c8b4fc6427d39a0527f4" title="relazida a interaçao basica apos a chamada de um serviço, executando o basico e preparando para que n..." alt="" coords="267,272,424,301"/>
+<area shape="rect" id="node15" href="$class_master.html#a00b7f77b44dacd05e0623c96307a3bc4" title="Master::inConnectionList" alt="" coords="263,325,428,355"/>
+<area shape="rect" id="node21" href="$class_connection.html#a3643ee96c249ac48f1bf4eba34111bdf" title="Connection::sendMessage" alt="" coords="257,379,433,408"/>
+<area shape="rect" id="node23" href="$class_string_list.html#a887dd6d29b120cac80b3dbdc6d639b6d" title="StringList::push" alt="" coords="289,432,401,461"/>
+<area shape="rect" id="node17" href="$class_connection.html#a50d0eb1a568b899bfaba95ebb1e1ee92" title="Connection::getConnectionList" alt="" coords="484,299,684,328"/>
+<area shape="rect" id="node19" href="$class_string_list.html#a3dc0d9070806f60c1fce9211a1013c8e" title="StringList::getN" alt="" coords="528,352,640,381"/>
+</map>
