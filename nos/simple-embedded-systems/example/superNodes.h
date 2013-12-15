@@ -26,7 +26,7 @@ protected:
 	/**  \fn virtual void setName()
           \brief Essa atruibui valor a variavel name, o seu respectivo valor. E uma função garante
           para na implementaçao dessa classe o programado set um nome para o super no garantindo
-          assim o funcionamento cosiso do sistema.*/
+          assim o funcionamento consiso do sistema.*/
 	virtual void setName();
 
 	/**  \fn virtual void setNodeDependencesName()
@@ -91,8 +91,7 @@ public:
 	/** \fn virtual void run()
           \brief realiza as interraçoes basicas do super no para cada interçao do master. Aqui
           se exetuda de forma continua. neste se gera a lista de interrupçoes se necessario, e
-          se faz um processamento nao blocante.
-     */
+          se faz um processamento nao blocante.*/
 	virtual void run();
 
 	/** \fn virtual void runService(char*)
