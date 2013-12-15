@@ -24,7 +24,7 @@ protected:
 
 	Node *nodes[100];				/**< Lista de nos instaciados pelo master*/
 	SuperNode *sNodes[100];			/**< Lista de superNos instaciados pelo master*/
-	Connection *connections[100];	     /**< Lista de connecoes instaciadas pelo master*/
+	Connection *connections[100];	/**< Lista de connecoes instaciadas pelo master*/
 
 	char *nodesNames[100];			/**< Lista de nomes dos nos instaciados pelo master, gerada automaticamente*/
 	char *sNodesNames[100];			/**< Lista de nomes dos super nos instaciados pelo master, gerada automaticamente*/
@@ -53,22 +53,36 @@ protected:
 
 	//functions
 
-	/** \fn void executeNos()*/
+	/** \fn void executeNos()
+		\brief executa todos os nos instanciados pelo master, esse tambem pega as 
+		interrupçoes geradas por esse e as concatena na  sua lista de interrupçoes.*/
 	void executeNos();
 
-	/** \fn void executeSuperNos()*/
+	/** \fn void executeSuperNos()
+		\brief executa todos os Supernos instanciados pelo master, esse tambem pega as 
+		interrupçoes geradas por esse e as concatena na  sua lista de interrupçoes.*/
 	void executeSuperNos();
 
-	/** \fn void executeConections()*/
+	/** \fn void executeConections()
+		\brief recebe menssagens de todas as connexoes ativas que fazem parte do no
+		defindo cada menssagem recebida como um interrupçao e as concatena na sua 
+		lista de interrupçoes.*/
 	void executeConections();
 
-	/** \fn void passSpys*/
+	/** \fn void passSpys
+		\brief Pega a lista de interrupçoes e repassa para os spy que as dejeam ouvir
+		permitindo que esses definam reaçoes ou mofiquem essas.*/
 	void passSpys();
 
-	/** \fn void executeInterruptionList()*/
+	/** \fn void executeInterruptionList()
+		\brief executa a lista de interrupçoes temporarias do nos as repnasando para
+		os reponsaveis por resolvelas, ou transmitilas. validando ainda se as chamdas
+		de serviços estao de acorco com aquilo que e propostro por que ira receber
+		essa interrupçoa*/
 	void executeInterruptionList();
 
-	/** \fn virtual void createNosList()*/
+	/** \fn virtual void createNosList()
+		*/
 	virtual void createNosList();
 
 	/** \fn virtual void createSuperNosList()*/
