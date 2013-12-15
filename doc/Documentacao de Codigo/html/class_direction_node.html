@@ -112,14 +112,14 @@ Inheritance diagram for DirectionNode:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_direction_node__inherit__graph.png" border="0" usemap="#_direction_node_inherit__map" alt="Inheritance graph"/></div>
 <map name="_direction_node_inherit__map" id="_direction_node_inherit__map">
-<area shape="rect" id="node2" href="class_node.html" title="Node" alt="" coords="31,5,84,35"/></map>
+<area shape="rect" id="node2" href="class_node.html" title="Classe que reprensenta os nos essa define a estrutura basica de um no, essa tras a implentaçõa basico..." alt="" coords="31,5,84,35"/></map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
 Collaboration diagram for DirectionNode:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_direction_node__coll__graph.png" border="0" usemap="#_direction_node_coll__map" alt="Collaboration graph"/></div>
 <map name="_direction_node_coll__map" id="_direction_node_coll__map">
-<area shape="rect" id="node2" href="class_node.html" title="Node" alt="" coords="17,197,71,227"/><area shape="rect" id="node4" href="class_string_list.html" title="StringList" alt="" coords="5,101,83,131"/><area shape="rect" id="node6" href="structl_strings.html" title="lStrings" alt="" coords="11,5,77,35"/><area shape="rect" id="node9" href="class_servo.html" title="Servo" alt="" coords="95,197,151,227"/></map>
+<area shape="rect" id="node2" href="class_node.html" title="Classe que reprensenta os nos essa define a estrutura basica de um no, essa tras a implentaçõa basico..." alt="" coords="17,197,71,227"/><area shape="rect" id="node4" href="class_string_list.html" title="StringList" alt="" coords="5,101,83,131"/><area shape="rect" id="node6" href="structl_strings.html" title="lStrings" alt="" coords="11,5,77,35"/><area shape="rect" id="node9" href="class_servo.html" title="Servo" alt="" coords="95,197,151,227"/></map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 
 <p><a href="class_direction_node-members.html">List of all members.</a></p>
@@ -128,11 +128,14 @@ Collaboration diagram for DirectionNode:</div>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_direction_node.html#a53a8403551cf42e8aa0c7bbe07ad2995">DirectionNode</a> (int)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_direction_node.html#aa7fde93e8ef5887e9793c4bd75279c47">run</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">realiza as interraçoes basicas do no para cada interçao do master. Aqui se executa de forma continua as acoes ja que e chamado a cada interaçao do master, aqui tambem se gera a lista de interrupçoes se necessario, fazendo um processamento nao blocante.  <a href="#aa7fde93e8ef5887e9793c4bd75279c47"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_direction_node.html#ab38b8d7381f174b9deadb1f6dbd71e31">runService</a> (char *)</td></tr>
 <tr><td colspan="2"><h2><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_direction_node.html#a61228494bbd8936697ca68d41edd79dd">setName</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Essa atruibui valor a variavel name, o seu respectivo valor. E uma função garante para na implementaçao dessa classe o programado set um nome para o no garantindo assim o funcionamento consiso do sistema.  <a href="#a61228494bbd8936697ca68d41edd79dd"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_direction_node.html#a2bf00da20c98befe761481c9eb4405ae">setServiceList</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Esse atribui valor lista de serviços que sao disponibilizados pelo no. E uma função garante que durante a implementaçao dessa classe o programdor set essa lista para o No garantindo assim o funcionamento consiso do sistema.  <a href="#a2bf00da20c98befe761481c9eb4405ae"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_direction_node.html#ab2040369d101d5964b2d76b06814d7eb">direita</a> (int)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_direction_node.html#a90091aad98a6ec4892d1cd0ae6675fad">esquerda</a> (int)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_direction_node.html#ad88a9f87817099bde959a2592412046c">centro</a> ()</td></tr>
@@ -167,7 +170,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_direction_node_a53a8403551cf42e8aa0c7bbe07ad2995_cgraph.png" border="0" usemap="#class_direction_node_a53a8403551cf42e8aa0c7bbe07ad2995_cgraph" alt=""/></div>
 <map name="class_direction_node_a53a8403551cf42e8aa0c7bbe07ad2995_cgraph" id="class_direction_node_a53a8403551cf42e8aa0c7bbe07ad2995_cgraph">
-<area shape="rect" id="node3" href="class_node.html#aae071b74f8ad790ba8304f6e9c9258e1" title="Node::initialize" alt="" coords="252,32,359,61"/><area shape="rect" id="node9" href="class_servo.html#aeccd2077f07ebc45250da14e72a0c461" title="Servo::attach" alt="" coords="256,85,355,115"/><area shape="rect" id="node11" href="class_servo.html#a72b4b546912eada96a6ef705168ceb8a" title="Servo::write" alt="" coords="260,139,351,168"/><area shape="rect" id="node5" href="class_node.html#a8fb03a775f38daccbdf08e8ba911c304" title="Node::setName" alt="" coords="437,5,552,35"/><area shape="rect" id="node7" href="class_node.html#a17a84c30b5ed55082d90a365346e342a" title="Node::setServiceList" alt="" coords="423,59,567,88"/><area shape="rect" id="node13" href="class_servo.html#ac7fe3d6d2ea285ead98814bcfc417029" title="Servo::writeMicroseconds" alt="" coords="408,139,581,168"/></map>
+<area shape="rect" id="node3" href="class_node.html#aae071b74f8ad790ba8304f6e9c9258e1" title="responsavel por inicializar o No, garantindo que tudo esteja ok antes da execucao dos serviços pelo N..." alt="" coords="252,32,359,61"/><area shape="rect" id="node9" href="class_servo.html#aeccd2077f07ebc45250da14e72a0c461" title="Servo::attach" alt="" coords="256,85,355,115"/><area shape="rect" id="node11" href="class_servo.html#a72b4b546912eada96a6ef705168ceb8a" title="Servo::write" alt="" coords="260,139,351,168"/><area shape="rect" id="node5" href="class_node.html#abe5d67bf17f22c0b6a82dbaa9955a2fe" title="Essa atruibui valor a variavel name, o seu respectivo valor. E uma função garante para na implementaç..." alt="" coords="437,5,552,35"/><area shape="rect" id="node7" href="class_node.html#a75a9d3a52407f66d54cc31a86378d584" title="Esse atribui valor lista de serviços que sao disponibilizados pelo no. E uma função garante que duran..." alt="" coords="423,59,567,88"/><area shape="rect" id="node13" href="class_servo.html#ac7fe3d6d2ea285ead98814bcfc417029" title="Servo::writeMicroseconds" alt="" coords="408,139,581,168"/></map>
 </div>
 </p>
 
@@ -298,7 +301,10 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Implements <a class="el" href="class_node.html#a262b9594b45604c69d12263853768533">Node</a>.</p>
+<p>realiza as interraçoes basicas do no para cada interçao do master. Aqui se executa de forma continua as acoes ja que e chamado a cada interaçao do master, aqui tambem se gera a lista de interrupçoes se necessario, fazendo um processamento nao blocante. </p>
+<p>realiza as interraçoes basicas de um node para que cada interaçao deste feitas no metodo <a class="el" href="class_direction_node.html#aa7fde93e8ef5887e9793c4bd75279c47" title="realiza as interraçoes basicas do no para cada interçao do master. Aqui se executa de forma continua ...">run()</a> se comperte de acordo com o estado atual desse no, que foi criado pelo serviço. Aqui tambem pode-se gerar a listas de interrupçoes para o master. </p>
+
+<p>Implements <a class="el" href="class_node.html#af4c4dbee4de86db99a21a8ac410ad66c">Node</a>.</p>
 
 <p>Definition at line <a class="el" href="inode_8cpp_source.html#l00114">114</a> of file <a class="el" href="inode_8cpp_source.html">inode.cpp</a>.</p>
 
@@ -348,7 +354,9 @@ Here is the call graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Implements <a class="el" href="class_node.html#a8fb03a775f38daccbdf08e8ba911c304">Node</a>.</p>
+<p>Essa atruibui valor a variavel name, o seu respectivo valor. E uma função garante para na implementaçao dessa classe o programado set um nome para o no garantindo assim o funcionamento consiso do sistema. </p>
+
+<p>Implements <a class="el" href="class_node.html#abe5d67bf17f22c0b6a82dbaa9955a2fe">Node</a>.</p>
 
 <p>Definition at line <a class="el" href="inode_8cpp_source.html#l00096">96</a> of file <a class="el" href="inode_8cpp_source.html">inode.cpp</a>.</p>
 
@@ -368,7 +376,9 @@ Here is the call graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Implements <a class="el" href="class_node.html#a17a84c30b5ed55082d90a365346e342a">Node</a>.</p>
+<p>Esse atribui valor lista de serviços que sao disponibilizados pelo no. E uma função garante que durante a implementaçao dessa classe o programdor set essa lista para o No garantindo assim o funcionamento consiso do sistema. </p>
+
+<p>Implements <a class="el" href="class_node.html#a75a9d3a52407f66d54cc31a86378d584">Node</a>.</p>
 
 <p>Definition at line <a class="el" href="inode_8cpp_source.html#l00102">102</a> of file <a class="el" href="inode_8cpp_source.html">inode.cpp</a>.</p>
 
@@ -408,8 +418,8 @@ Here is the call graph for this function:</div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/home/vitor/workspace/Nos-System/nos/simple-embedded-systems/integrated/versao3/<a class="el" href="inode_8h_source.html">inode.h</a></li>
-<li>/home/vitor/workspace/Nos-System/nos/simple-embedded-systems/integrated/versao3/<a class="el" href="inode_8cpp_source.html">inode.cpp</a></li>
+<li>/home/vitor/workspace/Nos-System/nos/simple-embedded-systems/example/<a class="el" href="inode_8h_source.html">inode.h</a></li>
+<li>/home/vitor/workspace/Nos-System/nos/simple-embedded-systems/example/<a class="el" href="inode_8cpp_source.html">inode.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div>
@@ -431,7 +441,7 @@ Here is the call graph for this function:</div>
     <ul>
       <li class="navelem"><a class="el" href="class_direction_node.html">DirectionNode</a>      </li>
 
-    <li class="footer">Generated on Sat Dec 14 2013 15:46:51 for Nos - System by
+    <li class="footer">Generated on Sun Dec 15 2013 00:11:59 for Nos - System by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

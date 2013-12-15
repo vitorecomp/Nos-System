@@ -1,7 +1,7 @@
 <map id="G" name="G">
-<area shape="rect" id="node2" href="$class_master.html" title="Master" alt="" coords="71,424,132,453"/>
-<area shape="rect" id="node4" href="$class_node.html" title="Node" alt="" coords="46,209,99,239"/>
-<area shape="rect" id="node11" href="$class_super_node.html" title="Essa classe representa um superNo que implementa serviçosq que dependem de mais de um no..." alt="" coords="128,328,214,357"/>
+<area shape="rect" id="node2" href="$class_master.html" title="Essa classe ..." alt="" coords="71,424,132,453"/>
+<area shape="rect" id="node4" href="$class_node.html" title="Classe que reprensenta os nos essa define a estrutura basica de um no, essa tras a implentaçõa basico..." alt="" coords="46,209,99,239"/>
+<area shape="rect" id="node11" href="$class_super_node.html" title="Essa classe representa um superNo que implementa serviços que dependem de mais de um no..." alt="" coords="128,328,214,357"/>
 <area shape="rect" id="node6" href="$class_string_list.html" title="StringList" alt="" coords="82,101,159,131"/>
 <area shape="rect" id="node16" href="$class_connection.html" title="Connection" alt="" coords="258,275,346,304"/>
 <area shape="rect" id="node8" href="$structl_strings.html" title="lStrings" alt="" coords="87,5,154,35"/>

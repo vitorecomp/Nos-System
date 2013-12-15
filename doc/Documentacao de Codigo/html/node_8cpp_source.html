@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Nos - System: /home/vitor/workspace/Nos-System/nos/simple-embedded-systems/integrated/versao3/node.cpp Source File</title>
+<title>Nos - System: /home/vitor/workspace/Nos-System/nos/simple-embedded-systems/example/node.cpp Source File</title>
 
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
@@ -96,29 +96,29 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div id="doc-content">
 <div class="header">
   <div class="headertitle">
-<div class="title">/home/vitor/workspace/Nos-System/nos/simple-embedded-systems/integrated/versao3/node.cpp</div>  </div>
+<div class="title">/home/vitor/workspace/Nos-System/nos/simple-embedded-systems/example/node.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
 <a href="node_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#include &quot;<a class="code" href="node_8h.html">node.h</a>&quot;</span>
 <a name="l00002"></a>00002 
-<a name="l00003"></a><a class="code" href="class_node.html#aae071b74f8ad790ba8304f6e9c9258e1">00003</a> <span class="keywordtype">void</span> <a class="code" href="class_node.html#aae071b74f8ad790ba8304f6e9c9258e1">Node::initialize</a>()
+<a name="l00003"></a><a class="code" href="class_node.html#aae071b74f8ad790ba8304f6e9c9258e1">00003</a> <span class="keywordtype">void</span> <a class="code" href="class_node.html#aae071b74f8ad790ba8304f6e9c9258e1" title="responsavel por inicializar o No, garantindo que tudo esteja ok antes da execucao dos serviços pelo N...">Node::initialize</a>()
 <a name="l00004"></a>00004 {
 <a name="l00005"></a>00005         <a class="code" href="class_node.html#a835e1b08cf223b7d424286d9831e6e1b">interruptions</a> = <span class="keyword">new</span> <a class="code" href="class_string_list.html">StringList</a>();
-<a name="l00006"></a>00006         <a class="code" href="class_node.html#a8fb03a775f38daccbdf08e8ba911c304">setName</a>();
-<a name="l00007"></a>00007         <a class="code" href="class_node.html#a17a84c30b5ed55082d90a365346e342a">setServiceList</a>();
+<a name="l00006"></a>00006         <a class="code" href="class_node.html#abe5d67bf17f22c0b6a82dbaa9955a2fe" title="Essa atruibui valor a variavel name, o seu respectivo valor. E uma função garante para na implementaç...">setName</a>();
+<a name="l00007"></a>00007         <a class="code" href="class_node.html#a75a9d3a52407f66d54cc31a86378d584" title="Esse atribui valor lista de serviços que sao disponibilizados pelo no. E uma função garante que duran...">setServiceList</a>();
 <a name="l00008"></a>00008 }
 <a name="l00009"></a>00009 
-<a name="l00010"></a><a class="code" href="class_node.html#a018baf1e8b80f389aadf6153d2305491">00010</a> <span class="keywordtype">char</span>* <a class="code" href="class_node.html#a018baf1e8b80f389aadf6153d2305491">Node::getName</a>()
+<a name="l00010"></a><a class="code" href="class_node.html#a018baf1e8b80f389aadf6153d2305491">00010</a> <span class="keywordtype">char</span>* <a class="code" href="class_node.html#a018baf1e8b80f389aadf6153d2305491" title="reporna o nome do No, podendo assim direcionar os serviços detinados a ele de forma correta...">Node::getName</a>()
 <a name="l00011"></a>00011 {
 <a name="l00012"></a>00012         <span class="keywordflow">return</span> <a class="code" href="class_node.html#a059a0ea6f86dce9fd919c08a707b360b">name</a>;
 <a name="l00013"></a>00013 }
 <a name="l00014"></a>00014 
-<a name="l00015"></a><a class="code" href="class_node.html#ad25e13ee5218fad2c59302812c5f8e12">00015</a> <span class="keywordtype">char</span>** <a class="code" href="class_node.html#ad25e13ee5218fad2c59302812c5f8e12">Node::getServices</a>()
+<a name="l00015"></a><a class="code" href="class_node.html#af3d156b20e553b137a40c964bd6f6a14">00015</a> <span class="keywordtype">char</span>** <a class="code" href="class_node.html#af3d156b20e553b137a40c964bd6f6a14" title="Retorna a lista de serviços disponibilizados pelo No, tornado assim possivel que o master consulte es...">Node::getServices</a>()
 <a name="l00016"></a>00016 {
 <a name="l00017"></a>00017         <span class="keywordflow">return</span> <a class="code" href="class_node.html#a4b21b5cd6dda987633ec2d42be41a844">services</a>;
 <a name="l00018"></a>00018 }
 <a name="l00019"></a>00019 
-<a name="l00020"></a><a class="code" href="class_node.html#a488ecca218f8b342a9b4d38ba20cd757">00020</a> <a class="code" href="class_string_list.html">StringList</a>* <a class="code" href="class_node.html#a488ecca218f8b342a9b4d38ba20cd757">Node::getInterrupts</a>()
+<a name="l00020"></a><a class="code" href="class_node.html#a488ecca218f8b342a9b4d38ba20cd757">00020</a> <a class="code" href="class_string_list.html">StringList</a>* <a class="code" href="class_node.html#a488ecca218f8b342a9b4d38ba20cd757" title="Retorna a lista de interrupçoes gerando pelo no apos a execução de um serviço ou de um interação...">Node::getInterrupts</a>()
 <a name="l00021"></a>00021 {
 <a name="l00022"></a>00022         <a class="code" href="class_string_list.html">StringList</a>* list = this-&gt;<a class="code" href="class_node.html#a835e1b08cf223b7d424286d9831e6e1b">interruptions</a>;
 <a name="l00023"></a>00023         <a class="code" href="class_node.html#a835e1b08cf223b7d424286d9831e6e1b">interruptions</a>= NULL;    
@@ -144,7 +144,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul>
       <li class="navelem"><a class="el" href="node_8cpp.html">node.cpp</a>      </li>
 
-    <li class="footer">Generated on Sat Dec 14 2013 15:46:51 for Nos - System by
+    <li class="footer">Generated on Sun Dec 15 2013 00:11:59 for Nos - System by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

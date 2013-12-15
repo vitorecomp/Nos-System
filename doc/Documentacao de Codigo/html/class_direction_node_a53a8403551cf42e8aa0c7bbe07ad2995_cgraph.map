@@ -1,8 +1,8 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$class_node.html#aae071b74f8ad790ba8304f6e9c9258e1" title="Node::initialize" alt="" coords="252,32,359,61"/>
+<area shape="rect" id="node3" href="$class_node.html#aae071b74f8ad790ba8304f6e9c9258e1" title="responsavel por inicializar o No, garantindo que tudo esteja ok antes da execucao dos serviços pelo N..." alt="" coords="252,32,359,61"/>
 <area shape="rect" id="node9" href="$class_servo.html#aeccd2077f07ebc45250da14e72a0c461" title="Servo::attach" alt="" coords="256,85,355,115"/>
 <area shape="rect" id="node11" href="$class_servo.html#a72b4b546912eada96a6ef705168ceb8a" title="Servo::write" alt="" coords="260,139,351,168"/>
-<area shape="rect" id="node5" href="$class_node.html#a8fb03a775f38daccbdf08e8ba911c304" title="Node::setName" alt="" coords="437,5,552,35"/>
-<area shape="rect" id="node7" href="$class_node.html#a17a84c30b5ed55082d90a365346e342a" title="Node::setServiceList" alt="" coords="423,59,567,88"/>
+<area shape="rect" id="node5" href="$class_node.html#abe5d67bf17f22c0b6a82dbaa9955a2fe" title="Essa atruibui valor a variavel name, o seu respectivo valor. E uma função garante para na implementaç..." alt="" coords="437,5,552,35"/>
+<area shape="rect" id="node7" href="$class_node.html#a75a9d3a52407f66d54cc31a86378d584" title="Esse atribui valor lista de serviços que sao disponibilizados pelo no. E uma função garante que duran..." alt="" coords="423,59,567,88"/>
 <area shape="rect" id="node13" href="$class_servo.html#ac7fe3d6d2ea285ead98814bcfc417029" title="Servo::writeMicroseconds" alt="" coords="408,139,581,168"/>
 </map>

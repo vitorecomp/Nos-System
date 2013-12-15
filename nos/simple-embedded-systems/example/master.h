@@ -1,3 +1,8 @@
+/**  \file   master.h
+     \brief  Cabecalho das classes que prove o serviço do Master. Nesse esta contido todo o codigo necessario
+     para se ter um Master implementado, faltando apenas os detalhes do sistema.
+*/
+
 #ifndef MASTER_H
 #define MASTER_H
 
@@ -8,119 +13,75 @@
 #include <Arduino.h>
 #include <string.h>
 
-/** \class BasicType
- *  \brief Essa e a classe responsavel por ser um padrao de classe para clases tipos basicos       \n
- *      tendo os metodos obrigratorios para todas essas e os mentodos mais gerais ja implemtados\n
- *      inline garantindo uma economia de memoria.
- */
+/**  \class Master
+     \brief Essa classe implementa a master esse e a parte principal do Nos-system ele e responsavel por
+     controlar as todas as outras entidades do systema, como os nos, super nos conexoes e spys, ele
+     tambem e resposavel por realizar a comunicação destes elementos entre si e com o mundo la fora
+     atraves das connexoes.*/
 class Master
 {
 protected:
-	//list of nodes
-	Node *nodes[100];				/**< Esta string e usada para armazenar as informaçoes repassadas de cada classe apos a validaçao destas*/
-	//list of supernodes
-	SuperNode *sNodes[100];			/**< Esta string e usada para armazenar as informaçoes repassadas de cada classe apos a validaçao destas*/
-	//list of connection
-	Connection *connections[100];	/**< Esta string e usada para armazenar as informaçoes repassadas de cada classe apos a validaçao destas*/
-	//list of nodes names 			
-	char *nodesNames[100];			/**< Esta string e usada para armazenar as informaçoes repassadas de cada classe apos a validaçao destas*/
-	char *sNodesNames[100];			/**< Esta string e usada para armazenar as informaçoes repassadas de cada classe apos a validaçao destas*/
-	//list of interruptions
-	StringList *interrupts;			/**< Esta string e usada para armazenar as informaçoes repassadas de cada classe apos a validaçao destas*/
+
+	Node *nodes[100];				/**< Lista de nos instaciados pelo master*/
+	SuperNode *sNodes[100];			/**< Lista de superNos instaciados pelo master*/
+	Connection *connections[100];	     /**< Lista de connecoes instaciadas pelo master*/
+
+	char *nodesNames[100];			/**< Lista de nomes dos nos instaciados pelo master, gerada automaticamente*/
+	char *sNodesNames[100];			/**< Lista de nomes dos super nos instaciados pelo master, gerada automaticamente*/
+
+	StringList *interrupts;			/**< Lista de interrupçoes, variavel temporaria que armazena 
+                                        as interrupções geradas pelos nos  ate que essa sejam atendidas*/
 	
-	/** \fn virtual void validate(const string& value) throw (invalid_argument) = 0
-     *  \brief Validar os argumentos antes que estes sejam setados nas classes.
-     *  \param value : e o valor a ser validado
-     *  \exception std::invalid_argument o argumeto e invalido
-     */
+	/**  \fn int inNodeList(char* nodeName)
+          \brief Verifica se um certo no esta dentro da lista de nos deste master.
+          \param char* nodeName nome do no que se esta a procura.
+          \return int que indica posiçao do no na lista de nos -1 se nao for localizado*/
 	int inNodeList(char *);
 
-	/** \fn virtual void validate(const string& value) throw (invalid_argument) = 0
-     *  \brief Validar os argumentos antes que estes sejam setados nas classes.
-     *  \param value : e o valor a ser validado
-     *  \exception std::invalid_argument o argumeto e invalido
-     */
+	/** \fn int inSuperNodeList(char* superNodeName)
+          \brief Verifica se um certo superno esta dentro da lista de supernos deste master.
+          \param char* nodeName nome do superno que se esta a procura.
+          \return int que indica posiçao do super no na lista de supernos, -1 se nao for localizado*/
 	int inSuperNodeList(char *);
 
-	/** \fn virtual void validate(const string& value) throw (invalid_argument) = 0
-     *  \brief Validar os argumentos antes que estes sejam setados nas classes.
-     *  \param value : e o valor a ser validado
-     *  \exception std::invalid_argument o argumeto e invalido
-     */
+	/** \fn int inConnectionList(char* node)
+          \brief Verifica se um certo no esta dentro da lista de nos / supernos das conecçoes lista de deste master.
+          \param char* nodeName nome do no que se esta a procura.
+          \return int que indica posiçao do conexao na lista de conexoes, -1 se nao for localizado*/
 	int inConnectionList(char *);
 
 
 	//functions
 
-	/** \fn virtual void validate(const string& value) throw (invalid_argument) = 0
-     *  \brief Validar os argumentos antes que estes sejam setados nas classes.
-     *  \param value : e o valor a ser validado
-     *  \exception std::invalid_argument o argumeto e invalido
-     */
+	/** \fn void executeNos()*/
 	void executeNos();
 
-	/** \fn virtual void validate(const string& value) throw (invalid_argument) = 0
-     *  \brief Validar os argumentos antes que estes sejam setados nas classes.
-     *  \param value : e o valor a ser validado
-     *  \exception std::invalid_argument o argumeto e invalido
-     */
+	/** \fn void executeSuperNos()*/
 	void executeSuperNos();
 
-	/** \fn virtual void validate(const string& value) throw (invalid_argument) = 0
-     *  \brief Validar os argumentos antes que estes sejam setados nas classes.
-     *  \param value : e o valor a ser validado
-     *  \exception std::invalid_argument o argumeto e invalido
-     */
+	/** \fn void executeConections()*/
 	void executeConections();
 
-	/** \fn virtual void validate(const string& value) throw (invalid_argument) = 0
-     *  \brief Validar os argumentos antes que estes sejam setados nas classes.
-     *  \param value : e o valor a ser validado
-     *  \exception std::invalid_argument o argumeto e invalido
-     */
+	/** \fn void passSpys*/
 	void passSpys();
 
-	/** \fn virtual void validate(const string& value) throw (invalid_argument) = 0
-     *  \brief Validar os argumentos antes que estes sejam setados nas classes.
-     *  \param value : e o valor a ser validado
-     *  \exception std::invalid_argument o argumeto e invalido
-     */
+	/** \fn void executeInterruptionList()*/
 	void executeInterruptionList();
 
-	/** \fn virtual void validate(const string& value) throw (invalid_argument) = 0
-     *  \brief Validar os argumentos antes que estes sejam setados nas classes.
-     *  \param value : e o valor a ser validado
-     *  \exception std::invalid_argument o argumeto e invalido
-     */
-	virtual void createNosList() = 0;
+	/** \fn virtual void createNosList()*/
+	virtual void createNosList();
 
-	/** \fn virtual void validate(const string& value) throw (invalid_argument) = 0
-     *  \brief Validar os argumentos antes que estes sejam setados nas classes.
-     *  \param value : e o valor a ser validado
-     *  \exception std::invalid_argument o argumeto e invalido
-     */
-	virtual void createSuperNosList() = 0;
+	/** \fn virtual void createSuperNosList()*/
+	virtual void createSuperNosList();
 
-	/** \fn virtual void validate(const string& value) throw (invalid_argument) = 0
-     *  \brief Validar os argumentos antes que estes sejam setados nas classes.
-     *  \param value : e o valor a ser validado
-     *  \exception std::invalid_argument o argumeto e invalido
-     */
-	virtual void createConnectionList() = 0;
+	/** \fn virtual void createConnectionList()*/
+	virtual void createConnectionList();
 public:
 
-	/** \fn virtual void validate(const string& value) throw (invalid_argument) = 0
-     *  \brief Validar os argumentos antes que estes sejam setados nas classes.
-     *  \param value : e o valor a ser validado
-     *  \exception std::invalid_argument o argumeto e invalido
-     */
+	/** \fn void initialize()*/
 	void initialize();
 
-	/** \fn virtual void validate(const string& value) throw (invalid_argument) = 0
-     *  \brief Validar os argumentos antes que estes sejam setados nas classes.
-     *  \param value : e o valor a ser validado
-     *  \exception std::invalid_argument o argumeto e invalido
-     */
+	/** \fn void run() */
 	void run();
 };
 #endif

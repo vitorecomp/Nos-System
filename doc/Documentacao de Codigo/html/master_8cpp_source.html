@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Nos - System: /home/vitor/workspace/Nos-System/nos/simple-embedded-systems/integrated/versao3/master.cpp Source File</title>
+<title>Nos - System: /home/vitor/workspace/Nos-System/nos/simple-embedded-systems/example/master.cpp Source File</title>
 
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
@@ -96,10 +96,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div id="doc-content">
 <div class="header">
   <div class="headertitle">
-<div class="title">/home/vitor/workspace/Nos-System/nos/simple-embedded-systems/integrated/versao3/master.cpp</div>  </div>
+<div class="title">/home/vitor/workspace/Nos-System/nos/simple-embedded-systems/example/master.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="master_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#include &quot;<a class="code" href="master_8h.html">master.h</a>&quot;</span>
+<a href="master_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#include &quot;<a class="code" href="master_8h.html" title="Cabecalho das classes que prove o serviço do Master. Nesse esta contido todo o codigo necessario para...">master.h</a>&quot;</span>
 <a name="l00002"></a>00002 
 <a name="l00003"></a><a class="code" href="class_master.html#ae7d5d18c793e0e32e5c53c69ecdb96a1">00003</a> <span class="keywordtype">void</span> <a class="code" href="class_master.html#ae7d5d18c793e0e32e5c53c69ecdb96a1">Master::initialize</a>()
 <a name="l00004"></a>00004 {
@@ -120,7 +120,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00019"></a>00019         
 <a name="l00020"></a>00020         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; <a class="code" href="class_master.html#ad72e615042ba6d7dce6eb740d566d656">nodes</a>[i] != NULL; i++)
 <a name="l00021"></a>00021         {
-<a name="l00022"></a>00022                 <a class="code" href="class_master.html#a7e1f5d1be566ea94123c986af9acf869">nodesNames</a>[i] = <a class="code" href="class_master.html#ad72e615042ba6d7dce6eb740d566d656">nodes</a>[i]-&gt;<a class="code" href="class_node.html#a018baf1e8b80f389aadf6153d2305491">getName</a>();
+<a name="l00022"></a>00022                 <a class="code" href="class_master.html#a7e1f5d1be566ea94123c986af9acf869">nodesNames</a>[i] = <a class="code" href="class_master.html#ad72e615042ba6d7dce6eb740d566d656">nodes</a>[i]-&gt;<a class="code" href="class_node.html#a018baf1e8b80f389aadf6153d2305491" title="reporna o nome do No, podendo assim direcionar os serviços detinados a ele de forma correta...">getName</a>();
 <a name="l00023"></a>00023         }
 <a name="l00024"></a>00024         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 100; i++)
 <a name="l00025"></a>00025         {
@@ -190,7 +190,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00089"></a>00089 {
 <a name="l00090"></a>00090         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; <a class="code" href="class_master.html#ad72e615042ba6d7dce6eb740d566d656">nodes</a>[i] != NULL; i++)
 <a name="l00091"></a>00091         {
-<a name="l00092"></a>00092                 <a class="code" href="class_master.html#ad72e615042ba6d7dce6eb740d566d656">nodes</a>[i]-&gt;<a class="code" href="class_node.html#a262b9594b45604c69d12263853768533">run</a>();
+<a name="l00092"></a>00092                 <a class="code" href="class_master.html#ad72e615042ba6d7dce6eb740d566d656">nodes</a>[i]-&gt;<a class="code" href="class_node.html#af4c4dbee4de86db99a21a8ac410ad66c" title="realiza as interraçoes basicas do no para cada interçao do master. Aqui se executa de forma continua ...">run</a>();
 <a name="l00093"></a>00093                 <a class="code" href="class_master.html#a63c0b80c268641b773de9dcd5e11b7c3">interrupts</a>-&gt;<a class="code" href="class_string_list.html#ad5cafd0f3f93cb721c07a57badb297d8">list_push_back</a>(<a class="code" href="class_master.html#ad72e615042ba6d7dce6eb740d566d656">nodes</a>[i]-&gt;getInterrupts());
 <a name="l00094"></a>00094         }
 <a name="l00095"></a>00095 }
@@ -263,7 +263,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul>
       <li class="navelem"><a class="el" href="master_8cpp.html">master.cpp</a>      </li>
 
-    <li class="footer">Generated on Sat Dec 14 2013 15:46:51 for Nos - System by
+    <li class="footer">Generated on Sun Dec 15 2013 00:11:59 for Nos - System by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

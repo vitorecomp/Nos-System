@@ -2,6 +2,6 @@
 <area shape="rect" id="node3" href="$class_master.html#ae2567a9398b944281617213bdae04def" title="Master::createNosList" alt="" coords="193,5,343,35"/>
 <area shape="rect" id="node5" href="$class_master.html#aeaf593702786432b496149c015dcebb4" title="Master::createSuperNosList" alt="" coords="176,59,360,88"/>
 <area shape="rect" id="node7" href="$class_master.html#a3368406242e0b8f0f63dd622694888e4" title="Master::createConnectionList" alt="" coords="172,112,364,141"/>
-<area shape="rect" id="node9" href="$class_node.html#a018baf1e8b80f389aadf6153d2305491" title="Node::getName" alt="" coords="211,165,325,195"/>
+<area shape="rect" id="node9" href="$class_node.html#a018baf1e8b80f389aadf6153d2305491" title="reporna o nome do No, podendo assim direcionar os serviços detinados a ele de forma correta..." alt="" coords="211,165,325,195"/>
 <area shape="rect" id="node11" href="$class_super_node.html#a739c73e1eda5cc23dd32d39ccd8d83ca" title="reporna o nome do superNo, podendo assim direcionar os serviços detinados a ele de forma correta..." alt="" coords="195,219,341,248"/>
 </map>

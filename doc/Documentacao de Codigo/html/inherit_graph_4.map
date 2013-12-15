@@ -1,5 +1,5 @@
 <map id="G" name="G">
-<area shape="rect" id="node1" href="$class_node.html" title="Node" alt="" coords="5,59,59,88"/>
+<area shape="rect" id="node1" href="$class_node.html" title="Classe que reprensenta os nos essa define a estrutura basica de um no, essa tras a implentaçõa basico..." alt="" coords="5,59,59,88"/>
 <area shape="rect" id="node3" href="$class_direction_node.html" title="DirectionNode" alt="" coords="119,5,223,35"/>
 <area shape="rect" id="node5" href="$class_motor_node.html" title="MotorNode" alt="" coords="128,59,213,88"/>
 <area shape="rect" id="node7" href="$class_temperature_node.html" title="TemperatureNode" alt="" coords="108,112,233,141"/>

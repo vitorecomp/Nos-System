@@ -1,5 +1,5 @@
 <map id="G" name="G">
-<area shape="rect" id="node2" href="$class_node.html" title="Node" alt="" coords="17,197,71,227"/>
+<area shape="rect" id="node2" href="$class_node.html" title="Classe que reprensenta os nos essa define a estrutura basica de um no, essa tras a implentaçõa basico..." alt="" coords="17,197,71,227"/>
 <area shape="rect" id="node4" href="$class_string_list.html" title="StringList" alt="" coords="5,101,83,131"/>
 <area shape="rect" id="node6" href="$structl_strings.html" title="lStrings" alt="" coords="11,5,77,35"/>
 <area shape="rect" id="node9" href="$class_servo.html" title="Servo" alt="" coords="95,197,151,227"/>

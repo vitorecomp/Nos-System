@@ -112,14 +112,14 @@ Inheritance diagram for MotorNode:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_motor_node__inherit__graph.png" border="0" usemap="#_motor_node_inherit__map" alt="Inheritance graph"/></div>
 <map name="_motor_node_inherit__map" id="_motor_node_inherit__map">
-<area shape="rect" id="node2" href="class_node.html" title="Node" alt="" coords="21,5,75,35"/></map>
+<area shape="rect" id="node2" href="class_node.html" title="Classe que reprensenta os nos essa define a estrutura basica de um no, essa tras a implentaçõa basico..." alt="" coords="21,5,75,35"/></map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
 Collaboration diagram for MotorNode:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_motor_node__coll__graph.png" border="0" usemap="#_motor_node_coll__map" alt="Collaboration graph"/></div>
 <map name="_motor_node_coll__map" id="_motor_node_coll__map">
-<area shape="rect" id="node2" href="class_node.html" title="Node" alt="" coords="21,197,75,227"/><area shape="rect" id="node4" href="class_string_list.html" title="StringList" alt="" coords="9,101,87,131"/><area shape="rect" id="node6" href="structl_strings.html" title="lStrings" alt="" coords="15,5,81,35"/></map>
+<area shape="rect" id="node2" href="class_node.html" title="Classe que reprensenta os nos essa define a estrutura basica de um no, essa tras a implentaçõa basico..." alt="" coords="21,197,75,227"/><area shape="rect" id="node4" href="class_string_list.html" title="StringList" alt="" coords="9,101,87,131"/><area shape="rect" id="node6" href="structl_strings.html" title="lStrings" alt="" coords="15,5,81,35"/></map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 
 <p><a href="class_motor_node-members.html">List of all members.</a></p>
@@ -128,11 +128,14 @@ Collaboration diagram for MotorNode:</div>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_motor_node.html#a0e8566ad6e799416807a5ace3bae7960">MotorNode</a> (int, int, int)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_motor_node.html#a56837f03bfa2f976de5510a948e4ec9f">run</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">realiza as interraçoes basicas do no para cada interçao do master. Aqui se executa de forma continua as acoes ja que e chamado a cada interaçao do master, aqui tambem se gera a lista de interrupçoes se necessario, fazendo um processamento nao blocante.  <a href="#a56837f03bfa2f976de5510a948e4ec9f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_motor_node.html#ad95eb7e85b274172c6bef6f685cf256d">runService</a> (char *)</td></tr>
 <tr><td colspan="2"><h2><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_motor_node.html#a67b51d8c7984e654738b514e390671dc">setName</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Essa atruibui valor a variavel name, o seu respectivo valor. E uma função garante para na implementaçao dessa classe o programado set um nome para o no garantindo assim o funcionamento consiso do sistema.  <a href="#a67b51d8c7984e654738b514e390671dc"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_motor_node.html#a562a90c1718556a3f6a25373687128b4">setServiceList</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Esse atribui valor lista de serviços que sao disponibilizados pelo no. E uma função garante que durante a implementaçao dessa classe o programdor set essa lista para o No garantindo assim o funcionamento consiso do sistema.  <a href="#a562a90c1718556a3f6a25373687128b4"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_motor_node.html#a27ea018840ace0eebbfaa2cb664de2f9">frente</a> (int)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_motor_node.html#a8fee12729e92e1aba2b5f7cf4bffb764">tras</a> (int)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_motor_node.html#a4cc66cb486f64b72daec6b4147d2b708">pare</a> ()</td></tr>
@@ -184,7 +187,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_motor_node_a0e8566ad6e799416807a5ace3bae7960_cgraph.png" border="0" usemap="#class_motor_node_a0e8566ad6e799416807a5ace3bae7960_cgraph" alt=""/></div>
 <map name="class_motor_node_a0e8566ad6e799416807a5ace3bae7960_cgraph" id="class_motor_node_a0e8566ad6e799416807a5ace3bae7960_cgraph">
-<area shape="rect" id="node3" href="class_node.html#aae071b74f8ad790ba8304f6e9c9258e1" title="Node::initialize" alt="" coords="215,32,321,61"/><area shape="rect" id="node5" href="class_node.html#a8fb03a775f38daccbdf08e8ba911c304" title="Node::setName" alt="" coords="385,5,500,35"/><area shape="rect" id="node7" href="class_node.html#a17a84c30b5ed55082d90a365346e342a" title="Node::setServiceList" alt="" coords="371,59,515,88"/></map>
+<area shape="rect" id="node3" href="class_node.html#aae071b74f8ad790ba8304f6e9c9258e1" title="responsavel por inicializar o No, garantindo que tudo esteja ok antes da execucao dos serviços pelo N..." alt="" coords="215,32,321,61"/><area shape="rect" id="node5" href="class_node.html#abe5d67bf17f22c0b6a82dbaa9955a2fe" title="Essa atruibui valor a variavel name, o seu respectivo valor. E uma função garante para na implementaç..." alt="" coords="385,5,500,35"/><area shape="rect" id="node7" href="class_node.html#a75a9d3a52407f66d54cc31a86378d584" title="Esse atribui valor lista de serviços que sao disponibilizados pelo no. E uma função garante que duran..." alt="" coords="371,59,515,88"/></map>
 </div>
 </p>
 
@@ -260,7 +263,10 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Implements <a class="el" href="class_node.html#a262b9594b45604c69d12263853768533">Node</a>.</p>
+<p>realiza as interraçoes basicas do no para cada interçao do master. Aqui se executa de forma continua as acoes ja que e chamado a cada interaçao do master, aqui tambem se gera a lista de interrupçoes se necessario, fazendo um processamento nao blocante. </p>
+<p>realiza as interraçoes basicas de um node para que cada interaçao deste feitas no metodo <a class="el" href="class_motor_node.html#a56837f03bfa2f976de5510a948e4ec9f" title="realiza as interraçoes basicas do no para cada interçao do master. Aqui se executa de forma continua ...">run()</a> se comperte de acordo com o estado atual desse no, que foi criado pelo serviço. Aqui tambem pode-se gerar a listas de interrupçoes para o master. </p>
+
+<p>Implements <a class="el" href="class_node.html#af4c4dbee4de86db99a21a8ac410ad66c">Node</a>.</p>
 
 <p>Definition at line <a class="el" href="inode_8cpp_source.html#l00064">64</a> of file <a class="el" href="inode_8cpp_source.html">inode.cpp</a>.</p>
 
@@ -310,7 +316,9 @@ Here is the call graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Implements <a class="el" href="class_node.html#a8fb03a775f38daccbdf08e8ba911c304">Node</a>.</p>
+<p>Essa atruibui valor a variavel name, o seu respectivo valor. E uma função garante para na implementaçao dessa classe o programado set um nome para o no garantindo assim o funcionamento consiso do sistema. </p>
+
+<p>Implements <a class="el" href="class_node.html#abe5d67bf17f22c0b6a82dbaa9955a2fe">Node</a>.</p>
 
 <p>Definition at line <a class="el" href="inode_8cpp_source.html#l00003">3</a> of file <a class="el" href="inode_8cpp_source.html">inode.cpp</a>.</p>
 
@@ -330,7 +338,9 @@ Here is the call graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Implements <a class="el" href="class_node.html#a17a84c30b5ed55082d90a365346e342a">Node</a>.</p>
+<p>Esse atribui valor lista de serviços que sao disponibilizados pelo no. E uma função garante que durante a implementaçao dessa classe o programdor set essa lista para o No garantindo assim o funcionamento consiso do sistema. </p>
+
+<p>Implements <a class="el" href="class_node.html#a75a9d3a52407f66d54cc31a86378d584">Node</a>.</p>
 
 <p>Definition at line <a class="el" href="inode_8cpp_source.html#l00009">9</a> of file <a class="el" href="inode_8cpp_source.html">inode.cpp</a>.</p>
 
@@ -414,8 +424,8 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/home/vitor/workspace/Nos-System/nos/simple-embedded-systems/integrated/versao3/<a class="el" href="inode_8h_source.html">inode.h</a></li>
-<li>/home/vitor/workspace/Nos-System/nos/simple-embedded-systems/integrated/versao3/<a class="el" href="inode_8cpp_source.html">inode.cpp</a></li>
+<li>/home/vitor/workspace/Nos-System/nos/simple-embedded-systems/example/<a class="el" href="inode_8h_source.html">inode.h</a></li>
+<li>/home/vitor/workspace/Nos-System/nos/simple-embedded-systems/example/<a class="el" href="inode_8cpp_source.html">inode.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div>
@@ -437,7 +447,7 @@ Here is the caller graph for this function:</div>
     <ul>
       <li class="navelem"><a class="el" href="class_motor_node.html">MotorNode</a>      </li>
 
-    <li class="footer">Generated on Sat Dec 14 2013 15:46:51 for Nos - System by
+    <li class="footer">Generated on Sun Dec 15 2013 00:11:59 for Nos - System by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

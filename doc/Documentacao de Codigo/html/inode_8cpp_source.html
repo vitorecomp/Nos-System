@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Nos - System: /home/vitor/workspace/Nos-System/nos/simple-embedded-systems/integrated/versao3/inode.cpp Source File</title>
+<title>Nos - System: /home/vitor/workspace/Nos-System/nos/simple-embedded-systems/example/inode.cpp Source File</title>
 
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
@@ -96,18 +96,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div id="doc-content">
 <div class="header">
   <div class="headertitle">
-<div class="title">/home/vitor/workspace/Nos-System/nos/simple-embedded-systems/integrated/versao3/inode.cpp</div>  </div>
+<div class="title">/home/vitor/workspace/Nos-System/nos/simple-embedded-systems/example/inode.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
 <a href="inode_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#include &quot;<a class="code" href="inode_8h.html">inode.h</a>&quot;</span>
 <a name="l00002"></a>00002 
-<a name="l00003"></a><a class="code" href="class_motor_node.html#a67b51d8c7984e654738b514e390671dc">00003</a> <span class="keywordtype">void</span> <a class="code" href="class_motor_node.html#a67b51d8c7984e654738b514e390671dc">MotorNode::setName</a>()
+<a name="l00003"></a><a class="code" href="class_motor_node.html#a67b51d8c7984e654738b514e390671dc">00003</a> <span class="keywordtype">void</span> <a class="code" href="class_motor_node.html#a67b51d8c7984e654738b514e390671dc" title="Essa atruibui valor a variavel name, o seu respectivo valor. E uma função garante para na implementaç...">MotorNode::setName</a>()
 <a name="l00004"></a>00004 {
 <a name="l00005"></a>00005         <a class="code" href="class_node.html#a059a0ea6f86dce9fd919c08a707b360b">name</a> = (<span class="keywordtype">char</span>*)calloc(20, <span class="keyword">sizeof</span>(<span class="keywordtype">char</span>));
 <a name="l00006"></a>00006         strcpy(<a class="code" href="class_node.html#a059a0ea6f86dce9fd919c08a707b360b">name</a>, <span class="stringliteral">&quot;motor&quot;</span>);
 <a name="l00007"></a>00007 }
 <a name="l00008"></a>00008 
-<a name="l00009"></a><a class="code" href="class_motor_node.html#a562a90c1718556a3f6a25373687128b4">00009</a> <span class="keywordtype">void</span> <a class="code" href="class_motor_node.html#a562a90c1718556a3f6a25373687128b4">MotorNode::setServiceList</a>()
+<a name="l00009"></a><a class="code" href="class_motor_node.html#a562a90c1718556a3f6a25373687128b4">00009</a> <span class="keywordtype">void</span> <a class="code" href="class_motor_node.html#a562a90c1718556a3f6a25373687128b4" title="Esse atribui valor lista de serviços que sao disponibilizados pelo no. E uma função garante que duran...">MotorNode::setServiceList</a>()
 <a name="l00010"></a>00010 {
 <a name="l00011"></a>00011         
 <a name="l00012"></a>00012         <a class="code" href="class_node.html#a4b21b5cd6dda987633ec2d42be41a844">services</a> = (<span class="keywordtype">char</span>**)malloc(<span class="keyword">sizeof</span>(<span class="keywordtype">char</span>*)*3);
@@ -121,7 +121,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00020"></a>00020 
 <a name="l00021"></a><a class="code" href="class_motor_node.html#a0e8566ad6e799416807a5ace3bae7960">00021</a> <a class="code" href="class_motor_node.html#a0e8566ad6e799416807a5ace3bae7960">MotorNode::MotorNode</a>(<span class="keywordtype">int</span> d1_PIN, <span class="keywordtype">int</span> d2_PIN, <span class="keywordtype">int</span> a_PIN)
 <a name="l00022"></a>00022 {
-<a name="l00023"></a>00023         <a class="code" href="class_node.html#aae071b74f8ad790ba8304f6e9c9258e1">initialize</a>();
+<a name="l00023"></a>00023         <a class="code" href="class_node.html#aae071b74f8ad790ba8304f6e9c9258e1" title="responsavel por inicializar o No, garantindo que tudo esteja ok antes da execucao dos serviços pelo N...">initialize</a>();
 <a name="l00024"></a>00024         <span class="comment">//Para a classe</span>
 <a name="l00025"></a>00025         this-&gt;d1_PIN = <a class="code" href="class_motor_node.html#a83bbfecdc4f5ce895b60790905de61ad">d1_PIN</a>;
 <a name="l00026"></a>00026         this-&gt;d2_PIN = <a class="code" href="class_motor_node.html#a898ee928705b6746296517bde5f9aaf2">d2_PIN</a>;
@@ -162,7 +162,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00061"></a>00061         digitalWrite(<a class="code" href="class_motor_node.html#a898ee928705b6746296517bde5f9aaf2">d2_PIN</a>, LOW); <span class="comment">//turns the motors on - forwards</span>
 <a name="l00062"></a>00062 }
 <a name="l00063"></a>00063 
-<a name="l00064"></a><a class="code" href="class_motor_node.html#a56837f03bfa2f976de5510a948e4ec9f">00064</a> <span class="keywordtype">void</span> <a class="code" href="class_motor_node.html#a56837f03bfa2f976de5510a948e4ec9f">MotorNode::run</a>()
+<a name="l00064"></a><a class="code" href="class_motor_node.html#a56837f03bfa2f976de5510a948e4ec9f">00064</a> <span class="keywordtype">void</span> <a class="code" href="class_motor_node.html#a56837f03bfa2f976de5510a948e4ec9f" title="realiza as interraçoes basicas do no para cada interçao do master. Aqui se executa de forma continua ...">MotorNode::run</a>()
 <a name="l00065"></a>00065 {
 <a name="l00066"></a>00066         <a class="code" href="class_node.html#a835e1b08cf223b7d424286d9831e6e1b">interruptions</a> = <span class="keyword">new</span> <a class="code" href="class_string_list.html">StringList</a>();
 <a name="l00067"></a>00067 }
@@ -186,7 +186,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00085"></a>00085 
 <a name="l00086"></a><a class="code" href="class_direction_node.html#a53a8403551cf42e8aa0c7bbe07ad2995">00086</a> <a class="code" href="class_direction_node.html#a53a8403551cf42e8aa0c7bbe07ad2995">DirectionNode::DirectionNode</a>(<span class="keywordtype">int</span> a_PIN)
 <a name="l00087"></a>00087 {
-<a name="l00088"></a>00088         <a class="code" href="class_node.html#aae071b74f8ad790ba8304f6e9c9258e1">initialize</a>();
+<a name="l00088"></a>00088         <a class="code" href="class_node.html#aae071b74f8ad790ba8304f6e9c9258e1" title="responsavel por inicializar o No, garantindo que tudo esteja ok antes da execucao dos serviços pelo N...">initialize</a>();
 <a name="l00089"></a>00089     <a class="code" href="class_direction_node.html#a1dd61938506f08758b12abd352b0da7f">myservo</a> = <span class="keyword">new</span> <a class="code" href="class_servo.html">Servo</a>();
 <a name="l00090"></a>00090         this-&gt;a_PIN = <a class="code" href="class_direction_node.html#ae5a68ce3183d9f5ab17786385e753127">a_PIN</a>;
 <a name="l00091"></a>00091     <a class="code" href="class_direction_node.html#a1dd61938506f08758b12abd352b0da7f">myservo</a>-&gt;<a class="code" href="class_servo.html#aeccd2077f07ebc45250da14e72a0c461">attach</a>(a_PIN);
@@ -194,13 +194,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00093"></a>00093     <a class="code" href="class_direction_node.html#a1dd61938506f08758b12abd352b0da7f">myservo</a>-&gt;<a class="code" href="class_servo.html#a72b4b546912eada96a6ef705168ceb8a">write</a>(outputValue);
 <a name="l00094"></a>00094 }
 <a name="l00095"></a>00095 
-<a name="l00096"></a><a class="code" href="class_direction_node.html#a61228494bbd8936697ca68d41edd79dd">00096</a> <span class="keywordtype">void</span> <a class="code" href="class_direction_node.html#a61228494bbd8936697ca68d41edd79dd">DirectionNode::setName</a>()
+<a name="l00096"></a><a class="code" href="class_direction_node.html#a61228494bbd8936697ca68d41edd79dd">00096</a> <span class="keywordtype">void</span> <a class="code" href="class_direction_node.html#a61228494bbd8936697ca68d41edd79dd" title="Essa atruibui valor a variavel name, o seu respectivo valor. E uma função garante para na implementaç...">DirectionNode::setName</a>()
 <a name="l00097"></a>00097 {
 <a name="l00098"></a>00098         <a class="code" href="class_node.html#a059a0ea6f86dce9fd919c08a707b360b">name</a> = (<span class="keywordtype">char</span>*)calloc(20, <span class="keyword">sizeof</span>(<span class="keywordtype">char</span>));
 <a name="l00099"></a>00099         strcpy(<a class="code" href="class_node.html#a059a0ea6f86dce9fd919c08a707b360b">name</a>, <span class="stringliteral">&quot;direction&quot;</span>);
 <a name="l00100"></a>00100 }
 <a name="l00101"></a>00101 
-<a name="l00102"></a><a class="code" href="class_direction_node.html#a2bf00da20c98befe761481c9eb4405ae">00102</a> <span class="keywordtype">void</span> <a class="code" href="class_direction_node.html#a2bf00da20c98befe761481c9eb4405ae">DirectionNode::setServiceList</a>()
+<a name="l00102"></a><a class="code" href="class_direction_node.html#a2bf00da20c98befe761481c9eb4405ae">00102</a> <span class="keywordtype">void</span> <a class="code" href="class_direction_node.html#a2bf00da20c98befe761481c9eb4405ae" title="Esse atribui valor lista de serviços que sao disponibilizados pelo no. E uma função garante que duran...">DirectionNode::setServiceList</a>()
 <a name="l00103"></a>00103 {
 <a name="l00104"></a>00104         
 <a name="l00105"></a>00105         <a class="code" href="class_node.html#a4b21b5cd6dda987633ec2d42be41a844">services</a> = (<span class="keywordtype">char</span>**)malloc(<span class="keyword">sizeof</span>(<span class="keywordtype">char</span>*)*3);
@@ -212,7 +212,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00111"></a>00111         
 <a name="l00112"></a>00112 }
 <a name="l00113"></a>00113 
-<a name="l00114"></a><a class="code" href="class_direction_node.html#aa7fde93e8ef5887e9793c4bd75279c47">00114</a> <span class="keywordtype">void</span> <a class="code" href="class_direction_node.html#aa7fde93e8ef5887e9793c4bd75279c47">DirectionNode::run</a>(){
+<a name="l00114"></a><a class="code" href="class_direction_node.html#aa7fde93e8ef5887e9793c4bd75279c47">00114</a> <span class="keywordtype">void</span> <a class="code" href="class_direction_node.html#aa7fde93e8ef5887e9793c4bd75279c47" title="realiza as interraçoes basicas do no para cada interçao do master. Aqui se executa de forma continua ...">DirectionNode::run</a>(){
 <a name="l00115"></a>00115         <a class="code" href="class_node.html#a835e1b08cf223b7d424286d9831e6e1b">interruptions</a> = <span class="keyword">new</span> <a class="code" href="class_string_list.html">StringList</a>();
 <a name="l00116"></a>00116 }
 <a name="l00117"></a>00117 
@@ -252,17 +252,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00151"></a>00151 
 <a name="l00152"></a><a class="code" href="class_temperature_node.html#a2ea691ecdbdf934d88d8200961661a66">00152</a> <a class="code" href="class_temperature_node.html#a2ea691ecdbdf934d88d8200961661a66">TemperatureNode::TemperatureNode</a>()
 <a name="l00153"></a>00153 {
-<a name="l00154"></a>00154         <a class="code" href="class_node.html#aae071b74f8ad790ba8304f6e9c9258e1">initialize</a>();
+<a name="l00154"></a>00154         <a class="code" href="class_node.html#aae071b74f8ad790ba8304f6e9c9258e1" title="responsavel por inicializar o No, garantindo que tudo esteja ok antes da execucao dos serviços pelo N...">initialize</a>();
 <a name="l00155"></a>00155 }
 <a name="l00156"></a>00156 
 <a name="l00157"></a>00157 
-<a name="l00158"></a><a class="code" href="class_temperature_node.html#a8889cdfc6f7f6697c8954883c30bca3d">00158</a> <span class="keywordtype">void</span> <a class="code" href="class_temperature_node.html#a8889cdfc6f7f6697c8954883c30bca3d">TemperatureNode::setName</a>()
+<a name="l00158"></a><a class="code" href="class_temperature_node.html#a8889cdfc6f7f6697c8954883c30bca3d">00158</a> <span class="keywordtype">void</span> <a class="code" href="class_temperature_node.html#a8889cdfc6f7f6697c8954883c30bca3d" title="Essa atruibui valor a variavel name, o seu respectivo valor. E uma função garante para na implementaç...">TemperatureNode::setName</a>()
 <a name="l00159"></a>00159 {
 <a name="l00160"></a>00160         <a class="code" href="class_node.html#a059a0ea6f86dce9fd919c08a707b360b">name</a> = (<span class="keywordtype">char</span>*)calloc(20, <span class="keyword">sizeof</span>(<span class="keywordtype">char</span>));
 <a name="l00161"></a>00161         strcpy(<a class="code" href="class_node.html#a059a0ea6f86dce9fd919c08a707b360b">name</a>, <span class="stringliteral">&quot;temperature&quot;</span>);
 <a name="l00162"></a>00162 }
 <a name="l00163"></a>00163 
-<a name="l00164"></a><a class="code" href="class_temperature_node.html#a04e950b56532c79d4b566284c204f707">00164</a> <span class="keywordtype">void</span> <a class="code" href="class_temperature_node.html#a04e950b56532c79d4b566284c204f707">TemperatureNode::setServiceList</a>()
+<a name="l00164"></a><a class="code" href="class_temperature_node.html#a04e950b56532c79d4b566284c204f707">00164</a> <span class="keywordtype">void</span> <a class="code" href="class_temperature_node.html#a04e950b56532c79d4b566284c204f707" title="Esse atribui valor lista de serviços que sao disponibilizados pelo no. E uma função garante que duran...">TemperatureNode::setServiceList</a>()
 <a name="l00165"></a>00165 {
 <a name="l00166"></a>00166         <a class="code" href="class_node.html#a4b21b5cd6dda987633ec2d42be41a844">services</a> = (<span class="keywordtype">char</span>**)malloc(<span class="keyword">sizeof</span>(<span class="keywordtype">char</span>*)*1);
 <a name="l00167"></a>00167         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 1; i++)
@@ -270,7 +270,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00169"></a>00169         strcpy(<a class="code" href="class_node.html#a4b21b5cd6dda987633ec2d42be41a844">services</a>[0], <span class="stringliteral">&quot;ambiente/X&quot;</span>);
 <a name="l00170"></a>00170 }
 <a name="l00171"></a>00171 
-<a name="l00172"></a><a class="code" href="class_temperature_node.html#a19e447adb2fd0aa2bf7f9eb0bd301016">00172</a> <span class="keywordtype">void</span> <a class="code" href="class_temperature_node.html#a19e447adb2fd0aa2bf7f9eb0bd301016">TemperatureNode::run</a>()
+<a name="l00172"></a><a class="code" href="class_temperature_node.html#a19e447adb2fd0aa2bf7f9eb0bd301016">00172</a> <span class="keywordtype">void</span> <a class="code" href="class_temperature_node.html#a19e447adb2fd0aa2bf7f9eb0bd301016" title="realiza as interraçoes basicas do no para cada interçao do master. Aqui se executa de forma continua ...">TemperatureNode::run</a>()
 <a name="l00173"></a>00173 {
 <a name="l00174"></a>00174         <a class="code" href="class_node.html#a835e1b08cf223b7d424286d9831e6e1b">interruptions</a> = <span class="keyword">new</span> <a class="code" href="class_string_list.html">StringList</a>();       
 <a name="l00175"></a>00175 }
@@ -294,7 +294,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul>
       <li class="navelem"><a class="el" href="inode_8cpp.html">inode.cpp</a>      </li>
 
-    <li class="footer">Generated on Sat Dec 14 2013 15:46:51 for Nos - System by
+    <li class="footer">Generated on Sun Dec 15 2013 00:11:59 for Nos - System by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

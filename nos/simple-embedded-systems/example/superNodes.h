@@ -78,13 +78,13 @@ public:
           \brief Retorna a lista de serviços disponibilizados pelo super No a partir do momento que
           todos os nos dos quais ele depende foram instacializado e devidamente setados. garantindo
           que o master nao chame sevicos nao implementados por esse super no.
-          \retorn Lista de serviços implementados por esse super no.*/
+          \return Lista de serviços implementados por esse super no.*/
 	StringList* getServices();
 
 	/** \fn StringList* getInterrupts()
           \brief Retorna a lista de interrupçoes gerando pelo super no apos a execução de um serviço
           ou de um interação.
-          /retorn A lista de interrupções geradas pelo super no.*/
+          /return A lista de interrupções geradas pelo super no.*/
 	StringList* getInterrupts();
 
 

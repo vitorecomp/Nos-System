@@ -1,6 +1,6 @@
-/**  \file   superNodes.h
-     \brief  Cabecalho das classes que prove o serviço de super no. Nesse esta contido todo o codigo necessario
-     para se ter um conito de super no implementado fora apenas o serviços implementados por estes
+/**  \file   snode.h
+     \brief  Cabecalho das classes que prove o serviço de no. Nesse esta contido todo o codigo necessario
+     para se ter um no implementado ,fora apenas o serviços implementados por estes
 */
 
 #ifndef NOS_H
@@ -50,13 +50,13 @@ public:
           \brief Retorna a lista de serviços disponibilizados pelo No, tornado assim
           possivel que o master consulte esse antes de enviar um requisiçao de serviço
           que nao seja implementado por esse no
-          \retorn Lista de serviços implementados por esse No.*/
+          \return Lista de serviços implementados por esse No.*/
 	char** getServices();
 
 	/** \fn StringList* getInterrupts()
           \brief Retorna a lista de interrupçoes gerando pelo no apos a execução 
           de um serviço ou de um interação.
-          /retorn A lista de interrupções geradas pelo No.*/
+          /return A lista de interrupções geradas pelo No.*/
 	StringList* getInterrupts();
 
 
