@@ -82,20 +82,34 @@ protected:
 	void executeInterruptionList();
 
 	/** \fn virtual void createNosList()
-		*/
+		\brief Aqui o programador deve precher a lista de nos com ponterios para os
+		o nos do systema ja implementados atraveis de classe nao abtradas que herdem
+		de node.*/
 	virtual void createNosList();
 
-	/** \fn virtual void createSuperNosList()*/
+	/** \fn virtual void createSuperNosList()
+		\brief Aqui o programador deve precher a lista de supernos com ponterios para
+		os supernos do systema ja implementados atraveis de classe nao abtradas que herdem
+		de supernode.*/
 	virtual void createSuperNosList();
 
-	/** \fn virtual void createConnectionList()*/
+	/** \fn virtual void createConnectionList()
+		\brief Aqui o programador deve precher a lista de connecçoes com ponterios para
+		as conecçoes do systema ja implementados atraves de classe nao abtradas que herdem
+		de Connection.*/
 	virtual void createConnectionList();
 public:
 
-	/** \fn void initialize()*/
+	/** \fn void initialize()
+          \brief responsavel por inicializar o master, instanciando os nos supernos spys
+          e connecoes, fazendo ainda o necessario para o funcionamento consiso deste, 
+          garantindo que tudo esteja ok antes da execucao dos serviços pelo No.*/
 	void initialize();
 
-	/** \fn void run() */
+	/** \fn void run()
+          \brief realiza as interraçoes basicas de todos os elementos do sistema. gariantido que
+          todos esses sejam executados e garitindo a passagem de menssagens entre eles e com o
+          mundo exterior.*/
 	void run();
 };
 #endif

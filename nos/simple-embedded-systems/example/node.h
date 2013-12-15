@@ -35,7 +35,7 @@ protected:
 	virtual void setServiceList() = 0;
 
 public:
-	/** \fn void initialize();
+	/** \fn void initialize()
           \brief responsavel por inicializar o No, garantindo que tudo esteja ok antes da
           execucao dos serviços pelo No.*/
 	void initialize();
