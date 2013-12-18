@@ -1,5 +1,5 @@
 <map id="G" name="G">
-<area shape="rect" id="node2" href="$class_connection.html" title="Connection" alt="" coords="35,197,123,227"/>
-<area shape="rect" id="node4" href="$class_string_list.html" title="StringList" alt="" coords="40,101,117,131"/>
-<area shape="rect" id="node6" href="$structl_strings.html" title="lStrings" alt="" coords="45,5,112,35"/>
+<area shape="rect" id="node2" href="$class_connection.html" title="lasse que implemento a interface basica das conexoes do sistema para que o uso dessa cominicaçao seja..." alt="" coords="35,197,123,227"/>
+<area shape="rect" id="node4" href="$class_string_list.html" title="Essa classe apresenta as funçoes basicas para trabalho em uma lista de strings." alt="" coords="40,101,117,131"/>
+<area shape="rect" id="node6" href="$structl_strings.html" title="Estrutura que reprensanta um termo de uma lista de strings." alt="" coords="45,5,112,35"/>
 </map>

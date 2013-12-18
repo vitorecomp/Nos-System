@@ -1,0 +1,23 @@
+1
+Como cliente eu quero um sensor de distância para desviar de obstáculos
+
+2
+Como cliente eu quero comunicação via bluetooth para controlar o veículo
+
+3
+Como cliente eu quero interface via android para controlar o veículo
+
+4
+Como cliente eu quero rede de comunicação segura
+
+5
+Como cliente eu quero sistema de GPS para localizar o veículo
+
+6
+Como cliente eu quero baixo consumo de energia para manter o veículo mantido por baterias
+
+7
+Como cliente eu quero comunicação com veículos externo para haver desvios de rotas de colisão
+
+8
+Como cliente eu quero autonomia de cerca de uma hora para funcionar somente com baterias

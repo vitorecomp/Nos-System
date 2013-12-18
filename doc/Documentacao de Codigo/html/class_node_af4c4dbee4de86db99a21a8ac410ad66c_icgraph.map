@@ -1,4 +1,4 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$class_master.html#a756ac6b740f56b6769755ed6670d3378" title="Master::executeNos" alt="" coords="135,5,273,35"/>
-<area shape="rect" id="node5" href="$class_master.html#a008baa6bf85857581cdd5702e0cfc0d2" title="Master::run" alt="" coords="323,5,411,35"/>
+<area shape="rect" id="node3" href="$class_master.html#a756ac6b740f56b6769755ed6670d3378" title="executa todos os nos instanciados pelo master, esse tambem pega as interrupçoes geradas por esse e as..." alt="" coords="135,5,273,35"/>
+<area shape="rect" id="node5" href="$class_master.html#a008baa6bf85857581cdd5702e0cfc0d2" title="realiza as interraçoes basicas de todos os elementos do sistema. gariantido que todos esses sejam exe..." alt="" coords="323,5,411,35"/>
 </map>

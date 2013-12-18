@@ -1,6 +1,5 @@
 var files =
 [
-    [ "/home/vitor/workspace/Nos-System/nos/simple-embedded-systems/example/BaseTypes.h", "_base_types_8h.html", null ],
     [ "/home/vitor/workspace/Nos-System/nos/simple-embedded-systems/example/connection.cpp", "connection_8cpp.html", null ],
     [ "/home/vitor/workspace/Nos-System/nos/simple-embedded-systems/example/connection.h", "connection_8h.html", null ],
     [ "/home/vitor/workspace/Nos-System/nos/simple-embedded-systems/example/Defines.h", "_defines_8h.html", "_defines_8h" ],

@@ -25,14 +25,12 @@ void Master::initialize()
 	{
 		sNodesNames[i] = sNodes[i]->getName();
 	}
-	Serial.println("/////loop");
 }
 
 
 void Master::run()
 {
-
-	Serial.println("loop");
+	cout << "aqui" << endl;
 	if(!interrupts->empty())
 		executeInterruptionList();
 	executeNos();
@@ -71,7 +69,6 @@ void Master::executeInterruptionList()
 		}
 
 		nService = inConnectionList(serviceName);
-		Serial.println(nService);
 		if(nService >= 0)
 		{
 			//executando o servico
@@ -136,7 +133,7 @@ int Master::inConnectionList(char *name){
 	for(int i = 0; connections[i] != NULL; i++)
 	{
 		StringList *list = connections[i]->getConnectionList();
-		for(int i = 0; !list->getN(i) == NULL; i++)
+		for(int i = 0; list->getN(i) != NULL; i++)
 			if(strcmp(list->getN(i), name))
 				return i;
 	}

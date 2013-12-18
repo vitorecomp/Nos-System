@@ -101,24 +101,26 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">/home/vitor/workspace/Nos-System/nos/simple-embedded-systems/example/inode.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Cabecalho da classe que implemento os nos do sistemas, implementado o modo de execução dessas e a forma com que cada uma dela devera ser executada, e tambem a lista de serviços providos por cada no do sistema.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="node_8h_source.html">node.h</a>&quot;</code><br/>
 <code>#include &lt;stdlib.h&gt;</code><br/>
-<code>#include &lt;Arduino.h&gt;</code><br/>
-<code>#include &quot;<a class="el" href="_servo_8h_source.html">Servo.h</a>&quot;</code><br/>
 <code>#include &lt;limits.h&gt;</code><br/>
+<code>#include &lt;iostream&gt;</code><br/>
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for inode.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="inode_8h__incl.png" border="0" usemap="#_2home_2vitor_2workspace_2_nos-_system_2nos_2simple-embedded-systems_2example_2inode_8h" alt=""/></div>
 <map name="_2home_2vitor_2workspace_2_nos-_system_2nos_2simple-embedded-systems_2example_2inode_8h" id="_2home_2vitor_2workspace_2_nos-_system_2nos_2simple-embedded-systems_2example_2inode_8h">
-<area shape="rect" id="node3" href="node_8h.html" title="node.h" alt="" coords="149,83,211,112"/><area shape="rect" id="node15" href="_servo_8h.html" title="Servo.h" alt="" coords="300,83,367,112"/><area shape="rect" id="node7" href="_entidades_8h.html" title="Entidades.h" alt="" coords="135,160,225,189"/></map>
+<area shape="rect" id="node3" href="node_8h.html" title="Cabecalho das classes que prove o serviço de no. Nesse esta contido todo o codigo necessario para se ..." alt="" coords="115,83,176,112"/><area shape="rect" id="node7" href="_entidades_8h.html" title="Cabecalho da classe que implemento as entidades basicas do sistema garantindo com eles um melhor reap..." alt="" coords="100,160,191,189"/><area shape="rect" id="node9" href="_defines_8h.html" title="Cabecalho de defines que trasforma o codigo mais modularios, esses estao garantido principalmente que..." alt="" coords="95,237,172,267"/></map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="inode_8h__dep__incl.png" border="0" usemap="#_2home_2vitor_2workspace_2_nos-_system_2nos_2simple-embedded-systems_2example_2inode_8hdep" alt=""/></div>
 <map name="_2home_2vitor_2workspace_2_nos-_system_2nos_2simple-embedded-systems_2example_2inode_8hdep" id="_2home_2vitor_2workspace_2_nos-_system_2nos_2simple-embedded-systems_2example_2inode_8hdep">
-<area shape="rect" id="node3" href="i_master_8h.html" title="/home/vitor/workspace/Nos&#45;System/nos/simple&#45;embedded&#45;systems/example/iMaster.h" alt="" coords="13,83,539,112"/><area shape="rect" id="node7" href="inode_8cpp.html" title="/home/vitor/workspace/Nos&#45;System/nos/simple&#45;embedded&#45;systems/example/inode.cpp" alt="" coords="563,83,1091,112"/><area shape="rect" id="node5" href="i_master_8cpp.html" title="/home/vitor/workspace/Nos&#45;System/nos/simple&#45;embedded&#45;systems/example/iMaster.cpp" alt="" coords="5,160,547,189"/></map>
+<area shape="rect" id="node3" href="i_master_8h.html" title="Cabecalho da classe que implemento o master atraves da classe master, essa classe implementa as carac..." alt="" coords="13,83,539,112"/><area shape="rect" id="node7" href="inode_8cpp.html" title="/home/vitor/workspace/Nos&#45;System/nos/simple&#45;embedded&#45;systems/example/inode.cpp" alt="" coords="563,83,1091,112"/><area shape="rect" id="node5" href="i_master_8cpp.html" title="/home/vitor/workspace/Nos&#45;System/nos/simple&#45;embedded&#45;systems/example/iMaster.cpp" alt="" coords="5,160,547,189"/></map>
 </div>
 </div>
 <p><a href="inode_8h_source.html">Go to the source code of this file.</a></p>
@@ -126,10 +128,17 @@ This graph shows which files directly or indirectly include this file:</div>
 <tr><td colspan="2"><h2><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_motor_node.html">MotorNode</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Esse e a classe casse que implementa a interface de motor com o hardware do motor, usando 3 reles que compartilham o terra e cada um dos outros reles e responsavel por um VCC que deve ser ligado apos o terra ja posicionado para evitar curto circuito.  <a href="class_motor_node.html#details">More...</a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_direction_node.html">DirectionNode</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_temperature_node.html">TemperatureNode</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Essa e a classe responsavel por implementar a interface com o servo motor de forma a implementar a a direção no carro de controle remoto. Essa e dada usando a biblioteca padra do Arduino.  <a href="class_direction_node.html#details">More...</a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ligth_node.html">LigthNode</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Essa e implementa a insterface com as saida de luz para ligalas ou desligalas nos carrinho.  <a href="class_ligth_node.html#details">More...</a><br/></td></tr>
 </table>
-</div><!-- contents -->
+<hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
+<div class="textblock"><p>Cabecalho da classe que implemento os nos do sistemas, implementado o modo de execução dessas e a forma com que cada uma dela devera ser executada, e tambem a lista de serviços providos por cada no do sistema. </p>
+
+<p>Definition in file <a class="el" href="inode_8h_source.html">inode.h</a>.</p>
+</div></div><!-- contents -->
 </div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -149,7 +158,7 @@ Classes</h2></td></tr>
     <ul>
       <li class="navelem"><a class="el" href="inode_8h.html">inode.h</a>      </li>
 
-    <li class="footer">Generated on Sun Dec 15 2013 00:11:59 for Nos - System by
+    <li class="footer">Generated on Wed Dec 18 2013 14:48:16 for Nos - System by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['second',['SECOND',['../_defines_8h.html#a94212be2394d2d37d9dfd33d07d82dba',1,'Defines.h']]],
   ['servo',['SERVO',['../_servo_8cpp.html#a8e1d5c9e2cd4785a0bd6cc06662db909',1,'Servo.cpp']]],
   ['servo_5findex',['SERVO_INDEX',['../_servo_8cpp.html#af016a8bca4e261c14879379487efce03',1,'Servo.cpp']]],
   ['servo_5findex_5fto_5fchannel',['SERVO_INDEX_TO_CHANNEL',['../_servo_8cpp.html#ad4bced77cce61445dd1ec5e2ee7a2489',1,'Servo.cpp']]],

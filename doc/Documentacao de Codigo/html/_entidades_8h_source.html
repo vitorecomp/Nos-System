@@ -99,39 +99,45 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">/home/vitor/workspace/Nos-System/nos/simple-embedded-systems/example/Entidades.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="_entidades_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef ENTIDADES_H</span>
-<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define ENTIDADES_H</span>
-<a name="l00003"></a>00003 <span class="preprocessor"></span>
-<a name="l00004"></a>00004 <span class="preprocessor">#include &lt;stdlib.h&gt;</span>
-<a name="l00005"></a>00005 <span class="preprocessor">#include &lt;Arduino.h&gt;</span>
-<a name="l00006"></a>00006 
-<a name="l00012"></a><a class="code" href="structl_strings.html">00012</a> <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structl_strings.html">lStrings</a>
-<a name="l00013"></a>00013 {
-<a name="l00014"></a><a class="code" href="structl_strings.html#a1e1e6e9e264c2b017dd8e4b255166f7b">00014</a>         <span class="keywordtype">char</span> *<a class="code" href="structl_strings.html#a1e1e6e9e264c2b017dd8e4b255166f7b">Valor</a>;
-<a name="l00015"></a><a class="code" href="structl_strings.html#ac85f27c4135282e360ee3f50dbdddcde">00015</a>         <span class="keyword">struct </span><a class="code" href="structl_strings.html">lStrings</a> *<a class="code" href="structl_strings.html#ac85f27c4135282e360ee3f50dbdddcde">next</a>;
-<a name="l00016"></a>00016 }<a class="code" href="_entidades_8h.html#a40521f74664dba9055f38fabae082a41">LStrings</a>;
-<a name="l00017"></a>00017 
-<a name="l00023"></a><a class="code" href="class_string_list.html">00023</a> <span class="keyword">class </span><a class="code" href="class_string_list.html">StringList</a>
-<a name="l00024"></a>00024 {
-<a name="l00025"></a>00025 <span class="keyword">private</span>:
-<a name="l00026"></a><a class="code" href="class_string_list.html#a759079f877566a0f5b53ba943a21ed6a">00026</a>         <a class="code" href="structl_strings.html">LStrings</a> *<a class="code" href="class_string_list.html#a759079f877566a0f5b53ba943a21ed6a">list</a>; 
-<a name="l00027"></a>00027 <span class="keyword">public</span>:
-<a name="l00033"></a>00033         <a class="code" href="class_string_list.html#a8b3f06efbfee49d884ed6a2907c03be0">StringList</a>();
-<a name="l00034"></a>00034 
-<a name="l00040"></a>00040         <span class="keywordtype">void</span> <a class="code" href="class_string_list.html#ad5cafd0f3f93cb721c07a57badb297d8">list_push_back</a>(<a class="code" href="class_string_list.html">StringList</a>*);
-<a name="l00041"></a>00041 
-<a name="l00047"></a>00047         <span class="keywordtype">char</span>* <a class="code" href="class_string_list.html#aaba9dc874a2e06aef3ab046ab6a373e0">pop</a>();
-<a name="l00048"></a>00048 
-<a name="l00054"></a>00054         <span class="keywordtype">char</span>* <a class="code" href="class_string_list.html#a927c93c8fc6db737ffc5ed652ef65b44">getFirst</a>();
-<a name="l00055"></a>00055 
-<a name="l00061"></a>00061         <span class="keywordtype">void</span> <a class="code" href="class_string_list.html#a887dd6d29b120cac80b3dbdc6d639b6d">push</a>(<span class="keywordtype">char</span>*);
-<a name="l00062"></a>00062 
-<a name="l00068"></a>00068         <span class="keywordtype">bool</span> <a class="code" href="class_string_list.html#a5f940fa69e60a1ee3273ea2cf3dafa33">empty</a>();
-<a name="l00069"></a>00069 
-<a name="l00075"></a>00075         <span class="keywordtype">char</span>* <a class="code" href="class_string_list.html#a3dc0d9070806f60c1fce9211a1013c8e">getN</a>(<span class="keywordtype">int</span>);
-<a name="l00076"></a>00076 };
-<a name="l00077"></a>00077 
-<a name="l00078"></a>00078 <span class="preprocessor">#endif</span>
+<a href="_entidades_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00005"></a>00005 <span class="preprocessor">#ifndef ENTIDADES_H</span>
+<a name="l00006"></a>00006 <span class="preprocessor"></span><span class="preprocessor">#define ENTIDADES_H</span>
+<a name="l00007"></a>00007 <span class="preprocessor"></span>
+<a name="l00008"></a>00008 <span class="preprocessor">#include &quot;<a class="code" href="_defines_8h.html" title="Cabecalho de defines que trasforma o codigo mais modularios, esses estao garantido principalmente que...">Defines.h</a>&quot;</span>
+<a name="l00009"></a>00009 
+<a name="l00010"></a>00010 <span class="preprocessor">#include &lt;stdlib.h&gt;</span>
+<a name="l00011"></a>00011      
+<a name="l00012"></a>00012 <span class="preprocessor">#ifdef ARDUINO</span>
+<a name="l00013"></a>00013 <span class="preprocessor"></span><span class="preprocessor">     #include &lt;Arduino.h&gt;</span>
+<a name="l00014"></a>00014 <span class="preprocessor">#endif</span>
+<a name="l00015"></a>00015 <span class="preprocessor"></span>
+<a name="l00018"></a><a class="code" href="structl_strings.html">00018</a> <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structl_strings.html" title="Estrutura que reprensanta um termo de uma lista de strings.">lStrings</a>
+<a name="l00019"></a>00019 {
+<a name="l00020"></a><a class="code" href="structl_strings.html#a1e1e6e9e264c2b017dd8e4b255166f7b">00020</a>         <span class="keywordtype">char</span> *<a class="code" href="structl_strings.html#a1e1e6e9e264c2b017dd8e4b255166f7b">Valor</a>;
+<a name="l00021"></a><a class="code" href="structl_strings.html#ac85f27c4135282e360ee3f50dbdddcde">00021</a>         <span class="keyword">struct </span><a class="code" href="structl_strings.html" title="Estrutura que reprensanta um termo de uma lista de strings.">lStrings</a> *<a class="code" href="structl_strings.html#ac85f27c4135282e360ee3f50dbdddcde">next</a>;
+<a name="l00022"></a>00022 }<a class="code" href="_entidades_8h.html#a40521f74664dba9055f38fabae082a41">LStrings</a>;
+<a name="l00023"></a>00023 
+<a name="l00026"></a><a class="code" href="class_string_list.html">00026</a> <span class="keyword">class </span><a class="code" href="class_string_list.html" title="Essa classe apresenta as funçoes basicas para trabalho em uma lista de strings.">StringList</a>
+<a name="l00027"></a>00027 {
+<a name="l00028"></a>00028 <span class="keyword">private</span>:
+<a name="l00029"></a><a class="code" href="class_string_list.html#a759079f877566a0f5b53ba943a21ed6a">00029</a>         <a class="code" href="structl_strings.html" title="Estrutura que reprensanta um termo de uma lista de strings.">LStrings</a> *<a class="code" href="class_string_list.html#a759079f877566a0f5b53ba943a21ed6a">list</a>; 
+<a name="l00030"></a>00030 <span class="keyword">public</span>:
+<a name="l00036"></a>00036         <a class="code" href="class_string_list.html#a8b3f06efbfee49d884ed6a2907c03be0">StringList</a>();
+<a name="l00037"></a>00037 
+<a name="l00043"></a>00043         <span class="keywordtype">void</span> <a class="code" href="class_string_list.html#ad5cafd0f3f93cb721c07a57badb297d8">list_push_back</a>(<a class="code" href="class_string_list.html" title="Essa classe apresenta as funçoes basicas para trabalho em uma lista de strings.">StringList</a>*);
+<a name="l00044"></a>00044 
+<a name="l00050"></a>00050         <span class="keywordtype">char</span>* <a class="code" href="class_string_list.html#aaba9dc874a2e06aef3ab046ab6a373e0">pop</a>();
+<a name="l00051"></a>00051 
+<a name="l00057"></a>00057         <span class="keywordtype">char</span>* <a class="code" href="class_string_list.html#a927c93c8fc6db737ffc5ed652ef65b44">getFirst</a>();
+<a name="l00058"></a>00058 
+<a name="l00064"></a>00064         <span class="keywordtype">void</span> <a class="code" href="class_string_list.html#a887dd6d29b120cac80b3dbdc6d639b6d">push</a>(<span class="keywordtype">char</span>*);
+<a name="l00065"></a>00065 
+<a name="l00071"></a>00071         <span class="keywordtype">bool</span> <a class="code" href="class_string_list.html#a5f940fa69e60a1ee3273ea2cf3dafa33">empty</a>();
+<a name="l00072"></a>00072 
+<a name="l00078"></a>00078         <span class="keywordtype">char</span>* <a class="code" href="class_string_list.html#a3dc0d9070806f60c1fce9211a1013c8e">getN</a>(<span class="keywordtype">int</span>);
+<a name="l00079"></a>00079 };
+<a name="l00080"></a>00080 
+<a name="l00081"></a>00081 <span class="preprocessor">#endif</span>
 </pre></div></div><!-- contents -->
 </div>
 <!-- window showing the filter options -->
@@ -152,7 +158,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul>
       <li class="navelem"><a class="el" href="_entidades_8h.html">Entidades.h</a>      </li>
 
-    <li class="footer">Generated on Sun Dec 15 2013 00:11:59 for Nos - System by
+    <li class="footer">Generated on Wed Dec 18 2013 14:48:16 for Nos - System by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

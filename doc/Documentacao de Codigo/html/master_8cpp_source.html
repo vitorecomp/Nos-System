@@ -101,9 +101,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 <a href="master_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#include &quot;<a class="code" href="master_8h.html" title="Cabecalho das classes que prove o serviço do Master. Nesse esta contido todo o codigo necessario para...">master.h</a>&quot;</span>
 <a name="l00002"></a>00002 
-<a name="l00003"></a><a class="code" href="class_master.html#ae7d5d18c793e0e32e5c53c69ecdb96a1">00003</a> <span class="keywordtype">void</span> <a class="code" href="class_master.html#ae7d5d18c793e0e32e5c53c69ecdb96a1">Master::initialize</a>()
+<a name="l00003"></a><a class="code" href="class_master.html#ae7d5d18c793e0e32e5c53c69ecdb96a1">00003</a> <span class="keywordtype">void</span> <a class="code" href="class_master.html#ae7d5d18c793e0e32e5c53c69ecdb96a1" title="responsavel por inicializar o master, instanciando os nos supernos spys e connecoes, fazendo ainda o necessario para o funcionamento consiso deste, garantindo que tudo esteja ok antes da execucao dos serviços pelo No.">Master::initialize</a>()
 <a name="l00004"></a>00004 {
-<a name="l00005"></a>00005         <a class="code" href="class_master.html#a63c0b80c268641b773de9dcd5e11b7c3">interrupts</a> = <span class="keyword">new</span> <a class="code" href="class_string_list.html">StringList</a>();
+<a name="l00005"></a>00005         <a class="code" href="class_master.html#a63c0b80c268641b773de9dcd5e11b7c3">interrupts</a> = <span class="keyword">new</span> <a class="code" href="class_string_list.html" title="Essa classe apresenta as funçoes basicas para trabalho em uma lista de strings.">StringList</a>();
 <a name="l00006"></a>00006         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 100; i ++)
 <a name="l00007"></a>00007         {
 <a name="l00008"></a>00008                 <a class="code" href="class_master.html#ad72e615042ba6d7dce6eb740d566d656">nodes</a>[i] = NULL;
@@ -114,9 +114,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00013"></a>00013                 <a class="code" href="class_master.html#aff269d443848d41f5a5a1d641b1eacb7">sNodesNames</a>[i] = NULL;
 <a name="l00014"></a>00014         }
 <a name="l00015"></a>00015 
-<a name="l00016"></a>00016         <a class="code" href="class_master.html#ae2567a9398b944281617213bdae04def">createNosList</a>();
-<a name="l00017"></a>00017         <a class="code" href="class_master.html#aeaf593702786432b496149c015dcebb4">createSuperNosList</a>();
-<a name="l00018"></a>00018         <a class="code" href="class_master.html#a3368406242e0b8f0f63dd622694888e4">createConnectionList</a>();
+<a name="l00016"></a>00016         <a class="code" href="class_master.html#ad586f715f6a3d6b80367e2a82ac90895" title="Aqui o programador deve precher a lista de nos com ponterios para os o nos do systema ja implementado...">createNosList</a>();
+<a name="l00017"></a>00017         <a class="code" href="class_master.html#a4707f942533f61cc043b39fb39a4fd04" title="Aqui o programador deve precher a lista de supernos com ponterios para os supernos do systema ja impl...">createSuperNosList</a>();
+<a name="l00018"></a>00018         <a class="code" href="class_master.html#a7cf034414781f873f86c5b93de1819aa" title="Aqui o programador deve precher a lista de connecçoes com ponterios para as conecçoes do systema ja i...">createConnectionList</a>();
 <a name="l00019"></a>00019         
 <a name="l00020"></a>00020         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; <a class="code" href="class_master.html#ad72e615042ba6d7dce6eb740d566d656">nodes</a>[i] != NULL; i++)
 <a name="l00021"></a>00021         {
@@ -130,21 +130,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00029"></a>00029 }
 <a name="l00030"></a>00030 
 <a name="l00031"></a>00031 
-<a name="l00032"></a><a class="code" href="class_master.html#a008baa6bf85857581cdd5702e0cfc0d2">00032</a> <span class="keywordtype">void</span> <a class="code" href="class_master.html#a008baa6bf85857581cdd5702e0cfc0d2">Master::run</a>()
+<a name="l00032"></a><a class="code" href="class_master.html#a008baa6bf85857581cdd5702e0cfc0d2">00032</a> <span class="keywordtype">void</span> <a class="code" href="class_master.html#a008baa6bf85857581cdd5702e0cfc0d2" title="realiza as interraçoes basicas de todos os elementos do sistema. gariantido que todos esses sejam exe...">Master::run</a>()
 <a name="l00033"></a>00033 {
 <a name="l00034"></a>00034 
 <a name="l00035"></a>00035         Serial.println(<span class="stringliteral">&quot;loop&quot;</span>);
 <a name="l00036"></a>00036         <span class="keywordflow">if</span>(!<a class="code" href="class_master.html#a63c0b80c268641b773de9dcd5e11b7c3">interrupts</a>-&gt;<a class="code" href="class_string_list.html#a5f940fa69e60a1ee3273ea2cf3dafa33">empty</a>())
-<a name="l00037"></a>00037                 <a class="code" href="class_master.html#a41bd85473687e1691d62bb9db328baf2">executeInterruptionList</a>();
-<a name="l00038"></a>00038         <a class="code" href="class_master.html#a756ac6b740f56b6769755ed6670d3378">executeNos</a>();
-<a name="l00039"></a>00039         <a class="code" href="class_master.html#a629f3d092d47c94471c1feb4b59b66e2">executeConections</a>();
-<a name="l00040"></a>00040         <a class="code" href="class_master.html#add8981ccc8f6ada51f55bbc5cfaa5e06">executeSuperNos</a>();
+<a name="l00037"></a>00037                 <a class="code" href="class_master.html#a41bd85473687e1691d62bb9db328baf2" title="executa a lista de interrupçoes temporarias do nos as repnasando para os reponsaveis por resolvelas...">executeInterruptionList</a>();
+<a name="l00038"></a>00038         <a class="code" href="class_master.html#a756ac6b740f56b6769755ed6670d3378" title="executa todos os nos instanciados pelo master, esse tambem pega as interrupçoes geradas por esse e as...">executeNos</a>();
+<a name="l00039"></a>00039         <a class="code" href="class_master.html#a629f3d092d47c94471c1feb4b59b66e2" title="recebe menssagens de todas as connexoes ativas que fazem parte do no defindo cada menssagem recebida ...">executeConections</a>();
+<a name="l00040"></a>00040         <a class="code" href="class_master.html#add8981ccc8f6ada51f55bbc5cfaa5e06" title="executa todos os Supernos instanciados pelo master, esse tambem pega as interrupçoes geradas por esse...">executeSuperNos</a>();
 <a name="l00041"></a>00041 }
 <a name="l00042"></a>00042 
-<a name="l00043"></a><a class="code" href="class_master.html#a41bd85473687e1691d62bb9db328baf2">00043</a> <span class="keywordtype">void</span> <a class="code" href="class_master.html#a41bd85473687e1691d62bb9db328baf2">Master::executeInterruptionList</a>()
+<a name="l00043"></a><a class="code" href="class_master.html#a41bd85473687e1691d62bb9db328baf2">00043</a> <span class="keywordtype">void</span> <a class="code" href="class_master.html#a41bd85473687e1691d62bb9db328baf2" title="executa a lista de interrupçoes temporarias do nos as repnasando para os reponsaveis por resolvelas...">Master::executeInterruptionList</a>()
 <a name="l00044"></a>00044 {
 <a name="l00045"></a>00045         <span class="keywordtype">int</span> nService = -1;
-<a name="l00046"></a>00046         <a class="code" href="class_string_list.html">StringList</a> *nAtenInterrupts = <span class="keyword">new</span> <a class="code" href="class_string_list.html">StringList</a>();
+<a name="l00046"></a>00046         <a class="code" href="class_string_list.html" title="Essa classe apresenta as funçoes basicas para trabalho em uma lista de strings.">StringList</a> *nAtenInterrupts = <span class="keyword">new</span> <a class="code" href="class_string_list.html" title="Essa classe apresenta as funçoes basicas para trabalho em uma lista de strings.">StringList</a>();
 <a name="l00047"></a>00047         <span class="keywordflow">while</span>(!<a class="code" href="class_master.html#a63c0b80c268641b773de9dcd5e11b7c3">interrupts</a>-&gt;<a class="code" href="class_string_list.html#a5f940fa69e60a1ee3273ea2cf3dafa33">empty</a>())
 <a name="l00048"></a>00048         {
 <a name="l00049"></a>00049                 <span class="comment">//pegando o nome do servico</span>
@@ -156,14 +156,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00055"></a>00055                 <span class="keywordtype">char</span> *serviceName = strtok(service, <span class="stringliteral">&quot;/&quot;</span>);
 <a name="l00056"></a>00056 
 <a name="l00057"></a>00057                 <span class="comment">//decobrindo onde sera executado</span>
-<a name="l00058"></a>00058                 <span class="keywordtype">int</span> nService = <a class="code" href="class_master.html#a48a96c20f84f6caf1d30dd8ba5baacd6">inNodeList</a>(serviceName);
+<a name="l00058"></a>00058                 <span class="keywordtype">int</span> nService = <a class="code" href="class_master.html#a48a96c20f84f6caf1d30dd8ba5baacd6" title="Verifica se um certo no esta dentro da lista de nos deste master.">inNodeList</a>(serviceName);
 <a name="l00059"></a>00059                 <span class="keywordflow">if</span>(nService &gt;= 0)
 <a name="l00060"></a>00060                 {
 <a name="l00061"></a>00061                         <a class="code" href="class_master.html#ad72e615042ba6d7dce6eb740d566d656">nodes</a>[nService]-&gt;<a class="code" href="class_node.html#aa1eaf5072c5d4dffaadbbdd83067318f">runService</a>(serviceTemp);
 <a name="l00062"></a>00062                         free(serviceTemp2);
 <a name="l00063"></a>00063                         <span class="keywordflow">continue</span>;
 <a name="l00064"></a>00064                 }
-<a name="l00065"></a>00065                 nService = <a class="code" href="class_master.html#ac5e687b80f27ffaa3774c1838240c58a">inSuperNodeList</a>(serviceName);
+<a name="l00065"></a>00065                 nService = <a class="code" href="class_master.html#ac5e687b80f27ffaa3774c1838240c58a" title="Verifica se um certo superno esta dentro da lista de supernos deste master.">inSuperNodeList</a>(serviceName);
 <a name="l00066"></a>00066                 <span class="keywordflow">if</span>(nService &gt;= 0)
 <a name="l00067"></a>00067                 {
 <a name="l00068"></a>00068                         <span class="comment">//executando o servico</span>
@@ -171,7 +171,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00070"></a>00070                         <span class="keywordflow">continue</span>;
 <a name="l00071"></a>00071                 }
 <a name="l00072"></a>00072 
-<a name="l00073"></a>00073                 nService = <a class="code" href="class_master.html#a00b7f77b44dacd05e0623c96307a3bc4">inConnectionList</a>(serviceName);
+<a name="l00073"></a>00073                 nService = <a class="code" href="class_master.html#a00b7f77b44dacd05e0623c96307a3bc4" title="Verifica se um certo no esta dentro da lista de nos / supernos das conecçoes lista de deste master...">inConnectionList</a>(serviceName);
 <a name="l00074"></a>00074                 Serial.println(nService);
 <a name="l00075"></a>00075                 <span class="keywordflow">if</span>(nService &gt;= 0)
 <a name="l00076"></a>00076                 {
@@ -186,7 +186,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00085"></a>00085         <a class="code" href="class_master.html#a63c0b80c268641b773de9dcd5e11b7c3">interrupts</a> = nAtenInterrupts;
 <a name="l00086"></a>00086 }
 <a name="l00087"></a>00087 
-<a name="l00088"></a><a class="code" href="class_master.html#a756ac6b740f56b6769755ed6670d3378">00088</a> <span class="keywordtype">void</span> <a class="code" href="class_master.html#a756ac6b740f56b6769755ed6670d3378">Master::executeNos</a>()
+<a name="l00088"></a><a class="code" href="class_master.html#a756ac6b740f56b6769755ed6670d3378">00088</a> <span class="keywordtype">void</span> <a class="code" href="class_master.html#a756ac6b740f56b6769755ed6670d3378" title="executa todos os nos instanciados pelo master, esse tambem pega as interrupçoes geradas por esse e as...">Master::executeNos</a>()
 <a name="l00089"></a>00089 {
 <a name="l00090"></a>00090         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; <a class="code" href="class_master.html#ad72e615042ba6d7dce6eb740d566d656">nodes</a>[i] != NULL; i++)
 <a name="l00091"></a>00091         {
@@ -195,7 +195,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00094"></a>00094         }
 <a name="l00095"></a>00095 }
 <a name="l00096"></a>00096 
-<a name="l00097"></a><a class="code" href="class_master.html#add8981ccc8f6ada51f55bbc5cfaa5e06">00097</a> <span class="keywordtype">void</span> <a class="code" href="class_master.html#add8981ccc8f6ada51f55bbc5cfaa5e06">Master::executeSuperNos</a>()
+<a name="l00097"></a><a class="code" href="class_master.html#add8981ccc8f6ada51f55bbc5cfaa5e06">00097</a> <span class="keywordtype">void</span> <a class="code" href="class_master.html#add8981ccc8f6ada51f55bbc5cfaa5e06" title="executa todos os Supernos instanciados pelo master, esse tambem pega as interrupçoes geradas por esse...">Master::executeSuperNos</a>()
 <a name="l00098"></a>00098 {
 <a name="l00099"></a>00099         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; <a class="code" href="class_master.html#aee685e5b58f7bd2c34e69118f360a95e">sNodes</a>[i] != NULL; i++)
 <a name="l00100"></a>00100         {
@@ -204,7 +204,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00103"></a>00103         }
 <a name="l00104"></a>00104 }
 <a name="l00105"></a>00105 
-<a name="l00106"></a><a class="code" href="class_master.html#a629f3d092d47c94471c1feb4b59b66e2">00106</a> <span class="keywordtype">void</span> <a class="code" href="class_master.html#a629f3d092d47c94471c1feb4b59b66e2">Master::executeConections</a>()
+<a name="l00106"></a><a class="code" href="class_master.html#a629f3d092d47c94471c1feb4b59b66e2">00106</a> <span class="keywordtype">void</span> <a class="code" href="class_master.html#a629f3d092d47c94471c1feb4b59b66e2" title="recebe menssagens de todas as connexoes ativas que fazem parte do no defindo cada menssagem recebida ...">Master::executeConections</a>()
 <a name="l00107"></a>00107 {
 <a name="l00108"></a>00108         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; <a class="code" href="class_master.html#a8bc8a77b8885a2059876fec3e8148655">connections</a>[i] != NULL; i++)
 <a name="l00109"></a>00109         {
@@ -212,7 +212,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00111"></a>00111         }
 <a name="l00112"></a>00112 }
 <a name="l00113"></a>00113 
-<a name="l00114"></a><a class="code" href="class_master.html#a48a96c20f84f6caf1d30dd8ba5baacd6">00114</a> <span class="keywordtype">int</span> <a class="code" href="class_master.html#a48a96c20f84f6caf1d30dd8ba5baacd6">Master::inNodeList</a>(<span class="keywordtype">char</span> *name)
+<a name="l00114"></a><a class="code" href="class_master.html#a48a96c20f84f6caf1d30dd8ba5baacd6">00114</a> <span class="keywordtype">int</span> <a class="code" href="class_master.html#a48a96c20f84f6caf1d30dd8ba5baacd6" title="Verifica se um certo no esta dentro da lista de nos deste master.">Master::inNodeList</a>(<span class="keywordtype">char</span> *name)
 <a name="l00115"></a>00115 {
 <a name="l00116"></a>00116         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; <a class="code" href="class_master.html#a7e1f5d1be566ea94123c986af9acf869">nodesNames</a>[i] != NULL &amp;&amp; i &lt; 100; i++)
 <a name="l00117"></a>00117         {
@@ -222,7 +222,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00121"></a>00121         <span class="keywordflow">return</span> -1;
 <a name="l00122"></a>00122 }
 <a name="l00123"></a>00123 
-<a name="l00124"></a><a class="code" href="class_master.html#ac5e687b80f27ffaa3774c1838240c58a">00124</a> <span class="keywordtype">int</span> <a class="code" href="class_master.html#ac5e687b80f27ffaa3774c1838240c58a">Master::inSuperNodeList</a>(<span class="keywordtype">char</span> *name)
+<a name="l00124"></a><a class="code" href="class_master.html#ac5e687b80f27ffaa3774c1838240c58a">00124</a> <span class="keywordtype">int</span> <a class="code" href="class_master.html#ac5e687b80f27ffaa3774c1838240c58a" title="Verifica se um certo superno esta dentro da lista de supernos deste master.">Master::inSuperNodeList</a>(<span class="keywordtype">char</span> *name)
 <a name="l00125"></a>00125 {
 <a name="l00126"></a>00126 <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; <a class="code" href="class_master.html#a7e1f5d1be566ea94123c986af9acf869">nodesNames</a>[i] !=NULL &amp;&amp; i &lt; 100; i++)
 <a name="l00127"></a>00127         {
@@ -232,11 +232,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00131"></a>00131         <span class="keywordflow">return</span> -1;
 <a name="l00132"></a>00132 }
 <a name="l00133"></a>00133 
-<a name="l00134"></a><a class="code" href="class_master.html#a00b7f77b44dacd05e0623c96307a3bc4">00134</a> <span class="keywordtype">int</span> <a class="code" href="class_master.html#a00b7f77b44dacd05e0623c96307a3bc4">Master::inConnectionList</a>(<span class="keywordtype">char</span> *name){
+<a name="l00134"></a><a class="code" href="class_master.html#a00b7f77b44dacd05e0623c96307a3bc4">00134</a> <span class="keywordtype">int</span> <a class="code" href="class_master.html#a00b7f77b44dacd05e0623c96307a3bc4" title="Verifica se um certo no esta dentro da lista de nos / supernos das conecçoes lista de deste master...">Master::inConnectionList</a>(<span class="keywordtype">char</span> *name){
 <a name="l00135"></a>00135         <span class="keywordtype">int</span> i = 0;
 <a name="l00136"></a>00136         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; <a class="code" href="class_master.html#a8bc8a77b8885a2059876fec3e8148655">connections</a>[i] != NULL; i++)
 <a name="l00137"></a>00137         {
-<a name="l00138"></a>00138                 <a class="code" href="class_string_list.html">StringList</a> *list = <a class="code" href="class_master.html#a8bc8a77b8885a2059876fec3e8148655">connections</a>[i]-&gt;<a class="code" href="class_connection.html#a50d0eb1a568b899bfaba95ebb1e1ee92">getConnectionList</a>();
+<a name="l00138"></a>00138                 <a class="code" href="class_string_list.html" title="Essa classe apresenta as funçoes basicas para trabalho em uma lista de strings.">StringList</a> *list = <a class="code" href="class_master.html#a8bc8a77b8885a2059876fec3e8148655">connections</a>[i]-&gt;<a class="code" href="class_connection.html#a50d0eb1a568b899bfaba95ebb1e1ee92">getConnectionList</a>();
 <a name="l00139"></a>00139                 <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; !list-&gt;<a class="code" href="class_string_list.html#a3dc0d9070806f60c1fce9211a1013c8e">getN</a>(i) == NULL; i++)
 <a name="l00140"></a>00140                         <span class="keywordflow">if</span>(strcmp(list-&gt;<a class="code" href="class_string_list.html#a3dc0d9070806f60c1fce9211a1013c8e">getN</a>(i), name))
 <a name="l00141"></a>00141                                 <span class="keywordflow">return</span> i;
@@ -263,7 +263,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul>
       <li class="navelem"><a class="el" href="master_8cpp.html">master.cpp</a>      </li>
 
-    <li class="footer">Generated on Sun Dec 15 2013 00:11:59 for Nos - System by
+    <li class="footer">Generated on Wed Dec 18 2013 14:48:16 for Nos - System by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

@@ -1,4 +1,4 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$class_master.html#a41bd85473687e1691d62bb9db328baf2" title="Master::executeInterruptionList" alt="" coords="176,5,379,35"/>
-<area shape="rect" id="node5" href="$class_master.html#a008baa6bf85857581cdd5702e0cfc0d2" title="Master::run" alt="" coords="427,5,515,35"/>
+<area shape="rect" id="node3" href="$class_master.html#a41bd85473687e1691d62bb9db328baf2" title="executa a lista de interrupçoes temporarias do nos as repnasando para os reponsaveis por resolvelas..." alt="" coords="176,5,379,35"/>
+<area shape="rect" id="node5" href="$class_master.html#a008baa6bf85857581cdd5702e0cfc0d2" title="realiza as interraçoes basicas de todos os elementos do sistema. gariantido que todos esses sejam exe..." alt="" coords="427,5,515,35"/>
 </map>

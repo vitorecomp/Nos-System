@@ -10,7 +10,14 @@
 #include "connection.h"
 #include "superNodes.h"
 
-#include <Arduino.h>
+#ifdef LINUX
+     #include <stdlib.h>
+     #include <stdio.h>
+#endif
+
+#ifdef ARDUINO
+	#include <Arduino.h>
+#endif
 #include <string.h>
 
 /**  \class Master
@@ -85,19 +92,19 @@ protected:
 		\brief Aqui o programador deve precher a lista de nos com ponterios para os
 		o nos do systema ja implementados atraveis de classe nao abtradas que herdem
 		de node.*/
-	virtual void createNosList();
+	virtual void createNosList() = 0;
 
 	/** \fn virtual void createSuperNosList()
 		\brief Aqui o programador deve precher a lista de supernos com ponterios para
 		os supernos do systema ja implementados atraveis de classe nao abtradas que herdem
 		de supernode.*/
-	virtual void createSuperNosList();
+	virtual void createSuperNosList() = 0;
 
 	/** \fn virtual void createConnectionList()
 		\brief Aqui o programador deve precher a lista de connecçoes com ponterios para
 		as conecçoes do systema ja implementados atraves de classe nao abtradas que herdem
 		de Connection.*/
-	virtual void createConnectionList();
+	virtual void createConnectionList() = 0;
 public:
 
 	/** \fn void initialize()

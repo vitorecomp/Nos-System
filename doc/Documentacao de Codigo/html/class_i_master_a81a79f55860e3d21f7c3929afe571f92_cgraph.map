@@ -1,8 +1,8 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$class_master.html#ae7d5d18c793e0e32e5c53c69ecdb96a1" title="Master::initialize" alt="" coords="173,112,291,141"/>
-<area shape="rect" id="node5" href="$class_master.html#ae2567a9398b944281617213bdae04def" title="Master::createNosList" alt="" coords="361,5,511,35"/>
-<area shape="rect" id="node7" href="$class_master.html#aeaf593702786432b496149c015dcebb4" title="Master::createSuperNosList" alt="" coords="344,59,528,88"/>
-<area shape="rect" id="node9" href="$class_master.html#a3368406242e0b8f0f63dd622694888e4" title="Master::createConnectionList" alt="" coords="340,112,532,141"/>
+<area shape="rect" id="node3" href="$class_master.html#ae7d5d18c793e0e32e5c53c69ecdb96a1" title="responsavel por inicializar o master, instanciando os nos supernos spys e connecoes, fazendo ainda o necessario para o funcionamento consiso deste, garantindo que tudo esteja ok antes da execucao dos serviços pelo No." alt="" coords="173,112,291,141"/>
+<area shape="rect" id="node5" href="$class_master.html#ad586f715f6a3d6b80367e2a82ac90895" title="Aqui o programador deve precher a lista de nos com ponterios para os o nos do systema ja implementado..." alt="" coords="361,5,511,35"/>
+<area shape="rect" id="node7" href="$class_master.html#a4707f942533f61cc043b39fb39a4fd04" title="Aqui o programador deve precher a lista de supernos com ponterios para os supernos do systema ja impl..." alt="" coords="344,59,528,88"/>
+<area shape="rect" id="node9" href="$class_master.html#a7cf034414781f873f86c5b93de1819aa" title="Aqui o programador deve precher a lista de connecçoes com ponterios para as conecçoes do systema ja i..." alt="" coords="340,112,532,141"/>
 <area shape="rect" id="node11" href="$class_node.html#a018baf1e8b80f389aadf6153d2305491" title="reporna o nome do No, podendo assim direcionar os serviços detinados a ele de forma correta..." alt="" coords="379,165,493,195"/>
 <area shape="rect" id="node13" href="$class_super_node.html#a739c73e1eda5cc23dd32d39ccd8d83ca" title="reporna o nome do superNo, podendo assim direcionar os serviços detinados a ele de forma correta..." alt="" coords="363,219,509,248"/>
 </map>

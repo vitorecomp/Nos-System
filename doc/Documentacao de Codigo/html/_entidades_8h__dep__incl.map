@@ -1,14 +1,14 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$connection_8h.html" title="/home/vitor/workspace/Nos&#45;System/nos/simple&#45;embedded&#45;systems/example/connection.h" alt="" coords="7,160,553,189"/>
+<area shape="rect" id="node3" href="$connection_8h.html" title="Cabecalho da classe que implemento a interface basica das conexoes do sistema para que o uso dessa co..." alt="" coords="7,160,553,189"/>
 <area shape="rect" id="node16" href="$_entidades_8cpp.html" title="/home/vitor/workspace/Nos&#45;System/nos/simple&#45;embedded&#45;systems/example/Entidades.cpp" alt="" coords="1171,83,1725,112"/>
-<area shape="rect" id="node18" href="$node_8h.html" title="/home/vitor/workspace/Nos&#45;System/nos/simple&#45;embedded&#45;systems/example/node.h" alt="" coords="635,83,1147,112"/>
-<area shape="rect" id="node5" href="$iconnection_8h.html" title="/home/vitor/workspace/Nos&#45;System/nos/simple&#45;embedded&#45;systems/example/iconnection.h" alt="" coords="5,237,555,267"/>
+<area shape="rect" id="node18" href="$node_8h.html" title="Cabecalho das classes que prove o serviço de no. Nesse esta contido todo o codigo necessario para se ..." alt="" coords="635,83,1147,112"/>
+<area shape="rect" id="node5" href="$iconnection_8h.html" title="Cabecalho da classe que implemento as conexoes do sistema garantida que essa sejam inicializadas de f..." alt="" coords="5,237,555,267"/>
 <area shape="rect" id="node11" href="$master_8h.html" title="Cabecalho das classes que prove o serviço do Master. Nesse esta contido todo o codigo necessario para..." alt="" coords="579,237,1101,267"/>
-<area shape="rect" id="node7" href="$i_master_8h.html" title="/home/vitor/workspace/Nos&#45;System/nos/simple&#45;embedded&#45;systems/example/iMaster.h" alt="" coords="299,315,824,344"/>
+<area shape="rect" id="node7" href="$i_master_8h.html" title="Cabecalho da classe que implemento o master atraves da classe master, essa classe implementa as carac..." alt="" coords="299,315,824,344"/>
 <area shape="rect" id="node9" href="$i_master_8cpp.html" title="/home/vitor/workspace/Nos&#45;System/nos/simple&#45;embedded&#45;systems/example/iMaster.cpp" alt="" coords="291,392,832,421"/>
 <area shape="rect" id="node14" href="$master_8cpp.html" title="/home/vitor/workspace/Nos&#45;System/nos/simple&#45;embedded&#45;systems/example/master.cpp" alt="" coords="848,315,1387,344"/>
 <area shape="rect" id="node21" href="$super_nodes_8h.html" title="Cabecalho das classes que prove o serviço de super no. Nesse esta contido todo o codigo necessario pa..." alt="" coords="1177,160,1732,189"/>
-<area shape="rect" id="node26" href="$inode_8h.html" title="/home/vitor/workspace/Nos&#45;System/nos/simple&#45;embedded&#45;systems/example/inode.h" alt="" coords="1756,160,2271,189"/>
+<area shape="rect" id="node26" href="$inode_8h.html" title="Cabecalho da classe que implemento os nos do sistemas, implementado o modo de execução dessas e a for..." alt="" coords="1756,160,2271,189"/>
 <area shape="rect" id="node31" href="$node_8cpp.html" title="/home/vitor/workspace/Nos&#45;System/nos/simple&#45;embedded&#45;systems/example/node.cpp" alt="" coords="628,160,1153,189"/>
 <area shape="rect" id="node24" href="$super_nodes_8cpp.html" title="/home/vitor/workspace/Nos&#45;System/nos/simple&#45;embedded&#45;systems/example/superNodes.cpp" alt="" coords="1141,237,1709,267"/>
 <area shape="rect" id="node29" href="$inode_8cpp.html" title="/home/vitor/workspace/Nos&#45;System/nos/simple&#45;embedded&#45;systems/example/inode.cpp" alt="" coords="1733,237,2261,267"/>

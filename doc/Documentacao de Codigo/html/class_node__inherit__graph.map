@@ -1,5 +1,5 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$class_direction_node.html" title="DirectionNode" alt="" coords="5,83,109,112"/>
-<area shape="rect" id="node5" href="$class_motor_node.html" title="MotorNode" alt="" coords="133,83,219,112"/>
-<area shape="rect" id="node7" href="$class_temperature_node.html" title="TemperatureNode" alt="" coords="243,83,368,112"/>
+<area shape="rect" id="node3" href="$class_direction_node.html" title="Essa e a classe responsavel por implementar a interface com o servo motor de forma a implementar a a ..." alt="" coords="5,83,109,112"/>
+<area shape="rect" id="node5" href="$class_ligth_node.html" title="Essa e implementa a insterface com as saida de luz para ligalas ou desligalas nos carrinho..." alt="" coords="133,83,213,112"/>
+<area shape="rect" id="node7" href="$class_motor_node.html" title="Esse e a classe casse que implementa a interface de motor com o hardware do motor, usando 3 reles que compartilham o terra e cada um dos outros reles e responsavel por um VCC que deve ser ligado apos o terra ja posicionado para evitar curto circuito." alt="" coords="237,83,323,112"/>
 </map>

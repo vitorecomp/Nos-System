@@ -1,8 +1,21 @@
+/**  \file   connection.h
+     \brief  Cabecalho da classe que implemento  a interface basica das conexoes do sistema 
+     para que  o uso dessa cominicaçao seja tranparente a outros modulos do sistema e tambem
+     permitindo ao programados modificaçoes grandes que normamentes sao necessarios para 
+     o uso de uma connexão*/
 #ifndef CONNECTIONS_H
 #define CONNECTIONS_H
 
 #include "Entidades.h"
+#ifdef LINUX
+     #include<stdio.h>
+#endif
 
+/**  \class Connection
+     \brief lasse que implemento  a interface basica das conexoes do sistema 
+     para que  o uso dessa cominicaçao seja tranparente a outros modulos do sistema e tambem
+     permitindo ao programados modificaçoes grandes que normamentes sao necessarios para 
+     o uso de uma connexão.*/
 class Connection
 {
 	StringList services; /**< Esta string e usada para armazenar as informaçoes repassadas de cada classe apos a validaçao destas*/

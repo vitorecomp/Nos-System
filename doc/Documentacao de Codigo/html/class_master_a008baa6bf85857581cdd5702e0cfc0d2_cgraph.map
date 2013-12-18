@@ -1,15 +1,15 @@
 <map id="G" name="G">
 <area shape="rect" id="node3" href="$class_string_list.html#a5f940fa69e60a1ee3273ea2cf3dafa33" title="StringList::empty" alt="" coords="421,5,541,35"/>
-<area shape="rect" id="node5" href="$class_master.html#a41bd85473687e1691d62bb9db328baf2" title="Master::executeInterruptionList" alt="" coords="141,245,344,275"/>
-<area shape="rect" id="node28" href="$class_master.html#a756ac6b740f56b6769755ed6670d3378" title="Master::executeNos" alt="" coords="173,485,312,515"/>
-<area shape="rect" id="node34" href="$class_master.html#a629f3d092d47c94471c1feb4b59b66e2" title="Master::executeConections" alt="" coords="152,539,333,568"/>
-<area shape="rect" id="node37" href="$class_master.html#add8981ccc8f6ada51f55bbc5cfaa5e06" title="Master::executeSuperNos" alt="" coords="156,592,329,621"/>
+<area shape="rect" id="node5" href="$class_master.html#a41bd85473687e1691d62bb9db328baf2" title="executa a lista de interrupçoes temporarias do nos as repnasando para os reponsaveis por resolvelas..." alt="" coords="141,245,344,275"/>
+<area shape="rect" id="node28" href="$class_master.html#a756ac6b740f56b6769755ed6670d3378" title="executa todos os nos instanciados pelo master, esse tambem pega as interrupçoes geradas por esse e as..." alt="" coords="173,485,312,515"/>
+<area shape="rect" id="node34" href="$class_master.html#a629f3d092d47c94471c1feb4b59b66e2" title="recebe menssagens de todas as connexoes ativas que fazem parte do no defindo cada menssagem recebida ..." alt="" coords="152,539,333,568"/>
+<area shape="rect" id="node37" href="$class_master.html#add8981ccc8f6ada51f55bbc5cfaa5e06" title="executa todos os Supernos instanciados pelo master, esse tambem pega as interrupçoes geradas por esse..." alt="" coords="156,592,329,621"/>
 <area shape="rect" id="node8" href="$class_string_list.html#aaba9dc874a2e06aef3ab046ab6a373e0" title="StringList::pop" alt="" coords="428,59,535,88"/>
-<area shape="rect" id="node10" href="$class_master.html#a48a96c20f84f6caf1d30dd8ba5baacd6" title="Master::inNodeList" alt="" coords="416,112,547,141"/>
+<area shape="rect" id="node10" href="$class_master.html#a48a96c20f84f6caf1d30dd8ba5baacd6" title="Verifica se um certo no esta dentro da lista de nos deste master." alt="" coords="416,112,547,141"/>
 <area shape="rect" id="node12" href="$class_node.html#aa1eaf5072c5d4dffaadbbdd83067318f" title="Node::runService" alt="" coords="420,165,543,195"/>
-<area shape="rect" id="node14" href="$class_master.html#ac5e687b80f27ffaa3774c1838240c58a" title="Master::inSuperNodeList" alt="" coords="399,219,564,248"/>
+<area shape="rect" id="node14" href="$class_master.html#ac5e687b80f27ffaa3774c1838240c58a" title="Verifica se um certo superno esta dentro da lista de supernos deste master." alt="" coords="399,219,564,248"/>
 <area shape="rect" id="node16" href="$class_super_node.html#a21f3bac0b293c8b4fc6427d39a0527f4" title="relazida a interaçao basica apos a chamada de um serviço, executando o basico e preparando para que n..." alt="" coords="403,272,560,301"/>
-<area shape="rect" id="node18" href="$class_master.html#a00b7f77b44dacd05e0623c96307a3bc4" title="Master::inConnectionList" alt="" coords="399,325,564,355"/>
+<area shape="rect" id="node18" href="$class_master.html#a00b7f77b44dacd05e0623c96307a3bc4" title="Verifica se um certo no esta dentro da lista de nos / supernos das conecçoes lista de deste master..." alt="" coords="399,325,564,355"/>
 <area shape="rect" id="node24" href="$class_connection.html#a3643ee96c249ac48f1bf4eba34111bdf" title="Connection::sendMessage" alt="" coords="393,379,569,408"/>
 <area shape="rect" id="node26" href="$class_string_list.html#a887dd6d29b120cac80b3dbdc6d639b6d" title="StringList::push" alt="" coords="425,432,537,461"/>
 <area shape="rect" id="node20" href="$class_connection.html#a50d0eb1a568b899bfaba95ebb1e1ee92" title="Connection::getConnectionList" alt="" coords="620,299,820,328"/>

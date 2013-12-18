@@ -1,25 +1,28 @@
+/**  \file   Entidades.h
+     \brief  Cabecalho da classe que implemento as entidades basicas do sistema
+     garantindo com eles um melhor reaproveitamento do codigo, e tambem a melhor
+     modularização e entedimento, essa ainda garantem uma validação basica de dados*/
 #ifndef ENTIDADES_H
 #define ENTIDADES_H
 
-#include <stdlib.h>
-#include <Arduino.h>
+#include "Defines.h"
 
-/** \class BasicType
- *  \brief Essa e a classe responsavel por ser um padrao de classe para clases tipos basicos       \n
- *      tendo os metodos obrigratorios para todas essas e os mentodos mais gerais ja implemtados\n
- *      inline garantindo uma economia de memoria.
- */
+#include <stdlib.h>
+     
+#ifdef ARDUINO
+     #include <Arduino.h>
+#endif
+
+/**  \class lStrings
+     \brief Estrutura que reprensanta um termo de uma lista de strings.*/
 typedef struct lStrings
 {
 	char *Valor;
 	struct lStrings *next;
 }LStrings;
 
-/** \class BasicType
- *  \brief Essa e a classe responsavel por ser um padrao de classe para clases tipos basicos       \n
- *      tendo os metodos obrigratorios para todas essas e os mentodos mais gerais ja implemtados\n
- *      inline garantindo uma economia de memoria.
- */
+/**  \class StringList
+     \brief Essa classe apresenta as funçoes basicas para trabalho em uma lista de strings.*/
 class StringList
 {
 private:

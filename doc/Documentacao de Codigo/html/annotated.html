@@ -102,23 +102,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <div class="textblock">Here are the classes, structs, unions and interfaces with brief descriptions:</div><table>
-  <tr><td class="indexkey"><a class="el" href="class_basic_type.html">BasicType</a></td><td class="indexvalue">Essa e a classe responsavel por ser um padrao de classe para clases tipos basicos <br/>
- tendo os metodos obrigratorios para todas essas e os mentodos mais gerais ja implemtados<br/>
- inline garantindo uma economia de memoria </td></tr>
-  <tr><td class="indexkey"><a class="el" href="class_blue_tooth_connection.html">BlueToothConnection</a></td><td class="indexvalue"></td></tr>
-  <tr><td class="indexkey"><a class="el" href="class_connection.html">Connection</a></td><td class="indexvalue"></td></tr>
-  <tr><td class="indexkey"><a class="el" href="class_direction_node.html">DirectionNode</a></td><td class="indexvalue"></td></tr>
-  <tr><td class="indexkey"><a class="el" href="class_i_master.html">IMaster</a></td><td class="indexvalue"></td></tr>
-  <tr><td class="indexkey"><a class="el" href="structl_strings.html">lStrings</a></td><td class="indexvalue"></td></tr>
-  <tr><td class="indexkey"><a class="el" href="class_master.html">Master</a></td><td class="indexvalue">Essa classe .. </td></tr>
-  <tr><td class="indexkey"><a class="el" href="class_motor_node.html">MotorNode</a></td><td class="indexvalue"></td></tr>
+  <tr><td class="indexkey"><a class="el" href="class_blue_tooth_connection.html">BlueToothConnection</a></td><td class="indexvalue">Classe que implemento as conexao bluetooth do sistema garantida que essa sejam inicializadas de forma corretado, provendo todos os paramentros. e tambem garantindo que usa dessa cominicaçao seja tranparente a outros modulos do sistema </td></tr>
+  <tr><td class="indexkey"><a class="el" href="class_connection.html">Connection</a></td><td class="indexvalue">Lasse que implemento a interface basica das conexoes do sistema para que o uso dessa cominicaçao seja tranparente a outros modulos do sistema e tambem permitindo ao programados modificaçoes grandes que normamentes sao necessarios para o uso de uma connexão </td></tr>
+  <tr><td class="indexkey"><a class="el" href="class_direction_node.html">DirectionNode</a></td><td class="indexvalue">Essa e a classe responsavel por implementar a interface com o servo motor de forma a implementar a a direção no carro de controle remoto. Essa e dada usando a biblioteca padra do Arduino </td></tr>
+  <tr><td class="indexkey"><a class="el" href="class_i_master.html">IMaster</a></td><td class="indexvalue">Esse classe que implementa as estruturas basicas do sistema atraves do da classe base <a class="el" href="class_master.html" title="Essa classe implementa a master esse e a parte principal do Nos-system ele e responsavel por controla...">Master</a>. Essa garante as instaciaçoes necessarias com os argumentos para cada no </td></tr>
+  <tr><td class="indexkey"><a class="el" href="class_ligth_node.html">LigthNode</a></td><td class="indexvalue">Essa e implementa a insterface com as saida de luz para ligalas ou desligalas nos carrinho </td></tr>
+  <tr><td class="indexkey"><a class="el" href="structl_strings.html">lStrings</a></td><td class="indexvalue">Estrutura que reprensanta um termo de uma lista de strings </td></tr>
+  <tr><td class="indexkey"><a class="el" href="class_master.html">Master</a></td><td class="indexvalue">Essa classe implementa a master esse e a parte principal do Nos-system ele e responsavel por controlar as todas as outras entidades do systema, como os nos, super nos conexoes e spys, ele tambem e resposavel por realizar a comunicação destes elementos entre si e com o mundo la fora atraves das connexoes </td></tr>
+  <tr><td class="indexkey"><a class="el" href="class_motor_node.html">MotorNode</a></td><td class="indexvalue">Esse e a classe casse que implementa a interface de motor com o hardware do motor, usando 3 reles que compartilham o terra e cada um dos outros reles e responsavel por um VCC que deve ser ligado apos o terra ja posicionado para evitar curto circuito </td></tr>
   <tr><td class="indexkey"><a class="el" href="class_node.html">Node</a></td><td class="indexvalue">Classe que reprensenta os nos essa define a estrutura basica de um no, essa tras a implentaçõa basico de um No, com as fiuncianlidades basicas ja implentadas levando apenas a implentaçao do No apenas a preocupaçao com detalhes dos serviços providos por esse </td></tr>
   <tr><td class="indexkey"><a class="el" href="class_servo.html">Servo</a></td><td class="indexvalue"></td></tr>
   <tr><td class="indexkey"><a class="el" href="structservo__t.html">servo_t</a></td><td class="indexvalue"></td></tr>
   <tr><td class="indexkey"><a class="el" href="struct_servo_pin__t.html">ServoPin_t</a></td><td class="indexvalue"></td></tr>
-  <tr><td class="indexkey"><a class="el" href="class_string_list.html">StringList</a></td><td class="indexvalue"></td></tr>
+  <tr><td class="indexkey"><a class="el" href="class_string_list.html">StringList</a></td><td class="indexvalue">Essa classe apresenta as funçoes basicas para trabalho em uma lista de strings </td></tr>
   <tr><td class="indexkey"><a class="el" href="class_super_node.html">SuperNode</a></td><td class="indexvalue">Essa classe representa um superNo que implementa serviços que dependem de mais de um no, esse coiceito permite que a comicaçao quase direta entre esse nos e tambem diminui varios problemas desse tipo de serviço pois agora ele so podera ser feito se os dois nos existirem. Evitando assim com que o serviço seja disponibilizado mesmo com uma de sua dependencias off </td></tr>
-  <tr><td class="indexkey"><a class="el" href="class_temperature_node.html">TemperatureNode</a></td><td class="indexvalue"></td></tr>
 </table>
 </div><!-- contents -->
 <!-- window showing the filter options -->
@@ -139,7 +136,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="nav-path" class="navpath">
     <ul>
 
-    <li class="footer">Generated on Sun Dec 15 2013 00:11:59 for Nos - System by
+    <li class="footer">Generated on Wed Dec 18 2013 14:48:16 for Nos - System by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

@@ -1,7 +1,6 @@
-/**  \file   snode.h
+/**  \file   node.h
      \brief  Cabecalho das classes que prove o serviço de no. Nesse esta contido todo o codigo necessario
-     para se ter um no implementado ,fora apenas o serviços implementados por estes
-*/
+     para se ter um no implementado ,fora apenas o serviços implementados por estes.*/
 
 #ifndef NOS_H
 #define NOS_H
@@ -14,7 +13,7 @@ using namespace std;
 /**  \class Node
      \brief Classe que reprensenta os nos essa define a estrutura basica de um no, essa tras
      a implentaçõa basico de um No, com as fiuncianlidades basicas ja implentadas levando apenas
-     a implentaçao do No apenas a preocupaçao com detalhes dos serviços providos por esse*/
+     a implentaçao do No apenas a preocupaçao com detalhes dos serviços providos por esse.*/
 class Node
 {
 protected:

@@ -99,7 +99,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">/home/vitor/workspace/Nos-System/nos/simple-embedded-systems/example/inode.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="inode_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#include &quot;<a class="code" href="inode_8h.html">inode.h</a>&quot;</span>
+<a href="inode_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#include &quot;<a class="code" href="inode_8h.html" title="Cabecalho da classe que implemento os nos do sistemas, implementado o modo de execução dessas e a for...">inode.h</a>&quot;</span>
 <a name="l00002"></a>00002 
 <a name="l00003"></a><a class="code" href="class_motor_node.html#a67b51d8c7984e654738b514e390671dc">00003</a> <span class="keywordtype">void</span> <a class="code" href="class_motor_node.html#a67b51d8c7984e654738b514e390671dc" title="Essa atruibui valor a variavel name, o seu respectivo valor. E uma função garante para na implementaç...">MotorNode::setName</a>()
 <a name="l00004"></a>00004 {
@@ -109,171 +109,245 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00008"></a>00008 
 <a name="l00009"></a><a class="code" href="class_motor_node.html#a562a90c1718556a3f6a25373687128b4">00009</a> <span class="keywordtype">void</span> <a class="code" href="class_motor_node.html#a562a90c1718556a3f6a25373687128b4" title="Esse atribui valor lista de serviços que sao disponibilizados pelo no. E uma função garante que duran...">MotorNode::setServiceList</a>()
 <a name="l00010"></a>00010 {
-<a name="l00011"></a>00011         
+<a name="l00011"></a>00011 
 <a name="l00012"></a>00012         <a class="code" href="class_node.html#a4b21b5cd6dda987633ec2d42be41a844">services</a> = (<span class="keywordtype">char</span>**)malloc(<span class="keyword">sizeof</span>(<span class="keywordtype">char</span>*)*3);
 <a name="l00013"></a>00013         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 3; i++)
 <a name="l00014"></a>00014                 <a class="code" href="class_node.html#a4b21b5cd6dda987633ec2d42be41a844">services</a>[i] = (<span class="keywordtype">char</span>*)calloc(20, <span class="keyword">sizeof</span>(<span class="keywordtype">char</span>));
 <a name="l00015"></a>00015         strcpy(<a class="code" href="class_node.html#a4b21b5cd6dda987633ec2d42be41a844">services</a>[0], <span class="stringliteral">&quot;frente/X&quot;</span>);
 <a name="l00016"></a>00016         strcpy(<a class="code" href="class_node.html#a4b21b5cd6dda987633ec2d42be41a844">services</a>[1], <span class="stringliteral">&quot;tras/X&quot;</span>);
 <a name="l00017"></a>00017         strcpy(<a class="code" href="class_node.html#a4b21b5cd6dda987633ec2d42be41a844">services</a>[2], <span class="stringliteral">&quot;stop&quot;</span>);
-<a name="l00018"></a>00018         
-<a name="l00019"></a>00019 }
-<a name="l00020"></a>00020 
-<a name="l00021"></a><a class="code" href="class_motor_node.html#a0e8566ad6e799416807a5ace3bae7960">00021</a> <a class="code" href="class_motor_node.html#a0e8566ad6e799416807a5ace3bae7960">MotorNode::MotorNode</a>(<span class="keywordtype">int</span> d1_PIN, <span class="keywordtype">int</span> d2_PIN, <span class="keywordtype">int</span> a_PIN)
-<a name="l00022"></a>00022 {
-<a name="l00023"></a>00023         <a class="code" href="class_node.html#aae071b74f8ad790ba8304f6e9c9258e1" title="responsavel por inicializar o No, garantindo que tudo esteja ok antes da execucao dos serviços pelo N...">initialize</a>();
-<a name="l00024"></a>00024         <span class="comment">//Para a classe</span>
-<a name="l00025"></a>00025         this-&gt;d1_PIN = <a class="code" href="class_motor_node.html#a83bbfecdc4f5ce895b60790905de61ad">d1_PIN</a>;
-<a name="l00026"></a>00026         this-&gt;d2_PIN = <a class="code" href="class_motor_node.html#a898ee928705b6746296517bde5f9aaf2">d2_PIN</a>;
-<a name="l00027"></a>00027         this-&gt;a_PIN = <a class="code" href="class_motor_node.html#aa0056bc3a0d01daac73e10afa98fb38a">a_PIN</a>;
-<a name="l00028"></a>00028 
-<a name="l00029"></a>00029         <span class="comment">//inicializando os pinos</span>
-<a name="l00030"></a>00030         pinMode(d1_PIN, OUTPUT);
-<a name="l00031"></a>00031         pinMode(d2_PIN, OUTPUT);
-<a name="l00032"></a>00032         pinMode(a_PIN, OUTPUT);
-<a name="l00033"></a>00033         
-<a name="l00034"></a>00034         <span class="comment">//Dando um valor Inicial</span>
-<a name="l00035"></a>00035         <span class="keywordtype">int</span> outputValue = map(0, 0, 1023, 0, 255);  
-<a name="l00036"></a>00036         analogWrite(a_PIN, outputValue);           
-<a name="l00037"></a>00037         
-<a name="l00038"></a>00038 
-<a name="l00039"></a>00039         digitalWrite(d1_PIN, LOW);
-<a name="l00040"></a>00040         digitalWrite(d2_PIN, LOW);
-<a name="l00041"></a>00041 }
-<a name="l00042"></a>00042 
-<a name="l00043"></a><a class="code" href="class_motor_node.html#a27ea018840ace0eebbfaa2cb664de2f9">00043</a> <span class="keywordtype">void</span> <a class="code" href="class_motor_node.html#a27ea018840ace0eebbfaa2cb664de2f9">MotorNode::frente</a>(<span class="keywordtype">int</span> forca)
-<a name="l00044"></a>00044 {
-<a name="l00045"></a>00045         analogWrite(<a class="code" href="class_motor_node.html#aa0056bc3a0d01daac73e10afa98fb38a">a_PIN</a>, forca); <span class="comment">// this is the analog speed value for the arduino (0-255)</span>
-<a name="l00046"></a>00046         digitalWrite(<a class="code" href="class_motor_node.html#a83bbfecdc4f5ce895b60790905de61ad">d1_PIN</a>, HIGH);
-<a name="l00047"></a>00047         digitalWrite(<a class="code" href="class_motor_node.html#a898ee928705b6746296517bde5f9aaf2">d2_PIN</a>, LOW); <span class="comment">//turns the motors on - forwards</span>
-<a name="l00048"></a>00048 }
+<a name="l00018"></a>00018 
+<a name="l00019"></a>00019 
+<a name="l00020"></a>00020 }
+<a name="l00021"></a>00021 
+<a name="l00022"></a><a class="code" href="class_motor_node.html#a0e8566ad6e799416807a5ace3bae7960">00022</a> <a class="code" href="class_motor_node.html#a0e8566ad6e799416807a5ace3bae7960">MotorNode::MotorNode</a>(<span class="keywordtype">int</span> PIN1, <span class="keywordtype">int</span> PIN2, <span class="keywordtype">int</span> PIN3)
+<a name="l00023"></a>00023 {
+<a name="l00024"></a>00024         <a class="code" href="class_node.html#aae071b74f8ad790ba8304f6e9c9258e1" title="responsavel por inicializar o No, garantindo que tudo esteja ok antes da execucao dos serviços pelo N...">initialize</a>();
+<a name="l00025"></a>00025 
+<a name="l00026"></a>00026         <span class="comment">//Para a classe</span>
+<a name="l00027"></a>00027         this-&gt;<a class="code" href="class_motor_node.html#aeda0ac2c5e97a5182104e173aaa05320">BACK_PIN</a> = PIN1;
+<a name="l00028"></a>00028         this-&gt;<a class="code" href="class_motor_node.html#a32dafb5daa03e5215976d249d70bb41a">FRONT_T_PIN</a> = PIN2;
+<a name="l00029"></a>00029         this-&gt;<a class="code" href="class_motor_node.html#aedfb952a36b62b68ec0fc8acf211b97a">FRONT_V_PIN</a> = PIN3;
+<a name="l00030"></a>00030 
+<a name="l00031"></a>00031 <span class="preprocessor">        #ifdef ARDUINO</span>
+<a name="l00032"></a>00032 <span class="preprocessor"></span>                <span class="comment">//inicializando os pinos</span>
+<a name="l00033"></a>00033                 pinMode(PIN1, OUTPUT);
+<a name="l00034"></a>00034                 pinMode(PIN2, OUTPUT);
+<a name="l00035"></a>00035                 pinMode(PIN3, OUTPUT);
+<a name="l00036"></a>00036         
+<a name="l00037"></a>00037                 digitalWrite(PIN1, LOW);
+<a name="l00038"></a>00038                 digitalWrite(PIN2, LOW);
+<a name="l00039"></a>00039                 digitalWrite(PIN3, LOW);
+<a name="l00040"></a>00040 
+<a name="l00041"></a>00041 <span class="preprocessor">        #endif</span>
+<a name="l00042"></a>00042 <span class="preprocessor"></span>
+<a name="l00043"></a>00043 <span class="preprocessor">        #ifdef LINUX</span>
+<a name="l00044"></a>00044 <span class="preprocessor"></span>                cout &lt;&lt; <span class="stringliteral">&quot;pino :&quot;</span> &lt;&lt; PIN1 &lt;&lt; <span class="stringliteral">&quot; LOW&quot;</span> &lt;&lt; endl;
+<a name="l00045"></a>00045                 cout &lt;&lt; <span class="stringliteral">&quot;pino :&quot;</span> &lt;&lt; PIN2 &lt;&lt; <span class="stringliteral">&quot; LOW&quot;</span> &lt;&lt; endl;
+<a name="l00046"></a>00046                 cout &lt;&lt; <span class="stringliteral">&quot;pino :&quot;</span> &lt;&lt; PIN3 &lt;&lt; <span class="stringliteral">&quot; LOW&quot;</span> &lt;&lt; endl;
+<a name="l00047"></a>00047 <span class="preprocessor">        #endif</span>
+<a name="l00048"></a>00048 <span class="preprocessor"></span>}
 <a name="l00049"></a>00049 
-<a name="l00050"></a><a class="code" href="class_motor_node.html#a8fee12729e92e1aba2b5f7cf4bffb764">00050</a> <span class="keywordtype">void</span> <a class="code" href="class_motor_node.html#a8fee12729e92e1aba2b5f7cf4bffb764">MotorNode::tras</a>(<span class="keywordtype">int</span> forca)
+<a name="l00050"></a><a class="code" href="class_motor_node.html#a27ea018840ace0eebbfaa2cb664de2f9">00050</a> <span class="keywordtype">void</span> <a class="code" href="class_motor_node.html#a27ea018840ace0eebbfaa2cb664de2f9">MotorNode::frente</a>(<span class="keywordtype">int</span> forca)
 <a name="l00051"></a>00051 {
-<a name="l00052"></a>00052         analogWrite(<a class="code" href="class_motor_node.html#aa0056bc3a0d01daac73e10afa98fb38a">a_PIN</a>, forca); <span class="comment">// this is the analog speed value for the arduino (0-255)</span>
-<a name="l00053"></a>00053         digitalWrite(<a class="code" href="class_motor_node.html#a83bbfecdc4f5ce895b60790905de61ad">d1_PIN</a>, LOW);
-<a name="l00054"></a>00054         digitalWrite(<a class="code" href="class_motor_node.html#a898ee928705b6746296517bde5f9aaf2">d2_PIN</a>, HIGH); <span class="comment">//turns the motors on - forwards</span>
-<a name="l00055"></a>00055 }
-<a name="l00056"></a>00056 
-<a name="l00057"></a><a class="code" href="class_motor_node.html#a4cc66cb486f64b72daec6b4147d2b708">00057</a> <span class="keywordtype">void</span> <a class="code" href="class_motor_node.html#a4cc66cb486f64b72daec6b4147d2b708">MotorNode::pare</a>()
-<a name="l00058"></a>00058 {
-<a name="l00059"></a>00059         analogWrite(<a class="code" href="class_motor_node.html#aa0056bc3a0d01daac73e10afa98fb38a">a_PIN</a>, 255); <span class="comment">// this is the analog speed value for the arduino (0-255)</span>
-<a name="l00060"></a>00060         digitalWrite(<a class="code" href="class_motor_node.html#a83bbfecdc4f5ce895b60790905de61ad">d1_PIN</a>, LOW);
-<a name="l00061"></a>00061         digitalWrite(<a class="code" href="class_motor_node.html#a898ee928705b6746296517bde5f9aaf2">d2_PIN</a>, LOW); <span class="comment">//turns the motors on - forwards</span>
-<a name="l00062"></a>00062 }
-<a name="l00063"></a>00063 
-<a name="l00064"></a><a class="code" href="class_motor_node.html#a56837f03bfa2f976de5510a948e4ec9f">00064</a> <span class="keywordtype">void</span> <a class="code" href="class_motor_node.html#a56837f03bfa2f976de5510a948e4ec9f" title="realiza as interraçoes basicas do no para cada interçao do master. Aqui se executa de forma continua ...">MotorNode::run</a>()
-<a name="l00065"></a>00065 {
-<a name="l00066"></a>00066         <a class="code" href="class_node.html#a835e1b08cf223b7d424286d9831e6e1b">interruptions</a> = <span class="keyword">new</span> <a class="code" href="class_string_list.html">StringList</a>();
-<a name="l00067"></a>00067 }
-<a name="l00068"></a>00068 
-<a name="l00069"></a><a class="code" href="class_motor_node.html#ad95eb7e85b274172c6bef6f685cf256d">00069</a> <span class="keywordtype">void</span> <a class="code" href="class_motor_node.html#ad95eb7e85b274172c6bef6f685cf256d">MotorNode::runService</a>(<span class="keywordtype">char</span> *service)
-<a name="l00070"></a>00070 {
-<a name="l00071"></a>00071         <span class="keywordtype">char</span> *msgInr, *msg2;
-<a name="l00072"></a>00072     msgInr = strtok(service, <span class="stringliteral">&quot;/;&quot;</span>);
-<a name="l00073"></a>00073     msg2 = strtok(NULL, <span class="stringliteral">&quot;/;&quot;</span>);
-<a name="l00074"></a>00074         msgInr = strtok(NULL, <span class="stringliteral">&quot;/;&quot;</span>);
-<a name="l00075"></a>00075         <span class="keywordtype">int</span> i = atoi(msgInr);
-<a name="l00076"></a>00076         <span class="keywordflow">if</span>(!strcmp(msg2, <span class="stringliteral">&quot;stop&quot;</span>))
-<a name="l00077"></a>00077                 <a class="code" href="class_motor_node.html#a4cc66cb486f64b72daec6b4147d2b708">pare</a>();
-<a name="l00078"></a>00078 
-<a name="l00079"></a>00079         <span class="keywordflow">if</span>(!strcmp(msg2, <span class="stringliteral">&quot;frente&quot;</span>))
-<a name="l00080"></a>00080                 <a class="code" href="class_motor_node.html#a27ea018840ace0eebbfaa2cb664de2f9">frente</a>(i);
-<a name="l00081"></a>00081 
-<a name="l00082"></a>00082         <span class="keywordflow">if</span>(!strcmp(msg2, <span class="stringliteral">&quot;tras&quot;</span>))
-<a name="l00083"></a>00083                 <a class="code" href="class_motor_node.html#a8fee12729e92e1aba2b5f7cf4bffb764">tras</a>(i);
-<a name="l00084"></a>00084 }
-<a name="l00085"></a>00085 
-<a name="l00086"></a><a class="code" href="class_direction_node.html#a53a8403551cf42e8aa0c7bbe07ad2995">00086</a> <a class="code" href="class_direction_node.html#a53a8403551cf42e8aa0c7bbe07ad2995">DirectionNode::DirectionNode</a>(<span class="keywordtype">int</span> a_PIN)
-<a name="l00087"></a>00087 {
-<a name="l00088"></a>00088         <a class="code" href="class_node.html#aae071b74f8ad790ba8304f6e9c9258e1" title="responsavel por inicializar o No, garantindo que tudo esteja ok antes da execucao dos serviços pelo N...">initialize</a>();
-<a name="l00089"></a>00089     <a class="code" href="class_direction_node.html#a1dd61938506f08758b12abd352b0da7f">myservo</a> = <span class="keyword">new</span> <a class="code" href="class_servo.html">Servo</a>();
-<a name="l00090"></a>00090         this-&gt;a_PIN = <a class="code" href="class_direction_node.html#ae5a68ce3183d9f5ab17786385e753127">a_PIN</a>;
-<a name="l00091"></a>00091     <a class="code" href="class_direction_node.html#a1dd61938506f08758b12abd352b0da7f">myservo</a>-&gt;<a class="code" href="class_servo.html#aeccd2077f07ebc45250da14e72a0c461">attach</a>(a_PIN);
-<a name="l00092"></a>00092         <span class="keywordtype">int</span> outputValue = map(0, SHRT_MIN, SHRT_MAX, 0, 180);  
-<a name="l00093"></a>00093     <a class="code" href="class_direction_node.html#a1dd61938506f08758b12abd352b0da7f">myservo</a>-&gt;<a class="code" href="class_servo.html#a72b4b546912eada96a6ef705168ceb8a">write</a>(outputValue);
-<a name="l00094"></a>00094 }
-<a name="l00095"></a>00095 
-<a name="l00096"></a><a class="code" href="class_direction_node.html#a61228494bbd8936697ca68d41edd79dd">00096</a> <span class="keywordtype">void</span> <a class="code" href="class_direction_node.html#a61228494bbd8936697ca68d41edd79dd" title="Essa atruibui valor a variavel name, o seu respectivo valor. E uma função garante para na implementaç...">DirectionNode::setName</a>()
-<a name="l00097"></a>00097 {
-<a name="l00098"></a>00098         <a class="code" href="class_node.html#a059a0ea6f86dce9fd919c08a707b360b">name</a> = (<span class="keywordtype">char</span>*)calloc(20, <span class="keyword">sizeof</span>(<span class="keywordtype">char</span>));
-<a name="l00099"></a>00099         strcpy(<a class="code" href="class_node.html#a059a0ea6f86dce9fd919c08a707b360b">name</a>, <span class="stringliteral">&quot;direction&quot;</span>);
-<a name="l00100"></a>00100 }
-<a name="l00101"></a>00101 
-<a name="l00102"></a><a class="code" href="class_direction_node.html#a2bf00da20c98befe761481c9eb4405ae">00102</a> <span class="keywordtype">void</span> <a class="code" href="class_direction_node.html#a2bf00da20c98befe761481c9eb4405ae" title="Esse atribui valor lista de serviços que sao disponibilizados pelo no. E uma função garante que duran...">DirectionNode::setServiceList</a>()
-<a name="l00103"></a>00103 {
-<a name="l00104"></a>00104         
-<a name="l00105"></a>00105         <a class="code" href="class_node.html#a4b21b5cd6dda987633ec2d42be41a844">services</a> = (<span class="keywordtype">char</span>**)malloc(<span class="keyword">sizeof</span>(<span class="keywordtype">char</span>*)*3);
-<a name="l00106"></a>00106         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 3; i++)
-<a name="l00107"></a>00107                 <a class="code" href="class_node.html#a4b21b5cd6dda987633ec2d42be41a844">services</a>[i] = (<span class="keywordtype">char</span>*)calloc(20, <span class="keyword">sizeof</span>(<span class="keywordtype">char</span>));
-<a name="l00108"></a>00108         strcpy(<a class="code" href="class_node.html#a4b21b5cd6dda987633ec2d42be41a844">services</a>[0], <span class="stringliteral">&quot;left/X&quot;</span>);
-<a name="l00109"></a>00109         strcpy(<a class="code" href="class_node.html#a4b21b5cd6dda987633ec2d42be41a844">services</a>[1], <span class="stringliteral">&quot;rigth/X&quot;</span>);
-<a name="l00110"></a>00110         strcpy(<a class="code" href="class_node.html#a4b21b5cd6dda987633ec2d42be41a844">services</a>[2], <span class="stringliteral">&quot;center&quot;</span>);
-<a name="l00111"></a>00111         
-<a name="l00112"></a>00112 }
-<a name="l00113"></a>00113 
-<a name="l00114"></a><a class="code" href="class_direction_node.html#aa7fde93e8ef5887e9793c4bd75279c47">00114</a> <span class="keywordtype">void</span> <a class="code" href="class_direction_node.html#aa7fde93e8ef5887e9793c4bd75279c47" title="realiza as interraçoes basicas do no para cada interçao do master. Aqui se executa de forma continua ...">DirectionNode::run</a>(){
-<a name="l00115"></a>00115         <a class="code" href="class_node.html#a835e1b08cf223b7d424286d9831e6e1b">interruptions</a> = <span class="keyword">new</span> <a class="code" href="class_string_list.html">StringList</a>();
+<a name="l00052"></a>00052 <span class="preprocessor">        #ifdef ARDUINO</span>
+<a name="l00053"></a>00053 <span class="preprocessor"></span>                digitalWrite(<a class="code" href="class_motor_node.html#aeda0ac2c5e97a5182104e173aaa05320">BACK_PIN</a>, LOW);
+<a name="l00054"></a>00054                 delay(5);
+<a name="l00055"></a>00055                 digitalWrite(<a class="code" href="class_motor_node.html#a32dafb5daa03e5215976d249d70bb41a">FRONT_T_PIN</a>, HIGH);
+<a name="l00056"></a>00056                 delay(5);
+<a name="l00057"></a>00057                 digitalWrite(<a class="code" href="class_motor_node.html#aedfb952a36b62b68ec0fc8acf211b97a">FRONT_V_PIN</a>, HIGH);
+<a name="l00058"></a>00058                 delay(5);
+<a name="l00059"></a>00059 <span class="preprocessor">        #endif</span>
+<a name="l00060"></a>00060 <span class="preprocessor"></span>
+<a name="l00061"></a>00061 <span class="preprocessor">        #ifdef LINUX</span>
+<a name="l00062"></a>00062 <span class="preprocessor"></span>                cout &lt;&lt; <span class="stringliteral">&quot;pino :&quot;</span> &lt;&lt; <a class="code" href="class_motor_node.html#aeda0ac2c5e97a5182104e173aaa05320">BACK_PIN</a> &lt;&lt; <span class="stringliteral">&quot; LOW&quot;</span> &lt;&lt; endl;
+<a name="l00063"></a>00063                 cout &lt;&lt; <span class="stringliteral">&quot;delay : 5&quot;</span> &lt;&lt; endl;
+<a name="l00064"></a>00064                 cout &lt;&lt; <span class="stringliteral">&quot;pino :&quot;</span> &lt;&lt; <a class="code" href="class_motor_node.html#a32dafb5daa03e5215976d249d70bb41a">FRONT_T_PIN</a> &lt;&lt; <span class="stringliteral">&quot; LOW&quot;</span> &lt;&lt; endl;
+<a name="l00065"></a>00065                 cout &lt;&lt; <span class="stringliteral">&quot;delay : 5&quot;</span> &lt;&lt; endl;
+<a name="l00066"></a>00066                 cout &lt;&lt; <span class="stringliteral">&quot;pino :&quot;</span> &lt;&lt; <a class="code" href="class_motor_node.html#aedfb952a36b62b68ec0fc8acf211b97a">FRONT_V_PIN</a> &lt;&lt; <span class="stringliteral">&quot; LOW&quot;</span> &lt;&lt; endl;
+<a name="l00067"></a>00067                 cout &lt;&lt; <span class="stringliteral">&quot;delay : 5&quot;</span> &lt;&lt; endl;
+<a name="l00068"></a>00068 <span class="preprocessor">        #endif</span>
+<a name="l00069"></a>00069 <span class="preprocessor"></span>}
+<a name="l00070"></a>00070 
+<a name="l00071"></a><a class="code" href="class_motor_node.html#a8fee12729e92e1aba2b5f7cf4bffb764">00071</a> <span class="keywordtype">void</span> <a class="code" href="class_motor_node.html#a8fee12729e92e1aba2b5f7cf4bffb764">MotorNode::tras</a>(<span class="keywordtype">int</span> forca)
+<a name="l00072"></a>00072 {
+<a name="l00073"></a>00073 <span class="preprocessor">        #ifdef ARDUINO</span>
+<a name="l00074"></a>00074 <span class="preprocessor"></span>                digitalWrite(<a class="code" href="class_motor_node.html#aedfb952a36b62b68ec0fc8acf211b97a">FRONT_V_PIN</a>, LOW);
+<a name="l00075"></a>00075                 delay(5);
+<a name="l00076"></a>00076                 digitalWrite(<a class="code" href="class_motor_node.html#a32dafb5daa03e5215976d249d70bb41a">FRONT_T_PIN</a>, LOW);
+<a name="l00077"></a>00077                 delay(5);
+<a name="l00078"></a>00078                 digitalWrite(<a class="code" href="class_motor_node.html#aeda0ac2c5e97a5182104e173aaa05320">BACK_PIN</a>, HIGH);
+<a name="l00079"></a>00079                 delay(5);
+<a name="l00080"></a>00080 <span class="preprocessor">        #endif</span>
+<a name="l00081"></a>00081 <span class="preprocessor"></span>
+<a name="l00082"></a>00082 <span class="preprocessor">        #ifdef LINUX</span>
+<a name="l00083"></a>00083 <span class="preprocessor"></span>                cout &lt;&lt; <span class="stringliteral">&quot;pino :&quot;</span> &lt;&lt; <a class="code" href="class_motor_node.html#aedfb952a36b62b68ec0fc8acf211b97a">FRONT_V_PIN</a> &lt;&lt; <span class="stringliteral">&quot; LOW&quot;</span> &lt;&lt; endl;
+<a name="l00084"></a>00084                 cout &lt;&lt; <span class="stringliteral">&quot;delay : 5&quot;</span> &lt;&lt; endl;
+<a name="l00085"></a>00085                 cout &lt;&lt; <span class="stringliteral">&quot;pino :&quot;</span> &lt;&lt; <a class="code" href="class_motor_node.html#a32dafb5daa03e5215976d249d70bb41a">FRONT_T_PIN</a> &lt;&lt; <span class="stringliteral">&quot; LOW&quot;</span> &lt;&lt; endl;
+<a name="l00086"></a>00086                 cout &lt;&lt; <span class="stringliteral">&quot;delay : 5&quot;</span> &lt;&lt; endl;
+<a name="l00087"></a>00087                 cout &lt;&lt; <span class="stringliteral">&quot;pino :&quot;</span> &lt;&lt; <a class="code" href="class_motor_node.html#aeda0ac2c5e97a5182104e173aaa05320">BACK_PIN</a> &lt;&lt; <span class="stringliteral">&quot; HIGH&quot;</span> &lt;&lt; endl;
+<a name="l00088"></a>00088                 cout &lt;&lt; <span class="stringliteral">&quot;delay : 5&quot;</span> &lt;&lt; endl;
+<a name="l00089"></a>00089 <span class="preprocessor">        #endif</span>
+<a name="l00090"></a>00090 <span class="preprocessor"></span>}
+<a name="l00091"></a>00091 
+<a name="l00092"></a><a class="code" href="class_motor_node.html#a4cc66cb486f64b72daec6b4147d2b708">00092</a> <span class="keywordtype">void</span> <a class="code" href="class_motor_node.html#a4cc66cb486f64b72daec6b4147d2b708">MotorNode::pare</a>()
+<a name="l00093"></a>00093 {
+<a name="l00094"></a>00094 <span class="preprocessor">        #ifdef ARDUINO</span>
+<a name="l00095"></a>00095 <span class="preprocessor"></span>                digitalWrite(<a class="code" href="class_motor_node.html#aedfb952a36b62b68ec0fc8acf211b97a">FRONT_V_PIN</a>, LOW);
+<a name="l00096"></a>00096                 delay(5);
+<a name="l00097"></a>00097                 digitalWrite(<a class="code" href="class_motor_node.html#aeda0ac2c5e97a5182104e173aaa05320">BACK_PIN</a>, LOW);
+<a name="l00098"></a>00098                 delay(5);
+<a name="l00099"></a>00099                 digitalWrite(<a class="code" href="class_motor_node.html#a32dafb5daa03e5215976d249d70bb41a">FRONT_T_PIN</a>, LOW);
+<a name="l00100"></a>00100                 delay(5);
+<a name="l00101"></a>00101 <span class="preprocessor">        #endif</span>
+<a name="l00102"></a>00102 <span class="preprocessor"></span>
+<a name="l00103"></a>00103 <span class="preprocessor">        #ifdef LINUX</span>
+<a name="l00104"></a>00104 <span class="preprocessor"></span>                cout &lt;&lt; <span class="stringliteral">&quot;pino :&quot;</span> &lt;&lt; <a class="code" href="class_motor_node.html#aedfb952a36b62b68ec0fc8acf211b97a">FRONT_V_PIN</a> &lt;&lt; <span class="stringliteral">&quot; LOW&quot;</span> &lt;&lt; endl;
+<a name="l00105"></a>00105                 cout &lt;&lt; <span class="stringliteral">&quot;delay : 5&quot;</span> &lt;&lt; endl;
+<a name="l00106"></a>00106                 cout &lt;&lt; <span class="stringliteral">&quot;pino :&quot;</span> &lt;&lt; <a class="code" href="class_motor_node.html#aeda0ac2c5e97a5182104e173aaa05320">BACK_PIN</a> &lt;&lt; <span class="stringliteral">&quot; LOW&quot;</span> &lt;&lt; endl;
+<a name="l00107"></a>00107                 cout &lt;&lt; <span class="stringliteral">&quot;delay : 5&quot;</span> &lt;&lt; endl;
+<a name="l00108"></a>00108                 cout &lt;&lt; <span class="stringliteral">&quot;pino :&quot;</span> &lt;&lt; <a class="code" href="class_motor_node.html#a32dafb5daa03e5215976d249d70bb41a">FRONT_T_PIN</a> &lt;&lt; <span class="stringliteral">&quot; LOW&quot;</span> &lt;&lt; endl;
+<a name="l00109"></a>00109                 cout &lt;&lt; <span class="stringliteral">&quot;delay : 5&quot;</span> &lt;&lt; endl;
+<a name="l00110"></a>00110 <span class="preprocessor">        #endif</span>
+<a name="l00111"></a>00111 <span class="preprocessor"></span>}
+<a name="l00112"></a>00112 
+<a name="l00113"></a><a class="code" href="class_motor_node.html#a56837f03bfa2f976de5510a948e4ec9f">00113</a> <span class="keywordtype">void</span> <a class="code" href="class_motor_node.html#a56837f03bfa2f976de5510a948e4ec9f" title="realiza as interraçoes basicas do no para cada interçao do master. Aqui se executa de forma continua ...">MotorNode::run</a>()
+<a name="l00114"></a>00114 {
+<a name="l00115"></a>00115         <a class="code" href="class_node.html#a835e1b08cf223b7d424286d9831e6e1b">interruptions</a> = <span class="keyword">new</span> <a class="code" href="class_string_list.html" title="Essa classe apresenta as funçoes basicas para trabalho em uma lista de strings.">StringList</a>();
 <a name="l00116"></a>00116 }
 <a name="l00117"></a>00117 
-<a name="l00118"></a><a class="code" href="class_direction_node.html#ab38b8d7381f174b9deadb1f6dbd71e31">00118</a> <span class="keywordtype">void</span> <a class="code" href="class_direction_node.html#ab38b8d7381f174b9deadb1f6dbd71e31">DirectionNode::runService</a>(<span class="keywordtype">char</span> *service)
+<a name="l00118"></a><a class="code" href="class_motor_node.html#ad95eb7e85b274172c6bef6f685cf256d">00118</a> <span class="keywordtype">void</span> <a class="code" href="class_motor_node.html#ad95eb7e85b274172c6bef6f685cf256d">MotorNode::runService</a>(<span class="keywordtype">char</span> *service)
 <a name="l00119"></a>00119 {
-<a name="l00120"></a>00120         Serial.println(service);
-<a name="l00121"></a>00121         <span class="keywordtype">char</span> *msgInr, *msg2;
-<a name="l00122"></a>00122     msgInr = strtok(service, <span class="stringliteral">&quot;/;&quot;</span>);
-<a name="l00123"></a>00123     msg2 = strtok(NULL, <span class="stringliteral">&quot;/;&quot;</span>);
-<a name="l00124"></a>00124         msgInr = strtok(NULL, <span class="stringliteral">&quot;/;&quot;</span>);
-<a name="l00125"></a>00125         <span class="keywordtype">int</span> i = atoi(msgInr);
-<a name="l00126"></a>00126 
-<a name="l00127"></a>00127         <span class="keywordflow">if</span>(!strcmp(msg2, <span class="stringliteral">&quot;center&quot;</span>))
-<a name="l00128"></a>00128                 <a class="code" href="class_direction_node.html#ad88a9f87817099bde959a2592412046c">centro</a>();
-<a name="l00129"></a>00129 
-<a name="l00130"></a>00130         <span class="keywordflow">if</span>(!strcmp(msg2, <span class="stringliteral">&quot;rigth&quot;</span>))
-<a name="l00131"></a>00131                 <a class="code" href="class_direction_node.html#ab2040369d101d5964b2d76b06814d7eb">direita</a>(i + 70) ;
-<a name="l00132"></a>00132 
-<a name="l00133"></a>00133         <span class="keywordflow">if</span>(!strcmp(msg2, <span class="stringliteral">&quot;left&quot;</span>))
-<a name="l00134"></a>00134                 <a class="code" href="class_direction_node.html#a90091aad98a6ec4892d1cd0ae6675fad">esquerda</a>(90 - i + 20);
-<a name="l00135"></a>00135 }
-<a name="l00136"></a>00136 
-<a name="l00137"></a><a class="code" href="class_direction_node.html#a90091aad98a6ec4892d1cd0ae6675fad">00137</a> <span class="keywordtype">void</span> <a class="code" href="class_direction_node.html#a90091aad98a6ec4892d1cd0ae6675fad">DirectionNode::esquerda</a>(<span class="keywordtype">int</span> forca)
-<a name="l00138"></a>00138 {
-<a name="l00139"></a>00139     <a class="code" href="class_direction_node.html#a1dd61938506f08758b12abd352b0da7f">myservo</a>-&gt;<a class="code" href="class_servo.html#a72b4b546912eada96a6ef705168ceb8a">write</a>(forca);
-<a name="l00140"></a>00140 }
-<a name="l00141"></a>00141 
-<a name="l00142"></a><a class="code" href="class_direction_node.html#ad88a9f87817099bde959a2592412046c">00142</a> <span class="keywordtype">void</span> <a class="code" href="class_direction_node.html#ad88a9f87817099bde959a2592412046c">DirectionNode::centro</a>()
-<a name="l00143"></a>00143 {
-<a name="l00144"></a>00144     <a class="code" href="class_direction_node.html#a1dd61938506f08758b12abd352b0da7f">myservo</a>-&gt;<a class="code" href="class_servo.html#a72b4b546912eada96a6ef705168ceb8a">write</a>(90);
-<a name="l00145"></a>00145 }
-<a name="l00146"></a>00146 
-<a name="l00147"></a><a class="code" href="class_direction_node.html#ab2040369d101d5964b2d76b06814d7eb">00147</a> <span class="keywordtype">void</span> <a class="code" href="class_direction_node.html#ab2040369d101d5964b2d76b06814d7eb">DirectionNode::direita</a>(<span class="keywordtype">int</span> forca)
-<a name="l00148"></a>00148 {
-<a name="l00149"></a>00149     <a class="code" href="class_direction_node.html#a1dd61938506f08758b12abd352b0da7f">myservo</a>-&gt;<a class="code" href="class_servo.html#a72b4b546912eada96a6ef705168ceb8a">write</a>(forca);
-<a name="l00150"></a>00150 }
-<a name="l00151"></a>00151 
-<a name="l00152"></a><a class="code" href="class_temperature_node.html#a2ea691ecdbdf934d88d8200961661a66">00152</a> <a class="code" href="class_temperature_node.html#a2ea691ecdbdf934d88d8200961661a66">TemperatureNode::TemperatureNode</a>()
-<a name="l00153"></a>00153 {
-<a name="l00154"></a>00154         <a class="code" href="class_node.html#aae071b74f8ad790ba8304f6e9c9258e1" title="responsavel por inicializar o No, garantindo que tudo esteja ok antes da execucao dos serviços pelo N...">initialize</a>();
+<a name="l00120"></a>00120         <span class="keywordtype">char</span> *msgInr, *msg2;
+<a name="l00121"></a>00121     msgInr = strtok(service, <span class="stringliteral">&quot;/;&quot;</span>);
+<a name="l00122"></a>00122     msg2 = strtok(NULL, <span class="stringliteral">&quot;/;&quot;</span>);
+<a name="l00123"></a>00123         msgInr = strtok(NULL, <span class="stringliteral">&quot;/;&quot;</span>);
+<a name="l00124"></a>00124         <span class="keywordtype">int</span> i = atoi(msgInr);
+<a name="l00125"></a>00125         <span class="keywordflow">if</span>(!strcmp(msg2, <span class="stringliteral">&quot;stop&quot;</span>))
+<a name="l00126"></a>00126                 <a class="code" href="class_motor_node.html#a4cc66cb486f64b72daec6b4147d2b708">pare</a>();
+<a name="l00127"></a>00127 
+<a name="l00128"></a>00128         <span class="keywordflow">if</span>(!strcmp(msg2, <span class="stringliteral">&quot;frente&quot;</span>))
+<a name="l00129"></a>00129                 <a class="code" href="class_motor_node.html#a27ea018840ace0eebbfaa2cb664de2f9">frente</a>(i);
+<a name="l00130"></a>00130 
+<a name="l00131"></a>00131         <span class="keywordflow">if</span>(!strcmp(msg2, <span class="stringliteral">&quot;tras&quot;</span>))
+<a name="l00132"></a>00132                 <a class="code" href="class_motor_node.html#a8fee12729e92e1aba2b5f7cf4bffb764">tras</a>(i);
+<a name="l00133"></a>00133 }
+<a name="l00134"></a>00134 
+<a name="l00135"></a><a class="code" href="class_direction_node.html#a53a8403551cf42e8aa0c7bbe07ad2995">00135</a> <a class="code" href="class_direction_node.html#a53a8403551cf42e8aa0c7bbe07ad2995">DirectionNode::DirectionNode</a>(<span class="keywordtype">int</span> a_PIN)
+<a name="l00136"></a>00136 {
+<a name="l00137"></a>00137         <a class="code" href="class_node.html#aae071b74f8ad790ba8304f6e9c9258e1" title="responsavel por inicializar o No, garantindo que tudo esteja ok antes da execucao dos serviços pelo N...">initialize</a>();
+<a name="l00138"></a>00138         this-&gt;a_PIN = <a class="code" href="class_direction_node.html#ae5a68ce3183d9f5ab17786385e753127">a_PIN</a>;
+<a name="l00139"></a>00139 <span class="preprocessor">        #ifdef ARDUINO</span>
+<a name="l00140"></a>00140 <span class="preprocessor"></span>                <a class="code" href="class_direction_node.html#a1dd61938506f08758b12abd352b0da7f">myservo</a> = <span class="keyword">new</span> <a class="code" href="class_servo.html">Servo</a>();
+<a name="l00141"></a>00141         <a class="code" href="class_direction_node.html#a1dd61938506f08758b12abd352b0da7f">myservo</a>-&gt;<a class="code" href="class_servo.html#aeccd2077f07ebc45250da14e72a0c461">attach</a>(a_PIN);
+<a name="l00142"></a>00142                 <span class="keywordtype">int</span> outputValue = map(0, SHRT_MIN, SHRT_MAX, 0, 180);  
+<a name="l00143"></a>00143         <a class="code" href="class_direction_node.html#a1dd61938506f08758b12abd352b0da7f">myservo</a>-&gt;<a class="code" href="class_servo.html#a72b4b546912eada96a6ef705168ceb8a">write</a>(outputValue);
+<a name="l00144"></a>00144 <span class="preprocessor">    #endif</span>
+<a name="l00145"></a>00145 <span class="preprocessor"></span>
+<a name="l00146"></a>00146 <span class="preprocessor">    #ifdef LINUX</span>
+<a name="l00147"></a>00147 <span class="preprocessor"></span>        cout &lt;&lt; <span class="stringliteral">&quot;pino :&quot;</span> &lt;&lt; a_PIN &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; 90 &lt;&lt; endl;
+<a name="l00148"></a>00148 <span class="preprocessor">    #endif</span>
+<a name="l00149"></a>00149 <span class="preprocessor"></span>}
+<a name="l00150"></a>00150 
+<a name="l00151"></a><a class="code" href="class_direction_node.html#a61228494bbd8936697ca68d41edd79dd">00151</a> <span class="keywordtype">void</span> <a class="code" href="class_direction_node.html#a61228494bbd8936697ca68d41edd79dd" title="Essa atruibui valor a variavel name, o seu respectivo valor. E uma função garante para na implementaç...">DirectionNode::setName</a>()
+<a name="l00152"></a>00152 {
+<a name="l00153"></a>00153         <a class="code" href="class_node.html#a059a0ea6f86dce9fd919c08a707b360b">name</a> = (<span class="keywordtype">char</span>*)calloc(20, <span class="keyword">sizeof</span>(<span class="keywordtype">char</span>));
+<a name="l00154"></a>00154         strcpy(<a class="code" href="class_node.html#a059a0ea6f86dce9fd919c08a707b360b">name</a>, <span class="stringliteral">&quot;direction&quot;</span>);
 <a name="l00155"></a>00155 }
 <a name="l00156"></a>00156 
-<a name="l00157"></a>00157 
-<a name="l00158"></a><a class="code" href="class_temperature_node.html#a8889cdfc6f7f6697c8954883c30bca3d">00158</a> <span class="keywordtype">void</span> <a class="code" href="class_temperature_node.html#a8889cdfc6f7f6697c8954883c30bca3d" title="Essa atruibui valor a variavel name, o seu respectivo valor. E uma função garante para na implementaç...">TemperatureNode::setName</a>()
-<a name="l00159"></a>00159 {
-<a name="l00160"></a>00160         <a class="code" href="class_node.html#a059a0ea6f86dce9fd919c08a707b360b">name</a> = (<span class="keywordtype">char</span>*)calloc(20, <span class="keyword">sizeof</span>(<span class="keywordtype">char</span>));
-<a name="l00161"></a>00161         strcpy(<a class="code" href="class_node.html#a059a0ea6f86dce9fd919c08a707b360b">name</a>, <span class="stringliteral">&quot;temperature&quot;</span>);
-<a name="l00162"></a>00162 }
-<a name="l00163"></a>00163 
-<a name="l00164"></a><a class="code" href="class_temperature_node.html#a04e950b56532c79d4b566284c204f707">00164</a> <span class="keywordtype">void</span> <a class="code" href="class_temperature_node.html#a04e950b56532c79d4b566284c204f707" title="Esse atribui valor lista de serviços que sao disponibilizados pelo no. E uma função garante que duran...">TemperatureNode::setServiceList</a>()
-<a name="l00165"></a>00165 {
-<a name="l00166"></a>00166         <a class="code" href="class_node.html#a4b21b5cd6dda987633ec2d42be41a844">services</a> = (<span class="keywordtype">char</span>**)malloc(<span class="keyword">sizeof</span>(<span class="keywordtype">char</span>*)*1);
-<a name="l00167"></a>00167         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 1; i++)
-<a name="l00168"></a>00168                 <a class="code" href="class_node.html#a4b21b5cd6dda987633ec2d42be41a844">services</a>[i] = (<span class="keywordtype">char</span>*)calloc(20, <span class="keyword">sizeof</span>(<span class="keywordtype">char</span>));
-<a name="l00169"></a>00169         strcpy(<a class="code" href="class_node.html#a4b21b5cd6dda987633ec2d42be41a844">services</a>[0], <span class="stringliteral">&quot;ambiente/X&quot;</span>);
-<a name="l00170"></a>00170 }
-<a name="l00171"></a>00171 
-<a name="l00172"></a><a class="code" href="class_temperature_node.html#a19e447adb2fd0aa2bf7f9eb0bd301016">00172</a> <span class="keywordtype">void</span> <a class="code" href="class_temperature_node.html#a19e447adb2fd0aa2bf7f9eb0bd301016" title="realiza as interraçoes basicas do no para cada interçao do master. Aqui se executa de forma continua ...">TemperatureNode::run</a>()
-<a name="l00173"></a>00173 {
-<a name="l00174"></a>00174         <a class="code" href="class_node.html#a835e1b08cf223b7d424286d9831e6e1b">interruptions</a> = <span class="keyword">new</span> <a class="code" href="class_string_list.html">StringList</a>();       
-<a name="l00175"></a>00175 }
+<a name="l00157"></a><a class="code" href="class_direction_node.html#a2bf00da20c98befe761481c9eb4405ae">00157</a> <span class="keywordtype">void</span> <a class="code" href="class_direction_node.html#a2bf00da20c98befe761481c9eb4405ae" title="Esse atribui valor lista de serviços que sao disponibilizados pelo no. E uma função garante que duran...">DirectionNode::setServiceList</a>()
+<a name="l00158"></a>00158 {
+<a name="l00159"></a>00159         
+<a name="l00160"></a>00160         <a class="code" href="class_node.html#a4b21b5cd6dda987633ec2d42be41a844">services</a> = (<span class="keywordtype">char</span>**)malloc(<span class="keyword">sizeof</span>(<span class="keywordtype">char</span>*)*3);
+<a name="l00161"></a>00161         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 3; i++)
+<a name="l00162"></a>00162                 <a class="code" href="class_node.html#a4b21b5cd6dda987633ec2d42be41a844">services</a>[i] = (<span class="keywordtype">char</span>*)calloc(20, <span class="keyword">sizeof</span>(<span class="keywordtype">char</span>));
+<a name="l00163"></a>00163         strcpy(<a class="code" href="class_node.html#a4b21b5cd6dda987633ec2d42be41a844">services</a>[0], <span class="stringliteral">&quot;left/X&quot;</span>);
+<a name="l00164"></a>00164         strcpy(<a class="code" href="class_node.html#a4b21b5cd6dda987633ec2d42be41a844">services</a>[1], <span class="stringliteral">&quot;rigth/X&quot;</span>);
+<a name="l00165"></a>00165         strcpy(<a class="code" href="class_node.html#a4b21b5cd6dda987633ec2d42be41a844">services</a>[2], <span class="stringliteral">&quot;center&quot;</span>);
+<a name="l00166"></a>00166         
+<a name="l00167"></a>00167 }
+<a name="l00168"></a>00168 
+<a name="l00169"></a><a class="code" href="class_direction_node.html#aa7fde93e8ef5887e9793c4bd75279c47">00169</a> <span class="keywordtype">void</span> <a class="code" href="class_direction_node.html#aa7fde93e8ef5887e9793c4bd75279c47" title="realiza as interraçoes basicas do no para cada interçao do master. Aqui se executa de forma continua ...">DirectionNode::run</a>(){
+<a name="l00170"></a>00170         <a class="code" href="class_node.html#a835e1b08cf223b7d424286d9831e6e1b">interruptions</a> = <span class="keyword">new</span> <a class="code" href="class_string_list.html" title="Essa classe apresenta as funçoes basicas para trabalho em uma lista de strings.">StringList</a>();
+<a name="l00171"></a>00171 }
+<a name="l00172"></a>00172 
+<a name="l00173"></a><a class="code" href="class_direction_node.html#ab38b8d7381f174b9deadb1f6dbd71e31">00173</a> <span class="keywordtype">void</span> <a class="code" href="class_direction_node.html#ab38b8d7381f174b9deadb1f6dbd71e31">DirectionNode::runService</a>(<span class="keywordtype">char</span> *service)
+<a name="l00174"></a>00174 {
+<a name="l00175"></a>00175         Serial.println(service);
+<a name="l00176"></a>00176         <span class="keywordtype">char</span> *msgInr, *msg2;
+<a name="l00177"></a>00177     msgInr = strtok(service, <span class="stringliteral">&quot;/;&quot;</span>);
+<a name="l00178"></a>00178     msg2 = strtok(NULL, <span class="stringliteral">&quot;/;&quot;</span>);
+<a name="l00179"></a>00179         msgInr = strtok(NULL, <span class="stringliteral">&quot;/;&quot;</span>);
+<a name="l00180"></a>00180         <span class="keywordtype">int</span> i = atoi(msgInr);
+<a name="l00181"></a>00181 
+<a name="l00182"></a>00182         <span class="keywordflow">if</span>(!strcmp(msg2, <span class="stringliteral">&quot;center&quot;</span>))
+<a name="l00183"></a>00183                 <a class="code" href="class_direction_node.html#ad88a9f87817099bde959a2592412046c">centro</a>();
+<a name="l00184"></a>00184 
+<a name="l00185"></a>00185         <span class="keywordflow">if</span>(!strcmp(msg2, <span class="stringliteral">&quot;rigth&quot;</span>))
+<a name="l00186"></a>00186                 <a class="code" href="class_direction_node.html#ab2040369d101d5964b2d76b06814d7eb">direita</a>(i + 70) ;
+<a name="l00187"></a>00187 
+<a name="l00188"></a>00188         <span class="keywordflow">if</span>(!strcmp(msg2, <span class="stringliteral">&quot;left&quot;</span>))
+<a name="l00189"></a>00189                 <a class="code" href="class_direction_node.html#a90091aad98a6ec4892d1cd0ae6675fad">esquerda</a>(90 - i + 20);
+<a name="l00190"></a>00190 }
+<a name="l00191"></a>00191 
+<a name="l00192"></a><a class="code" href="class_direction_node.html#a90091aad98a6ec4892d1cd0ae6675fad">00192</a> <span class="keywordtype">void</span> <a class="code" href="class_direction_node.html#a90091aad98a6ec4892d1cd0ae6675fad">DirectionNode::esquerda</a>(<span class="keywordtype">int</span> forca)
+<a name="l00193"></a>00193 {
+<a name="l00194"></a>00194 <span class="preprocessor">        #ifdef ARDUINO</span>
+<a name="l00195"></a>00195 <span class="preprocessor"></span>        <a class="code" href="class_direction_node.html#a1dd61938506f08758b12abd352b0da7f">myservo</a>-&gt;<a class="code" href="class_servo.html#a72b4b546912eada96a6ef705168ceb8a">write</a>(forca);
+<a name="l00196"></a>00196 <span class="preprocessor">    #endif</span>
+<a name="l00197"></a>00197 <span class="preprocessor"></span>
+<a name="l00198"></a>00198 <span class="preprocessor">    #ifdef LINUX</span>
+<a name="l00199"></a>00199 <span class="preprocessor"></span>                cout &lt;&lt; <span class="stringliteral">&quot;pino :&quot;</span> &lt;&lt; <a class="code" href="class_direction_node.html#ae5a68ce3183d9f5ab17786385e753127">a_PIN</a> &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; forca &lt;&lt; endl;
+<a name="l00200"></a>00200 <span class="preprocessor">        #endif          </span>
+<a name="l00201"></a>00201 <span class="preprocessor"></span>}
+<a name="l00202"></a>00202 
+<a name="l00203"></a><a class="code" href="class_direction_node.html#ad88a9f87817099bde959a2592412046c">00203</a> <span class="keywordtype">void</span> <a class="code" href="class_direction_node.html#ad88a9f87817099bde959a2592412046c">DirectionNode::centro</a>()
+<a name="l00204"></a>00204 {
+<a name="l00205"></a>00205         <span class="keywordtype">int</span> forca = 90;
+<a name="l00206"></a>00206 <span class="preprocessor">    #ifdef ARDUINO</span>
+<a name="l00207"></a>00207 <span class="preprocessor"></span>        <a class="code" href="class_direction_node.html#a1dd61938506f08758b12abd352b0da7f">myservo</a>-&gt;<a class="code" href="class_servo.html#a72b4b546912eada96a6ef705168ceb8a">write</a>(forca);
+<a name="l00208"></a>00208 <span class="preprocessor">    #endif</span>
+<a name="l00209"></a>00209 <span class="preprocessor"></span>
+<a name="l00210"></a>00210 <span class="preprocessor">    #ifdef LINUX</span>
+<a name="l00211"></a>00211 <span class="preprocessor"></span>                cout &lt;&lt; <span class="stringliteral">&quot;pino :&quot;</span> &lt;&lt; <a class="code" href="class_direction_node.html#ae5a68ce3183d9f5ab17786385e753127">a_PIN</a> &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; forca &lt;&lt; endl;
+<a name="l00212"></a>00212 <span class="preprocessor">        #endif          </span>
+<a name="l00213"></a>00213 <span class="preprocessor"></span>}
+<a name="l00214"></a>00214 
+<a name="l00215"></a><a class="code" href="class_direction_node.html#ab2040369d101d5964b2d76b06814d7eb">00215</a> <span class="keywordtype">void</span> <a class="code" href="class_direction_node.html#ab2040369d101d5964b2d76b06814d7eb">DirectionNode::direita</a>(<span class="keywordtype">int</span> forca)
+<a name="l00216"></a>00216 {
+<a name="l00217"></a>00217 <span class="preprocessor">    #ifdef ARDUINO</span>
+<a name="l00218"></a>00218 <span class="preprocessor"></span>        <a class="code" href="class_direction_node.html#a1dd61938506f08758b12abd352b0da7f">myservo</a>-&gt;<a class="code" href="class_servo.html#a72b4b546912eada96a6ef705168ceb8a">write</a>(forca);
+<a name="l00219"></a>00219 <span class="preprocessor">    #endif</span>
+<a name="l00220"></a>00220 <span class="preprocessor"></span>
+<a name="l00221"></a>00221 <span class="preprocessor">    #ifdef LINUX</span>
+<a name="l00222"></a>00222 <span class="preprocessor"></span>                cout &lt;&lt; <span class="stringliteral">&quot;pino :&quot;</span> &lt;&lt; <a class="code" href="class_direction_node.html#ae5a68ce3183d9f5ab17786385e753127">a_PIN</a> &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; forca &lt;&lt; endl;
+<a name="l00223"></a>00223 <span class="preprocessor">        #endif  </span>
+<a name="l00224"></a>00224 <span class="preprocessor"></span>}
+<a name="l00225"></a>00225 
+<a name="l00226"></a><a class="code" href="class_ligth_node.html#a0beea790688705bcdf817d87f0c175c4">00226</a> <a class="code" href="class_ligth_node.html#a0beea790688705bcdf817d87f0c175c4">LigthNode::LigthNode</a>()
+<a name="l00227"></a>00227 {
+<a name="l00228"></a>00228         <a class="code" href="class_node.html#aae071b74f8ad790ba8304f6e9c9258e1" title="responsavel por inicializar o No, garantindo que tudo esteja ok antes da execucao dos serviços pelo N...">initialize</a>();
+<a name="l00229"></a>00229 }
+<a name="l00230"></a>00230 
+<a name="l00231"></a>00231 
+<a name="l00232"></a><a class="code" href="class_ligth_node.html#a91f7bc9a5cf8e3c03c821bc3fcbaaf25">00232</a> <span class="keywordtype">void</span> <a class="code" href="class_ligth_node.html#a91f7bc9a5cf8e3c03c821bc3fcbaaf25" title="Essa atruibui valor a variavel name, o seu respectivo valor. E uma função garante para na implementaç...">LigthNode::setName</a>()
+<a name="l00233"></a>00233 {
+<a name="l00234"></a>00234         <a class="code" href="class_node.html#a059a0ea6f86dce9fd919c08a707b360b">name</a> = (<span class="keywordtype">char</span>*)calloc(20, <span class="keyword">sizeof</span>(<span class="keywordtype">char</span>));
+<a name="l00235"></a>00235         strcpy(<a class="code" href="class_node.html#a059a0ea6f86dce9fd919c08a707b360b">name</a>, <span class="stringliteral">&quot;light&quot;</span>);
+<a name="l00236"></a>00236 }
+<a name="l00237"></a>00237 
+<a name="l00238"></a><a class="code" href="class_ligth_node.html#a3f19798f38d4bd0aa1938e38432c113f">00238</a> <span class="keywordtype">void</span> <a class="code" href="class_ligth_node.html#a3f19798f38d4bd0aa1938e38432c113f" title="Esse atribui valor lista de serviços que sao disponibilizados pelo no. E uma função garante que duran...">LigthNode::setServiceList</a>()
+<a name="l00239"></a>00239 {
+<a name="l00240"></a>00240         <a class="code" href="class_node.html#a4b21b5cd6dda987633ec2d42be41a844">services</a> = (<span class="keywordtype">char</span>**)malloc(<span class="keyword">sizeof</span>(<span class="keywordtype">char</span>*)*1);
+<a name="l00241"></a>00241         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 1; i++)
+<a name="l00242"></a>00242                 <a class="code" href="class_node.html#a4b21b5cd6dda987633ec2d42be41a844">services</a>[i] = (<span class="keywordtype">char</span>*)calloc(20, <span class="keyword">sizeof</span>(<span class="keywordtype">char</span>));
+<a name="l00243"></a>00243         strcpy(<a class="code" href="class_node.html#a4b21b5cd6dda987633ec2d42be41a844">services</a>[0], <span class="stringliteral">&quot;automatic&quot;</span>);
+<a name="l00244"></a>00244 }
+<a name="l00245"></a>00245 
+<a name="l00246"></a><a class="code" href="class_ligth_node.html#a3c644560ef563e6683b874c46e14e5ca">00246</a> <span class="keywordtype">void</span> <a class="code" href="class_ligth_node.html#a3c644560ef563e6683b874c46e14e5ca" title="realiza as interraçoes basicas do no para cada interçao do master. Aqui se executa de forma continua ...">LigthNode::run</a>()
+<a name="l00247"></a>00247 {
+<a name="l00248"></a>00248         <a class="code" href="class_node.html#a835e1b08cf223b7d424286d9831e6e1b">interruptions</a> = <span class="keyword">new</span> <a class="code" href="class_string_list.html" title="Essa classe apresenta as funçoes basicas para trabalho em uma lista de strings.">StringList</a>();       
+<a name="l00249"></a>00249 }
 </pre></div></div><!-- contents -->
 </div>
 <!-- window showing the filter options -->
@@ -294,7 +368,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul>
       <li class="navelem"><a class="el" href="inode_8cpp.html">inode.cpp</a>      </li>
 
-    <li class="footer">Generated on Sun Dec 15 2013 00:11:59 for Nos - System by
+    <li class="footer">Generated on Wed Dec 18 2013 14:48:16 for Nos - System by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

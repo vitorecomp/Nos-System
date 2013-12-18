@@ -1,5 +1,5 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$node_8h.html" title="node.h" alt="" coords="149,83,211,112"/>
-<area shape="rect" id="node15" href="$_servo_8h.html" title="Servo.h" alt="" coords="300,83,367,112"/>
-<area shape="rect" id="node7" href="$_entidades_8h.html" title="Entidades.h" alt="" coords="135,160,225,189"/>
+<area shape="rect" id="node3" href="$node_8h.html" title="Cabecalho das classes que prove o serviço de no. Nesse esta contido todo o codigo necessario para se ..." alt="" coords="115,83,176,112"/>
+<area shape="rect" id="node7" href="$_entidades_8h.html" title="Cabecalho da classe que implemento as entidades basicas do sistema garantindo com eles um melhor reap..." alt="" coords="100,160,191,189"/>
+<area shape="rect" id="node9" href="$_defines_8h.html" title="Cabecalho de defines que trasforma o codigo mais modularios, esses estao garantido principalmente que..." alt="" coords="95,237,172,267"/>
 </map>

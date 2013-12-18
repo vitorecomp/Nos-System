@@ -1,7 +1,7 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$iconnection_8h.html" title="/home/vitor/workspace/Nos&#45;System/nos/simple&#45;embedded&#45;systems/example/iconnection.h" alt="" coords="5,83,555,112"/>
+<area shape="rect" id="node3" href="$iconnection_8h.html" title="Cabecalho da classe que implemento as conexoes do sistema garantida que essa sejam inicializadas de f..." alt="" coords="5,83,555,112"/>
 <area shape="rect" id="node9" href="$master_8h.html" title="Cabecalho das classes que prove o serviço do Master. Nesse esta contido todo o codigo necessario para..." alt="" coords="579,83,1101,112"/>
-<area shape="rect" id="node5" href="$i_master_8h.html" title="/home/vitor/workspace/Nos&#45;System/nos/simple&#45;embedded&#45;systems/example/iMaster.h" alt="" coords="19,160,544,189"/>
+<area shape="rect" id="node5" href="$i_master_8h.html" title="Cabecalho da classe que implemento o master atraves da classe master, essa classe implementa as carac..." alt="" coords="19,160,544,189"/>
 <area shape="rect" id="node7" href="$i_master_8cpp.html" title="/home/vitor/workspace/Nos&#45;System/nos/simple&#45;embedded&#45;systems/example/iMaster.cpp" alt="" coords="11,237,552,267"/>
 <area shape="rect" id="node12" href="$master_8cpp.html" title="/home/vitor/workspace/Nos&#45;System/nos/simple&#45;embedded&#45;systems/example/master.cpp" alt="" coords="571,160,1109,189"/>
 </map>

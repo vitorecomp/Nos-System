@@ -1,6 +1,6 @@
 <map id="G" name="G">
 <area shape="rect" id="node3" href="$class_node.html#aae071b74f8ad790ba8304f6e9c9258e1" title="responsavel por inicializar o No, garantindo que tudo esteja ok antes da execucao dos serviços pelo N..." alt="" coords="199,59,305,88"/>
-<area shape="rect" id="node5" href="$class_motor_node.html#a0e8566ad6e799416807a5ace3bae7960" title="MotorNode::MotorNode" alt="" coords="396,5,553,35"/>
-<area shape="rect" id="node7" href="$class_direction_node.html#a53a8403551cf42e8aa0c7bbe07ad2995" title="DirectionNode::DirectionNode" alt="" coords="377,59,572,88"/>
-<area shape="rect" id="node9" href="$class_temperature_node.html#a2ea691ecdbdf934d88d8200961661a66" title="TemperatureNode::TemperatureNode" alt="" coords="356,112,593,141"/>
+<area shape="rect" id="node5" href="$class_motor_node.html#a0e8566ad6e799416807a5ace3bae7960" title="MotorNode::MotorNode" alt="" coords="375,5,532,35"/>
+<area shape="rect" id="node7" href="$class_direction_node.html#a53a8403551cf42e8aa0c7bbe07ad2995" title="DirectionNode::DirectionNode" alt="" coords="356,59,551,88"/>
+<area shape="rect" id="node9" href="$class_ligth_node.html#a0beea790688705bcdf817d87f0c175c4" title="LigthNode::LigthNode" alt="" coords="380,112,527,141"/>
 </map>

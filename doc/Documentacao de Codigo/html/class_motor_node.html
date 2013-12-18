@@ -106,6 +106,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <!-- doxytag: class="MotorNode" --><!-- doxytag: inherits="Node" -->
+<p>Esse e a classe casse que implementa a interface de motor com o hardware do motor, usando 3 reles que compartilham o terra e cada um dos outros reles e responsavel por um VCC que deve ser ligado apos o terra ja posicionado para evitar curto circuito.  
+ <a href="class_motor_node.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="inode_8h_source.html">inode.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for MotorNode:</div>
@@ -119,7 +122,7 @@ Collaboration diagram for MotorNode:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_motor_node__coll__graph.png" border="0" usemap="#_motor_node_coll__map" alt="Collaboration graph"/></div>
 <map name="_motor_node_coll__map" id="_motor_node_coll__map">
-<area shape="rect" id="node2" href="class_node.html" title="Classe que reprensenta os nos essa define a estrutura basica de um no, essa tras a implentaçõa basico..." alt="" coords="21,197,75,227"/><area shape="rect" id="node4" href="class_string_list.html" title="StringList" alt="" coords="9,101,87,131"/><area shape="rect" id="node6" href="structl_strings.html" title="lStrings" alt="" coords="15,5,81,35"/></map>
+<area shape="rect" id="node2" href="class_node.html" title="Classe que reprensenta os nos essa define a estrutura basica de um no, essa tras a implentaçõa basico..." alt="" coords="21,197,75,227"/><area shape="rect" id="node4" href="class_string_list.html" title="Essa classe apresenta as funçoes basicas para trabalho em uma lista de strings." alt="" coords="9,101,87,131"/><area shape="rect" id="node6" href="structl_strings.html" title="Estrutura que reprensanta um termo de uma lista de strings." alt="" coords="15,5,81,35"/></map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 
 <p><a href="class_motor_node-members.html">List of all members.</a></p>
@@ -141,13 +144,14 @@ Private Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_motor_node.html#a4cc66cb486f64b72daec6b4147d2b708">pare</a> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_motor_node.html#a83bbfecdc4f5ce895b60790905de61ad">d1_PIN</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_motor_node.html#a898ee928705b6746296517bde5f9aaf2">d2_PIN</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_motor_node.html#aa0056bc3a0d01daac73e10afa98fb38a">a_PIN</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_motor_node.html#aeda0ac2c5e97a5182104e173aaa05320">BACK_PIN</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_motor_node.html#a32dafb5daa03e5215976d249d70bb41a">FRONT_T_PIN</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_motor_node.html#aedfb952a36b62b68ec0fc8acf211b97a">FRONT_V_PIN</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock">
-<p>Definition at line <a class="el" href="inode_8h_source.html#l00016">16</a> of file <a class="el" href="inode_8h_source.html">inode.h</a>.</p>
+<div class="textblock"><p>Esse e a classe casse que implementa a interface de motor com o hardware do motor, usando 3 reles que compartilham o terra e cada um dos outros reles e responsavel por um VCC que deve ser ligado apos o terra ja posicionado para evitar curto circuito. </p>
+
+<p>Definition at line <a class="el" href="inode_8h_source.html#l00028">28</a> of file <a class="el" href="inode_8h_source.html">inode.h</a>.</p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a0e8566ad6e799416807a5ace3bae7960"></a><!-- doxytag: member="MotorNode::MotorNode" ref="a0e8566ad6e799416807a5ace3bae7960" args="(int, int, int)" -->
 <div class="memitem">
@@ -157,19 +161,19 @@ Private Attributes</h2></td></tr>
           <td class="memname"><a class="el" href="class_motor_node.html#a0e8566ad6e799416807a5ace3bae7960">MotorNode::MotorNode</a> </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>d1_PIN</em>, </td>
+          <td class="paramname"><em>PIN1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>d2_PIN</em>, </td>
+          <td class="paramname"><em>PIN2</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>a_PIN</em>&#160;</td>
+          <td class="paramname"><em>PIN3</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -180,7 +184,7 @@ Private Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="inode_8cpp_source.html#l00021">21</a> of file <a class="el" href="inode_8cpp_source.html">inode.cpp</a>.</p>
+<p>Definition at line <a class="el" href="inode_8cpp_source.html#l00022">22</a> of file <a class="el" href="inode_8cpp_source.html">inode.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -209,7 +213,7 @@ Here is the call graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="inode_8cpp_source.html#l00043">43</a> of file <a class="el" href="inode_8cpp_source.html">inode.cpp</a>.</p>
+<p>Definition at line <a class="el" href="inode_8cpp_source.html#l00050">50</a> of file <a class="el" href="inode_8cpp_source.html">inode.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -236,7 +240,7 @@ Here is the caller graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="inode_8cpp_source.html#l00057">57</a> of file <a class="el" href="inode_8cpp_source.html">inode.cpp</a>.</p>
+<p>Definition at line <a class="el" href="inode_8cpp_source.html#l00092">92</a> of file <a class="el" href="inode_8cpp_source.html">inode.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -268,7 +272,7 @@ Here is the caller graph for this function:</div>
 
 <p>Implements <a class="el" href="class_node.html#af4c4dbee4de86db99a21a8ac410ad66c">Node</a>.</p>
 
-<p>Definition at line <a class="el" href="inode_8cpp_source.html#l00064">64</a> of file <a class="el" href="inode_8cpp_source.html">inode.cpp</a>.</p>
+<p>Definition at line <a class="el" href="inode_8cpp_source.html#l00113">113</a> of file <a class="el" href="inode_8cpp_source.html">inode.cpp</a>.</p>
 
 </div>
 </div>
@@ -289,7 +293,7 @@ Here is the caller graph for this function:</div>
 
 <p>Implements <a class="el" href="class_node.html#aa1eaf5072c5d4dffaadbbdd83067318f">Node</a>.</p>
 
-<p>Definition at line <a class="el" href="inode_8cpp_source.html#l00069">69</a> of file <a class="el" href="inode_8cpp_source.html">inode.cpp</a>.</p>
+<p>Definition at line <a class="el" href="inode_8cpp_source.html#l00118">118</a> of file <a class="el" href="inode_8cpp_source.html">inode.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -361,7 +365,7 @@ Here is the call graph for this function:</div>
 </div>
 <div class="memdoc">
 
-<p>Definition at line <a class="el" href="inode_8cpp_source.html#l00050">50</a> of file <a class="el" href="inode_8cpp_source.html">inode.cpp</a>.</p>
+<p>Definition at line <a class="el" href="inode_8cpp_source.html#l00071">71</a> of file <a class="el" href="inode_8cpp_source.html">inode.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -375,51 +379,51 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <hr/><h2>Member Data Documentation</h2>
-<a class="anchor" id="aa0056bc3a0d01daac73e10afa98fb38a"></a><!-- doxytag: member="MotorNode::a_PIN" ref="aa0056bc3a0d01daac73e10afa98fb38a" args="" -->
+<a class="anchor" id="aeda0ac2c5e97a5182104e173aaa05320"></a><!-- doxytag: member="MotorNode::BACK_PIN" ref="aeda0ac2c5e97a5182104e173aaa05320" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="class_motor_node.html#aa0056bc3a0d01daac73e10afa98fb38a">MotorNode::a_PIN</a><code> [private]</code></td>
+          <td class="memname">int <a class="el" href="class_motor_node.html#aeda0ac2c5e97a5182104e173aaa05320">MotorNode::BACK_PIN</a><code> [private]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Esta string e usada para armazenar as informaçoes repassadas de cada classe apos a validaçao destas </p>
+<p>Pino vcc de re </p>
 
-<p>Definition at line <a class="el" href="inode_8h_source.html#l00020">20</a> of file <a class="el" href="inode_8h_source.html">inode.h</a>.</p>
+<p>Definition at line <a class="el" href="inode_8h_source.html#l00030">30</a> of file <a class="el" href="inode_8h_source.html">inode.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a83bbfecdc4f5ce895b60790905de61ad"></a><!-- doxytag: member="MotorNode::d1_PIN" ref="a83bbfecdc4f5ce895b60790905de61ad" args="" -->
+<a class="anchor" id="a32dafb5daa03e5215976d249d70bb41a"></a><!-- doxytag: member="MotorNode::FRONT_T_PIN" ref="a32dafb5daa03e5215976d249d70bb41a" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="class_motor_node.html#a83bbfecdc4f5ce895b60790905de61ad">MotorNode::d1_PIN</a><code> [private]</code></td>
+          <td class="memname">int <a class="el" href="class_motor_node.html#a32dafb5daa03e5215976d249d70bb41a">MotorNode::FRONT_T_PIN</a><code> [private]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Esta string e usada para armazenar as informaçoes repassadas de cada classe apos a validaçao destas </p>
+<p>Pino terra front </p>
 
-<p>Definition at line <a class="el" href="inode_8h_source.html#l00018">18</a> of file <a class="el" href="inode_8h_source.html">inode.h</a>.</p>
+<p>Definition at line <a class="el" href="inode_8h_source.html#l00031">31</a> of file <a class="el" href="inode_8h_source.html">inode.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a898ee928705b6746296517bde5f9aaf2"></a><!-- doxytag: member="MotorNode::d2_PIN" ref="a898ee928705b6746296517bde5f9aaf2" args="" -->
+<a class="anchor" id="aedfb952a36b62b68ec0fc8acf211b97a"></a><!-- doxytag: member="MotorNode::FRONT_V_PIN" ref="aedfb952a36b62b68ec0fc8acf211b97a" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="class_motor_node.html#a898ee928705b6746296517bde5f9aaf2">MotorNode::d2_PIN</a><code> [private]</code></td>
+          <td class="memname">int <a class="el" href="class_motor_node.html#aedfb952a36b62b68ec0fc8acf211b97a">MotorNode::FRONT_V_PIN</a><code> [private]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
-<p>Esta string e usada para armazenar as informaçoes repassadas de cada classe apos a validaçao destas </p>
+<p>Pino vcc front </p>
 
-<p>Definition at line <a class="el" href="inode_8h_source.html#l00019">19</a> of file <a class="el" href="inode_8h_source.html">inode.h</a>.</p>
+<p>Definition at line <a class="el" href="inode_8h_source.html#l00032">32</a> of file <a class="el" href="inode_8h_source.html">inode.h</a>.</p>
 
 </div>
 </div>
@@ -447,7 +451,7 @@ Here is the caller graph for this function:</div>
     <ul>
       <li class="navelem"><a class="el" href="class_motor_node.html">MotorNode</a>      </li>
 
-    <li class="footer">Generated on Sun Dec 15 2013 00:11:59 for Nos - System by
+    <li class="footer">Generated on Wed Dec 18 2013 14:48:16 for Nos - System by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

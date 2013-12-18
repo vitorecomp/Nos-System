@@ -1,11 +1,26 @@
+/**  \file   iconnection.h
+     \brief  Cabecalho da classe que implemento as conexoes do sistema garantida que essa
+     sejam inicializadas de forma corretado, provendo todos os paramentros. e tambem garantindo
+     que usa dessa cominicaçao seja tranparente a outros modulos do sistema.*/
 #ifndef ICONNECTION_H
 #define ICONNECTION_H
 
 #include "connection.h"
 #include "Defines.h"
-#include <Arduino.h>
 
+#ifdef ARDUINO
+	#include <Arduino.h>
+#endif
 
+#ifdef LINUX
+     #include <stdio.h>
+#endif
+
+/** \class BlueToothConnection
+	\brief classe que implemento as conexao bluetooth do sistema garantida que essa
+     sejam inicializadas de forma corretado, provendo todos os paramentros. e tambem garantindo
+     que usa dessa cominicaçao seja tranparente a outros modulos do sistema.
+*/
 class BlueToothConnection : Connection
 {
 public:
@@ -61,12 +76,16 @@ public:
 
 inline BlueToothConnection::BlueToothConnection()
 {
+	#ifdef ARDUINO
 	Serial.begin(9600);
+	#endif
 }
 
 inline StringList* BlueToothConnection::reciveMessages()
 {
 	StringList *list = new StringList();
+	#ifdef ARDUINO
+
 	if (!Serial.available()){
 		return list;
 	}
@@ -85,6 +104,24 @@ inline StringList* BlueToothConnection::reciveMessages()
 	Serial.println(msg);
 	list->push(msg);
 	return list;
+	#endif
+
+	#ifdef LINUX
+	int count, i;
+	char c = 0;
+	char *msg = (char*)calloc(sizeof(char), 40);
+	while(i < 40 && (c != END_MESSAGE) || c != '\n'){
+		i++;
+		cin >> c;
+		if(c == '#')
+			exit(0);
+	}
+	msg[i] = '\0';
+	cout << "BlueToothConnection read : "<< msg << endl;
+	return list;
+	
+	#endif
+	
 }
 
 #endif

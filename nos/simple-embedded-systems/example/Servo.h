@@ -43,6 +43,7 @@
  */
 
 #ifndef Servo_h
+#ifdef ARDUINO
 #define Servo_h
 
 #include <inttypes.h>
@@ -124,4 +125,5 @@ private:
    int8_t max;                       // maximum is this value times 4 added to MAX_PULSE_WIDTH   
 };
 
+#endif
 #endif

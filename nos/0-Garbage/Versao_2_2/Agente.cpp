@@ -28,11 +28,14 @@ void CarAgent::execute()
     	if(i == 0)
     		motor->pare();
 
-    	if(i < 0)
-    		motor->re(-1*i);
-
     	if(i > 0)
-    		motor->frente(i);
+    		motor->re(1);
+
+    	if(i < 0)
+    {  
+        Serial.print("poraa");
+    		motor->frente(1);
+    }
 
     }
     Serial.println(msgInr);

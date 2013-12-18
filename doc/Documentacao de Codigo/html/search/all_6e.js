@@ -7,6 +7,5 @@ var searchData=
   ['node_2ecpp',['node.cpp',['../node_8cpp.html',1,'']]],
   ['node_2eh',['node.h',['../node_8h.html',1,'']]],
   ['nodes',['nodes',['../class_master.html#ad72e615042ba6d7dce6eb740d566d656',1,'Master::nodes()'],['../class_super_node.html#ac0fc7ee976ec99824410cbc64693dff2',1,'SuperNode::nodes()']]],
-  ['nodesnames',['nodesNames',['../class_master.html#a7e1f5d1be566ea94123c986af9acf869',1,'Master']]],
-  ['number_5fagents',['NUMBER_AGENTS',['../_defines_8h.html#adb01786d376600da0b5e10c94e1e2acc',1,'Defines.h']]]
+  ['nodesnames',['nodesNames',['../class_master.html#a7e1f5d1be566ea94123c986af9acf869',1,'Master']]]
 ];

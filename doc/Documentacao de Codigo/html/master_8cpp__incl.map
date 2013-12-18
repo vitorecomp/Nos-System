@@ -1,7 +1,8 @@
 <map id="G" name="G">
 <area shape="rect" id="node3" href="$master_8h.html" title="Cabecalho das classes que prove o serviço do Master. Nesse esta contido todo o codigo necessario para..." alt="" coords="239,83,311,112"/>
-<area shape="rect" id="node5" href="$node_8h.html" title="node.h" alt="" coords="275,237,336,267"/>
-<area shape="rect" id="node15" href="$connection_8h.html" title="connection.h" alt="" coords="363,237,459,267"/>
-<area shape="rect" id="node18" href="$super_nodes_8h.html" title="Cabecalho das classes que prove o serviço de super no. Nesse esta contido todo o codigo necessario pa..." alt="" coords="224,160,325,189"/>
-<area shape="rect" id="node9" href="$_entidades_8h.html" title="Entidades.h" alt="" coords="277,315,368,344"/>
+<area shape="rect" id="node5" href="$node_8h.html" title="Cabecalho das classes que prove o serviço de no. Nesse esta contido todo o codigo necessario para se ..." alt="" coords="205,237,267,267"/>
+<area shape="rect" id="node15" href="$connection_8h.html" title="Cabecalho da classe que implemento a interface basica das conexoes do sistema para que o uso dessa co..." alt="" coords="312,160,408,189"/>
+<area shape="rect" id="node20" href="$super_nodes_8h.html" title="Cabecalho das classes que prove o serviço de super no. Nesse esta contido todo o codigo necessario pa..." alt="" coords="136,160,237,189"/>
+<area shape="rect" id="node9" href="$_entidades_8h.html" title="Cabecalho da classe que implemento as entidades basicas do sistema garantindo com eles um melhor reap..." alt="" coords="284,315,375,344"/>
+<area shape="rect" id="node11" href="$_defines_8h.html" title="Cabecalho de defines que trasforma o codigo mais modularios, esses estao garantido principalmente que..." alt="" coords="243,392,320,421"/>
 </map>

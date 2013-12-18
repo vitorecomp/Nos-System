@@ -99,21 +99,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">/home/vitor/workspace/Nos-System/nos/simple-embedded-systems/example/iMaster.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="i_master_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#include &quot;<a class="code" href="i_master_8h.html">iMaster.h</a>&quot;</span>
+<a href="i_master_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#include &quot;<a class="code" href="i_master_8h.html" title="Cabecalho da classe que implemento o master atraves da classe master, essa classe implementa as carac...">iMaster.h</a>&quot;</span>
 <a name="l00002"></a>00002 
 <a name="l00003"></a><a class="code" href="class_i_master.html#add7b28868f6836b7b8ebca919b19af63">00003</a> <span class="keywordtype">void</span> <a class="code" href="class_i_master.html#add7b28868f6836b7b8ebca919b19af63">IMaster::createNosList</a>()
 <a name="l00004"></a>00004 {
-<a name="l00005"></a>00005         <a class="code" href="class_master.html#ad72e615042ba6d7dce6eb740d566d656">nodes</a>[0] = (<a class="code" href="class_node.html" title="Classe que reprensenta os nos essa define a estrutura basica de um no, essa tras a implentaçõa basico...">Node</a>*) <span class="keyword">new</span> <a class="code" href="class_motor_node.html">MotorNode</a>(<a class="code" href="_defines_8h.html#a08a6cc75450fb9a191abed1449a99045">D1_OUT_MOTOR_PIN</a>, <a class="code" href="_defines_8h.html#adf95c3979a7dee4033678908b5f968dc">D2_OUT_MOTOR_PIN</a>, <a class="code" href="_defines_8h.html#a93835586a493a48e3a078ffb81e853f4">A1_OUT_MOTOR_PIN</a>);
-<a name="l00006"></a>00006         <a class="code" href="class_master.html#ad72e615042ba6d7dce6eb740d566d656">nodes</a>[1] = (<a class="code" href="class_node.html" title="Classe que reprensenta os nos essa define a estrutura basica de um no, essa tras a implentaçõa basico...">Node</a>*) <span class="keyword">new</span> <a class="code" href="class_direction_node.html">DirectionNode</a>(<a class="code" href="_defines_8h.html#ae014d9420a2bceda34409d4f89a66512">A1_OUT_DIRECTION_BOX_PIN</a>);
-<a name="l00007"></a>00007         <a class="code" href="class_master.html#ad72e615042ba6d7dce6eb740d566d656">nodes</a>[2] = (<a class="code" href="class_node.html" title="Classe que reprensenta os nos essa define a estrutura basica de um no, essa tras a implentaçõa basico...">Node</a>*) <span class="keyword">new</span> <a class="code" href="class_temperature_node.html">TemperatureNode</a>();
+<a name="l00005"></a>00005         <a class="code" href="class_master.html#ad72e615042ba6d7dce6eb740d566d656">nodes</a>[0] = (<a class="code" href="class_node.html" title="Classe que reprensenta os nos essa define a estrutura basica de um no, essa tras a implentaçõa basico...">Node</a>*) <span class="keyword">new</span> <a class="code" href="class_motor_node.html" title="Esse e a classe casse que implementa a interface de motor com o hardware do motor, usando 3 reles que compartilham o terra e cada um dos outros reles e responsavel por um VCC que deve ser ligado apos o terra ja posicionado para evitar curto circuito.">MotorNode</a>(D1_OUT_MOTOR_PIN, D2_OUT_MOTOR_PIN, A1_OUT_MOTOR_PIN);
+<a name="l00006"></a>00006         <a class="code" href="class_master.html#ad72e615042ba6d7dce6eb740d566d656">nodes</a>[1] = (<a class="code" href="class_node.html" title="Classe que reprensenta os nos essa define a estrutura basica de um no, essa tras a implentaçõa basico...">Node</a>*) <span class="keyword">new</span> <a class="code" href="class_direction_node.html" title="Essa e a classe responsavel por implementar a interface com o servo motor de forma a implementar a a ...">DirectionNode</a>(A1_OUT_DIRECTION_BOX_PIN);
+<a name="l00007"></a>00007         <a class="code" href="class_master.html#ad72e615042ba6d7dce6eb740d566d656">nodes</a>[2] = (<a class="code" href="class_node.html" title="Classe que reprensenta os nos essa define a estrutura basica de um no, essa tras a implentaçõa basico...">Node</a>*) <span class="keyword">new</span> <a class="code" href="class_ligth_node.html" title="Essa e implementa a insterface com as saida de luz para ligalas ou desligalas nos carrinho...">LigthNode</a>();
 <a name="l00008"></a>00008 }
 <a name="l00009"></a>00009 
-<a name="l00010"></a><a class="code" href="class_i_master.html#a4186f113dd8a913051f38cc0f9def82f">00010</a> <span class="keywordtype">void</span> <a class="code" href="class_i_master.html#a4186f113dd8a913051f38cc0f9def82f">IMaster::createConnectionList</a>()
+<a name="l00010"></a><a class="code" href="class_i_master.html#a4186f113dd8a913051f38cc0f9def82f">00010</a> <span class="keywordtype">void</span> <a class="code" href="class_i_master.html#a4186f113dd8a913051f38cc0f9def82f" title="Funcao que implementa a instaciação de conexoes do sistema, essa garante a correta inicialização das ...">IMaster::createConnectionList</a>()
 <a name="l00011"></a>00011 {
-<a name="l00012"></a>00012         <a class="code" href="class_master.html#a8bc8a77b8885a2059876fec3e8148655">connections</a>[0] = (<a class="code" href="class_connection.html">Connection</a>*)<span class="keyword">new</span> <a class="code" href="class_blue_tooth_connection.html">BlueToothConnection</a>() ;
+<a name="l00012"></a>00012         <a class="code" href="class_master.html#a8bc8a77b8885a2059876fec3e8148655">connections</a>[0] = (<a class="code" href="class_connection.html" title="lasse que implemento a interface basica das conexoes do sistema para que o uso dessa cominicaçao seja...">Connection</a>*)<span class="keyword">new</span> <a class="code" href="class_blue_tooth_connection.html" title="classe que implemento as conexao bluetooth do sistema garantida que essa sejam inicializadas de forma...">BlueToothConnection</a>() ;
 <a name="l00013"></a>00013 }
 <a name="l00014"></a>00014 
-<a name="l00015"></a><a class="code" href="class_i_master.html#a3271a8e8b029c6a2b9e28d407a7b075c">00015</a> <span class="keywordtype">void</span> <a class="code" href="class_i_master.html#a3271a8e8b029c6a2b9e28d407a7b075c">IMaster::createSuperNosList</a>()
+<a name="l00015"></a><a class="code" href="class_i_master.html#a3271a8e8b029c6a2b9e28d407a7b075c">00015</a> <span class="keywordtype">void</span> <a class="code" href="class_i_master.html#a3271a8e8b029c6a2b9e28d407a7b075c" title="Funcao que.">IMaster::createSuperNosList</a>()
 <a name="l00016"></a>00016 {
 <a name="l00017"></a>00017         
 <a name="l00018"></a>00018 }
@@ -137,7 +137,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul>
       <li class="navelem"><a class="el" href="i_master_8cpp.html">iMaster.cpp</a>      </li>
 
-    <li class="footer">Generated on Sun Dec 15 2013 00:11:59 for Nos - System by
+    <li class="footer">Generated on Wed Dec 18 2013 14:48:16 for Nos - System by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

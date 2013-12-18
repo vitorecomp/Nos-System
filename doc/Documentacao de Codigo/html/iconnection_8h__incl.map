@@ -1,5 +1,5 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$connection_8h.html" title="connection.h" alt="" coords="147,83,243,112"/>
-<area shape="rect" id="node11" href="$_defines_8h.html" title="Defines.h" alt="" coords="317,83,395,112"/>
-<area shape="rect" id="node5" href="$_entidades_8h.html" title="Entidades.h" alt="" coords="149,160,240,189"/>
+<area shape="rect" id="node3" href="$connection_8h.html" title="Cabecalho da classe que implemento a interface basica das conexoes do sistema para que o uso dessa co..." alt="" coords="189,83,285,112"/>
+<area shape="rect" id="node7" href="$_defines_8h.html" title="Cabecalho de defines que trasforma o codigo mais modularios, esses estao garantido principalmente que..." alt="" coords="247,237,324,267"/>
+<area shape="rect" id="node5" href="$_entidades_8h.html" title="Cabecalho da classe que implemento as entidades basicas do sistema garantindo com eles um melhor reap..." alt="" coords="109,160,200,189"/>
 </map>

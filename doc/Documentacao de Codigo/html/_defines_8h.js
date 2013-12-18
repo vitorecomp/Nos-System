@@ -1,10 +1,14 @@
 var _defines_8h =
 [
-    [ "A1_OUT_DIRECTION_BOX_PIN", "_defines_8h.html#ae014d9420a2bceda34409d4f89a66512", null ],
-    [ "A1_OUT_MOTOR_PIN", "_defines_8h.html#a93835586a493a48e3a078ffb81e853f4", null ],
-    [ "D1_OUT_MOTOR_PIN", "_defines_8h.html#a08a6cc75450fb9a191abed1449a99045", null ],
-    [ "D2_OUT_MOTOR_PIN", "_defines_8h.html#adf95c3979a7dee4033678908b5f968dc", null ],
+    [ "BACK_OUT_LIGHT_PIN", "_defines_8h.html#aad248d885ad07df88ea87b8b32ed58be", null ],
+    [ "BUZER_OUT_PIN", "_defines_8h.html#ac7a5669ccfb8b142bd9b2eb3400224cd", null ],
     [ "END_MESSAGE", "_defines_8h.html#a5fefcde31293db5929e9c0068e2e45c7", null ],
-    [ "NUMBER_AGENTS", "_defines_8h.html#adb01786d376600da0b5e10c94e1e2acc", null ],
-    [ "SECOND", "_defines_8h.html#a94212be2394d2d37d9dfd33d07d82dba", null ]
+    [ "FRONT_OUT_LIGHT_PIN", "_defines_8h.html#a517e5f096c46ad236fbefbf7bb91e2a9", null ],
+    [ "FRONT_T_OUT_MOTOR_PIN", "_defines_8h.html#a3bc28f2b657bd5fd241d6e8266c0fb79", null ],
+    [ "FRONT_V_OUT_MOTOR_PIN", "_defines_8h.html#a34537c7a1d97889211edf7cbce50ec53", null ],
+    [ "LEFT_OUT_LIGHT_PIN", "_defines_8h.html#a0cd83dbee2d1de78a99bce089ea27bde", null ],
+    [ "LIGHT_IN", "_defines_8h.html#af823e683884333fa5379688638f6e24b", null ],
+    [ "LINUX", "_defines_8h.html#a157a956e14c5c44b3f73ef23a4776f64", null ],
+    [ "RE_OUT_MOTOR_PIN", "_defines_8h.html#a4225850c15f37473c65a645793dd4e7a", null ],
+    [ "RIGHT_OUT_LIGHT_PIN", "_defines_8h.html#a37b2f5ea2c2558500dc54a894d947352", null ]
 ];

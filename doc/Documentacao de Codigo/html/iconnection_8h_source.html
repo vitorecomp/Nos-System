@@ -99,61 +99,84 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">/home/vitor/workspace/Nos-System/nos/simple-embedded-systems/example/iconnection.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="iconnection_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef ICONNECTION_H</span>
-<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define ICONNECTION_H</span>
-<a name="l00003"></a>00003 <span class="preprocessor"></span>
-<a name="l00004"></a>00004 <span class="preprocessor">#include &quot;<a class="code" href="connection_8h.html">connection.h</a>&quot;</span>
-<a name="l00005"></a>00005 <span class="preprocessor">#include &quot;<a class="code" href="_defines_8h.html">Defines.h</a>&quot;</span>
-<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;Arduino.h&gt;</span>
-<a name="l00007"></a>00007 
-<a name="l00008"></a>00008 
-<a name="l00009"></a><a class="code" href="class_blue_tooth_connection.html">00009</a> <span class="keyword">class </span><a class="code" href="class_blue_tooth_connection.html">BlueToothConnection</a> : <a class="code" href="class_connection.html">Connection</a>
-<a name="l00010"></a>00010 {
-<a name="l00011"></a>00011 <span class="keyword">public</span>:
-<a name="l00017"></a>00017         <a class="code" href="class_blue_tooth_connection.html#a541d13bb4ad99d079eacac562b820284">BlueToothConnection</a>();
-<a name="l00018"></a>00018 
-<a name="l00024"></a><a class="code" href="class_blue_tooth_connection.html#a60aeac7821a3138659d17f33251273ef">00024</a>         <span class="keywordtype">void</span> <a class="code" href="class_blue_tooth_connection.html#a60aeac7821a3138659d17f33251273ef">initialize</a>(){}
-<a name="l00025"></a>00025 
-<a name="l00031"></a><a class="code" href="class_blue_tooth_connection.html#a5c8049671e392939b582a0f4e8a6175b">00031</a>         <span class="keywordtype">int</span> <a class="code" href="class_blue_tooth_connection.html#a5c8049671e392939b582a0f4e8a6175b">connect</a>(){}
-<a name="l00032"></a>00032 
-<a name="l00038"></a><a class="code" href="class_blue_tooth_connection.html#a8e7ddd2163e55e78106e1cc0ba467303">00038</a>         <span class="keywordtype">int</span> <a class="code" href="class_blue_tooth_connection.html#a8e7ddd2163e55e78106e1cc0ba467303">sendMessage</a>(<span class="keywordtype">char</span> *){}
-<a name="l00039"></a>00039 
-<a name="l00045"></a>00045         <a class="code" href="class_string_list.html">StringList</a>* <a class="code" href="class_blue_tooth_connection.html#a2842aa8673fa9b12a6df0804321c77c8">reciveMessages</a>();
-<a name="l00046"></a>00046 
-<a name="l00052"></a><a class="code" href="class_blue_tooth_connection.html#a443897301c80d7538c5eb0c7824d3368">00052</a>         <span class="keywordtype">bool</span> <a class="code" href="class_blue_tooth_connection.html#a443897301c80d7538c5eb0c7824d3368">verifyConnection</a>(){}
-<a name="l00053"></a>00053 
-<a name="l00059"></a><a class="code" href="class_blue_tooth_connection.html#a0b885fed3aa2187fa74bf25c038b53e0">00059</a>         <a class="code" href="class_string_list.html">StringList</a>* <a class="code" href="class_blue_tooth_connection.html#a0b885fed3aa2187fa74bf25c038b53e0">getConnectionList</a>(){}
-<a name="l00060"></a>00060 };
-<a name="l00061"></a>00061 
-<a name="l00062"></a><a class="code" href="class_blue_tooth_connection.html#a541d13bb4ad99d079eacac562b820284">00062</a> <span class="keyword">inline</span> <a class="code" href="class_blue_tooth_connection.html#a541d13bb4ad99d079eacac562b820284">BlueToothConnection::BlueToothConnection</a>()
-<a name="l00063"></a>00063 {
-<a name="l00064"></a>00064         Serial.begin(9600);
-<a name="l00065"></a>00065 }
-<a name="l00066"></a>00066 
-<a name="l00067"></a><a class="code" href="class_blue_tooth_connection.html#a2842aa8673fa9b12a6df0804321c77c8">00067</a> <span class="keyword">inline</span> <a class="code" href="class_string_list.html">StringList</a>* <a class="code" href="class_blue_tooth_connection.html#a2842aa8673fa9b12a6df0804321c77c8">BlueToothConnection::reciveMessages</a>()
-<a name="l00068"></a>00068 {
-<a name="l00069"></a>00069         <a class="code" href="class_string_list.html">StringList</a> *list = <span class="keyword">new</span> <a class="code" href="class_string_list.html">StringList</a>();
-<a name="l00070"></a>00070         <span class="keywordflow">if</span> (!Serial.available()){
-<a name="l00071"></a>00071                 <span class="keywordflow">return</span> list;
-<a name="l00072"></a>00072         }
-<a name="l00073"></a>00073         <span class="keywordtype">int</span> i = 0;
-<a name="l00074"></a>00074         <span class="keywordtype">long</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> p = 0;
-<a name="l00075"></a>00075         <span class="keywordtype">char</span> c = 0;
-<a name="l00076"></a>00076         <span class="keywordtype">char</span> *msg = (<span class="keywordtype">char</span>*)calloc(<span class="keyword">sizeof</span>(<span class="keywordtype">char</span>), 40);
-<a name="l00077"></a>00077         <span class="keywordflow">while</span> (c != <a class="code" href="_defines_8h.html#a5fefcde31293db5929e9c0068e2e45c7">END_MESSAGE</a> &amp;&amp; i &lt; 40){
-<a name="l00078"></a>00078                 <span class="keywordflow">if</span> (Serial.available()){
-<a name="l00079"></a>00079                         c = Serial.read();
-<a name="l00080"></a>00080                         msg[i] = c;
-<a name="l00081"></a>00081                         i++;               
-<a name="l00082"></a>00082                 }
-<a name="l00083"></a>00083         }
-<a name="l00084"></a>00084         msg[i] = <span class="charliteral">&#39;\0&#39;</span>;
-<a name="l00085"></a>00085         Serial.println(msg);
-<a name="l00086"></a>00086         list-&gt;<a class="code" href="class_string_list.html#a887dd6d29b120cac80b3dbdc6d639b6d">push</a>(msg);
-<a name="l00087"></a>00087         <span class="keywordflow">return</span> list;
-<a name="l00088"></a>00088 }
-<a name="l00089"></a>00089 
-<a name="l00090"></a>00090 <span class="preprocessor">#endif</span>
+<a href="iconnection_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00005"></a>00005 <span class="preprocessor">#ifndef ICONNECTION_H</span>
+<a name="l00006"></a>00006 <span class="preprocessor"></span><span class="preprocessor">#define ICONNECTION_H</span>
+<a name="l00007"></a>00007 <span class="preprocessor"></span>
+<a name="l00008"></a>00008 <span class="preprocessor">#include &quot;<a class="code" href="connection_8h.html" title="Cabecalho da classe que implemento a interface basica das conexoes do sistema para que o uso dessa co...">connection.h</a>&quot;</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="code" href="_defines_8h.html" title="Cabecalho de defines que trasforma o codigo mais modularios, esses estao garantido principalmente que...">Defines.h</a>&quot;</span>
+<a name="l00010"></a>00010 
+<a name="l00011"></a>00011 <span class="preprocessor">#ifdef ARDUINO</span>
+<a name="l00012"></a>00012 <span class="preprocessor"></span><span class="preprocessor">        #include &lt;Arduino.h&gt;</span>
+<a name="l00013"></a>00013 <span class="preprocessor">#endif</span>
+<a name="l00014"></a>00014 <span class="preprocessor"></span>
+<a name="l00020"></a><a class="code" href="class_blue_tooth_connection.html">00020</a> <span class="keyword">class </span><a class="code" href="class_blue_tooth_connection.html" title="classe que implemento as conexao bluetooth do sistema garantida que essa sejam inicializadas de forma...">BlueToothConnection</a> : <a class="code" href="class_connection.html" title="lasse que implemento a interface basica das conexoes do sistema para que o uso dessa cominicaçao seja...">Connection</a>
+<a name="l00021"></a>00021 {
+<a name="l00022"></a>00022 <span class="keyword">public</span>:
+<a name="l00028"></a>00028         <a class="code" href="class_blue_tooth_connection.html#a541d13bb4ad99d079eacac562b820284">BlueToothConnection</a>();
+<a name="l00029"></a>00029 
+<a name="l00035"></a><a class="code" href="class_blue_tooth_connection.html#a60aeac7821a3138659d17f33251273ef">00035</a>         <span class="keywordtype">void</span> <a class="code" href="class_blue_tooth_connection.html#a60aeac7821a3138659d17f33251273ef">initialize</a>(){}
+<a name="l00036"></a>00036 
+<a name="l00042"></a><a class="code" href="class_blue_tooth_connection.html#a5c8049671e392939b582a0f4e8a6175b">00042</a>         <span class="keywordtype">int</span> <a class="code" href="class_blue_tooth_connection.html#a5c8049671e392939b582a0f4e8a6175b">connect</a>(){}
+<a name="l00043"></a>00043 
+<a name="l00049"></a><a class="code" href="class_blue_tooth_connection.html#a8e7ddd2163e55e78106e1cc0ba467303">00049</a>         <span class="keywordtype">int</span> <a class="code" href="class_blue_tooth_connection.html#a8e7ddd2163e55e78106e1cc0ba467303">sendMessage</a>(<span class="keywordtype">char</span> *){}
+<a name="l00050"></a>00050 
+<a name="l00056"></a>00056         <a class="code" href="class_string_list.html" title="Essa classe apresenta as funçoes basicas para trabalho em uma lista de strings.">StringList</a>* <a class="code" href="class_blue_tooth_connection.html#a2842aa8673fa9b12a6df0804321c77c8">reciveMessages</a>();
+<a name="l00057"></a>00057 
+<a name="l00063"></a><a class="code" href="class_blue_tooth_connection.html#a443897301c80d7538c5eb0c7824d3368">00063</a>         <span class="keywordtype">bool</span> <a class="code" href="class_blue_tooth_connection.html#a443897301c80d7538c5eb0c7824d3368">verifyConnection</a>(){}
+<a name="l00064"></a>00064 
+<a name="l00070"></a><a class="code" href="class_blue_tooth_connection.html#a0b885fed3aa2187fa74bf25c038b53e0">00070</a>         <a class="code" href="class_string_list.html" title="Essa classe apresenta as funçoes basicas para trabalho em uma lista de strings.">StringList</a>* <a class="code" href="class_blue_tooth_connection.html#a0b885fed3aa2187fa74bf25c038b53e0">getConnectionList</a>(){}
+<a name="l00071"></a>00071 };
+<a name="l00072"></a>00072 
+<a name="l00073"></a><a class="code" href="class_blue_tooth_connection.html#a541d13bb4ad99d079eacac562b820284">00073</a> <span class="keyword">inline</span> <a class="code" href="class_blue_tooth_connection.html#a541d13bb4ad99d079eacac562b820284">BlueToothConnection::BlueToothConnection</a>()
+<a name="l00074"></a>00074 {
+<a name="l00075"></a>00075 <span class="preprocessor">        #ifdef ARDUINO</span>
+<a name="l00076"></a>00076 <span class="preprocessor"></span>        Serial.begin(9600);
+<a name="l00077"></a>00077 <span class="preprocessor">        #endif</span>
+<a name="l00078"></a>00078 <span class="preprocessor"></span>}
+<a name="l00079"></a>00079 
+<a name="l00080"></a><a class="code" href="class_blue_tooth_connection.html#a2842aa8673fa9b12a6df0804321c77c8">00080</a> <span class="keyword">inline</span> <a class="code" href="class_string_list.html" title="Essa classe apresenta as funçoes basicas para trabalho em uma lista de strings.">StringList</a>* <a class="code" href="class_blue_tooth_connection.html#a2842aa8673fa9b12a6df0804321c77c8">BlueToothConnection::reciveMessages</a>()
+<a name="l00081"></a>00081 {
+<a name="l00082"></a>00082         <a class="code" href="class_string_list.html" title="Essa classe apresenta as funçoes basicas para trabalho em uma lista de strings.">StringList</a> *list = <span class="keyword">new</span> <a class="code" href="class_string_list.html" title="Essa classe apresenta as funçoes basicas para trabalho em uma lista de strings.">StringList</a>();
+<a name="l00083"></a>00083 <span class="preprocessor">        #ifdef ARDUINO</span>
+<a name="l00084"></a>00084 <span class="preprocessor"></span>
+<a name="l00085"></a>00085         <span class="keywordflow">if</span> (!Serial.available()){
+<a name="l00086"></a>00086                 <span class="keywordflow">return</span> list;
+<a name="l00087"></a>00087         }
+<a name="l00088"></a>00088         <span class="keywordtype">int</span> i = 0;
+<a name="l00089"></a>00089         <span class="keywordtype">long</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> p = 0;
+<a name="l00090"></a>00090         <span class="keywordtype">char</span> c = 0;
+<a name="l00091"></a>00091         <span class="keywordtype">char</span> *msg = (<span class="keywordtype">char</span>*)calloc(<span class="keyword">sizeof</span>(<span class="keywordtype">char</span>), 40);
+<a name="l00092"></a>00092         <span class="keywordflow">while</span> (c != <a class="code" href="_defines_8h.html#a5fefcde31293db5929e9c0068e2e45c7">END_MESSAGE</a> &amp;&amp; i &lt; 40){
+<a name="l00093"></a>00093                 <span class="keywordflow">if</span> (Serial.available()){
+<a name="l00094"></a>00094                         c = Serial.read();
+<a name="l00095"></a>00095                         msg[i] = c;
+<a name="l00096"></a>00096                         i++;               
+<a name="l00097"></a>00097                 }
+<a name="l00098"></a>00098         }
+<a name="l00099"></a>00099         msg[i] = <span class="charliteral">&#39;\0&#39;</span>;
+<a name="l00100"></a>00100         Serial.println(msg);
+<a name="l00101"></a>00101         list-&gt;<a class="code" href="class_string_list.html#a887dd6d29b120cac80b3dbdc6d639b6d">push</a>(msg);
+<a name="l00102"></a>00102         <span class="keywordflow">return</span> list;
+<a name="l00103"></a>00103 <span class="preprocessor">        #endif</span>
+<a name="l00104"></a>00104 <span class="preprocessor"></span>
+<a name="l00105"></a>00105 <span class="preprocessor">        #ifdef LINUX</span>
+<a name="l00106"></a>00106 <span class="preprocessor"></span>        <span class="keywordtype">int</span> count;
+<a name="l00107"></a>00107         <span class="keywordtype">char</span> *msg = (<span class="keywordtype">char</span>*)calloc(<span class="keyword">sizeof</span>(<span class="keywordtype">char</span>), 40);
+<a name="l00108"></a>00108         count = read(fd, msg, 1024);
+<a name="l00109"></a>00109         <span class="keywordflow">if</span>(count &gt;= 0) {
+<a name="l00110"></a>00110         Serial.println(msg);
+<a name="l00111"></a>00111                 list-&gt;<a class="code" href="class_string_list.html#a887dd6d29b120cac80b3dbdc6d639b6d">push</a>(msg);
+<a name="l00112"></a>00112                 msg[count] = <span class="charliteral">&#39;\0&#39;</span>;
+<a name="l00113"></a>00113                 cout &lt;&lt; <span class="stringliteral">&quot;BlueToothConnection read : &quot;</span>&lt;&lt; msg &lt;&lt; endl;
+<a name="l00114"></a>00114         }
+<a name="l00115"></a>00115         <span class="keywordflow">return</span> list;
+<a name="l00116"></a>00116         
+<a name="l00117"></a>00117 <span class="preprocessor">        #endif</span>
+<a name="l00118"></a>00118 <span class="preprocessor"></span>        
+<a name="l00119"></a>00119 }
+<a name="l00120"></a>00120 
+<a name="l00121"></a>00121 <span class="preprocessor">#endif</span>
 </pre></div></div><!-- contents -->
 </div>
 <!-- window showing the filter options -->
@@ -174,7 +197,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul>
       <li class="navelem"><a class="el" href="iconnection_8h.html">iconnection.h</a>      </li>
 
-    <li class="footer">Generated on Sun Dec 15 2013 00:11:59 for Nos - System by
+    <li class="footer">Generated on Wed Dec 18 2013 14:48:16 for Nos - System by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

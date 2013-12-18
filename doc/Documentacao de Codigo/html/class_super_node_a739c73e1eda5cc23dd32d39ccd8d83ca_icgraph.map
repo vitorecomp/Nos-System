@@ -1,4 +1,4 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$class_master.html#ae7d5d18c793e0e32e5c53c69ecdb96a1" title="Master::initialize" alt="" coords="203,5,320,35"/>
+<area shape="rect" id="node3" href="$class_master.html#ae7d5d18c793e0e32e5c53c69ecdb96a1" title="responsavel por inicializar o master, instanciando os nos supernos spys e connecoes, fazendo ainda o necessario para o funcionamento consiso deste, garantindo que tudo esteja ok antes da execucao dos serviços pelo No." alt="" coords="203,5,320,35"/>
 <area shape="rect" id="node5" href="$class_i_master.html#a81a79f55860e3d21f7c3929afe571f92" title="IMaster::IMaster" alt="" coords="369,5,487,35"/>
 </map>

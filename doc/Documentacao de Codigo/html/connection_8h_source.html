@@ -99,29 +99,33 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">/home/vitor/workspace/Nos-System/nos/simple-embedded-systems/example/connection.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="connection_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef CONNECTIONS_H</span>
-<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define CONNECTIONS_H</span>
-<a name="l00003"></a>00003 <span class="preprocessor"></span>
-<a name="l00004"></a>00004 <span class="preprocessor">#include &quot;<a class="code" href="_entidades_8h.html">Entidades.h</a>&quot;</span>
-<a name="l00005"></a>00005 
-<a name="l00006"></a><a class="code" href="class_connection.html">00006</a> <span class="keyword">class </span><a class="code" href="class_connection.html">Connection</a>
-<a name="l00007"></a>00007 {
-<a name="l00008"></a><a class="code" href="class_connection.html#a815d06b275bbd9688b539b53f0af22d2">00008</a>         <a class="code" href="class_string_list.html">StringList</a> <a class="code" href="class_connection.html#a815d06b275bbd9688b539b53f0af22d2">services</a>; 
-<a name="l00010"></a>00010 <span class="keyword">public</span>:
-<a name="l00016"></a>00016         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_connection.html#a28243250ce4a8afcc2c3c28cb215cda6">initialize</a>() = 0;
-<a name="l00017"></a>00017 
-<a name="l00023"></a>00023         <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="class_connection.html#ae97c710db785d4387e73def6cc2e10d0">connect</a>() = 0;
-<a name="l00024"></a>00024 
-<a name="l00030"></a>00030         <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="class_connection.html#a3643ee96c249ac48f1bf4eba34111bdf">sendMessage</a>(<span class="keywordtype">char</span> *) = 0;
-<a name="l00031"></a>00031 
-<a name="l00037"></a>00037         <span class="keyword">virtual</span> <a class="code" href="class_string_list.html">StringList</a>* <a class="code" href="class_connection.html#ab2b0280016e8516f3114b7db2c901b68">reciveMessages</a>() = 0;
-<a name="l00038"></a>00038 
-<a name="l00044"></a>00044         <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_connection.html#a6aacb9e31524db4aea66618b869cb510">verifyConnection</a>() = 0;
-<a name="l00045"></a>00045 
-<a name="l00051"></a>00051         <span class="keyword">virtual</span> <a class="code" href="class_string_list.html">StringList</a>* <a class="code" href="class_connection.html#a50d0eb1a568b899bfaba95ebb1e1ee92">getConnectionList</a>() = 0;
-<a name="l00052"></a>00052 };
-<a name="l00053"></a>00053 
-<a name="l00054"></a>00054 <span class="preprocessor">#endif</span>
+<a href="connection_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00006"></a>00006 <span class="preprocessor">#ifndef CONNECTIONS_H</span>
+<a name="l00007"></a>00007 <span class="preprocessor"></span><span class="preprocessor">#define CONNECTIONS_H</span>
+<a name="l00008"></a>00008 <span class="preprocessor"></span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="code" href="_entidades_8h.html" title="Cabecalho da classe que implemento as entidades basicas do sistema garantindo com eles um melhor reap...">Entidades.h</a>&quot;</span>
+<a name="l00010"></a>00010 <span class="preprocessor">#ifdef LINUX</span>
+<a name="l00011"></a>00011 <span class="preprocessor"></span><span class="preprocessor">     #include&lt;stdio.h&gt;</span>
+<a name="l00012"></a>00012 <span class="preprocessor">#endif</span>
+<a name="l00013"></a>00013 <span class="preprocessor"></span>
+<a name="l00019"></a><a class="code" href="class_connection.html">00019</a> <span class="keyword">class </span><a class="code" href="class_connection.html" title="lasse que implemento a interface basica das conexoes do sistema para que o uso dessa cominicaçao seja...">Connection</a>
+<a name="l00020"></a>00020 {
+<a name="l00021"></a><a class="code" href="class_connection.html#a815d06b275bbd9688b539b53f0af22d2">00021</a>         <a class="code" href="class_string_list.html" title="Essa classe apresenta as funçoes basicas para trabalho em uma lista de strings.">StringList</a> <a class="code" href="class_connection.html#a815d06b275bbd9688b539b53f0af22d2">services</a>; 
+<a name="l00023"></a>00023 <span class="keyword">public</span>:
+<a name="l00029"></a>00029         <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_connection.html#a28243250ce4a8afcc2c3c28cb215cda6">initialize</a>() = 0;
+<a name="l00030"></a>00030 
+<a name="l00036"></a>00036         <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="class_connection.html#ae97c710db785d4387e73def6cc2e10d0">connect</a>() = 0;
+<a name="l00037"></a>00037 
+<a name="l00043"></a>00043         <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="class_connection.html#a3643ee96c249ac48f1bf4eba34111bdf">sendMessage</a>(<span class="keywordtype">char</span> *) = 0;
+<a name="l00044"></a>00044 
+<a name="l00050"></a>00050         <span class="keyword">virtual</span> <a class="code" href="class_string_list.html" title="Essa classe apresenta as funçoes basicas para trabalho em uma lista de strings.">StringList</a>* <a class="code" href="class_connection.html#ab2b0280016e8516f3114b7db2c901b68">reciveMessages</a>() = 0;
+<a name="l00051"></a>00051 
+<a name="l00057"></a>00057         <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_connection.html#a6aacb9e31524db4aea66618b869cb510">verifyConnection</a>() = 0;
+<a name="l00058"></a>00058 
+<a name="l00064"></a>00064         <span class="keyword">virtual</span> <a class="code" href="class_string_list.html" title="Essa classe apresenta as funçoes basicas para trabalho em uma lista de strings.">StringList</a>* <a class="code" href="class_connection.html#a50d0eb1a568b899bfaba95ebb1e1ee92">getConnectionList</a>() = 0;
+<a name="l00065"></a>00065 };
+<a name="l00066"></a>00066 
+<a name="l00067"></a>00067 <span class="preprocessor">#endif</span>
 </pre></div></div><!-- contents -->
 </div>
 <!-- window showing the filter options -->
@@ -142,7 +146,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul>
       <li class="navelem"><a class="el" href="connection_8h.html">connection.h</a>      </li>
 
-    <li class="footer">Generated on Sun Dec 15 2013 00:11:59 for Nos - System by
+    <li class="footer">Generated on Wed Dec 18 2013 14:48:16 for Nos - System by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

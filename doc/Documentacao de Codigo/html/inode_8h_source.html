@@ -99,80 +99,89 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">/home/vitor/workspace/Nos-System/nos/simple-embedded-systems/example/inode.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="inode_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef INODES_H</span>
-<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define INODES_H</span>
-<a name="l00003"></a>00003 <span class="preprocessor"></span>
-<a name="l00004"></a>00004 <span class="preprocessor">#include &quot;<a class="code" href="node_8h.html">node.h</a>&quot;</span>
-<a name="l00005"></a>00005 
-<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;stdlib.h&gt;</span>
-<a name="l00007"></a>00007 <span class="preprocessor">#include &lt;Arduino.h&gt;</span>
-<a name="l00008"></a>00008 <span class="preprocessor">#include &quot;<a class="code" href="_servo_8h.html">Servo.h</a>&quot;</span>
-<a name="l00009"></a>00009 <span class="preprocessor">#include &lt;limits.h&gt;</span>
-<a name="l00010"></a>00010 
-<a name="l00016"></a><a class="code" href="class_motor_node.html">00016</a> <span class="keyword">class </span><a class="code" href="class_motor_node.html">MotorNode</a> : <a class="code" href="class_node.html" title="Classe que reprensenta os nos essa define a estrutura basica de um no, essa tras a implentaçõa basico...">Node</a>{
-<a name="l00017"></a>00017 <span class="keyword">private</span>:
-<a name="l00018"></a><a class="code" href="class_motor_node.html#a83bbfecdc4f5ce895b60790905de61ad">00018</a>         <span class="keywordtype">int</span> <a class="code" href="class_motor_node.html#a83bbfecdc4f5ce895b60790905de61ad">d1_PIN</a>; 
-<a name="l00019"></a><a class="code" href="class_motor_node.html#a898ee928705b6746296517bde5f9aaf2">00019</a>         <span class="keywordtype">int</span> <a class="code" href="class_motor_node.html#a898ee928705b6746296517bde5f9aaf2">d2_PIN</a>; 
-<a name="l00020"></a><a class="code" href="class_motor_node.html#aa0056bc3a0d01daac73e10afa98fb38a">00020</a>         <span class="keywordtype">int</span> <a class="code" href="class_motor_node.html#aa0056bc3a0d01daac73e10afa98fb38a">a_PIN</a>; 
-<a name="l00028"></a>00028         <span class="keywordtype">void</span> <a class="code" href="class_motor_node.html#a67b51d8c7984e654738b514e390671dc" title="Essa atruibui valor a variavel name, o seu respectivo valor. E uma função garante para na implementaç...">setName</a>();
-<a name="l00029"></a>00029 
-<a name="l00035"></a>00035         <span class="keywordtype">void</span> <a class="code" href="class_motor_node.html#a562a90c1718556a3f6a25373687128b4" title="Esse atribui valor lista de serviços que sao disponibilizados pelo no. E uma função garante que duran...">setServiceList</a>();
-<a name="l00036"></a>00036 
-<a name="l00037"></a>00037 
-<a name="l00043"></a>00043         <span class="keywordtype">void</span> <a class="code" href="class_motor_node.html#a27ea018840ace0eebbfaa2cb664de2f9">frente</a>(<span class="keywordtype">int</span>);
-<a name="l00044"></a>00044 
-<a name="l00050"></a>00050         <span class="keywordtype">void</span> <a class="code" href="class_motor_node.html#a8fee12729e92e1aba2b5f7cf4bffb764">tras</a>(<span class="keywordtype">int</span>);
-<a name="l00051"></a>00051 
-<a name="l00057"></a>00057         <span class="keywordtype">void</span> <a class="code" href="class_motor_node.html#a4cc66cb486f64b72daec6b4147d2b708">pare</a>();
-<a name="l00058"></a>00058 <span class="keyword">public</span>:
-<a name="l00059"></a>00059 
-<a name="l00065"></a>00065         <a class="code" href="class_motor_node.html#a0e8566ad6e799416807a5ace3bae7960">MotorNode</a>(<span class="keywordtype">int</span>, <span class="keywordtype">int</span>, <span class="keywordtype">int</span>);
-<a name="l00066"></a>00066 
-<a name="l00072"></a>00072         <span class="keywordtype">void</span> <a class="code" href="class_motor_node.html#a56837f03bfa2f976de5510a948e4ec9f" title="realiza as interraçoes basicas do no para cada interçao do master. Aqui se executa de forma continua ...">run</a>();
-<a name="l00073"></a>00073 
-<a name="l00079"></a>00079         <span class="keywordtype">void</span> <a class="code" href="class_motor_node.html#ad95eb7e85b274172c6bef6f685cf256d">runService</a>(<span class="keywordtype">char</span>*);
-<a name="l00080"></a>00080 };
-<a name="l00081"></a>00081 
-<a name="l00087"></a><a class="code" href="class_direction_node.html">00087</a> <span class="keyword">class </span><a class="code" href="class_direction_node.html">DirectionNode</a> : <a class="code" href="class_node.html" title="Classe que reprensenta os nos essa define a estrutura basica de um no, essa tras a implentaçõa basico...">Node</a>
-<a name="l00088"></a>00088 {
-<a name="l00089"></a>00089 <span class="keyword">private</span>:
-<a name="l00090"></a><a class="code" href="class_direction_node.html#a1dd61938506f08758b12abd352b0da7f">00090</a>         <a class="code" href="class_servo.html">Servo</a> *<a class="code" href="class_direction_node.html#a1dd61938506f08758b12abd352b0da7f">myservo</a>;         
-<a name="l00091"></a><a class="code" href="class_direction_node.html#ae5a68ce3183d9f5ab17786385e753127">00091</a>         <span class="keywordtype">int</span> <a class="code" href="class_direction_node.html#ae5a68ce3183d9f5ab17786385e753127">a_PIN</a>;                      
-<a name="l00098"></a>00098         <span class="keywordtype">void</span> <a class="code" href="class_direction_node.html#a61228494bbd8936697ca68d41edd79dd" title="Essa atruibui valor a variavel name, o seu respectivo valor. E uma função garante para na implementaç...">setName</a>();
-<a name="l00099"></a>00099 
-<a name="l00105"></a>00105         <span class="keywordtype">void</span> <a class="code" href="class_direction_node.html#a2bf00da20c98befe761481c9eb4405ae" title="Esse atribui valor lista de serviços que sao disponibilizados pelo no. E uma função garante que duran...">setServiceList</a>();
-<a name="l00106"></a>00106 
-<a name="l00107"></a>00107 
-<a name="l00113"></a>00113         <span class="keywordtype">void</span> <a class="code" href="class_direction_node.html#ab2040369d101d5964b2d76b06814d7eb">direita</a>(<span class="keywordtype">int</span>);
-<a name="l00114"></a>00114 
-<a name="l00120"></a>00120         <span class="keywordtype">void</span> <a class="code" href="class_direction_node.html#a90091aad98a6ec4892d1cd0ae6675fad">esquerda</a>(<span class="keywordtype">int</span>);
-<a name="l00121"></a>00121 
-<a name="l00127"></a>00127         <span class="keywordtype">void</span> <a class="code" href="class_direction_node.html#ad88a9f87817099bde959a2592412046c">centro</a>();
-<a name="l00128"></a>00128 <span class="keyword">public</span>:
-<a name="l00129"></a>00129 
-<a name="l00135"></a>00135         <a class="code" href="class_direction_node.html#a53a8403551cf42e8aa0c7bbe07ad2995">DirectionNode</a>(<span class="keywordtype">int</span>);
-<a name="l00136"></a>00136 
-<a name="l00142"></a>00142         <span class="keywordtype">void</span> <a class="code" href="class_direction_node.html#aa7fde93e8ef5887e9793c4bd75279c47" title="realiza as interraçoes basicas do no para cada interçao do master. Aqui se executa de forma continua ...">run</a>();
-<a name="l00143"></a>00143 
-<a name="l00149"></a>00149         <span class="keywordtype">void</span> <a class="code" href="class_direction_node.html#ab38b8d7381f174b9deadb1f6dbd71e31">runService</a>(<span class="keywordtype">char</span>*);
-<a name="l00150"></a>00150 };
-<a name="l00151"></a>00151 
-<a name="l00157"></a><a class="code" href="class_temperature_node.html">00157</a> <span class="keyword">class </span><a class="code" href="class_temperature_node.html">TemperatureNode</a> : <a class="code" href="class_node.html" title="Classe que reprensenta os nos essa define a estrutura basica de um no, essa tras a implentaçõa basico...">Node</a>
-<a name="l00158"></a>00158 {
-<a name="l00159"></a>00159 <span class="keyword">private</span>:        
-<a name="l00165"></a>00165         <span class="keywordtype">void</span> <a class="code" href="class_temperature_node.html#a8889cdfc6f7f6697c8954883c30bca3d" title="Essa atruibui valor a variavel name, o seu respectivo valor. E uma função garante para na implementaç...">setName</a>();
-<a name="l00166"></a>00166 
-<a name="l00172"></a>00172         <span class="keywordtype">void</span> <a class="code" href="class_temperature_node.html#a04e950b56532c79d4b566284c204f707" title="Esse atribui valor lista de serviços que sao disponibilizados pelo no. E uma função garante que duran...">setServiceList</a>();
-<a name="l00173"></a>00173 <span class="keyword">public</span>:
-<a name="l00174"></a>00174 
-<a name="l00180"></a>00180         <a class="code" href="class_temperature_node.html#a2ea691ecdbdf934d88d8200961661a66">TemperatureNode</a>();
-<a name="l00181"></a>00181 
-<a name="l00187"></a>00187         <span class="keywordtype">void</span> <a class="code" href="class_temperature_node.html#a19e447adb2fd0aa2bf7f9eb0bd301016" title="realiza as interraçoes basicas do no para cada interçao do master. Aqui se executa de forma continua ...">run</a>();
-<a name="l00188"></a>00188 
-<a name="l00194"></a><a class="code" href="class_temperature_node.html#ab30d2b70c8f25344d6f562398af793d8">00194</a>         <span class="keywordtype">void</span> <a class="code" href="class_temperature_node.html#ab30d2b70c8f25344d6f562398af793d8">runService</a>(<span class="keywordtype">char</span>*){}
-<a name="l00195"></a>00195 };
-<a name="l00196"></a>00196 
-<a name="l00197"></a>00197 <span class="preprocessor">#endif</span>
+<a href="inode_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00005"></a>00005 <span class="preprocessor">#ifndef INODES_H</span>
+<a name="l00006"></a>00006 <span class="preprocessor"></span><span class="preprocessor">#define INODES_H</span>
+<a name="l00007"></a>00007 <span class="preprocessor"></span>
+<a name="l00008"></a>00008 <span class="preprocessor">#include &quot;<a class="code" href="node_8h.html" title="Cabecalho das classes que prove o serviço de no. Nesse esta contido todo o codigo necessario para se ...">node.h</a>&quot;</span>
+<a name="l00009"></a>00009 
+<a name="l00010"></a>00010 <span class="preprocessor">#include &lt;stdlib.h&gt;</span>
+<a name="l00011"></a>00011 <span class="preprocessor">#include &lt;limits.h&gt;</span>
+<a name="l00012"></a>00012 
+<a name="l00013"></a>00013 <span class="preprocessor">#ifdef ARDUINO</span>
+<a name="l00014"></a>00014 <span class="preprocessor"></span><span class="preprocessor">     #include &lt;Arduino.h&gt;</span>
+<a name="l00015"></a>00015 <span class="preprocessor">     #include &quot;<a class="code" href="_servo_8h.html">Servo.h</a>&quot;</span>
+<a name="l00016"></a>00016 <span class="preprocessor">#endif</span>
+<a name="l00017"></a>00017 <span class="preprocessor"></span>
+<a name="l00018"></a>00018 <span class="preprocessor">#ifdef LINUX</span>
+<a name="l00019"></a>00019 <span class="preprocessor"></span><span class="preprocessor">     #include &lt;iostream&gt;</span>
+<a name="l00020"></a>00020 <span class="preprocessor">#endif</span>
+<a name="l00021"></a>00021 <span class="preprocessor"></span>
+<a name="l00022"></a>00022 
+<a name="l00028"></a><a class="code" href="class_motor_node.html">00028</a> <span class="keyword">class </span><a class="code" href="class_motor_node.html" title="Esse e a classe casse que implementa a interface de motor com o hardware do motor, usando 3 reles que compartilham o terra e cada um dos outros reles e responsavel por um VCC que deve ser ligado apos o terra ja posicionado para evitar curto circuito.">MotorNode</a> : <a class="code" href="class_node.html" title="Classe que reprensenta os nos essa define a estrutura basica de um no, essa tras a implentaçõa basico...">Node</a>{
+<a name="l00029"></a>00029 <span class="keyword">private</span>:
+<a name="l00030"></a><a class="code" href="class_motor_node.html#aeda0ac2c5e97a5182104e173aaa05320">00030</a>         <span class="keywordtype">int</span> <a class="code" href="class_motor_node.html#aeda0ac2c5e97a5182104e173aaa05320">BACK_PIN</a>;     
+<a name="l00031"></a><a class="code" href="class_motor_node.html#a32dafb5daa03e5215976d249d70bb41a">00031</a>         <span class="keywordtype">int</span> <a class="code" href="class_motor_node.html#a32dafb5daa03e5215976d249d70bb41a">FRONT_T_PIN</a>; 
+<a name="l00032"></a><a class="code" href="class_motor_node.html#aedfb952a36b62b68ec0fc8acf211b97a">00032</a>         <span class="keywordtype">int</span> <a class="code" href="class_motor_node.html#aedfb952a36b62b68ec0fc8acf211b97a">FRONT_V_PIN</a>; 
+<a name="l00040"></a>00040         <span class="keywordtype">void</span> <a class="code" href="class_motor_node.html#a67b51d8c7984e654738b514e390671dc" title="Essa atruibui valor a variavel name, o seu respectivo valor. E uma função garante para na implementaç...">setName</a>();
+<a name="l00041"></a>00041 
+<a name="l00047"></a>00047         <span class="keywordtype">void</span> <a class="code" href="class_motor_node.html#a562a90c1718556a3f6a25373687128b4" title="Esse atribui valor lista de serviços que sao disponibilizados pelo no. E uma função garante que duran...">setServiceList</a>();
+<a name="l00048"></a>00048 
+<a name="l00049"></a>00049 
+<a name="l00055"></a>00055         <span class="keywordtype">void</span> <a class="code" href="class_motor_node.html#a27ea018840ace0eebbfaa2cb664de2f9">frente</a>(<span class="keywordtype">int</span>);
+<a name="l00056"></a>00056 
+<a name="l00062"></a>00062         <span class="keywordtype">void</span> <a class="code" href="class_motor_node.html#a8fee12729e92e1aba2b5f7cf4bffb764">tras</a>(<span class="keywordtype">int</span>);
+<a name="l00063"></a>00063 
+<a name="l00069"></a>00069         <span class="keywordtype">void</span> <a class="code" href="class_motor_node.html#a4cc66cb486f64b72daec6b4147d2b708">pare</a>();
+<a name="l00070"></a>00070 <span class="keyword">public</span>:
+<a name="l00071"></a>00071 
+<a name="l00077"></a>00077         <a class="code" href="class_motor_node.html#a0e8566ad6e799416807a5ace3bae7960">MotorNode</a>(<span class="keywordtype">int</span>, <span class="keywordtype">int</span>, <span class="keywordtype">int</span>);
+<a name="l00078"></a>00078 
+<a name="l00084"></a>00084         <span class="keywordtype">void</span> <a class="code" href="class_motor_node.html#a56837f03bfa2f976de5510a948e4ec9f" title="realiza as interraçoes basicas do no para cada interçao do master. Aqui se executa de forma continua ...">run</a>();
+<a name="l00085"></a>00085 
+<a name="l00091"></a>00091         <span class="keywordtype">void</span> <a class="code" href="class_motor_node.html#ad95eb7e85b274172c6bef6f685cf256d">runService</a>(<span class="keywordtype">char</span>*);
+<a name="l00092"></a>00092 };
+<a name="l00093"></a>00093 
+<a name="l00099"></a><a class="code" href="class_direction_node.html">00099</a> <span class="keyword">class </span><a class="code" href="class_direction_node.html" title="Essa e a classe responsavel por implementar a interface com o servo motor de forma a implementar a a ...">DirectionNode</a> : <a class="code" href="class_node.html" title="Classe que reprensenta os nos essa define a estrutura basica de um no, essa tras a implentaçõa basico...">Node</a>
+<a name="l00100"></a>00100 {
+<a name="l00101"></a>00101 <span class="keyword">private</span>:
+<a name="l00102"></a><a class="code" href="class_direction_node.html#a1dd61938506f08758b12abd352b0da7f">00102</a>         <a class="code" href="class_servo.html">Servo</a> *<a class="code" href="class_direction_node.html#a1dd61938506f08758b12abd352b0da7f">myservo</a>;         
+<a name="l00103"></a><a class="code" href="class_direction_node.html#ae5a68ce3183d9f5ab17786385e753127">00103</a>         <span class="keywordtype">int</span> <a class="code" href="class_direction_node.html#ae5a68ce3183d9f5ab17786385e753127">a_PIN</a>;                      
+<a name="l00110"></a>00110         <span class="keywordtype">void</span> <a class="code" href="class_direction_node.html#a61228494bbd8936697ca68d41edd79dd" title="Essa atruibui valor a variavel name, o seu respectivo valor. E uma função garante para na implementaç...">setName</a>();
+<a name="l00111"></a>00111 
+<a name="l00117"></a>00117         <span class="keywordtype">void</span> <a class="code" href="class_direction_node.html#a2bf00da20c98befe761481c9eb4405ae" title="Esse atribui valor lista de serviços que sao disponibilizados pelo no. E uma função garante que duran...">setServiceList</a>();
+<a name="l00118"></a>00118 
+<a name="l00119"></a>00119 
+<a name="l00125"></a>00125         <span class="keywordtype">void</span> <a class="code" href="class_direction_node.html#ab2040369d101d5964b2d76b06814d7eb">direita</a>(<span class="keywordtype">int</span>);
+<a name="l00126"></a>00126 
+<a name="l00132"></a>00132         <span class="keywordtype">void</span> <a class="code" href="class_direction_node.html#a90091aad98a6ec4892d1cd0ae6675fad">esquerda</a>(<span class="keywordtype">int</span>);
+<a name="l00133"></a>00133 
+<a name="l00139"></a>00139         <span class="keywordtype">void</span> <a class="code" href="class_direction_node.html#ad88a9f87817099bde959a2592412046c">centro</a>();
+<a name="l00140"></a>00140 <span class="keyword">public</span>:
+<a name="l00141"></a>00141 
+<a name="l00147"></a>00147         <a class="code" href="class_direction_node.html#a53a8403551cf42e8aa0c7bbe07ad2995">DirectionNode</a>(<span class="keywordtype">int</span>);
+<a name="l00148"></a>00148 
+<a name="l00154"></a>00154         <span class="keywordtype">void</span> <a class="code" href="class_direction_node.html#aa7fde93e8ef5887e9793c4bd75279c47" title="realiza as interraçoes basicas do no para cada interçao do master. Aqui se executa de forma continua ...">run</a>();
+<a name="l00155"></a>00155 
+<a name="l00161"></a>00161         <span class="keywordtype">void</span> <a class="code" href="class_direction_node.html#ab38b8d7381f174b9deadb1f6dbd71e31">runService</a>(<span class="keywordtype">char</span>*);
+<a name="l00162"></a>00162 };
+<a name="l00163"></a>00163 
+<a name="l00167"></a><a class="code" href="class_ligth_node.html">00167</a> <span class="keyword">class </span><a class="code" href="class_ligth_node.html" title="Essa e implementa a insterface com as saida de luz para ligalas ou desligalas nos carrinho...">LigthNode</a> : <a class="code" href="class_node.html" title="Classe que reprensenta os nos essa define a estrutura basica de um no, essa tras a implentaçõa basico...">Node</a>
+<a name="l00168"></a>00168 {
+<a name="l00169"></a>00169 <span class="keyword">private</span>:        
+<a name="l00175"></a>00175         <span class="keywordtype">void</span> <a class="code" href="class_ligth_node.html#a91f7bc9a5cf8e3c03c821bc3fcbaaf25" title="Essa atruibui valor a variavel name, o seu respectivo valor. E uma função garante para na implementaç...">setName</a>();
+<a name="l00176"></a>00176 
+<a name="l00182"></a>00182         <span class="keywordtype">void</span> <a class="code" href="class_ligth_node.html#a3f19798f38d4bd0aa1938e38432c113f" title="Esse atribui valor lista de serviços que sao disponibilizados pelo no. E uma função garante que duran...">setServiceList</a>();
+<a name="l00183"></a>00183 <span class="keyword">public</span>:
+<a name="l00184"></a>00184 
+<a name="l00190"></a>00190         <a class="code" href="class_ligth_node.html#a0beea790688705bcdf817d87f0c175c4">LigthNode</a>();
+<a name="l00191"></a>00191 
+<a name="l00197"></a>00197         <span class="keywordtype">void</span> <a class="code" href="class_ligth_node.html#a3c644560ef563e6683b874c46e14e5ca" title="realiza as interraçoes basicas do no para cada interçao do master. Aqui se executa de forma continua ...">run</a>();
+<a name="l00198"></a>00198 
+<a name="l00204"></a><a class="code" href="class_ligth_node.html#acc2a9da909bdaf5a94d38799c0d324c4">00204</a>         <span class="keywordtype">void</span> <a class="code" href="class_ligth_node.html#acc2a9da909bdaf5a94d38799c0d324c4">runService</a>(<span class="keywordtype">char</span>*){}
+<a name="l00205"></a>00205 };
+<a name="l00206"></a>00206 
+<a name="l00207"></a>00207 <span class="preprocessor">#endif</span>
 </pre></div></div><!-- contents -->
 </div>
 <!-- window showing the filter options -->
@@ -193,7 +202,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul>
       <li class="navelem"><a class="el" href="inode_8h.html">inode.h</a>      </li>
 
-    <li class="footer">Generated on Sun Dec 15 2013 00:11:59 for Nos - System by
+    <li class="footer">Generated on Wed Dec 18 2013 14:48:16 for Nos - System by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

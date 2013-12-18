@@ -1,6 +1,6 @@
 <map id="G" name="G">
 <area shape="rect" id="node3" href="$class_string_list.html#a927c93c8fc6db737ffc5ed652ef65b44" title="StringList::getFirst" alt="" coords="188,5,316,35"/>
-<area shape="rect" id="node5" href="$class_master.html#a00b7f77b44dacd05e0623c96307a3bc4" title="Master::inConnectionList" alt="" coords="169,59,335,88"/>
-<area shape="rect" id="node7" href="$class_master.html#a41bd85473687e1691d62bb9db328baf2" title="Master::executeInterruptionList" alt="" coords="384,59,587,88"/>
-<area shape="rect" id="node9" href="$class_master.html#a008baa6bf85857581cdd5702e0cfc0d2" title="Master::run" alt="" coords="635,59,723,88"/>
+<area shape="rect" id="node5" href="$class_master.html#a00b7f77b44dacd05e0623c96307a3bc4" title="Verifica se um certo no esta dentro da lista de nos / supernos das conecçoes lista de deste master..." alt="" coords="169,59,335,88"/>
+<area shape="rect" id="node7" href="$class_master.html#a41bd85473687e1691d62bb9db328baf2" title="executa a lista de interrupçoes temporarias do nos as repnasando para os reponsaveis por resolvelas..." alt="" coords="384,59,587,88"/>
+<area shape="rect" id="node9" href="$class_master.html#a008baa6bf85857581cdd5702e0cfc0d2" title="realiza as interraçoes basicas de todos os elementos do sistema. gariantido que todos esses sejam exe..." alt="" coords="635,59,723,88"/>
 </map>

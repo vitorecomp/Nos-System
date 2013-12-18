@@ -1,3 +1,4 @@
 <map id="G" name="G">
-<area shape="rect" id="node1" href="$class_basic_type.html" title="Essa e a classe responsavel por ser um padrao de classe para clases tipos basicos &#160;&#160;tendo os metodos ..." alt="" coords="7,5,89,35"/>
+<area shape="rect" id="node1" href="$class_connection.html" title="lasse que implemento a interface basica das conexoes do sistema para que o uso dessa cominicaçao seja..." alt="" coords="5,5,93,35"/>
+<area shape="rect" id="node3" href="$class_blue_tooth_connection.html" title="classe que implemento as conexao bluetooth do sistema garantida que essa sejam inicializadas de forma..." alt="" coords="141,5,288,35"/>
 </map>

@@ -1,4 +1,4 @@
 <map id="G" name="G">
-<area shape="rect" id="node2" href="$class_string_list.html" title="StringList" alt="" coords="11,101,88,131"/>
-<area shape="rect" id="node4" href="$structl_strings.html" title="lStrings" alt="" coords="16,5,83,35"/>
+<area shape="rect" id="node2" href="$class_string_list.html" title="Essa classe apresenta as funçoes basicas para trabalho em uma lista de strings." alt="" coords="11,101,88,131"/>
+<area shape="rect" id="node4" href="$structl_strings.html" title="Estrutura que reprensanta um termo de uma lista de strings." alt="" coords="16,5,83,35"/>
 </map>

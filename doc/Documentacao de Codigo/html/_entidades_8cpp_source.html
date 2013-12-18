@@ -99,7 +99,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">/home/vitor/workspace/Nos-System/nos/simple-embedded-systems/example/Entidades.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="_entidades_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#include &quot;<a class="code" href="_entidades_8h.html">Entidades.h</a>&quot;</span>
+<a href="_entidades_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#include &quot;<a class="code" href="_entidades_8h.html" title="Cabecalho da classe que implemento as entidades basicas do sistema garantindo com eles um melhor reap...">Entidades.h</a>&quot;</span>
 <a name="l00002"></a>00002 
 <a name="l00003"></a><a class="code" href="class_string_list.html#a8b3f06efbfee49d884ed6a2907c03be0">00003</a> <a class="code" href="class_string_list.html#a8b3f06efbfee49d884ed6a2907c03be0">StringList::StringList</a>()
 <a name="l00004"></a>00004 {
@@ -117,18 +117,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00016"></a>00016 
 <a name="l00017"></a><a class="code" href="class_string_list.html#a887dd6d29b120cac80b3dbdc6d639b6d">00017</a> <span class="keywordtype">void</span> <a class="code" href="class_string_list.html#a887dd6d29b120cac80b3dbdc6d639b6d">StringList::push</a>(<span class="keywordtype">char</span> * valor)
 <a name="l00018"></a>00018 {
-<a name="l00019"></a>00019         <a class="code" href="structl_strings.html">LStrings</a> *termo =(<a class="code" href="structl_strings.html">lStrings</a>*)malloc(<span class="keyword">sizeof</span>(<a class="code" href="structl_strings.html">lStrings</a>));
+<a name="l00019"></a>00019         <a class="code" href="structl_strings.html" title="Estrutura que reprensanta um termo de uma lista de strings.">LStrings</a> *termo =(<a class="code" href="structl_strings.html" title="Estrutura que reprensanta um termo de uma lista de strings.">lStrings</a>*)malloc(<span class="keyword">sizeof</span>(<a class="code" href="structl_strings.html" title="Estrutura que reprensanta um termo de uma lista de strings.">lStrings</a>));
 <a name="l00020"></a>00020         termo-&gt;<a class="code" href="structl_strings.html#a1e1e6e9e264c2b017dd8e4b255166f7b">Valor</a> = valor;
 <a name="l00021"></a>00021         termo-&gt;<a class="code" href="structl_strings.html#ac85f27c4135282e360ee3f50dbdddcde">next</a> = <a class="code" href="class_string_list.html#a759079f877566a0f5b53ba943a21ed6a">list</a>;
 <a name="l00022"></a>00022         <a class="code" href="class_string_list.html#a759079f877566a0f5b53ba943a21ed6a">list</a> = termo;
 <a name="l00023"></a>00023 }
 <a name="l00024"></a>00024 
-<a name="l00025"></a><a class="code" href="class_string_list.html#ad5cafd0f3f93cb721c07a57badb297d8">00025</a> <span class="keywordtype">void</span> <a class="code" href="class_string_list.html#ad5cafd0f3f93cb721c07a57badb297d8">StringList::list_push_back</a>(<a class="code" href="class_string_list.html">StringList</a> *aList)
+<a name="l00025"></a><a class="code" href="class_string_list.html#ad5cafd0f3f93cb721c07a57badb297d8">00025</a> <span class="keywordtype">void</span> <a class="code" href="class_string_list.html#ad5cafd0f3f93cb721c07a57badb297d8">StringList::list_push_back</a>(<a class="code" href="class_string_list.html" title="Essa classe apresenta as funçoes basicas para trabalho em uma lista de strings.">StringList</a> *aList)
 <a name="l00026"></a>00026 {
 <a name="l00027"></a>00027         <span class="keywordflow">if</span>(<a class="code" href="class_string_list.html#a759079f877566a0f5b53ba943a21ed6a">list</a> == NULL){
 <a name="l00028"></a>00028                 <a class="code" href="class_string_list.html#a759079f877566a0f5b53ba943a21ed6a">list</a> = aList-&gt;<a class="code" href="class_string_list.html#a759079f877566a0f5b53ba943a21ed6a">list</a>;
 <a name="l00029"></a>00029         }<span class="keywordflow">else</span>{
-<a name="l00030"></a>00030                 <a class="code" href="structl_strings.html">LStrings</a> *termo;
+<a name="l00030"></a>00030                 <a class="code" href="structl_strings.html" title="Estrutura que reprensanta um termo de uma lista de strings.">LStrings</a> *termo;
 <a name="l00031"></a>00031                 <span class="keywordflow">for</span>(termo = <a class="code" href="class_string_list.html#a759079f877566a0f5b53ba943a21ed6a">list</a>; termo-&gt;<a class="code" href="structl_strings.html#ac85f27c4135282e360ee3f50dbdddcde">next</a> != NULL; termo = termo-&gt;<a class="code" href="structl_strings.html#ac85f27c4135282e360ee3f50dbdddcde">next</a>);
 <a name="l00032"></a>00032                 termo-&gt;<a class="code" href="structl_strings.html#ac85f27c4135282e360ee3f50dbdddcde">next</a> =aList-&gt;<a class="code" href="class_string_list.html#a759079f877566a0f5b53ba943a21ed6a">list</a>;
 <a name="l00033"></a>00033         }
@@ -144,7 +144,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00043"></a>00043                 <span class="keywordflow">return</span> termo;
 <a name="l00044"></a>00044 
 <a name="l00045"></a>00045         termo = <a class="code" href="class_string_list.html#a759079f877566a0f5b53ba943a21ed6a">list</a>-&gt;<a class="code" href="structl_strings.html#a1e1e6e9e264c2b017dd8e4b255166f7b">Valor</a>;
-<a name="l00046"></a>00046         <a class="code" href="structl_strings.html">lStrings</a> *inter = <a class="code" href="class_string_list.html#a759079f877566a0f5b53ba943a21ed6a">list</a>;
+<a name="l00046"></a>00046         <a class="code" href="structl_strings.html" title="Estrutura que reprensanta um termo de uma lista de strings.">lStrings</a> *inter = <a class="code" href="class_string_list.html#a759079f877566a0f5b53ba943a21ed6a">list</a>;
 <a name="l00047"></a>00047         <a class="code" href="class_string_list.html#a759079f877566a0f5b53ba943a21ed6a">list</a>= <a class="code" href="class_string_list.html#a759079f877566a0f5b53ba943a21ed6a">list</a>-&gt;<a class="code" href="structl_strings.html#ac85f27c4135282e360ee3f50dbdddcde">next</a>;
 <a name="l00048"></a>00048         free(<a class="code" href="class_string_list.html#a759079f877566a0f5b53ba943a21ed6a">list</a>);
 <a name="l00049"></a>00049         <span class="keywordflow">return</span> termo;
@@ -159,7 +159,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00058"></a>00058 {
 <a name="l00059"></a>00059         <span class="keywordtype">char</span> *termo = NULL;
 <a name="l00060"></a>00060         <span class="keywordtype">int</span> i = 0;
-<a name="l00061"></a>00061         <span class="keywordflow">for</span>(<a class="code" href="structl_strings.html">lStrings</a> *iList = <a class="code" href="class_string_list.html#a759079f877566a0f5b53ba943a21ed6a">list</a>; iList != NULL; iList = iList-&gt;<a class="code" href="structl_strings.html#ac85f27c4135282e360ee3f50dbdddcde">next</a>, i++){
+<a name="l00061"></a>00061         <span class="keywordflow">for</span>(<a class="code" href="structl_strings.html" title="Estrutura que reprensanta um termo de uma lista de strings.">lStrings</a> *iList = <a class="code" href="class_string_list.html#a759079f877566a0f5b53ba943a21ed6a">list</a>; iList != NULL; iList = iList-&gt;<a class="code" href="structl_strings.html#ac85f27c4135282e360ee3f50dbdddcde">next</a>, i++){
 <a name="l00062"></a>00062                 <span class="keywordflow">if</span>(i == ni)
 <a name="l00063"></a>00063                 {
 <a name="l00064"></a>00064                         termo = iList-&gt;Valor;
@@ -189,7 +189,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul>
       <li class="navelem"><a class="el" href="_entidades_8cpp.html">Entidades.cpp</a>      </li>
 
-    <li class="footer">Generated on Sun Dec 15 2013 00:11:59 for Nos - System by
+    <li class="footer">Generated on Wed Dec 18 2013 14:48:16 for Nos - System by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

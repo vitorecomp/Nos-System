@@ -1,6 +1,5 @@
 var hierarchy =
 [
-    [ "BasicType", "class_basic_type.html", null ],
     [ "Connection", "class_connection.html", [
       [ "BlueToothConnection", "class_blue_tooth_connection.html", null ]
     ] ],
@@ -10,8 +9,8 @@ var hierarchy =
     ] ],
     [ "Node", "class_node.html", [
       [ "DirectionNode", "class_direction_node.html", null ],
-      [ "MotorNode", "class_motor_node.html", null ],
-      [ "TemperatureNode", "class_temperature_node.html", null ]
+      [ "LigthNode", "class_ligth_node.html", null ],
+      [ "MotorNode", "class_motor_node.html", null ]
     ] ],
     [ "Servo", "class_servo.html", null ],
     [ "servo_t", "structservo__t.html", null ],

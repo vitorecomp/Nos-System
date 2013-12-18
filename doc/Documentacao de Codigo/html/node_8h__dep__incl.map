@@ -1,9 +1,9 @@
 <map id="G" name="G">
 <area shape="rect" id="node3" href="$master_8h.html" title="Cabecalho das classes que prove o serviço do Master. Nesse esta contido todo o codigo necessario para..." alt="" coords="13,160,536,189"/>
 <area shape="rect" id="node11" href="$super_nodes_8h.html" title="Cabecalho das classes que prove o serviço de super no. Nesse esta contido todo o codigo necessario pa..." alt="" coords="329,83,884,112"/>
-<area shape="rect" id="node16" href="$inode_8h.html" title="/home/vitor/workspace/Nos&#45;System/nos/simple&#45;embedded&#45;systems/example/inode.h" alt="" coords="908,83,1423,112"/>
+<area shape="rect" id="node16" href="$inode_8h.html" title="Cabecalho da classe que implemento os nos do sistemas, implementado o modo de execução dessas e a for..." alt="" coords="908,83,1423,112"/>
 <area shape="rect" id="node21" href="$node_8cpp.html" title="/home/vitor/workspace/Nos&#45;System/nos/simple&#45;embedded&#45;systems/example/node.cpp" alt="" coords="1447,83,1972,112"/>
-<area shape="rect" id="node5" href="$i_master_8h.html" title="/home/vitor/workspace/Nos&#45;System/nos/simple&#45;embedded&#45;systems/example/iMaster.h" alt="" coords="735,237,1260,267"/>
+<area shape="rect" id="node5" href="$i_master_8h.html" title="Cabecalho da classe que implemento o master atraves da classe master, essa classe implementa as carac..." alt="" coords="735,237,1260,267"/>
 <area shape="rect" id="node9" href="$master_8cpp.html" title="/home/vitor/workspace/Nos&#45;System/nos/simple&#45;embedded&#45;systems/example/master.cpp" alt="" coords="5,237,544,267"/>
 <area shape="rect" id="node7" href="$i_master_8cpp.html" title="/home/vitor/workspace/Nos&#45;System/nos/simple&#45;embedded&#45;systems/example/iMaster.cpp" alt="" coords="727,315,1268,344"/>
 <area shape="rect" id="node14" href="$super_nodes_8cpp.html" title="/home/vitor/workspace/Nos&#45;System/nos/simple&#45;embedded&#45;systems/example/superNodes.cpp" alt="" coords="560,160,1128,189"/>
