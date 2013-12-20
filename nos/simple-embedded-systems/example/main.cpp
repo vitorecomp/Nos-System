@@ -3,7 +3,9 @@
 #ifdef LINUX
 int main ()
 {
-	IMaster().run();
+	IMaster master;
+	while(1)
+		master.run();
 }
 
 #endif

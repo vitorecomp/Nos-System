@@ -107,17 +107,13 @@ inline StringList* BlueToothConnection::reciveMessages()
 	#endif
 
 	#ifdef LINUX
-	int count, i;
+	int count = 0, i = 0;
 	char c = 0;
 	char *msg = (char*)calloc(sizeof(char), 40);
-	while(i < 40 && (c != END_MESSAGE) || c != '\n'){
-		i++;
-		cin >> c;
-		if(c == '#')
-			exit(0);
-	}
-	msg[i] = '\0';
-	cout << "BlueToothConnection read : "<< msg << endl;
+	cin >> msg;
+	if (msg[0] == '#')
+		exit(0);
+	list->push(msg);
 	return list;
 	
 	#endif

@@ -12,16 +12,18 @@ void Master::initialize()
 		nodesNames[i]  = NULL;
 		sNodesNames[i] = NULL;
 	}
-
+	
 	createNosList();
 	createSuperNosList();
 	createConnectionList();
+	
+
 	
 	for(int i = 0; nodes[i] != NULL; i++)
 	{
 		nodesNames[i] = nodes[i]->getName();
 	}
-	for(int i = 0; i < 100; i++)
+	for(int i = 0; sNodes[i] != NULL; i++)
 	{
 		sNodesNames[i] = sNodes[i]->getName();
 	}
@@ -30,7 +32,7 @@ void Master::initialize()
 
 void Master::run()
 {
-	cout << "aqui" << endl;
+
 	if(!interrupts->empty())
 		executeInterruptionList();
 	executeNos();

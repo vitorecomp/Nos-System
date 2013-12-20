@@ -118,10 +118,12 @@ void MotorNode::run()
 void MotorNode::runService(char *service)
 {
 	char *msgInr, *msg2;
+	int i =0;
     msgInr = strtok(service, "/;");
     msg2 = strtok(NULL, "/;");
 	msgInr = strtok(NULL, "/;");
-	int i = atoi(msgInr);
+	if(msgInr != NULL)
+		i = atoi(msgInr);
 	if(!strcmp(msg2, "stop"))
 		pare();
 
@@ -172,11 +174,13 @@ void DirectionNode::run(){
 
 void DirectionNode::runService(char *service)
 {
+	int i =0;
 	char *msgInr, *msg2;
     msgInr = strtok(service, "/;");
     msg2 = strtok(NULL, "/;");
 	msgInr = strtok(NULL, "/;");
-	int i = atoi(msgInr);
+	if(msgInr != NULL)
+		i = atoi(msgInr);
 
 	if(!strcmp(msg2, "center"))
 		centro();

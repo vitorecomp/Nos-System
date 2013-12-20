@@ -13,6 +13,8 @@
 #ifdef LINUX
      #include <stdlib.h>
      #include <stdio.h>
+     #include <iostream>
+     using namespace std;
 #endif
 
 #ifdef ARDUINO

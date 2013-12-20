@@ -1,0 +1,6 @@
+direction/left/10;
+direction/center;
+direction/right/10;
+direction/right/20;
+direction/center;
+#
