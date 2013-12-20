@@ -10,7 +10,7 @@
 #include <string.h>
 
 /**  \class SuperNode
-     \brief Essa classe representa um superNo que implementa serviçosq que dependem de mais de um no, 
+     \brief Essa classe representa um superNo que implementa serviços que dependem de mais de um no, 
      esse coiceito permite que a comicaçao quase direta entre esse nos e tambem diminui varios problemas
      desse tipo de serviço pois agora ele so podera ser feito se os dois nos existirem. Evitando assim com
      que o serviço seja disponibilizado mesmo com uma de sua dependencias off.*/
@@ -26,7 +26,7 @@ protected:
 	/**  \fn virtual void setName()
           \brief Essa atruibui valor a variavel name, o seu respectivo valor. E uma função garante
           para na implementaçao dessa classe o programado set um nome para o super no garantindo
-          assim o funcionamento cosiso do sistema.*/
+          assim o funcionamento consiso do sistema.*/
 	virtual void setName();
 
 	/**  \fn virtual void setNodeDependencesName()
@@ -78,21 +78,20 @@ public:
           \brief Retorna a lista de serviços disponibilizados pelo super No a partir do momento que
           todos os nos dos quais ele depende foram instacializado e devidamente setados. garantindo
           que o master nao chame sevicos nao implementados por esse super no.
-          \retorn Lista de serviços implementados por esse super no.*/
+          \return Lista de serviços implementados por esse super no.*/
 	StringList* getServices();
 
 	/** \fn StringList* getInterrupts()
           \brief Retorna a lista de interrupçoes gerando pelo super no apos a execução de um serviço
           ou de um interação.
-          /retorn A lista de interrupções geradas pelo super no.*/
+          /return A lista de interrupções geradas pelo super no.*/
 	StringList* getInterrupts();
 
 
 	/** \fn virtual void run()
           \brief realiza as interraçoes basicas do super no para cada interçao do master. Aqui
           se exetuda de forma continua. neste se gera a lista de interrupçoes se necessario, e
-          se faz um processamento nao blocante.
-     */
+          se faz um processamento nao blocante.*/
 	virtual void run();
 
 	/** \fn virtual void runService(char*)

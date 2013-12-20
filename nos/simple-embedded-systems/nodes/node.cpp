@@ -2,27 +2,24 @@
 
 void Node::initialize()
 {
+	interruptions = new StringList();
 	setName();
 	setServiceList();
 }
 
-string Node::getName()
+char* Node::getName()
 {
 	return name;
 }
 
-list<string> Node::getServices()
+char** Node::getServices()
 {
 	return services;
 }
 
-list<Interruptions> Node::getInterrupts()
+StringList* Node::getInterrupts()
 {
-	list<Interruptions> temp
-	while(!interruptions)
-	{
-		temp.push(interruptions.front());
-		interruptions.pop;
-	}
-	return temp;
+	StringList* list = this->interruptions;
+	interruptions= NULL;	
+	return list;
 }

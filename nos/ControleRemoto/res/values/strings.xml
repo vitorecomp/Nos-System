@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Controle Remoto</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="button_right">Direita</string>
+    <string name="init_bt">Init</string>
+    <string name="button_left">Esquerda</string>
+    <string name="button_forward">Frente</string>
+    <string name="button_backward">Trás</string>
+    <string name="button_stop">Parar</string>
+
+</resources>
